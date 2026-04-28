@@ -1,0 +1,46 @@
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+    auth: {
+        user: process.env.GMAIL_USER || 'getfreshtrax@gmail.com',
+            pass: process.env.GMAIL_PASSWORD,
+              },
+              });
+
+              exports.handler = async (event) => {
+                if (event.httpMethod !== 'POST') {
+                    return { statusCode: 405, body: 'Method Not Allowed' };
+                      }
+
+                        try {
+                            const { name, email, businessType, phone, readyIn30, offer } = JSON.parse(event.body);
+
+                                await transporter.sendMail({
+                                      from: process.env.GMAIL_USER || 'getfreshtrax@gmail.com',
+                                            to: 'getfreshtrax@gmail.com',
+                                                  subject: `New Lead: ${name} - ${businessType}`,
+                                                        html: `
+                                                                <h2>New Lead Submission</h2>
+                                                                        <p><strong>Name:</strong> ${name}</p>
+                                                                                <p><strong>Email:</strong> ${email}</p>
+                                                                                        <p><strong>Business Type:</strong> ${businessType}</p>
+                                                                                                <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+                                                                                                        <p><strong>Ready in 30 days:</strong> ${readyIn30 ? 'Yes' : 'No'}</p>
+                                                                                                                <p><strong>Offer:</strong> ${offer}</p>
+                                                                                                                        <p><strong>Downloaded PDF:</strong> Yes</p>
+                                                                                                                              `,
+                                                                                                                                  });
+                                                                                                                                  
+                                                                                                                                      return {
+                                                                                                                                            statusCode: 200,
+                                                                                                                                                  body: JSON.stringify({ success: true, message: 'Notification sent' }),
+                                                                                                                                                      };
+                                                                                                                                                        } catch (error) {
+                                                                                                                                                            console.error('Error sending email:', error);
+                                                                                                                                                                return {
+                                                                                                                                                                      statusCode: 500,
+                                                                                                                                                                            body: JSON.stringify({ success: false, error: 'Failed to send notification' }),
+                                                                                                                                                                                };
+                                                                                                                                                                                  }
+                                                                                                                                                                                  };
