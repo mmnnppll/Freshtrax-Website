@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /404
+
+# Sitemaps
+Sitemap: https://getfreshtrax.com/sitemap.xml
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1

@@ -1,0 +1,87 @@
+import ParticleField from "@/components/ParticleField";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import EconomicsSection from "@/components/EconomicsSection";
+import FinancialProjections from "@/components/FinancialProjections";
+import TechnologySection from "@/components/TechnologySection";
+import MarketOpportunity from "@/components/MarketOpportunity";
+import FoundersClub from "@/components/FoundersClub";
+import Footer from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
+import { SchemaMarkup, organizationSchema, productSchema, createWebPageSchema, createVideoSchema } from "@/components/SchemaMarkup";
+
+export default function Home() {
+  return (
+    <>
+      <SEOHead
+        title="Freshtrax — Footwear sterilization self-serve kiosk"
+        description="Freshtrax is a self-service footwear sterilization kiosk for fitness venues. Medical-grade UVC + ozone eliminates odor in 90 seconds. Zero staff required."
+        canonicalUrl="https://getfreshtrax.com/"
+        ogTitle="Freshtrax — Footwear sterilization self-serve kiosk"
+        ogDescription="Make $38,325/year from a single machine. Freshtrax is a self-service footwear sterilization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds."
+      />
+      <SchemaMarkup schema={organizationSchema} />
+      <SchemaMarkup schema={productSchema} />
+      <SchemaMarkup schema={createWebPageSchema({
+        title: "Freshtrax | Footwear Sterilization Kiosk for Fitness Venues",
+        description: "Freshtrax is a self-service footwear sterilization kiosk for fitness venues. Medical-grade UVC + ozone eliminates odor in 90 seconds.",
+        url: "https://getfreshtrax.com/",
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+      })} />
+      <SchemaMarkup schema={createVideoSchema({
+        name: "Freshtrax Demo Video",
+        description: "12-second cinematic demo of Freshtrax footwear sterilization kiosk in action",
+        thumbnailUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4",
+        uploadDate: "2026-03-20",
+        duration: "PT12S",
+        contentUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4",
+      })} />
+      <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
+      <ParticleField />
+      <Navbar />
+      <main className="flex-1" role="main">
+        <section id="hero" aria-label="Hero section">
+          <HeroSection />
+        </section>
+        {/* Subtle divider */}
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="economics" aria-label="Unit economics section">
+          <EconomicsSection />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="projections" aria-label="Financial projections section">
+          <FinancialProjections />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="technology" aria-label="Technology section">
+          <TechnologySection />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="market" aria-label="Market opportunity section">
+          <MarketOpportunity />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="founders" aria-label="Founders club section">
+          <FoundersClub />
+        </section>
+      </main>
+      <Footer />
+    </div>
+    </>
+  );
+}
