@@ -1,0 +1,56 @@
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER || 'getfreshtrax@gmail.com',
+          pass: process.env.GMAIL_PASSWORD,
+      },
+});
+
+exports.handler = async (event) => {
+    if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+}
+
+  try {
+    const { name, email, phone, company, inquiryType, message } = JSON.parse(event.body);
+
+    if (!name || !email || !phone || !message) {
+      return {
+                statusCode: 400,
+                body: JSON.stringify({ success: false, error: 'Missing required fields' }),
+        };
+    }
+
+    await transporter.sendMail({
+            from: process.env.GMAIL_USER || 'getfreshtrax@gmail.com',
+            to: 'getfreshtrax@gmail.com',
+            replyTo: email,
+            subject: `New Contact Form Submission: ${name} - ${inquiryType}`,
+            html: `
+              <h2>New Contact Form Submission</h2>
+              <p><strong>Name:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone}</p>
+              <p><strong>Company/Venue:</strong> ${company || 'Not provided'}</p>
+              <p><strong>Inquiry Type:</strong> ${inquiryType}</p>
+              <p><strong>Message:</strong></p>
+              <p>${message.replace(/\n/g, '<br>')}</p>
+            <hr>
+            <p><em>Please respond within 1 business day.</em></p>
+          `,
+    });
+
+    return {
+            statusCode: 200,
+            body: JSON.stringify({ success: true, message: 'Message sent successfully' }),
+      };
+} catch (error) {
+    console.error('Error sending contact email:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ success: false, error: 'Failed to send message' }),
+};
+}
+};
