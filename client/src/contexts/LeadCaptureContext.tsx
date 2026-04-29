@@ -86,6 +86,6 @@ export function LeadCaptureProvider({ children }: { children: ReactNode }) {
         <LeadCaptureContext.Provider value={{ openModal, closeModal }}>
           {children}
                 <LeadCaptureModal open={isOpen} onClose={closeModal} offer={currentOffer} />
-        </LeadCaptureContext.Provider>LeadCaptureContext.Provider>
+        </LeadCaptureContext.Provider>
       );
 }
