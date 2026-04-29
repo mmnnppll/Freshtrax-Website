@@ -13,11 +13,11 @@ const faqs = [
     questions: [
       {
         q: "How does Freshtrax actually work?",
-        a: "Freshtrax uses a three-stage sterilization process: UVC light (99.9% bacteria elimination), ozone (99.999% elimination), and antimicrobial vapor. The entire cycle takes 90 seconds and eliminates bacteria, fungi, and odor at the root — not just masking it.",
+        a: "Freshtrax uses a three-stage sterilization process: UVC light (bacteria elimination), ozone (odor elimination), and antimicrobial vapor. The entire cycle takes 90 seconds and eliminates bacteria, fungi, and odor at the root — not just masking it.",
       },
       {
         q: "Is Freshtrax FDA-approved?",
-        a: "Freshtrax uses medical-grade sterilization technologies that have been proven in clinical settings across Asia for over a decade. The UVC and ozone technologies are FDA-recognized sterilization methods. We're currently pursuing formal FDA classification for the complete system.",
+        a: "Freshtrax uses sterilization technologies that have been proven in clinical settings across Asia for over a decade. The UVC and ozone technologies are FDA-recognized sterilization methods. We're currently pursuing formal FDA classification for the complete system.",
       },
       {
         q: "What happens if the machine breaks?",
@@ -25,7 +25,7 @@ const faqs = [
       },
       {
         q: "How often does the machine need maintenance?",
-        a: "Routine maintenance is minimal: filter replacement every 6 months (~$50), and a quarterly system check. We handle most maintenance remotely. Preventive maintenance is included in the Founder's Club package.",
+        a: "Routine maintenance is minimal: quarterly system check. We handle most maintenance remotely. Preventive maintenance is included in the Founder's Club package.",
       },
       {
         q: "Can the machine handle different shoe types?",
@@ -71,7 +71,7 @@ const faqs = [
       },
       {
         q: "How do I collect payment from users?",
-        a: "The machine accepts contactless payments (Apple Pay, Google Pay, cards) and cash. Revenue is automatically tracked in your dashboard. Payouts are weekly to your bank account.",
+        a: "The machine accepts contactless payments (Apple Pay, Google Pay, cards) and cash. Revenue is automatically tracked in your dashboard. All our kiosks use NAYAX POS (point of sale). Payouts are directly from NAYAX to your bank account.",
       },
       {
         q: "What if the venue wants to remove the machine?",
@@ -88,11 +88,11 @@ const faqs = [
     questions: [
       {
         q: "How long does it take to deploy a machine?",
-        a: "From purchase to deployment: 2-3 weeks. We handle logistics, installation, and user training. You start collecting revenue immediately after launch.",
+        a: "From purchase to deployment: 6-7 months. We handle logistics, and user training. You start collecting revenue immediately after launch.",
       },
       {
         q: "What's the difference between Founder's Club and regular ownership?",
-        a: "Founder's Club (first 20 operators) includes: $79/month platform fee (vs. $99 regular), 5% service fee waived for 1 year, territory exclusivity, lifetime priority support, and quarterly strategy calls. Regular operators pay $99/month platform fee + 5% service fee but get full support without exclusivity. Download the 8-Month ROI Blueprint for complete machine acquisition pricing.",
+        a: "Founder's Club (first 20 operators) includes: $79/month platform fee (vs. $99 regular), territory exclusivity, lifetime priority support, and quarterly strategy calls. Regular operators pay $99/month platform fee + 5% service fee but get full support without exclusivity. Download the 8-Month ROI Blueprint for complete machine acquisition pricing.",
       },
       {
         q: "How much does it cost to be an operator for Freshtrax kiosk?",
@@ -100,7 +100,7 @@ const faqs = [
       },
       {
         q: "Can I finance the machine?",
-        a: "Yes. We work with financing partners to offer flexible payment plans. Download the 8-Month ROI Blueprint PDF to see the machine cost and financing options. Most operators pay off the machine within 3-4 months from revenue.",
+        a: "Yes. Connect with us, and we can come up with a plan that works for you. Download the 8-Month ROI Blueprint PDF to see the machine cost and financing options. Most operators pay off the machine within 3-4 months from revenue.",
       },
       {
         q: "What venues are best for Freshtrax?",
