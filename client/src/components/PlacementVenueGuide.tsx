@@ -29,7 +29,7 @@ export default function PlacementVenueGuide() {
         >
           <h2 className="text-4xl font-bold mb-4">Where Freshtrax Belongs</h2>
           <p className="text-xl text-white/60 max-w-3xl">
-            Freshtrax is built for high-traffic fitness and sports venues where athletic footwear is worn during activity. The best placements share three things: recurring members, high per-visit engagement, and a culture of performance.
+            Freshtrax is a kiosk business built for fitness centers and sports venues where athletic footwear is worn daily. The best placements share three things: recurring members, high per-visit engagement, and a culture of performance.
           </p>
         </motion.div>
 
