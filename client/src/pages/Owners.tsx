@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Zap, TrendingUp } from "lucide-react";
+import { ArrowRight, CheckCircle, Zap, TrendingUp, VolumeX, Volume2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
@@ -16,6 +16,9 @@ import OperatorFAQs from "@/components/OperatorFAQs";
 
 export default function Owners() {
   const { openModal } = useLeadCapture();
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
 
   return (
     <>
@@ -45,41 +48,79 @@ export default function Owners() {
           </div>
 
           <div className="container relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-3xl"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Become a Freshtrax Owner
-              </h1>
-              <p className="text-xl text-white/70 mb-8">
-                Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
-                Operators generate $28,000+ net profit annually from a single machine with zero staff and zero inventory.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => openModal(OFFERS.roiBlueprint)}
-                  className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Get the 8-Month ROI Blueprint
-                  <ArrowRight size={18} />
-                </button>
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                      "_blank"
-                    )
-                  }
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Book a call with us
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left: Copy */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="max-w-xl"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                  Become a Freshtrax Owner
+                </h1>
+                <p className="text-xl text-white/70 mb-8">
+                  Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
+                  Operators generate $28,000+ net profit annually from a single machine with zero staff and zero inventory.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button
+                    onClick={() => openModal(OFFERS.roiBlueprint)}
+                    className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    Get the 8-Month ROI Blueprint
+                    <ArrowRight size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
+                        "_blank"
+                      )
+                    }
+                    className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    Book a call with us
+                    <ArrowRight size={18} />
+                  </button>
+                </div>
+              </motion.div>
+
+              {/* Right: Demo Video */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.5 }}
+                className="flex justify-center lg:justify-end"
+              >
+                <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
+                  <div className="absolute -inset-8 bg-orange-500/[0.06] rounded-full blur-[80px]" />
+                  <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
+                    <video
+                      ref={videoRef}
+                      src={DEMO_VIDEO}
+                      autoPlay
+                      muted={isMuted}
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      onClick={() => {
+                        setIsMuted(!isMuted);
+                        if (videoRef.current) {
+                          videoRef.current.muted = !isMuted;
+                        }
+                      }}
+                      className="absolute bottom-4 right-4 p-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                      aria-label={isMuted ? "Unmute video" : "Mute video"}
+                    >
+                      {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
