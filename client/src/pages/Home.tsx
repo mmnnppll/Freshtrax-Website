@@ -14,17 +14,17 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Freshtrax | Shoe Sterilization Kiosk for Fitness Venues"
+        title="Freshtrax | Shoe Sterilization Kiosk for Fitness & Sports Venues"
         description="Freshtrax is the only medical-grade shoe sterilization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required."
         canonicalUrl="https://getfreshtrax.com/"
-        ogTitle="Freshtrax | Shoe Sterilization Kiosk for Fitness Venues"
+        ogTitle="Freshtrax | Shoe Sterilization Kiosk for Fitness & Sports Venues"
         ogDescription="Make $38,325/year from a single machine. Freshtrax is a self-service footwear sterilization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds."
       />
       <SchemaMarkup schema={organizationSchema} />
       <SchemaMarkup schema={productSchema} />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "Freshtrax | Footwear Sterilization Kiosk for Fitness Venues",
-        description: "Freshtrax is a self-service footwear sterilization kiosk for fitness venues. Medical-grade UVC + ozone eliminates odor in 90 seconds.",
+        title: "Freshtrax | Footwear Sterilization Kiosk for Fitness & Sports Venues",
+        description: "Freshtrax is a self-service footwear sterilization kiosk for fitness & sports venues. Medical-grade UVC + ozone eliminates odor in 90 seconds.",
         url: "https://getfreshtrax.com/",
         image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
       })} />
