@@ -163,7 +163,7 @@ export default function HowItWorks() {
                 How Freshtrax Works
               </h1>
               <p className="text-xl text-white/70 mb-8">
-                Freshtrax is a medical-grade shoe sterilization machine for gyms, fitness centers, and sports venues.
+                Freshtrax is a shoe sterilization machine for gyms, fitness centers, and sports venues.
                 Three technologies work together to eliminate bacteria, fungi, and odor from athletic footwear in 90 seconds.
               </p>
             </motion.div>
