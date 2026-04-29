@@ -13,7 +13,7 @@ const faqs = [
     questions: [
       {
         q: "How does Freshtrax actually work?",
-        a: "Freshtrax uses a three-stage sterilization process: UVC light (bacteria elimination), ozone (odor elimination), and antimicrobial vapor. The entire cycle takes 90 seconds and eliminates bacteria, fungi, and odor at the root — not just masking it.",
+        a: "Freshtrax uses a three-stage sanitization process: UVC light (bacteria elimination), ozone (odor elimination), and antimicrobial vapor. The entire cycle takes 90 seconds and eliminates bacteria, fungi, and odor at the root — not just masking it.",
       },
       {
         q: "Is Freshtrax FDA-approved?",
@@ -38,23 +38,23 @@ const faqs = [
     questions: [
       {
         q: "What if my venue doesn't hit 25 cycles per day?",
-        a: "Even at 15 cycles/day (conservative scenario), you're looking at $1,575/month or $18,900/year — still a 240% Year 1 return. The machine pays for itself in 5 months at that volume. Most operators hit 25+ within 3 months of launch.",
+        a: "Even at 15 cycles/day (conservative scenario), you're looking at $1,575/month or $18,900/year — still a 240% Year 1 return. The machine pays for itself in 5 months at that volume. Most owners hit 25+ within 3 months of launch.",
       },
       {
         q: "Do I keep 100% of the revenue?",
-        a: "You own the machine and set the price ($3.65-$4.45 per cycle). After operating costs (~$0.55/cycle), you pay a $99/month platform fee (includes Dashboard + device health monitoring) and a 5% service fee (used for marketing). Founder's Club members pay $79/month with the 5% service fee waived for the first year.",
+        a: "You own the machine and set the price ($3.65-$4.45 per cycle). After operating costs (~$0.55/cycle), you pay a $99/month platform fee (includes Dashboard + device health monitoring) and a 5% service fee (used for marketing). Founder's Club members pay $79/month with 0% service fee on their founding machine — permanently.",
       },
       {
         q: "What are the ongoing costs?",
-        a: "Operating costs are ~$0.55 per cycle (electricity, consumables, maintenance reserve). Additionally, there's a $99/month platform fee (includes Dashboard + device health monitoring) and a 5% service fee for marketing. Founder's Club members pay $79/month platform fee with the 5% service fee waived for 1 year, saving ~$1,428 in Year 1.",
+        a: "Operating costs are ~$0.55 per cycle (electricity, consumables, maintenance reserve). Additionally, there's a $99/month platform fee (includes Dashboard + device health monitoring) and a 5% service fee for marketing. Founder's Club members pay $79/month platform fee with the 0% service fee on founding machine, permanently.",
       },
       {
         q: "What if the market gets saturated?",
-        a: "We're actively managing territory exclusivity for Founder's Club members. For non-exclusive operators, the addressable market (gyms, pickleball clubs, tennis centers, sports facilities) is massive — we're targeting 12 Tier 1 metros with 1,000+ venues each.",
+        a: "We're actively managing territory exclusivity for Founder's Club members. For non-exclusive owners, the addressable market (gyms, pickleball clubs, tennis centers, sports facilities) is massive — we're targeting 12 Tier 1 metros with 1,000+ venues each.",
       },
       {
         q: "Can I scale to multiple machines?",
-        a: "Absolutely. Many of our best operators are running 3-5 machines across different venues. We have a multi-unit support program with volume pricing and dedicated account management.",
+        a: "Absolutely. Many of our best owners are running 3-5 machines across different venues. We have a multi-unit support program with volume pricing and dedicated account management.",
       },
     ],
   },
@@ -92,7 +92,7 @@ const faqs = [
       },
       {
         q: "What's the difference between Founder's Club and regular ownership?",
-        a: "Founder's Club (first 20 operators) includes: $79/month platform fee (vs. $99 regular), territory exclusivity, lifetime priority support, and quarterly strategy calls. Regular operators pay $99/month platform fee + 5% service fee but get full support without exclusivity. Download the 8-Month ROI Blueprint for complete machine acquisition pricing.",
+        a: "Founder's Club (first 20 owners) includes: $79/month platform fee (vs. $99 regular), locked for life, 0% service fee on founding machine permanently, territory exclusivity, lifetime priority support, and quarterly strategy calls. Regular owners pay $99/month platform fee + 5% service fee but get full support without exclusivity. Download the 8-Month ROI Blueprint for complete machine acquisition pricing.",
       },
       {
         q: "How much does it cost to be an operator for Freshtrax kiosk?",
@@ -118,15 +118,15 @@ export default function FAQ() {
   return (
     <>
       <SEOHead
-        title="FAQ | Freshtrax Footwear Sterilization"
-        description="Frequently asked questions about Freshtrax footwear sterilization kiosk. Learn about product technology, financial performance, operations, and getting started."
+        title="FAQ | Freshtrax Footwear Sanitization"
+        description="Frequently asked questions about Freshtrax footwear sanitization kiosk. Learn about product technology, financial performance, operations, and getting started."
         canonicalUrl="https://getfreshtrax.com/faq"
-        ogTitle="FAQ | Freshtrax Footwear Sterilization"
+        ogTitle="FAQ | Freshtrax Footwear Sanitization"
         ogDescription="Get answers to common questions about how Freshtrax works, profitability, maintenance, and becoming an owner."
       />
       <SchemaMarkup schema={createWebPageSchema({
         title: "FAQ | Freshtrax Footwear Sterilization",
-        description: "Frequently asked questions about Freshtrax footwear sterilization kiosk.",
+        description: "Frequently asked questions about Freshtrax footwear sanitization kiosk.",
         url: "https://getfreshtrax.com/faq",
       })} />
       <SchemaMarkup schema={createFAQSchema(faqs.flatMap(category => category.questions.map(q => ({
@@ -153,7 +153,7 @@ export default function FAQ() {
                 Frequently Asked Questions
               </h1>
               <p className="text-xl text-white/70">
-                Everything you need to know about becoming a Freshtrax operator.
+                Everything you need to know about becoming a Freshtrax owner.
               </p>
             </motion.div>
           </div>

@@ -97,7 +97,7 @@ export default function HowItWorks() {
     {
       icon: CheckCircle,
       title: "Safe & Effective",
-      description: "Medical-grade sterilization without harsh chemicals",
+      description: "Medical-grade sanitization without harsh chemicals",
     },
   ];
 
@@ -105,7 +105,7 @@ export default function HowItWorks() {
     {
       question: "What happens inside the machine?",
       answer:
-        "The machine uses three sterilization methods in sequence: UVC light disrupts microbial DNA, ozone eliminates odors at the molecular level, and antimicrobial vapor reaches internal shoe fibers. This multi-stage approach ensures comprehensive sanitization.",
+        "The machine uses three sanitization methods in sequence: UVC light disrupts microbial DNA, ozone eliminates odors at the molecular level, and antimicrobial vapor reaches internal shoe fibers. This multi-stage approach ensures comprehensive sanitization.",
     },
     {
       question: "Is it safe for all shoe types?",
@@ -113,14 +113,14 @@ export default function HowItWorks() {
         "Yes. The sanitization process is designed to be safe for athletic shoes, casual footwear, and most shoe materials. The antimicrobial vapor and UVC light do not damage shoe integrity or materials.",
     },
     {
-      question: "How often should shoes be sterilized?",
+      question: "How often should shoes be sanitized?",
       answer:
         "For athletes and frequent users, 2-3 times per week is recommended. For casual use, weekly sanitization is sufficient. The more you use your shoes, the more bacteria and fungi accumulate.",
     },
     {
       question: "Can I monitor cycles remotely?",
       answer:
-        "Yes. Operators have access to a real-time dashboard that tracks all cycles, revenue, machine health, and usage patterns. This allows for remote monitoring and data-driven business decisions.",
+        "Yes. Owners have access to a real-time dashboard that tracks all cycles, revenue, machine health, and usage patterns. This allows for remote monitoring and data-driven business decisions.",
     },
     {
       question: "What's the difference between this and shoe sprays?",
@@ -133,7 +133,7 @@ export default function HowItWorks() {
     <>
       <SEOHead
         title="How It Works | Freshtrax Footwear Sterilization"
-        description="Learn how Freshtrax sterilizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology."
+        description="Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology."
         canonicalUrl="https://getfreshtrax.com/how-it-works"
         ogTitle="How It Works | Freshtrax Footwear Sterilization"
         ogDescription="Discover the 4-step process: SELECT, INSERT, REFRESH, UNLOAD. Backed by peer-reviewed clinical research."
@@ -163,7 +163,7 @@ export default function HowItWorks() {
                 How Freshtrax Works
               </h1>
               <p className="text-xl text-white/70 mb-8">
-                Freshtrax is a shoe sterilization machine for gyms, fitness centers, and sports venues.
+                Freshtrax is a shoe sanitization machine for gyms, fitness centers, and sports venues.
                 Three technologies work together to eliminate bacteria, fungi, and odor from athletic footwear in 90 seconds.
               </p>
             </motion.div>
@@ -238,7 +238,7 @@ export default function HowItWorks() {
             >
               <h2 className="text-4xl font-bold mb-4">The Science</h2>
               <p className="text-white/60 text-lg">
-                Three complementary technologies for comprehensive sterilization.
+                Three complementary technologies for comprehensive sanitization.
               </p>
             </motion.div>
 
@@ -310,7 +310,7 @@ export default function HowItWorks() {
             >
               <h2 className="text-4xl font-bold mb-4">Why Freshtrax</h2>
               <p className="text-white/60 text-lg">
-                Designed for operators and athletes who demand results.
+                Designed for owners and athletes who demand results.
               </p>
             </motion.div>
 
@@ -386,7 +386,7 @@ export default function HowItWorks() {
             >
               <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
               <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-                Join operators who are building passive income with Freshtrax.
+                Join owners who are building passive income with Freshtrax.
               </p>
               <button
                 onClick={() =>
@@ -427,7 +427,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.6 }}
                 className="bg-white/5 border border-white/10 rounded-lg p-8"
               >
-                <h3 className="text-2xl font-bold mb-6">Regular Operator</h3>
+                <h3 className="text-2xl font-bold mb-6">Regular Owner</h3>
                 <div className="space-y-4 mb-8">
                   <div className="flex justify-between items-center">
                     <span className="text-white/70">Platform Fee</span>
@@ -442,7 +442,7 @@ export default function HowItWorks() {
                     <span className="text-sm text-white/60">Dashboard + Device Health Monitoring</span>
                   </div>
                 </div>
-                <p className="text-sm text-white/50">Best for: Individual operators starting out</p>
+                <p className="text-sm text-white/50">Best for: Individual owners starting out</p>
               </motion.div>
 
               {/* Founder's Club */}
@@ -462,19 +462,19 @@ export default function HowItWorks() {
                     <span className="text-xl font-bold text-orange-500">$79/mo</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-white/70">Service Fee (Year 1)</span>
-                    <span className="text-xl font-bold text-green-400">Waived</span>
+                    <span className="text-white/70">Service Fee (Founding Machine)</span>
+                    <span className="text-xl font-bold text-green-400">None — permanently</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-white/70">Year 1 Savings</span>
-                    <span className="text-xl font-bold text-green-400">~$1,428</span>
+                    <span className="text-white/70">Permanent Advantage</span>
+                    <span className="text-xl font-bold text-green-400">$1,460/yr vs. standard</span>
                   </div>
                   <div className="border-t border-white/10 pt-4 flex justify-between items-center">
                     <span className="text-white/70">Includes</span>
                     <span className="text-sm text-white/60">Territory Exclusivity + Priority Support</span>
                   </div>
                 </div>
-                <p className="text-sm text-white/50">Best for: Early-stage operators securing market position</p>
+                <p className="text-sm text-white/50">Best for: Early-stage owners securing market position</p>
               </motion.div>
             </div>
           </div>

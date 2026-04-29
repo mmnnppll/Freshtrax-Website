@@ -61,7 +61,7 @@ export default function Owners() {
                 </h1>
                 <p className="text-xl text-white/70 mb-8">
                   Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
-                  Operators generate $38,325 revenue annually from a single machine with zero staff and zero inventory.
+                  Owners generate $38,325 revenue annually from a single machine with zero staff and zero inventory.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
@@ -136,7 +136,7 @@ export default function Owners() {
                   icon: TrendingUp,
                   title: "Predictable Revenue",
                   description:
-                    "Every cycle generates $3.50-$3.90 net profit. No guessing. No volatility.",
+                    "Every cycle generates $3.10-$3.45 net profit. No guessing. No volatility.",
                 },
                 {
                   icon: Zap,
@@ -154,7 +154,7 @@ export default function Owners() {
                   icon: ArrowRight,
                   title: "Scaling Path",
                   description:
-                    "Start with 1 machine. Scale to 5, 10, 50. We support multi-unit operators.",
+                    "Start with 1 machine. Scale to 5, 10, 50. We support multi-unit owners.",
                 },
               ].map((item, idx) => (
                 <motion.div
@@ -204,8 +204,8 @@ export default function Owners() {
               </div>
               <h3 className="text-3xl font-bold mb-4">Join the Founder's Club</h3>
               <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-                Be part of the first 20 operators. Get territory exclusivity, lifetime
-                priority support, and access to over $3,800 in incentives to support your first kiosk.
+                Be part of the first 20 owners. Get territory exclusivity, lifetime
+                priority support, and a locked-for-life $79/month platform fee with 0% service fee on your founding machine.
               </p>
               <button
                 onClick={() =>
@@ -273,18 +273,18 @@ function ROICalculator() {
   const [dailyCycles, setDailyCycles] = useState(25);
   const [isFounder, setIsFounder] = useState(false);
 
-  const grossPerCycle = 4.05; // Blended average: ($3.65 + $4.45) / 2
+  const grossPerCycle = 4.00; // Blended average: ($3.65 + $4.35) / 2
   const operatingCostPerCycle = 0.55; // Antimicrobial fog, credit card fees, electricity
-  const netPerCycle = grossPerCycle - operatingCostPerCycle; // $3.50 net
+  const revShareRate = isFounder ? 0 : 0.05; // 0% on founding machine for Founders, 5% for regular
+  const netPerCycle = grossPerCycle * (1 - revShareRate) - operatingCostPerCycle; // $3.25 standard | $3.45 founder
   const dailyRevenue = dailyCycles * netPerCycle;
-  const monthlyRevenue = dailyRevenue * 30;
-  const annualRevenue = monthlyRevenue * 12;
+  const monthlyRevenue = dailyCycles * netPerCycle * (365 / 12);
+  const annualRevenue = dailyCycles * netPerCycle * 365;
   
   // Platform fees
   const platformFee = isFounder ? 79 : 99; // $79 for Founder's Club, $99 for regular
-  const monthlyServiceFee = isFounder ? 0 : (annualRevenue * 0.05) / 12; // 5% service fee (waived for Founder's Club Year 1)
-  const monthlyNetProfit = monthlyRevenue - platformFee - monthlyServiceFee;
-  const annualNetProfit = monthlyNetProfit * 12;
+  const monthlyNetProfit = monthlyRevenue - platformFee;
+  const annualNetProfit = annualRevenue - (platformFee * 12);
   
   // Machine cost is confidential - available in the Blueprint PDF
   // Removed hardcoded payback calculation
@@ -319,12 +319,12 @@ function ROICalculator() {
               className="w-4 h-4 accent-orange-500"
             />
             <span className="text-sm text-white/80">
-              {isFounder ? "Founder's Club Member" : "Regular Operator"}
+              {isFounder ? "Founder's Club Member" : "Regular Owner"}
             </span>
           </label>
           {isFounder && (
             <p className="text-xs text-orange-500/80 mt-2">
-              Platform fee: $79/mo | Service fee: Waived for 1 year
+              Platform fee: $79/mo | Service fee: None on founding machine — permanently
             </p>
           )}
           {!isFounder && (
@@ -357,8 +357,8 @@ function ROICalculator() {
         </div>
 
         <p className="text-xs text-white/50 mt-6 text-center">
-          Gross revenue: $4.05/cycle | Operating cost: $0.55/cycle | Net per cycle: $3.50<br />
-          Platform fee: {isFounder ? "$79/mo" : "$99/mo"} | Service fee: {isFounder ? "Waived Year 1" : "5% of revenue"}<br />
+          Gross revenue: $4.00/cycle | Operating cost: $0.55/cycle | Net per cycle: $3.25 (standard) / $3.45 (founding machine)<br />
+          Platform fee: {isFounder ? "$79/mo" : "$99/mo"} | Service fee: {isFounder ? "None on founding machine" : "5% of revenue"}<br />
           <span className="text-orange-500">Download the 8-Month ROI Blueprint PDF for machine acquisition cost and complete payback analysis</span>
          </p>
       </div>

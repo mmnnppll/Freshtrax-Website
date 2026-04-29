@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 const financialData = [
   { label: "Revenue per cycle", value: "$3.65 (Refresh) / $4.35 (Max Fresh)" },
   { label: "Operating cost per cycle", value: "$0.55 (power, consumables, Credit Card fees)" },
-  { label: "Net per cycle", value: "$3.10 to $3.90" },
-  { label: "Base scenario (20 cycles/day)", value: "$2,100/month net" },
-  { label: "Optimistic (30 cycles/day)", value: "$3,900/month net" },
-  { label: "Year 1 net (base)", value: "$25,550" },
-  { label: "Year 2 cumulative net (base)", value: "$51,100" },
-  { label: "Cash-on-cash return Year 1", value: "325%" },
-  { label: "Platform fee (standard operators)", value: "$99/month (dashboard, device monitoring, antimicrobial liquid alerts)" },
-  { label: "Revenue split", value: "95% to operator / 5% to Freshtrax. Founding operators: $79/month platform fee (locked for life)." },
+  { label: "Net per cycle", value: "$3.25/cycle (standard) | $3.45/cycle (founding machine)" },
+  { label: "Base scenario (20 cycles/day)", value: "$1,898/month net" },
+  { label: "Optimistic (30 cycles/day)", value: "$2,887/month net" },
+  { label: "Year 1 net (base)", value: "$22,777" },
+  { label: "Year 2 cumulative net (base)", value: "$45,554" },
+  { label: "Cash-on-cash return Year 1", value: "290%" },
+  { label: "Platform fee (standard owners)", value: "$99/month (dashboard, device monitoring, antimicrobial liquid alerts)" },
+  { label: "Revenue split", value: "95% to owner / 5% to Freshtrax on standard machines. Founding owners: $79/month platform fee, locked for life. 0% service fee on founding machine — permanently." },
   { label: "Delivery timeline", value: "6 to 7 months from order confirmation" },
 ];
 
@@ -80,9 +80,9 @@ export default function DetailedFinancials() {
           className="mt-12 grid md:grid-cols-3 gap-6"
         >
           {[
-            { title: "Conservative", cycles: "10/day", net: "$11,862", color: "from-blue-500" },
-            { title: "Base Case", cycles: "20/day", net: "$24,273", color: "from-orange-500", highlight: true },
-            { title: "Optimistic", cycles: "30/day", net: "$36,953", color: "from-green-500" },
+            { title: "Conservative", cycles: "10/day", net: "$10,914", color: "from-blue-500" },
+            { title: "Base Case", cycles: "20/day", net: "$22,777", color: "from-orange-500", highlight: true },
+            { title: "Optimistic", cycles: "30/day", net: "$34,640", color: "from-green-500" },
           ].map((scenario, idx) => (
             <motion.div
               key={idx}

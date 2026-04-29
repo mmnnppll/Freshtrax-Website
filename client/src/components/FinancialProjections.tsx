@@ -190,7 +190,7 @@ export default function FinancialProjections() {
                 </span>
               </div>
               <p className="text-white/30 text-[11px] font-body leading-relaxed">
-                Modeled on blended avg. revenue of $4.05/cycle ($3.65 + $4.45 / 2), net margin of $3.50/cycle after $0.55 operating cost.
+                Gross revenue projections before platform fee and service fee. Modeled on blended avg. revenue of $4.00/cycle ($3.65 + $4.35 blended), after $0.55 operating cost per cycle. Net figures vary by ownership tier — see the ROI Blueprint for full net projections.
               </p>
             </div>
           </motion.div>

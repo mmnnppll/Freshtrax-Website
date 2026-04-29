@@ -3,15 +3,15 @@ import { Zap, TrendingUp, Users, Lock } from "lucide-react";
 
 const founderBenefits = [
   { icon: Lock, title: "$79/month platform fee, locked for life", desc: "Standard rate is $99/month. Your rate never changes." },
-  { icon: TrendingUp, title: "100% revenue retention", desc: "Freshtrax takes only a 5% revenue share, no royalties." },
+  { icon: TrendingUp, title: "100% revenue retention", desc: "Freshtrax takes 0% service fee on your founding machine. 100% of net revenue is yours." },
   { icon: Zap, title: "Priority placement support", desc: "Dedicated support from the Freshtrax team to secure your Tier 1 venue." },
-  { icon: Users, title: "Direct access to founding operator network", desc: "Connect with other early operators as the category builds in your market." },
+  { icon: Users, title: "Direct access to founding owner network", desc: "Connect with other early owners as the category builds in your market." },
 ];
 
 const founderComparison = [
-  { scenario: "Conservative (10/day)", standard: "$11,862", founder: "$12,480", diff: "+$618" },
-  { scenario: "Base (20/day)", standard: "$24,273", founder: "$25,550", diff: "+$1,277", highlight: true },
-  { scenario: "Optimistic (30/day)", standard: "$36,953", founder: "$38,900", diff: "+$1,947" },
+  { scenario: "Conservative (10/day)", standard: "$10,914", founder: "$11,645", diff: "+$731" },
+  { scenario: "Base (20/day)", standard: "$22,777", founder: "$24,237", diff: "+$1,460", highlight: true },
+  { scenario: "Optimistic (30/day)", standard: "$34,640", founder: "$36,830", diff: "+$2,190" },
 ];
 
 export default function FoundersClubDetails() {
@@ -27,9 +27,9 @@ export default function FoundersClubDetails() {
           <div className="inline-block px-4 py-1 bg-orange-500/20 rounded-full text-orange-400 text-sm font-semibold mb-4">
             Limited Opportunity
           </div>
-          <h2 className="text-4xl font-bold mb-4">Founder's Club: First 20 Operators Only</h2>
+          <h2 className="text-4xl font-bold mb-4">Founder's Club: First 20 Owners Only</h2>
           <p className="text-xl text-white/60 max-w-3xl">
-            The first 20 operators to join Freshtrax lock in terms that will not be available once the market is established. This is not a limited-time sale. It is a structural advantage for early movers.
+            The first 20 owners to join Freshtrax lock in terms that will not be available once the market is established. This is not a limited-time sale. It is a structural advantage for early movers.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function FoundersClubDetails() {
           transition={{ delay: 0.3 }}
           className="mb-12"
         >
-          <h3 className="text-2xl font-bold mb-6">What the Fee Waiver Means in Dollars</h3>
+          <h3 className="text-2xl font-bold mb-6">Your Structural Advantage as a Founding Owner</h3>
           <div className="overflow-hidden rounded-lg border border-white/10">
             <div className="overflow-x-auto">
               <table className="w-full">

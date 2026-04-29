@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Do I need a business entity to become an operator?",
+    question: "Do I need a business entity to become an owner?",
     answer: "No. You can operate as an individual, though we recommend setting up an LLC / incorporation for liability separation. We can point you toward resources if needed.",
   },
   {
@@ -13,15 +13,15 @@ const faqs = [
   },
   {
     question: "Can I own more than one unit?",
-    answer: "Yes. Multiple unit operators receive the same founding terms on each unit during the founding period. Owning more than one unit in multiple venues is the natural scaling path for this model.",
+    answer: "Yes. Multiple unit owners receive the same founding terms on each unit during the founding period. Owning more than one unit in multiple venues is the natural scaling path for this model.",
   },
   {
     question: "How do I negotiate with the venue?",
-    answer: "We provide a full placement guide as part of the operator onboarding package. It covers how to approach venue owners, what terms to negotiate, and what a standard placement agreement looks like. You are not figuring this out alone.",
+    answer: "We provide a full placement guide as part of the owner onboarding package. It covers how to approach venue owners, what terms to negotiate, and what a standard placement agreement looks like. You are not figuring this out alone.",
   },
   {
     question: "Is there a contract between me and Freshtrax?",
-    answer: "Yes. Operators sign a standard operator agreement that outlines the service terms, revenue structure, support commitments, and the founding operator fee waiver. All terms are shared in full before you commit.",
+    answer: "Yes. Owners sign a standard owner agreement that outlines the service terms, revenue structure, support commitments, and the founding owner service fee terms. All terms are shared in full before you commit.",
   },
   {
     question: "What if the venue asks me to remove the kiosk?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "How long until I see my first revenue?",
-    answer: "Revenue starts the day your machine goes live at its first venue. Given the 6 to 7 month production and delivery window, most operators use that time to scout and confirm their placement venue so they go live within days of receiving their unit.",
+    answer: "Revenue starts the day your machine goes live at its first venue. Given the 6 to 7 month production and delivery window, most owners use that time to scout and confirm their placement venue so they go live within days of receiving their unit.",
   },
 ];
 
@@ -80,9 +80,9 @@ export default function OperatorFAQs() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Questions Operators Ask Before Joining</h2>
+          <h2 className="text-4xl font-bold mb-4">Questions Owners Ask Before Joining</h2>
           <p className="text-xl text-white/60 max-w-3xl">
-            These are the questions that kill deals when left unanswered. Address them here so operators never have to email to find out.
+            These are the questions that kill deals when left unanswered. Address them here so owners never have to email to find out.
           </p>
         </motion.div>
 

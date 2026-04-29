@@ -11,7 +11,7 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 const metrics = [
   {
     label: "Revenue per cycle",
-    value: "$3.65–$4.45",
+    value: "$3.65–$4.35",
     sub: "Basic / Max Fresh",
     accent: false,
   },
@@ -63,8 +63,8 @@ export default function EconomicsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-white/50 text-base font-body max-w-2xl mb-10"
           >
-            Freshtrax is the only medical-grade shoe sterilization kiosk built for North American fitness venues.
-            Operators acquire the asset once and earn predictable recurring revenue with zero staff involvement.
+            Freshtrax is the only medical-grade shoe sanitization kiosk built for North American fitness venues.
+            Owners acquire the asset once and earn predictable recurring revenue with zero staff involvement.
           </motion.p>
         </div>
 

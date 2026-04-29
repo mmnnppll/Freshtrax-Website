@@ -12,7 +12,7 @@ const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/By
 
 const benefits = [
   "$79/month platform fee (vs. $99 regular)",
-  "5% service fee waived for 1 year (saves ~$1,428)",
+  "0% service fee on your founding machine, permanently",
   "Territory exclusivity in your market",
   "Lifetime priority support & quarterly strategy calls",
   "Exclusive machine pricing (see Blueprint PDF)",
@@ -44,7 +44,7 @@ export default function FoundersClub() {
                   Founder's Club
                 </h2>
                 <p className="text-orange-500/80 font-body text-base mb-1">
-                  First 20 operators only
+                  First 20 owners only
                 </p>
                 <p className="text-white/90 font-display font-semibold text-lg mb-5">
                   Lock in exclusive pricing before launch.
@@ -58,8 +58,7 @@ export default function FoundersClub() {
                 className="text-white/40 text-sm font-body mb-5 max-w-md leading-relaxed"
               >
                 Founding partners lock in exclusive terms before the market is established.
-                First 20 operators get reduced platform fees ($79/month vs. $99), waived service
-                fees for 1 year, and territory exclusivity — maximizing Year 1 returns. Download the Blueprint PDF for complete machine pricing details.
+                First 20 owners lock in a $79/month platform fee for life, 0% service fee on their founding machine — permanently — and territory exclusivity. Download the Blueprint PDF for complete machine pricing details.
               </motion.p>
 
               {/* Benefits */}
