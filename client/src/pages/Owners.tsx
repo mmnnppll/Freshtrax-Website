@@ -61,7 +61,7 @@ export default function Owners() {
                 </h1>
                 <p className="text-xl text-white/70 mb-8">
                   Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
-                  Operators generate $28,000+ net profit annually from a single machine with zero staff and zero inventory.
+                  Operators generate $38,325 revenue annually from a single machine with zero staff and zero inventory.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
