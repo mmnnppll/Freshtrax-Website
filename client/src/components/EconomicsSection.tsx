@@ -23,8 +23,8 @@ const metrics = [
   },
   {
     label: "Revenue model",
-    value: "100%",
-    sub: "Operator keeps all",
+    value: "Passive",
+    sub: "Zero staff involvement",
     accent: true,
   },
 ];
@@ -63,8 +63,8 @@ export default function EconomicsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-white/50 text-base font-body max-w-2xl mb-10"
           >
-            Medical-grade footwear sterilization designed for high-traffic sports and fitness venues.
-            Operators acquire the asset once and collect 100% of recurring revenue.
+            Freshtrax is the only medical-grade shoe sterilization kiosk built for North American fitness venues.
+            Operators acquire the asset once and earn predictable recurring revenue with zero staff involvement.
           </motion.p>
         </div>
 
