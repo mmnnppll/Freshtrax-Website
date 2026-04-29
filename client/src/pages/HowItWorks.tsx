@@ -163,8 +163,8 @@ export default function HowItWorks() {
                 How Freshtrax Works
               </h1>
               <p className="text-xl text-white/70 mb-8">
-                Medical-grade sterilization in 90 seconds. Three technologies
-                working together to eliminate bacteria, fungi, and odor.
+                Freshtrax is a medical-grade shoe sterilization machine for gyms, fitness centers, and sports venues.
+                Three technologies work together to eliminate bacteria, fungi, and odor from athletic footwear in 90 seconds.
               </p>
             </motion.div>
           </div>
@@ -177,6 +177,17 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              className="mb-6"
+            >
+              <h2 className="text-3xl font-bold mb-3">The Only UVC Shoe Sanitizer Built for High-Traffic Venues</h2>
+              <p className="text-white/60 text-lg max-w-2xl">
+                Engineered for the demands of gyms, pickleball clubs, and sports facilities where hundreds of shoes pass through weekly.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">The Process</h2>
