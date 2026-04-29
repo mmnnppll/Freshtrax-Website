@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Freshtrax — Footwear sterilization self-serve kiosk"
-        description="Freshtrax is a self-service footwear sterilization kiosk for fitness venues. Medical-grade UVC + ozone eliminates odor in 90 seconds. Zero staff required."
+        title="Freshtrax | Shoe Sterilization Kiosk for Fitness Venues"
+        description="Freshtrax is the only medical-grade shoe sterilization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required."
         canonicalUrl="https://getfreshtrax.com/"
-        ogTitle="Freshtrax — Footwear sterilization self-serve kiosk"
+        ogTitle="Freshtrax | Shoe Sterilization Kiosk for Fitness Venues"
         ogDescription="Make $38,325/year from a single machine. Freshtrax is a self-service footwear sterilization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds."
       />
       <SchemaMarkup schema={organizationSchema} />
