@@ -55,8 +55,8 @@ export default function Owners() {
                 Become a Freshtrax Owner
               </h1>
               <p className="text-xl text-white/70 mb-8">
-                Join the network of operators generating $28,000+ net profit annually from a
-                single machine after platform fees. Zero staff. Zero inventory. Predictable returns.
+                Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
+                Operators generate $28,000+ net profit annually from a single machine with zero staff and zero inventory.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
