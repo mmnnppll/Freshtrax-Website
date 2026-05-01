@@ -26,7 +26,7 @@ const footerSections = [
       { label: "About", href: "/about" },
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy" },
     ],
   },
 ];
@@ -47,7 +47,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-white/30 text-xs font-body mt-3 max-w-xs leading-relaxed">
-              Medical-grade footwear sterilization. Fully automated. Zero competition.
+              Medical-grade footwear sanitization. Fully automated. Zero competition.
             </p>
             <button
               onClick={() =>
@@ -92,7 +92,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <a
-              href="#"
+              href="/terms"
               className="text-white/20 hover:text-white/40 text-xs font-body transition-colors"
             >
               Terms of Service

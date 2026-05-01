@@ -17,7 +17,7 @@ const faqs = [
       },
       {
         q: "Is Freshtrax FDA-approved?",
-        a: "Freshtrax uses sterilization technologies that have been proven in clinical settings across Asia for over a decade. The UVC and ozone technologies are FDA-recognized sterilization methods. We're currently pursuing formal FDA classification for the complete system.",
+        a: "Freshtrax uses sanitization technologies that have been proven in clinical settings across Asia for over a decade. The UVC and ozone technologies are FDA-recognized sanitization methods. We're currently pursuing formal FDA classification for the complete system.",
       },
       {
         q: "What happens if the machine breaks?",
@@ -29,7 +29,7 @@ const faqs = [
       },
       {
         q: "Can the machine handle different shoe types?",
-        a: "Yes. The dual-chamber design accommodates everything from running shoes to cleats to wrestling shoes. The system automatically adjusts sterilization intensity based on shoe type.",
+        a: "Yes. The dual-chamber design accommodates everything from running shoes to cleats to wrestling shoes. The system automatically adjusts sanitization intensity based on shoe type.",
       },
     ],
   },
@@ -42,7 +42,7 @@ const faqs = [
       },
       {
         q: "Do I keep 100% of the revenue?",
-        a: "You own the machine and set the price ($3.65-$4.45 per cycle). After operating costs (~$0.55/cycle), you pay a $99/month platform fee (includes Dashboard + device health monitoring) and a 5% service fee (used for marketing). Founder's Club members pay $79/month with 0% service fee on their founding machine — permanently.",
+        a: "You own the machine and set the price ($3.65-$4.35 per cycle). After operating costs (~$0.55/cycle), you pay a $99/month platform fee (includes Dashboard + device health monitoring) and a 5% service fee (used for marketing). Founder's Club members pay $79/month with 0% service fee on their founding machine — permanently.",
       },
       {
         q: "What are the ongoing costs?",
@@ -95,12 +95,12 @@ const faqs = [
         a: "Founder's Club (first 20 owners) includes: $79/month platform fee (vs. $99 regular), locked for life, 0% service fee on founding machine permanently, territory exclusivity, lifetime priority support, and quarterly strategy calls. Regular owners pay $99/month platform fee + 5% service fee but get full support without exclusivity. Download the 8-Month ROI Blueprint for complete machine acquisition pricing.",
       },
       {
-        q: "How much does it cost to be an operator for Freshtrax kiosk?",
+        q: "How much does it cost to be an owner for Freshtrax kiosk?",
         a: "Monthly operating costs include: $99/month platform fee (or $79/month for Founder's Club) + 5% service fee on revenue + ~$0.55 per cycle for electricity and consumables. For the machine acquisition cost and complete financial breakdown, download the 8-Month ROI Blueprint PDF which includes all upfront costs, financing options, and detailed ROI projections.",
       },
       {
         q: "Can I finance the machine?",
-        a: "Yes. Connect with us, and we can come up with a plan that works for you. Download the 8-Month ROI Blueprint PDF to see the machine cost and financing options. Most operators pay off the machine within 3-4 months from revenue.",
+        a: "Yes. Connect with us, and we can come up with a plan that works for you. Download the 8-Month ROI Blueprint PDF to see the machine cost and financing options. Most owners pay off the machine within 3-4 months from revenue.",
       },
       {
         q: "What venues are best for Freshtrax?",
@@ -125,7 +125,7 @@ export default function FAQ() {
         ogDescription="Get answers to common questions about how Freshtrax works, profitability, maintenance, and becoming an owner."
       />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "FAQ | Freshtrax Footwear Sterilization",
+        title: "FAQ | Freshtrax Footwear Sanitization",
         description: "Frequently asked questions about Freshtrax footwear sanitization kiosk.",
         url: "https://getfreshtrax.com/faq",
       })} />

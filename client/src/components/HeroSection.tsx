@@ -21,7 +21,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img src={HERO_BG} alt="Freshtrax footwear sterilization kiosk background" className="w-full h-full object-cover" />
+        <img src={HERO_BG} alt="Freshtrax footwear sanitization kiosk background" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/50 to-transparent" />
       </div>
@@ -51,13 +51,29 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="font-display font-bold text-5xl md:text-6xl leading-tight mb-6 text-white"
+              className="font-display font-bold text-5xl md:text-6xl leading-tight mb-4 text-white"
             >
-              Make{" "}
-              <span className="text-orange-500">$38,325/year</span>
+              Make up to{" "}
+              <span className="text-orange-500">$36,830/year</span>
               <br />
-              from a single machine.
+              per kiosk.
             </motion.h1>
+
+            {/* Earnings disclosure — visible, not fine print */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.55 }}
+              className="text-white/55 text-sm mb-6 font-body"
+            >
+              Optimistic case (30 cycles/day). Typical owner projects $24,237/year.{" "}
+              <a
+                href="#projections"
+                className="text-orange-500 hover:text-orange-400 underline underline-offset-4 transition-colors"
+              >
+                Full math &rarr;
+              </a>
+            </motion.p>
 
             {/* Subheadline */}
             <motion.p
@@ -66,7 +82,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-white/70 text-lg mb-8 leading-relaxed font-body"
             >
-              Freshtrax — a self-service footwear sterilization kiosk. It eliminates bacteria and odor from athletic shoes in 90 seconds.
+              Freshtrax — a self-service footwear sanitization kiosk. It eliminates bacteria and odor from athletic shoes in 90 seconds.
             </motion.p>
 
             {/* CTAs */}

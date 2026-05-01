@@ -11,7 +11,7 @@ const steps = [
   {
     num: "2",
     title: "Secure Your Slot",
-    description: "Founding operator slots are limited to 20. Once you confirm, your position is reserved. First 20 operators lock in the $79/month platform rate.",
+    description: "Founding owner slots are limited to 20. Once you confirm, your position is reserved. First 20 owners lock in the $79/month platform rate.",
     icon: CheckCircle,
   },
   {

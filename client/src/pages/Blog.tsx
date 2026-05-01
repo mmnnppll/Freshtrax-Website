@@ -32,16 +32,16 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Blog | Freshtrax - Footwear Sterilization & Fitness Insights"
-        description="Read articles about shoe sterilization, athlete's foot prevention, gym hygiene, and fitness business insights. Expert tips from the Freshtrax team."
+        title="Blog | Freshtrax - Footwear Sanitization & Fitness Insights"
+        description="Read articles about shoe sanitization, athlete's foot prevention, gym hygiene, and fitness business insights. Expert tips from the Freshtrax team."
         canonicalUrl="https://getfreshtrax.com/blog"
         ogTitle="Blog | Freshtrax"
-        ogDescription="Expert articles on footwear sterilization, foot health, and fitness business growth."
+        ogDescription="Expert articles on footwear sanitization, foot health, and fitness business growth."
       />
       <SchemaMarkup schema={organizationSchema} />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "Blog | Freshtrax - Footwear Sterilization & Fitness Insights",
-        description: "Read articles about shoe sterilization, athlete's foot prevention, and fitness business insights.",
+        title: "Blog | Freshtrax - Footwear Sanitization & Fitness Insights",
+        description: "Read articles about shoe sanitization, athlete's foot prevention, and fitness business insights.",
         url: "https://getfreshtrax.com/blog",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -59,7 +59,7 @@ export default function Blog() {
                   Freshtrax Blog
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  Expert insights on footwear sterilization, foot health, and fitness business growth.
+                  Expert insights on footwear sanitization, foot health, and fitness business growth.
                 </p>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function Blog() {
                   Ready to Get Started?
                 </h2>
                 <p className="text-gray-400 mb-8">
-                  Join the network of operators generating $38,325+ annually from a single machine.
+                  Join the network of owners generating up to $36,830/year per machine.
                 </p>
                 <Link href="/owners">
                   <a>

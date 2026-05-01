@@ -6,7 +6,7 @@ const freshtraxHandles = [
   "Remote monitoring and diagnostics",
   "Technical maintenance and servicing",
   "Software updates",
-  "Operator support and placement guidance",
+  "Owner support and placement guidance",
   "Consumable restocking (where applicable)",
 ];
 

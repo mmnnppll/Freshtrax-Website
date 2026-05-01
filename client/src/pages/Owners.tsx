@@ -12,7 +12,7 @@ import PlacementVenueGuide from "@/components/PlacementVenueGuide";
 import ResponsibilityBreakdown from "@/components/ResponsibilityBreakdown";
 import DetailedFinancials from "@/components/DetailedFinancials";
 import FoundersClubDetails from "@/components/FoundersClubDetails";
-import OperatorFAQs from "@/components/OperatorFAQs";
+import OwnerFAQs from "@/components/OwnerFAQs";
 
 export default function Owners() {
   const { openModal } = useLeadCapture();
@@ -23,15 +23,15 @@ export default function Owners() {
   return (
     <>
       <SEOHead
-        title="Become an Owner | Freshtrax Footwear Sterilization"
-        description="Join the Freshtrax network as an owner. Generate $38,325+ annually from a single kiosk. ROI Calculator, Founder's Club benefits, and partnership opportunities."
+        title="Become an Owner | Freshtrax Footwear Sanitization"
+        description="Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237). ROI Calculator, Founder's Club benefits, and partnership opportunities."
         canonicalUrl="https://getfreshtrax.com/owners"
-        ogTitle="Become an Owner | Freshtrax Footwear Sterilization"
+        ogTitle="Become an Owner | Freshtrax Footwear Sanitization"
         ogDescription="Make $3,150–$10,000+ monthly revenue. Access to $3,800 in incentives through the Founder's Club."
       />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "Become an Owner | Freshtrax Footwear Sterilization",
-        description: "Join the Freshtrax network as an owner. Generate $38,325+ annually from a single kiosk.",
+        title: "Become an Owner | Freshtrax Footwear Sanitization",
+        description: "Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237).",
         url: "https://getfreshtrax.com/owners",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -61,7 +61,7 @@ export default function Owners() {
                 </h1>
                 <p className="text-xl text-white/70 mb-8">
                   Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
-                  Owners generate $38,325 revenue annually from a single machine with zero staff and zero inventory.
+                  Owners can generate up to $36,830/year per machine (typical: $24,237) with zero staff and zero inventory.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
@@ -189,7 +189,7 @@ export default function Owners() {
         <ResponsibilityBreakdown />
         <DetailedFinancials />
         <FoundersClubDetails />
-        <OperatorFAQs />
+        <OwnerFAQs />
 
         {/* Founder's Club CTA */}
         <section className="py-20 border-t border-white/5">

@@ -110,7 +110,7 @@ export default function About() {
                     complete absence of it anywhere in North America. I worked
                     directly with the manufacturer to adapt the technology for
                     footwear. The result is Freshtrax: a three-stage, medical-grade
-                    sterilization kiosk that eliminates what sprays can't reach, in
+                    sanitization kiosk that eliminates what sprays can't reach, in
                     90 seconds.
                   </p>
                   <p>
@@ -122,7 +122,7 @@ export default function About() {
                     something that works even when they're not in the room.
                   </p>
                   <p className="italic text-white/50">
-                    Freshtrax is designed to be that — for me, and for every operator
+                    Freshtrax is designed to be that — for me, and for every owner
                     who partners with us.
                   </p>
                 </div>
@@ -192,13 +192,13 @@ export default function About() {
                   icon: Lightbulb,
                   title: "Solve Real Problems",
                   description:
-                    "We don't build features. We build solutions to problems that actually matter to athletes and operators.",
+                    "We don't build features. We build solutions to problems that actually matter to athletes and owners.",
                 },
                 {
                   icon: Target,
-                  title: "Operator First",
+                  title: "Owner First",
                   description:
-                    "Every decision we make is filtered through one lens: does this help our operators succeed?",
+                    "Every decision we make is filtered through one lens: does this help our owners succeed?",
                 },
                 {
                   icon: Zap,

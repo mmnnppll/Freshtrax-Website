@@ -254,7 +254,7 @@ export default function BlogArticle() {
                   Ready to Get Started?
                 </h2>
                 <p className="text-gray-400 mb-8">
-                  Join the network of operators generating $38,325+ annually from a single machine.
+                  Join the network of owners generating up to $36,830/year per machine.
                 </p>
                 <Link href="/owners">
                   <a>

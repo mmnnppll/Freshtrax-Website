@@ -34,7 +34,7 @@ const opportunities = [
     featured: false,
   },
   {
-    stat: "$3.65–$4.45",
+    stat: "$3.65–$4.35",
     label: "proven consumer behavior",
     description:
       "Athletes invest in performance. Footwear hygiene is the natural, obvious next spend — per use.",
