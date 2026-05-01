@@ -14,7 +14,7 @@ export default function Contact() {
     email: "",
     phone: "",
     company: "",
-    inquiryType: "operator",
+    inquiryType: "owner",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,7 +49,7 @@ export default function Contact() {
         email: "",
         phone: "",
         company: "",
-        inquiryType: "operator",
+        inquiryType: "owner",
         message: "",
       });
     } catch (error) {
@@ -63,16 +63,16 @@ export default function Contact() {
   return (
     <>
       <SEOHead
-        title="Contact Us | Freshtrax Footwear Sterilization"
-        description="Get in touch with Freshtrax. Contact us for operator inquiries, partnerships, general questions, or support. We respond within 1 business day."
+        title="Contact Us | Freshtrax Footwear Sanitization"
+        description="Get in touch with Freshtrax. Contact us for owner inquiries, partnerships, general questions, or support. We respond within 1 business day."
         canonicalUrl="https://getfreshtrax.com/contact"
-        ogTitle="Contact Us | Freshtrax Footwear Sterilization"
+        ogTitle="Contact Us | Freshtrax Footwear Sanitization"
         ogDescription="Reach out to Freshtrax for inquiries about becoming an owner, partnerships, or technical support."
       />
       <SchemaMarkup schema={organizationSchema} />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "Contact Us | Freshtrax Footwear Sterilization",
-        description: "Get in touch with Freshtrax. Contact us for operator inquiries, partnerships, general questions, or support.",
+        title: "Contact Us | Freshtrax Footwear Sanitization",
+        description: "Get in touch with Freshtrax. Contact us for owner inquiries, partnerships, general questions, or support.",
         url: "https://getfreshtrax.com/contact",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -93,7 +93,7 @@ export default function Contact() {
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
               <p className="text-xl text-white/70 max-w-2xl">
-                Have questions about becoming an operator or partnering with
+                Have questions about becoming an owner or partnering with
                 Freshtrax? We'd love to hear from you. Fill out the form below and
                 we'll respond within 1 business day.
               </p>
@@ -243,7 +243,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-orange-500 focus:outline-none transition-colors"
                   >
-                    <option value="operator">Becoming a Freshtrax Operator</option>
+                    <option value="owner">Becoming a Freshtrax Owner</option>
                     <option value="partnership">
                       Partnership / Venue Collaboration
                     </option>

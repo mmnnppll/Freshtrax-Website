@@ -95,7 +95,7 @@ export default function PlacementVenueGuide() {
           className="mt-12 p-6 bg-gradient-to-r from-orange-500/10 to-orange-500/5 border border-orange-500/20 rounded-lg"
         >
           <p className="text-white/80">
-            <span className="font-semibold text-orange-400">Not sure if your target venue qualifies?</span> We review every placement with you as part of the operator onboarding process. If your venue has the fundamentals, we'll help you secure it.
+            <span className="font-semibold text-orange-400">Not sure if your target venue qualifies?</span> We review every placement with you as part of the owner onboarding process. If your venue has the fundamentals, we'll help you secure it.
           </p>
         </motion.div>
       </div>

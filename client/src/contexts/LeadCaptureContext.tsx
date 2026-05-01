@@ -8,10 +8,10 @@ import LeadCaptureModal, { type LeadOffer } from "@/components/LeadCaptureModal"
 // Pre-defined offers for each section
 export const OFFERS = {
     roiBlueprint: {
-          label: "Operator Intelligence",
+          label: "Owner Intelligence",
           headline: "Get the 8-Month ROI Blueprint",
           description:
-                  "Discover how to generate $3,150+ monthly revenue from a single kiosk. Includes detailed financial projections, break-even analysis, and proven operator scenarios.",
+                  "Discover how to generate $3,150+ monthly revenue from a single kiosk. Includes detailed financial projections, break-even analysis, and proven owner scenarios.",
           pdfName: "Freshtrax 8-Month ROI Blueprint.pdf",
           pdfUrl: "/Freshtrax-roi-blueprint.pdf",
           ctaText: "Get the blueprint now",

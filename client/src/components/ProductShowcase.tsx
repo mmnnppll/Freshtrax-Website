@@ -52,7 +52,7 @@ export default function ProductShowcase() {
                 Interior Chamber
               </h3>
               <p className="text-white/50 text-sm font-body">
-                Three-layer sterilization system with UVC, ozone, and antimicrobial vapor working in perfect harmony.
+                Three-layer sanitization system with UVC, ozone, and antimicrobial vapor working in perfect harmony.
               </p>
             </div>
           </motion.div>
@@ -101,7 +101,7 @@ export default function ProductShowcase() {
                 90-Second Cycle
               </h3>
               <p className="text-white/50 text-sm font-body">
-                Watch the complete sanitization process with all three sterilization technologies working together.
+                Watch the complete sanitization process with all three sanitization technologies working together.
               </p>
             </div>
           </motion.div>

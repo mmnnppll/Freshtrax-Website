@@ -70,7 +70,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
   );
 }
 
-export default function OperatorFAQs() {
+export default function OwnerFAQs() {
   return (
     <section className="py-20 border-t border-white/5">
       <div className="container">

@@ -12,19 +12,19 @@ export interface SEOConfig {
 }
 
 export const DEFAULT_SEO: SEOConfig = {
-  title: "Freshtrax — Medical-Grade Footwear Sterilization",
+  title: "Freshtrax — Medical-Grade Footwear Sanitization",
   description:
-    "Make $38,325/year from a single machine. Freshtrax is a self-service footwear sterilization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds. Zero staff, zero inventory, zero competition.",
+    "Make up to $36,830/year per kiosk (typical owner: $24,237). Freshtrax is a self-service footwear sanitization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds. Zero staff, zero inventory, zero competition.",
   keywords: [
-    "footwear sterilization",
+    "footwear sanitization",
     "shoe sanitizer",
     "gym equipment",
     "passive income",
     "kiosk business",
     "athletic shoe cleaning",
     "bacteria elimination",
-    "UVC sterilization",
-    "ozone sterilization",
+    "UVC sanitization",
+    "ozone sanitization",
     "antimicrobial treatment",
   ],
   ogType: "website",
@@ -105,7 +105,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "Freshtrax",
     description:
-      "Medical-grade footwear sterilization kiosk for fitness venues and sports centers",
+      "Medical-grade footwear sanitization kiosk for fitness venues and sports centers",
     url: "https://getfreshtrax.com",
     logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp",
     sameAs: [
@@ -123,9 +123,9 @@ export function generateProductSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "Freshtrax Footwear Sterilization Kiosk",
+    name: "Freshtrax Footwear Sanitization Kiosk",
     description:
-      "Self-service medical-grade footwear sterilization system using UVC, Ozone, and Antimicrobial Vapor",
+      "Self-service medical-grade footwear sanitization system using UVC, Ozone, and Antimicrobial Vapor",
     brand: {
       "@type": "Brand",
       name: "Freshtrax",
@@ -147,9 +147,9 @@ export function generateLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Freshtrax",
-    description: "Footwear sterilization kiosk operator",
+    description: "Footwear sanitization kiosk owner",
     areaServed: ["US", "CA"],
-    serviceType: "Footwear Sterilization",
+    serviceType: "Footwear Sanitization",
   };
 }
 

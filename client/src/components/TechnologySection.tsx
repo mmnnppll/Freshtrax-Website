@@ -74,7 +74,7 @@ export default function TechnologySection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-white/50 text-base font-body max-w-xl"
           >
-            Proven sterilization technologies, delivering clinical-level hygiene in a fully automated, consumer-facing format.
+            Proven sanitization technologies, delivering clinical-level hygiene in a fully automated, consumer-facing format.
           </motion.p>
         </div>
 

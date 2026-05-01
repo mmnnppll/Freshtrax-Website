@@ -92,7 +92,7 @@ export default function HowItWorks() {
     {
       icon: BarChart3,
       title: "Real-Time Monitoring",
-      description: "Operator dashboard tracks all cycles",
+      description: "Owner dashboard tracks all cycles",
     },
     {
       icon: CheckCircle,
@@ -132,15 +132,15 @@ export default function HowItWorks() {
   return (
     <>
       <SEOHead
-        title="How It Works | Freshtrax Footwear Sterilization"
+        title="How It Works | Freshtrax Footwear Sanitization"
         description="Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology."
         canonicalUrl="https://getfreshtrax.com/how-it-works"
-        ogTitle="How It Works | Freshtrax Footwear Sterilization"
+        ogTitle="How It Works | Freshtrax Footwear Sanitization"
         ogDescription="Discover the 4-step process: SELECT, INSERT, REFRESH, UNLOAD. Backed by peer-reviewed clinical research."
       />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "How It Works | Freshtrax Footwear Sterilization",
-        description: "Learn how Freshtrax sterilizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology.",
+        title: "How It Works | Freshtrax Footwear Sanitization",
+        description: "Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology.",
         url: "https://getfreshtrax.com/how-it-works",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -420,7 +420,7 @@ export default function HowItWorks() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              {/* Regular Operator */}
+              {/* Regular Owner */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
