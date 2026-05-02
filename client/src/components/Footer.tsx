@@ -2,7 +2,7 @@
  * Design: Dark Matter Industrial — Footer
  * Updated footer with new page structure and CTA links.
  */
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Instagram, Phone } from "lucide-react";
 
 const footerSections = [
   {
@@ -49,6 +49,22 @@ export default function Footer() {
             <p className="text-white/30 text-xs font-body mt-3 max-w-xs leading-relaxed">
               Medical-grade footwear sanitization. Fully automated. Zero competition.
             </p>
+            <a
+              href="tel:+17788988063"
+              className="mt-4 flex items-center gap-2 text-white/40 hover:text-orange-500 text-xs font-body transition-colors duration-300"
+            >
+              <Phone size={12} />
+              +1 778.898.8063
+            </a>
+            <a
+              href="https://www.instagram.com/fresh.trax/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center gap-2 text-white/40 hover:text-orange-500 text-xs font-body transition-colors duration-300"
+            >
+              <Instagram size={12} />
+              @fresh.trax
+            </a>
             <button
               onClick={() =>
                 window.open(

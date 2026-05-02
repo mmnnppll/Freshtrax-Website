@@ -647,6 +647,325 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     seoTitle: "Why Pickleball Clubs Are Best for Hygiene Amenity Kiosks in 2026",
     seoDescription: "Discover why pickleball clubs are the best placement opportunity for hygiene kiosks. Learn about the fastest-growing sport and venue dynamics.",
   },
+  {
+    id: "16",
+    title: "Why Serious CrossFit Athletes Clean Their Shoes Differently",
+    slug: "why-serious-crossfit-athletes-clean-their-shoes-differently",
+    excerpt: "CrossFit athletes put their shoes through more punishment than almost any other sport. Here's how serious competitors approach shoe hygiene — and why it matters more than most people think.",
+    content: `# Why Serious CrossFit Athletes Clean Their Shoes Differently
+
+Walk into any CrossFit box on a Saturday morning and you will find two types of athletes: the ones who throw their Nanos or Metcons in a bag after the WOD and don't think about it again until next time, and the ones who have an actual system.
+
+The second group is not being neurotic. They have figured out something that the first group eventually learns the hard way: CrossFit is exceptionally hard on shoes, and shoes that are not maintained properly become a hygiene problem, a performance problem, and eventually an expensive replacement problem.
+
+## What CrossFit Does to Your Shoes That Other Sports Don't
+
+CrossFit involves rope climbs, box jumps, Olympic lifting, handstand walks, tire flips, and burpees — often in the same hour. The result is a shoe being asked to perform across a wider range of mechanical demands than almost any other athletic footwear, while accumulating sweat, chalk, rubber floor particles, and outdoor debris.
+
+**Sweat volume.** A moderate CrossFit WOD elevates heart rate significantly for 20 to 40 minutes. The American Podiatric Medical Association indicates that feet have approximately 250,000 sweat glands and can produce more than half a pint of moisture per day under exercise conditions.
+
+**Temperature inside the shoe.** During intense exercise, the interior of a closed athletic shoe reaches 85 to 95°F — the optimal range for bacterial reproduction. Common shoe bacteria like Staphylococcus and Micrococcus can double their population roughly every 20 minutes in the immediate post-workout window.
+
+**Floor contact diversity.** WODs that include outdoor elements mean shoes contact a variety of surface types in a single session, broadening the microbial load the shoe accumulates.
+
+**Rope climbs.** The lacing and upper of CrossFit shoes take friction and compression damage during rope climbs that accelerates material degradation — creating more surface area where bacteria and moisture can accumulate.
+
+## What Happens If You Don't Address It
+
+In the first few weeks of a shoe's life, there is minimal odor because the bacterial colony has not yet established itself. Around weeks three to six, a detectable odor develops. By months two to four, the colony is well established in the insole foam, midsole seams, and fabric lining. Sprays no longer mask it effectively. The shoe is also, at this point, a vector for athlete's foot fungus — which can survive in shoe materials for months and recolonizes treated skin between workouts.
+
+## How Serious CrossFit Athletes Approach Shoe Maintenance
+
+**They remove shoes immediately after training.** Every additional hour in a warm, enclosed shoe is time the bacterial colony is growing.
+
+**They rotate footwear.** Shoes need 24 to 48 hours to fully dry between sessions. Athletes training five or six days per week without a second pair are wearing consistently damp footwear, which dramatically accelerates bacterial growth.
+
+**They treat the shoe interior, not just the surface.** Surface sprays address what is on the outside. The problem is inside — in the insole foam, lining fabric, and midsole cushioning layers. Effective treatment requires something that penetrates these materials: UV-C light, ozone, or antimicrobial vapor.
+
+**They replace insoles on a regular schedule.** Aftermarket insoles accumulate bacteria and moisture faster than the shoe upper. Replacing them every three to four months significantly reduces the bacterial load.
+
+**They track shoe mileage.** Most athletic footwear manufacturers recommend replacement at 300 to 500 miles, or six to twelve months of heavy training. Beyond this point, cushioning and support are no longer performing as intended — regardless of how the shoe looks.
+
+## The Performance Connection
+
+Foot health and shoe condition directly affect performance. Bacterial and fungal infections cause discomfort that affects movement mechanics. Shoe condition matters too — a midsole that has compressed beyond its design parameters changes load distribution on every lift and every jump.
+
+## Practical Recommendations
+
+- **After every session:** Remove shoes, loosen laces, air dry for a minimum of 12 hours
+- **Weekly:** Use a UV-C or ozone-based treatment on the shoe interior
+- **Monthly:** Deep clean outsoles and uppers; inspect for uneven wear
+- **Every 3-4 months:** Replace insoles
+- **Every 6-12 months:** Evaluate shoes for replacement
+
+*Freshtrax kiosks deliver UV-C, ozone, and antimicrobial vapor treatment in 90 seconds. [See how it works](https://getfreshtrax.com/how-it-works).*`,
+    author: "Marvin N.",
+    publishedDate: "2026-05-01",
+    updatedDate: "2026-05-01",
+    category: "Health & Wellness",
+    tags: ["crossfit", "shoe hygiene", "crossfit shoe care", "gym shoes", "bacteria"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "CrossFit athlete shoe hygiene",
+    readingTime: 9,
+    seoTitle: "Why Serious CrossFit Athletes Clean Their Shoes Differently",
+    seoDescription: "CrossFit athletes put their shoes through more punishment than almost any other sport. Here's how serious competitors approach shoe hygiene — and why it matters more than most people think.",
+  },
+  {
+    id: "17",
+    title: "The Hidden Reason Your Gym Bag Smells — Even After Washing",
+    slug: "the-hidden-reason-your-gym-bag-smells-even-after-washing",
+    excerpt: "You wash your gym bag regularly but it still smells. Here's the actual reason why — and the simple fix most people miss entirely.",
+    content: `# The Hidden Reason Your Gym Bag Smells — Even After Washing
+
+You have done everything right. Washed the bag, left it open to dry, maybe even run it through a second cycle. And yet within a day or two of packing it again, the smell is back.
+
+The standard advice — wash it, air it out, repeat — does not actually solve the problem. It addresses the symptom without touching the cause.
+
+The cause is not the bag. It is what goes inside it.
+
+## The Actual Source of Gym Bag Odor
+
+Gym bags develop persistent odor because they become a containment vessel for the bacteria that live in your athletic gear. Your shoes are the dominant odor source — not because they are dirty in any obvious sense, but because they have the highest bacterial load, the highest moisture content, and the longest time spent enclosed in a confined space.
+
+After a workout, athletic footwear contains accumulated sweat from approximately 250,000 sweat glands, Brevibacterium and other odor-producing bacteria that thrive in warm dark moist shoe interiors, fungal spores if any contact with gym or locker room floors has occurred, and dead skin cells that feed bacterial colonies for days after the workout.
+
+When you put those shoes in your gym bag immediately after a session, you are sealing a warm, active bacterial environment into a confined space. The bag fabric absorbs the bacterial byproducts — primarily isovaleric acid and other volatile organic compounds — and that is the smell you cannot get rid of.
+
+Washing the bag removes surface contamination. But if you immediately pack your shoes back in, the colonization restarts within 24 hours.
+
+## Why Gym Clothes Are a Secondary Contributor
+
+Sweaty gym clothes do contribute — but less than most people assume. Synthetic performance materials like polyester and spandex blends are designed with moisture-wicking properties that reduce bacterial accumulation. The exception is synthetic fabrics worn long enough for bacteria to embed in the fiber structure rather than just sitting on the surface.
+
+## The Gear You Are Probably Not Thinking About
+
+**Damp towels.** A towel used during a workout and packed immediately into a closed bag creates one of the fastest-colonizing environments possible.
+
+**Gloves and wraps.** Boxing gloves, lifting gloves, and hand wraps absorb significant sweat, are rarely washed, and spend most of their time in enclosed storage.
+
+**Knee sleeves and compression gear.** Tight-fitting items in sustained skin contact during exercise accumulate bacteria accordingly.
+
+**The bag pocket you forgot about.** Every gym bag has at least one compartment that never gets fully emptied. This becomes a localized odor source that persists regardless of how well the rest of the bag is maintained.
+
+## The Fix: A Layered Approach
+
+**Step 1: Treat the shoes before they go in the bag.** UV-C or ozone-based sterilization kills the bacteria in the shoe interior before they colonize the bag fabric. A 90-second treatment immediately after a workout, before packing, changes the dynamic entirely.
+
+**Step 2: Never pack wet items directly.** Use a waterproof interior bag or designated damp compartment for towels and wet gear.
+
+**Step 3: Clean gloves and wraps on a weekly schedule.** Hand wraps can be machine washed. Lifting gloves should be washed weekly in warm water with antimicrobial detergent.
+
+**Step 4: Empty and air the bag fully after every session.** Leave it open and allow it to air for several hours before repacking.
+
+**Step 5: Deep clean the bag monthly.** Monthly washing with an enzyme-based detergent prevents biofilm buildup on the bag lining.
+
+## What Does Not Work
+
+Dryer sheets in the bag add fragrance, they do not reduce bacterial load. Baking soda is mildly effective at absorbing odors temporarily but does not kill bacteria. Febreze and similar fabric sprays are effective for about six hours. Open-air drying alone is necessary but not sufficient.
+
+## The Bottom Line
+
+Gym bag odor is a bacterial problem, and the primary bacteria are coming from your shoes. Treat the footwear, manage moisture-heavy items properly, and maintain the bag's contents on a regular schedule — in that order.
+
+*Freshtrax kiosks eliminate bacteria in athletic footwear in 90 seconds — removing the primary odor source before it goes into your bag. [Find a Freshtrax kiosk](https://getfreshtrax.com).*`,
+    author: "Marvin N.",
+    publishedDate: "2026-05-01",
+    updatedDate: "2026-05-01",
+    category: "Health & Wellness",
+    tags: ["gym bag smell", "gym bag bacteria", "shoe odor", "gym hygiene"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Gym bag odor causes and solutions",
+    readingTime: 8,
+    seoTitle: "The Hidden Reason Your Gym Bag Smells Even After Washing",
+    seoDescription: "You wash your gym bag regularly but it still smells. Here's the actual reason why — and the simple fix most people miss entirely.",
+  },
+  {
+    id: "18",
+    title: "Does Freezing Your Shoes Really Kill Bacteria? The Truth",
+    slug: "does-freezing-your-shoes-really-kill-bacteria-the-truth",
+    excerpt: "The 'put your shoes in the freezer' hack has been circulating for years. Here's what science actually says about whether it works — and what does.",
+    content: `# Does Freezing Your Shoes Really Kill Bacteria? The Truth
+
+At some point, someone told you to put your shoes in the freezer overnight. The logic sounds plausible: cold kills bacteria, right? Same reason we refrigerate food?
+
+It is one of those tips that spreads because it sounds scientific without requiring any verification. The reality is more complicated.
+
+## Where the Freezer Myth Comes From
+
+The freezer shoe hack has genuine roots in science. Cold temperatures do inhibit bacterial activity. The refrigerator keeps your food safe precisely because bacteria reproduce far more slowly in cold environments.
+
+The problem is that "inhibit" and "kill" are not the same thing.
+
+Most bacteria found in shoes go dormant in cold temperatures rather than dying. They enter a metabolic state that suspends their growth and activity but preserves their viability. When conditions return to room temperature — which happens the moment you take your shoes out and start wearing them — bacterial activity resumes. The colony that was paused overnight is fully operational again within hours.
+
+A 2019 review in the Journal of Applied Microbiology on cold stress responses in bacteria confirmed that the majority of mesophilic bacteria (including common shoe bacteria Staphylococcus and Brevibacterium) survive freezing temperatures through protective mechanisms and resume normal growth upon warming.
+
+## What Freezing Actually Does (and Does Not Do)
+
+**What it does:** Temporarily suppresses bacterial activity and odor production. Slightly desiccates the shoe interior due to the dry air in most freezers.
+
+**What it does not do:** Kill bacteria at meaningful rates. Kill fungal spores (Trichophyton species responsible for athlete's foot are notably cold-resistant). Penetrate shoe materials to address bacteria embedded in insole foam and midsole layers.
+
+**Side effects worth noting:** Repeated freeze-thaw cycles can affect adhesives in shoe construction, particularly around the sole-upper bond. The moisture condensation that forms when a frozen shoe returns to room temperature can temporarily create a more hospitable environment for bacterial growth.
+
+## Other Home Remedies: What Science Says
+
+**Baking soda:** Modestly effective at absorbing odor-causing acids. Does not kill bacteria. Provides temporary relief that requires consistent replenishment.
+
+**White vinegar:** Some antimicrobial activity against some bacteria in controlled lab settings. In practice, the concentration delivered by spraying diluted vinegar into a shoe is lower than in lab tests, and penetration into shoe materials is minimal.
+
+**Essential oils (tea tree):** Tea tree oil has genuine documented antimicrobial properties. Useful as a supplementary tool, not a standalone solution.
+
+**Dryer sheets:** Fragrance masking with no antimicrobial effect whatsoever.
+
+**Sunlight:** More effective than most people give it credit for. UV-B and UV-A radiation from natural sunlight does kill bacteria and inhibit fungal growth. The limitation is penetration — sunlight addresses the surface but not the interior materials where odor-causing bacteria primarily live.
+
+## What Actually Kills Shoe Bacteria
+
+UV-C light at 254nm wavelength is the standard used in medical sterilization. It works by disrupting bacterial and fungal DNA at the cellular level, preventing reproduction. Unlike freezing or most chemical sprays, it penetrates fabric and foam materials at close range, reaching bacteria embedded in insole layers.
+
+Ozone works through a different mechanism: it is a highly reactive oxygen molecule that oxidizes bacterial cell membranes on contact. It has the highest penetration of any common shoe sterilization method and is particularly effective against anaerobic bacteria. The two methods in combination achieve near-total bacterial elimination rather than the surface-level partial reduction of most alternatives.
+
+## The Practical Takeaway
+
+Freezing your shoes is not going to hurt anything. If it makes you feel better, go ahead. But if you are dealing with persistent shoe odor, athlete's foot that keeps coming back, or shoes that smell bad within days of washing, the freezer is not going to solve it.
+
+The methods that actually work — UV-C and ozone — are now available in purpose-built systems at gyms and fitness facilities. A 90-second treatment at the kiosk after a workout does what three nights in the freezer cannot.
+
+*Freshtrax uses UV-C, ozone, and antimicrobial vapor in combination to eliminate shoe bacteria in 90 seconds. [Learn how it works](https://getfreshtrax.com/how-it-works).*`,
+    author: "Marvin N.",
+    publishedDate: "2026-05-01",
+    updatedDate: "2026-05-01",
+    category: "Technology & Science",
+    tags: ["freeze shoes kill bacteria", "shoe odor home remedies", "shoe bacteria", "UV-C light"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Does freezing shoes kill bacteria",
+    readingTime: 8,
+    seoTitle: "Does Freezing Your Shoes Kill Bacteria? The Science-Backed Truth",
+    seoDescription: "The 'put your shoes in the freezer' hack has been circulating for years. Here's what science actually says — and what actually works.",
+  },
+  {
+    id: "19",
+    title: "How Long Do Gym Shoes Actually Last? (Most People Replace Them Too Late)",
+    slug: "how-long-do-gym-shoes-actually-last-most-people-replace-too-late",
+    excerpt: "Most athletes wear their gym shoes far past the point where they're still performing. Here's how to tell when your shoes are actually done — and why waiting costs you more than the replacement.",
+    content: `# How Long Do Gym Shoes Actually Last? (Most People Replace Them Too Late)
+
+Here is an uncomfortable truth: the gym shoes you are currently wearing are probably past their performance prime, and you cannot tell by looking at them.
+
+The visible signs most people wait for — worn-down outsole tread, obvious physical damage, holes in the upper — are lagging indicators. By the time your shoe looks done, the cushioning and support structures have been compromised for months.
+
+## The Official Guidance
+
+Most major athletic footwear manufacturers — including ASICS, Brooks, New Balance, and Nike — recommend replacing running and training shoes every 300 to 500 miles, or every six to twelve months for regular gym use, whichever comes first.
+
+A 2011 study in the British Journal of Sports Medicine found that midsole cushioning degrades measurably with use, with significant loss of shock absorption occurring well before most runners would visually identify their shoes as worn out.
+
+## How to Actually Tell If Your Shoes Are Done
+
+**The thumb compression test.** Press your thumb firmly into the midsole. In a well-cushioned shoe, it should compress and spring back with resistance. If it compresses easily with little resistance or feels hard and unyielding, the foam has broken down.
+
+**Uneven wear pattern on the outsole.** Flip your shoe over. If wear is significantly uneven — heavily worn in one area, intact in others — the shoe is no longer distributing load as designed.
+
+**The twist test.** Hold your shoe at the toe and heel and try to twist it. A shoe that twists easily has lost structural integrity and is no longer providing the stability your joints rely on.
+
+**How your joints feel the day after training.** If you have been experiencing more knee stiffness, hip soreness, or plantar fasciitis symptoms than usual, your footwear's condition is a serious suspect.
+
+**The smell and hygiene state.** A shoe with persistent odor that does not respond to treatment has a well-established bacterial colony embedded in the insole and foam materials. Heavily worn shoes tend to have been worn heavily, and heavily worn shoes have had more time to accumulate bacterial load.
+
+## The Hygiene and Lifespan Connection
+
+A shoe's lifespan is shortened by poor hygiene maintenance. The moisture that accumulates in a shoe's insole and midsole layers is not just a bacterial growth medium — it also accelerates the breakdown of foam compounds that provide cushioning.
+
+Research on EVA foam (the most common midsole material) has shown that moisture cycling — the repeated absorption and drying of moisture — accelerates foam compression set. In practical terms: athletes who consistently leave their shoes damp between sessions are shortening the structural lifespan of their footwear as well as creating a hygiene problem.
+
+## The Cost of Replacing Too Late
+
+**Training quality.** A shoe that is no longer providing adequate cushioning or stability limits every session.
+
+**Injury risk.** A review in the Journal of Orthopaedic and Sports Physical Therapy linked worn athletic footwear to increased rates of lower extremity overuse injury — including plantar fasciitis, shin splints, and stress fractures.
+
+**The false economy.** A $150 pair of training shoes that lasts 12 months at proper replacement timing costs $12.50 per month. The same pair worn for 18 months costs $8.33 per month, but the last six months may have been delivering meaningfully less protection.
+
+## What a Good Shoe Rotation Looks Like
+
+Maintain at least two pairs in active rotation, alternating between them. This allows each pair 24 to 48 hours between sessions to decompress the midsole and dry fully — both of which extend lifespan and maintain performance. Track approximate mileage or time in service. A rough log is enough to create an informed replacement decision rather than a visual guess.
+
+*Freshtrax kiosks extend shoe lifespan by eliminating moisture-driven bacterial buildup — keeping the interior dry and clean between sessions. [Learn more](https://getfreshtrax.com/how-it-works).*`,
+    author: "Marvin N.",
+    publishedDate: "2026-05-01",
+    updatedDate: "2026-05-01",
+    category: "Health & Wellness",
+    tags: ["gym shoe lifespan", "when to replace gym shoes", "athletic shoes", "shoe replacement"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Gym shoe lifespan and replacement guide",
+    readingTime: 9,
+    seoTitle: "How Long Do Gym Shoes Actually Last? When to Replace Athletic Shoes",
+    seoDescription: "Most athletes wear their gym shoes far past the point where they're still performing. Here's how to tell when your shoes are actually done.",
+  },
+  {
+    id: "20",
+    title: "Martial Arts & Hygiene: What Every BJJ and MMA Practitioner Should Know",
+    slug: "martial-arts-hygiene-what-every-bjj-mma-practitioner-should-know",
+    excerpt: "Martial arts gyms have some of the highest skin infection rates in sport. Here's what the research says about hygiene in BJJ, MMA, and wrestling — and how to protect yourself without leaving your training behind.",
+    content: `# Martial Arts & Hygiene: What Every BJJ and MMA Practitioner Should Know
+
+If you have trained Brazilian Jiu-Jitsu or wrestled for any length of time, you have either gotten a skin infection or trained with someone who had one. Possibly both. In combat sports that involve sustained skin-to-skin contact on shared surfaces, hygiene is not a peripheral concern. It is a core training variable.
+
+## The Infections You Actually Need to Know About
+
+### Ringworm (Tinea Corporis)
+
+Ringworm is not a worm. It is a fungal infection caused by dermatophyte fungi — the same family of organisms responsible for athlete's foot and fungal nail infections. It is the most common infection in grappling sports.
+
+Trichophyton species survive on mats, fabric, and footwear for extended periods. The key thing most practitioners miss: ringworm in footwear can continuously reinfect the feet and lower legs even when topical antifungal treatment is working on the skin. If you are treating tinea corporis on your legs but not treating your training shoes, you are fighting one battle while losing another.
+
+### Staph Infections (Including MRSA)
+
+Staphylococcus aureus is a common skin bacterium that becomes dangerous when it enters the body through cuts, abrasions, or open blisters — all of which are routine in grappling. Methicillin-resistant Staphylococcus aureus (MRSA) has been identified in multiple outbreaks traced to combat sports gyms.
+
+MRSA is not a reason to stop training. It is a reason to maintain disciplined personal hygiene, keep cuts covered, and ensure your training gear — including footwear — is not acting as a passive reservoir.
+
+### Impetigo
+
+A bacterial skin infection caused by Staphylococcus aureus or Streptococcus pyogenes, producing blistering sores that are highly contagious through contact. Footwear that contacts both the training area and common floors can transfer these bacteria across surfaces.
+
+## Shoes in the BJJ and MMA Context
+
+**The barefoot-to-shoe transition.** Many BJJ practitioners train barefoot on the mat and use shoes only to walk to and from training areas, bathrooms, and locker rooms. Shoes pick up bacteria and fungi from locker room and bathroom floors and then are removed, placed in gear bags, and brought back into contact with the training environment.
+
+**Flip-flops and transition footwear.** The standard recommendation in grappling communities is to wear flip-flops when transitioning between the mat and common areas — this is good practice but only partially effective if the flip-flops themselves are not cleaned regularly.
+
+## A Practical Hygiene Protocol for Grapplers
+
+**Before training:** Inspect your skin for any open wounds, active rashes, or suspicious lesions. Ensure training gear, including shoes, has been treated since the last session.
+
+**After training:** Shower immediately — do not wait. A clinical study in the British Journal of Dermatology found that showering within 60 minutes of sport contact significantly reduced transmission risk for tinea corporis. Wash your gi and rash guards before the next use. Treat your shoes: UV-C and ozone sterilization kills the dermatophyte fungi and bacteria that standard air-drying does not address.
+
+**Weekly:** Wash all training gear including knee pads, ankle braces, and hand wraps. Deep clean training shoes with a penetrating sterilization method.
+
+**When you have an active infection:** Consult a physician and follow their guidance on return to training. Do not train through active, contagious skin infections.
+
+## What Your Gym Can Do
+
+Individual hygiene is necessary but not sufficient. Gyms that take this seriously tend to have mat cleaning protocols with documented frequency, a culture of transparency around infections, and footwear hygiene at the facility level.
+
+## The Mental Shift That Matters
+
+The athletes who have the fewest infection problems are not the ones who are paranoid about it. They are the ones who have built the right habits into their existing routine — shower right after training, treat your gear, sit out when you have something contagious — and execute those habits consistently without thinking much about it.
+
+*Freshtrax kiosks use UV-C, ozone, and antimicrobial vapor to eliminate dermatophyte fungi and bacteria from athletic footwear in 90 seconds. [Learn how it works](https://getfreshtrax.com/how-it-works).*`,
+    author: "Marvin N.",
+    publishedDate: "2026-05-01",
+    updatedDate: "2026-05-01",
+    category: "Health & Wellness",
+    tags: ["martial arts hygiene", "BJJ skin infections", "MMA hygiene", "wrestling hygiene", "ringworm BJJ"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Martial arts hygiene BJJ MMA",
+    readingTime: 10,
+    seoTitle: "Martial Arts Hygiene: What Every BJJ and MMA Practitioner Should Know",
+    seoDescription: "Martial arts gyms have some of the highest skin infection rates in sport. Here's what the research says about BJJ, MMA, and wrestling hygiene.",
+  },
 ];
 
 export const getBlogArticleBySlug = (slug: string): BlogArticle | undefined => {
