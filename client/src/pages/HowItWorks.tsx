@@ -419,30 +419,38 @@ export default function HowItWorks() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch">
               {/* Regular Owner */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white/5 border border-white/10 rounded-lg p-8"
+                className="bg-white/5 border border-white/10 rounded-lg p-8 flex flex-col"
               >
                 <h3 className="text-2xl font-bold mb-6">Regular Owner</h3>
-                <div className="space-y-4 mb-8">
-                  <div className="flex justify-between items-center">
-                    <span className="text-white/70">Platform Fee</span>
-                    <span className="text-xl font-bold text-orange-500">$99/mo</span>
+                <div className="space-y-4 flex-1">
+                  {/* Row 1 */}
+                  <div className="flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Platform Fee</span>
+                    <span className="text-xl font-bold text-orange-500 text-right">$99/mo</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-white/70">Service Fee</span>
-                    <span className="text-xl font-bold text-orange-500">5% of revenue</span>
+                  {/* Row 2 */}
+                  <div className="flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Service Fee</span>
+                    <span className="text-xl font-bold text-orange-500 text-right">5% of revenue</span>
                   </div>
-                  <div className="border-t border-white/10 pt-4 flex justify-between items-center">
-                    <span className="text-white/70">Includes</span>
-                    <span className="text-sm text-white/60">Dashboard + Device Health Monitoring</span>
+                  {/* Row 3 — spacer to match Founder's Club extra row */}
+                  <div className="flex justify-between items-start gap-4 opacity-0 select-none pointer-events-none" aria-hidden="true">
+                    <span className="text-white/70 shrink-0">Advantage</span>
+                    <span className="text-xl font-bold text-right">—</span>
+                  </div>
+                  {/* Divider + Includes */}
+                  <div className="border-t border-white/10 pt-4 flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Includes</span>
+                    <span className="text-sm text-white/60 text-right">Dashboard + Device Health Monitoring</span>
                   </div>
                 </div>
-                <p className="text-sm text-white/50">Best for: Individual owners starting out</p>
+                <p className="text-sm text-white/50 mt-6">Best for: Individual owners starting out</p>
               </motion.div>
 
               {/* Founder's Club */}
@@ -450,31 +458,35 @@ export default function HowItWorks() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border border-orange-500/30 rounded-lg p-8 relative"
+                className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border border-orange-500/30 rounded-lg p-8 relative flex flex-col"
               >
                 <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                   EXCLUSIVE
                 </div>
                 <h3 className="text-2xl font-bold mb-6">Founder's Club</h3>
-                <div className="space-y-4 mb-8">
-                  <div className="flex justify-between items-center">
-                    <span className="text-white/70">Platform Fee</span>
-                    <span className="text-xl font-bold text-orange-500">$79/mo</span>
+                <div className="space-y-4 flex-1">
+                  {/* Row 1 */}
+                  <div className="flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Platform Fee</span>
+                    <span className="text-xl font-bold text-orange-500 text-right">$79/mo</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-white/70">Service Fee (Founding Machine)</span>
-                    <span className="text-xl font-bold text-green-400">None — permanently</span>
+                  {/* Row 2 */}
+                  <div className="flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Service Fee</span>
+                    <span className="text-xl font-bold text-green-400 text-right">$0 — permanently</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-white/70">Permanent Advantage</span>
-                    <span className="text-xl font-bold text-green-400">$1,460/yr vs. standard</span>
+                  {/* Row 3 */}
+                  <div className="flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Annual Advantage</span>
+                    <span className="text-xl font-bold text-green-400 text-right">+$1,460/yr vs. standard</span>
                   </div>
-                  <div className="border-t border-white/10 pt-4 flex justify-between items-center">
-                    <span className="text-white/70">Includes</span>
-                    <span className="text-sm text-white/60">Territory Exclusivity + Priority Support</span>
+                  {/* Divider + Includes */}
+                  <div className="border-t border-white/10 pt-4 flex justify-between items-start gap-4">
+                    <span className="text-white/70 shrink-0">Includes</span>
+                    <span className="text-sm text-white/60 text-right">Territory Exclusivity + Priority Support</span>
                   </div>
                 </div>
-                <p className="text-sm text-white/50">Best for: Early-stage owners securing market position</p>
+                <p className="text-sm text-white/50 mt-6">Best for: Early-stage owners securing market position</p>
               </motion.div>
             </div>
           </div>
