@@ -102,18 +102,25 @@ export default function About() {
                     90 seconds.
                   </p>
 
-                  {/* Layoff letter accent */}
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex gap-4 items-start">
-                    <img
-                      src="/layoff-letter.jpg"
-                      alt="The letter that started it all"
-                      className="w-16 h-20 object-cover rounded flex-shrink-0 opacity-80"
-                    />
-                    <div>
-                      <p className="text-sm text-orange-500 font-semibold mb-1">The letter that changed everything</p>
-                      <p className="text-sm text-white/60">
-                        The moment I stopped being an employee and started being a founder.
-                      </p>
+                  {/* Layoff letter accent — larger card */}
+                  <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <div className="flex gap-5 p-5 items-start">
+                      <div className="flex-shrink-0 w-28 rounded-lg overflow-hidden border border-white/10 shadow-lg">
+                        <img
+                          src="/layoff-letter.jpg"
+                          alt="Termination letter — the moment that started Freshtrax"
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-2 pt-1">
+                        <p className="text-orange-500 font-semibold text-sm uppercase tracking-wide">
+                          The laid-off letter that changed everything
+                        </p>
+                        <p className="text-white/70 text-sm leading-relaxed">
+                          I fought the company hard for my commission — and they decided to lay me off instead of pay up.
+                        </p>
+                        <p className="text-white/40 text-xs">May 22, 2025 · Termination of Employment</p>
+                      </div>
                     </div>
                   </div>
 
