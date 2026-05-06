@@ -105,9 +105,9 @@ export default function About() {
                   {/* Layoff letter accent — larger card */}
                   <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
                     <div className="flex gap-5 p-5 items-start">
-                      <div className="flex-shrink-0 w-28 rounded-lg overflow-hidden border border-white/10 shadow-lg">
+                      <div className="flex-shrink-0 w-44 rounded-lg overflow-hidden border border-white/10 shadow-lg">
                         <img
-                          src="/layoff-letter.jpg"
+                          src="/termination-letter.jpg"
                           alt="Termination letter — the moment that started Freshtrax"
                           className="w-full h-auto object-cover"
                         />
