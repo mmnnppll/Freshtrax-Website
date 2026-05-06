@@ -56,7 +56,7 @@ export default function About() {
         {/* Founder Story */}
         <section className="py-20 border-t border-white/5">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -65,65 +65,66 @@ export default function About() {
                 <h2 className="text-4xl font-bold mb-6">The Founder's Journey</h2>
                 <div className="space-y-6 text-white/70 leading-relaxed">
                   <p>
-                    My journey to founding Freshtrax began with two things: a drive
-                    to build something that no employer could take from me, and a
-                    pair of shoes that were genuinely offensive.
+                    My six-figure commission check was stolen by my employer. I had
+                    spent years in national account sales, building relationships,
+                    delivering results for some of the largest restaurant groups in
+                    North America — and when it came time to pay out, they decided
+                    that money looked better on their balance sheet. That was the
+                    day I stopped working for someone else's income and started
+                    building my own.
+                  </p>
+
+                  {/* Pull Quote */}
+                  <div className="border-l-4 border-orange-500 pl-6 py-2 my-8">
+                    <p className="text-white text-xl font-semibold leading-snug italic">
+                      "I decided that day I'd never let someone else hold the eraser
+                      to my income again."
+                    </p>
+                  </div>
+
+                  <p>
+                    Around the same time, I was dealing with a completely separate
+                    problem. I play racket sports two or three times a week. My shoes
+                    had developed a scent so potent it had a personality. I tried
+                    everything — sprays, charcoal inserts, airing them out. Nothing
+                    worked. Eventually I developed athlete's foot: a direct result of
+                    bacteria that no spray can actually eliminate, just briefly mask.
                   </p>
                   <p>
-                    After moving from Malaysia to Canada, I spent over a decade in
-                    the restaurant sales trenches, closing deals with some of the
-                    largest restaurant groups on the continent. I was good at it. I
-                    built relationships. I delivered results. And then my employer
-                    decided my six-figure commission check looked better in their
-                    account than mine.
-                  </p>
-                  <p>
-                    In that moment, I learned what hard and loyal work actually means
-                    to a corporation: nothing. You aren't a partner. You're a line
-                    item that can be deleted to balance a spreadsheet. I decided that
-                    day I would never let someone else hold the eraser to my income
-                    again.
-                  </p>
-                  <p>
-                    Around the same time, I was dealing with a different problem. I
-                    play racket sports two or three times a week — badminton, tennis,
-                    whatever I can get a court for. My shoes had developed a scent so
-                    potent it didn't just smell, it had a personality. My fiancée
-                    would wrinkle her nose every time I got in the car after a game.
-                    I tried everything: sprays, charcoal inserts. Nothing worked beyond
-                    a few hours.
-                  </p>
-                  <p>
-                    Eventually I developed athlete's foot — a direct consequence of
-                    bacteria that no spray could actually kill, just briefly masking.
-                  </p>
-                  <p>
-                    I didn't want another band-aid. I wanted a system that actually
-                    solved the problem. Then I saw an Instagram post about a
-                    helmet-sanitizing kiosk operating across Asia. I didn't send an
-                    inquiry email. I didn't add it to a wishlist. I booked a flight
-                    to the factory.
-                  </p>
-                  <p>
-                    What I found was a model that had been operating profitably for
-                    over a decade across Japan, South Korea, and China — and a
-                    complete absence of it anywhere in North America. I worked
+                    Then I saw an Instagram post about a kiosk sanitizing helmets
+                    across Asia. I didn't send an inquiry email. I booked a flight to
+                    the factory. What I found was a model that had been operating
+                    profitably for over a decade across Japan, South Korea, and China
+                    — and a complete absence of it anywhere in North America. I worked
                     directly with the manufacturer to adapt the technology for
                     footwear. The result is Freshtrax: a three-stage, medical-grade
                     sanitization kiosk that eliminates what sprays can't reach, in
                     90 seconds.
                   </p>
+
+                  {/* Layoff letter accent */}
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex gap-4 items-start">
+                    <img
+                      src="/layoff-letter.jpg"
+                      alt="The letter that started it all"
+                      className="w-16 h-20 object-cover rounded flex-shrink-0 opacity-80"
+                    />
+                    <div>
+                      <p className="text-sm text-orange-500 font-semibold mb-1">The letter that changed everything</p>
+                      <p className="text-sm text-white/60">
+                        The moment I stopped being an employee and started being a founder.
+                      </p>
+                    </div>
+                  </div>
+
                   <p>
-                    I built this because I needed reliable income that would take care
-                    of me whether I was working or not — income that couldn't be stolen
-                    by an employer, cut in a restructuring, or eliminated in an
-                    afternoon. And I built it because I know I'm not the only one. There
-                    are thousands of people who play hard, work hard, and want to build
-                    something that works even when they're not in the room.
-                  </p>
-                  <p className="italic text-white/50">
-                    Freshtrax is designed to be that — for me, and for every owner
-                    who partners with us.
+                    I built Freshtrax because I needed income that couldn't be stolen,
+                    cut in a restructuring, or eliminated in an afternoon. Income that
+                    works even when I'm not in the room. And I built it because I know
+                    I'm not the only one — there are thousands of people who play hard,
+                    work hard, and want to build something that outlasts their last
+                    paycheck. Freshtrax is designed to be that asset, for me and for
+                    every owner who partners with us.
                   </p>
                 </div>
               </motion.div>
@@ -132,17 +133,21 @@ export default function About() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center gap-6 md:sticky md:top-28"
               >
-                <div className="w-full max-w-xs rounded-lg overflow-hidden">
+                {/* Factory photo */}
+                <div className="w-full rounded-xl overflow-hidden border border-white/10">
                   <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/1760602831165_31b4dff4.jpeg"
-                    alt="Marvin N., Founder of Freshtrax"
-                    className="w-full h-auto object-cover aspect-square"
+                    src="/founder-factory.jpg"
+                    alt="Marvin at the factory sourcing the Freshtrax kiosk technology"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mt-6">Marvin N.</h3>
-                <p className="text-white/60">Founder, Freshtrax</p>
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold">Marvin N.</h3>
+                  <p className="text-white/60">Founder, Freshtrax</p>
+                  <p className="text-white/40 text-sm mt-1">At the factory — sourcing the technology firsthand</p>
+                </div>
               </motion.div>
             </div>
           </div>

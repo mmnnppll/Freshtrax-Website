@@ -4,8 +4,10 @@ import HeroSection from "@/components/HeroSection";
 import EconomicsSection from "@/components/EconomicsSection";
 import FinancialProjections from "@/components/FinancialProjections";
 import TechnologySection from "@/components/TechnologySection";
+import PilotSection from "@/components/PilotSection";
 import MarketOpportunity from "@/components/MarketOpportunity";
 import FoundersClub from "@/components/FoundersClub";
+import HomeFAQ from "@/components/HomeFAQ";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, productSchema, createWebPageSchema, createVideoSchema } from "@/components/SchemaMarkup";
@@ -69,6 +71,13 @@ export default function Home() {
           className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
           aria-hidden="true"
         />
+        <section id="pilot" aria-label="Venue partner results">
+          <PilotSection />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
         <section id="market" aria-label="Market opportunity section">
           <MarketOpportunity />
         </section>
@@ -78,6 +87,13 @@ export default function Home() {
         />
         <section id="founders" aria-label="Founders club section">
           <FoundersClub />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="faq" aria-label="Frequently asked questions">
+          <HomeFAQ />
         </section>
       </main>
       <Footer />
