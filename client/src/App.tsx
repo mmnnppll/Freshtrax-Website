@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import HowItWorks from "./pages/HowItWorks";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
+import BlogPillar from "./pages/BlogPillar";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -26,6 +27,7 @@ function Router() {
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/pillar/:slug"} component={BlogPillar} />
       <Route path={"/blog/:slug"} component={BlogArticle} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/terms"} component={Terms} />

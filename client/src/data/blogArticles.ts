@@ -17,6 +17,7 @@ export interface BlogArticle {
   imageUrl: string;
   imageAlt: string;
   readingTime: number; // in minutes
+  pillar: string;
   seoTitle: string;
   seoDescription: string;
 }
@@ -97,6 +98,7 @@ Medical-grade sanitization technology, once available only in hospitals and clin
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Athlete's foot prevention through shoe sanitization",
     readingTime: 8,
+    pillar: "athlete-health-hygiene",
     seoTitle:
       "How to Eliminate Athlete's Foot: Medical-Grade Shoe Sanitization Guide",
     seoDescription:
@@ -183,6 +185,7 @@ That's why medical-grade sanitization is a game-changer for athletes and fitness
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Gym shoes and bacteria growth",
     readingTime: 7,
+    pillar: "shoe-care-gear",
     seoTitle: "Why Your Gym Shoes Smell: The Science of Shoe Odor & Bacteria",
     seoDescription:
       "Discover the science behind gym shoe odor. Learn why sprays don't work and how medical-grade sanitization eliminates bacteria permanently.",
@@ -278,6 +281,7 @@ For venue owners looking to increase revenue without significant capital investm
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Fitness venue with shoe sanitization kiosk",
     readingTime: 9,
+    pillar: "revenue-business-model",
     seoTitle:
       "Shoe Sanitization Kiosks: Revenue Model for Fitness Venue Owners",
     seoDescription:
@@ -372,6 +376,7 @@ This is why hospitals trust it, and why athletes and fitness venues are now adop
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "UVC light sanitization technology",
     readingTime: 8,
+    pillar: "shoe-care-gear",
     seoTitle: "UVC Light Sanitization: How Medical-Grade Technology Works",
     seoDescription:
       "Learn how UVC light kills bacteria and fungi. Discover why hospitals use it and how it's combined with ozone for 99.99% sanitization.",
@@ -464,6 +469,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Pickleball court with shoe sanitization kiosk",
     readingTime: 7,
+    pillar: "venue-owner-playbooks",
     seoTitle: "Pickleball Court Hygiene: Shoe Sanitization for Sports Facilities",
     seoDescription:
       "Learn why shoe sanitization is essential for pickleball facilities. Prevent athlete's foot and fungal infections in shared court environments.",
@@ -484,6 +490,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Shoe deodorizer spray effectiveness analysis",
     readingTime: 9,
+    pillar: "shoe-care-gear",
     seoTitle: "Do Shoe Deodorizer Sprays Actually Work? Science-Based Analysis",
     seoDescription:
       "Discover if shoe deodorizer sprays actually work. We break down the science of odor elimination and reveal what really kills bacteria in shoes.",
@@ -504,6 +511,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Athlete's foot treatment and shoe sanitization",
     readingTime: 10,
+    pillar: "athlete-health-hygiene",
     seoTitle: "How to Get Rid of Athlete's Foot for Good: Complete Treatment Guide",
     seoDescription:
       "Discover why athlete's foot keeps returning and how to eliminate it permanently. Learn the two-front treatment approach targeting skin and shoes.",
@@ -524,6 +532,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
       "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Kiosk business opportunities 2026",
     readingTime: 11,
+    pillar: "revenue-business-model",
     seoTitle: "Best Low-Cost Kiosk Businesses to Start in 2026: Complete Guide",
     seoDescription:
       "Compare top kiosk and vending business models for 2026. Analyze startup costs, ROI timelines, and profitability of specialty wellness kiosks.",
@@ -542,6 +551,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Gym shoes bacteria research",
     readingTime: 9,
+    pillar: "athlete-health-hygiene",
     seoTitle: "Are Gym Shoes Making You Sick? Bacteria Research",
     seoDescription: "Your gym shoes may harbor 421,000 bacteria per shoe. Learn what's growing inside athletic footwear and how to protect your foot health.",
   },
@@ -559,6 +569,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Shoe washing and odor elimination",
     readingTime: 9,
+    pillar: "shoe-care-gear",
     seoTitle: "Why Shoes Still Smell After Washing: The Science Behind It",
     seoDescription: "Discover why shoe odor persists after washing and what methods actually eliminate bacteria deep in shoe materials.",
   },
@@ -576,6 +587,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "UV-C light sanitization technology",
     readingTime: 10,
+    pillar: "shoe-care-gear",
     seoTitle: "UVC Light for Shoes: Does It Kill Bacteria? Complete Guide",
     seoDescription: "Learn how UV-C light kills bacteria in shoes and what to look for in an effective UV shoe sanitizer.",
   },
@@ -593,6 +605,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Kiosk placement in fitness center",
     readingTime: 11,
+    pillar: "venue-owner-playbooks",
     seoTitle: "How to Place a Kiosk in a Gym: Complete Step-by-Step Guide",
     seoDescription: "Learn the complete process for securing kiosk placement in gyms and fitness centers, from identifying venues to negotiating terms.",
   },
@@ -610,6 +623,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Fitness center kiosk business models",
     readingTime: 12,
+    pillar: "revenue-business-model",
     seoTitle: "Passive Income Kiosk Models for Fitness Centers: Complete Comparison",
     seoDescription: "Compare 5 kiosk business models for fitness venues by startup cost, revenue potential, and operational effort. Find the best passive income opportunity.",
   },
@@ -627,6 +641,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Gym revenue streams without staff",
     readingTime: 11,
+    pillar: "venue-owner-playbooks",
     seoTitle: "How Gyms Can Add Revenue Without Hiring Staff: 6 Ideas",
     seoDescription: "Discover 6 ways fitness centers can add revenue streams in 2026 without increasing headcount or operational complexity.",
   },
@@ -644,6 +659,7 @@ As pickleball continues to grow, hygiene will become an increasingly important d
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Pickleball club with hygiene amenities",
     readingTime: 10,
+    pillar: "venue-owner-playbooks",
     seoTitle: "Why Pickleball Clubs Are Best for Hygiene Amenity Kiosks in 2026",
     seoDescription: "Discover why pickleball clubs are the best placement opportunity for hygiene kiosks. Learn about the fastest-growing sport and venue dynamics.",
   },
@@ -707,6 +723,7 @@ Foot health and shoe condition directly affect performance. Bacterial and fungal
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "CrossFit athlete shoe hygiene",
     readingTime: 9,
+    pillar: "athlete-health-hygiene",
     seoTitle: "Why Serious CrossFit Athletes Clean Their Shoes Differently",
     seoDescription: "CrossFit athletes put their shoes through more punishment than almost any other sport. Here's how serious competitors approach shoe hygiene — and why it matters more than most people think.",
   },
@@ -776,6 +793,7 @@ Gym bag odor is a bacterial problem, and the primary bacteria are coming from yo
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Gym bag odor causes and solutions",
     readingTime: 8,
+    pillar: "athlete-health-hygiene",
     seoTitle: "The Hidden Reason Your Gym Bag Smells Even After Washing",
     seoDescription: "You wash your gym bag regularly but it still smells. Here's the actual reason why — and the simple fix most people miss entirely.",
   },
@@ -841,6 +859,7 @@ The methods that actually work — UV-C and ozone — are now available in purpo
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Does freezing shoes kill bacteria",
     readingTime: 8,
+    pillar: "shoe-care-gear",
     seoTitle: "Does Freezing Your Shoes Kill Bacteria? The Science-Backed Truth",
     seoDescription: "The 'put your shoes in the freezer' hack has been circulating for years. Here's what science actually says — and what actually works.",
   },
@@ -900,6 +919,7 @@ Maintain at least two pairs in active rotation, alternating between them. This a
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Gym shoe lifespan and replacement guide",
     readingTime: 9,
+    pillar: "athlete-health-hygiene",
     seoTitle: "How Long Do Gym Shoes Actually Last? When to Replace Athletic Shoes",
     seoDescription: "Most athletes wear their gym shoes far past the point where they're still performing. Here's how to tell when your shoes are actually done.",
   },
@@ -963,6 +983,7 @@ The athletes who have the fewest infection problems are not the ones who are par
     imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
     imageAlt: "Martial arts hygiene BJJ MMA",
     readingTime: 10,
+    pillar: "athlete-health-hygiene",
     seoTitle: "Martial Arts Hygiene: What Every BJJ and MMA Practitioner Should Know",
     seoDescription: "Martial arts gyms have some of the highest skin infection rates in sport. Here's what the research says about BJJ, MMA, and wrestling hygiene.",
   },
@@ -1009,4 +1030,62 @@ export const getAllBlogCategories = (): string[] => {
 export const getAllBlogTags = (): string[] => {
   const tags = new Set(blogArticles.flatMap((article) => article.tags));
   return Array.from(tags).sort();
+};
+
+// ─── Topic-cluster architecture ──────────────────────────────────────────────
+
+export interface Pillar {
+  slug: string;
+  name: string;
+  description: string;
+  icon: string; // emoji/symbol used as icon placeholder
+  order: number;
+}
+
+export const PILLARS: Pillar[] = [
+  {
+    slug: "shoe-care-gear",
+    name: "Shoe Care & Gear",
+    description: "How UVC, ozone, and antimicrobials actually work to eliminate bacteria, fungi, and odor from athletic footwear.",
+    icon: "⚡",
+    order: 1,
+  },
+  {
+    slug: "revenue-business-model",
+    name: "Revenue & Business Model",
+    description: "The financial proof, kiosk economics, and business model behind owning a Freshtrax machine.",
+    icon: "📈",
+    order: 2,
+  },
+  {
+    slug: "venue-owner-playbooks",
+    name: "Venue Owner Playbooks",
+    description: "Placement strategy, member retention, reviews, and the complete guide to running Freshtrax in your facility.",
+    icon: "🏟️",
+    order: 3,
+  },
+  {
+    slug: "athlete-health-hygiene",
+    name: "Athlete Health & Hygiene",
+    description: "Foot health science, odor root causes, recovery routines, and what athletes need to know about shoe hygiene.",
+    icon: "🏃",
+    order: 4,
+  },
+];
+
+export const getPillarBySlug = (slug: string): Pillar | undefined =>
+  PILLARS.find((p) => p.slug === slug);
+
+export const getArticlesByPillar = (pillarSlug: string): BlogArticle[] =>
+  blogArticles.filter((a) => a.pillar === pillarSlug);
+
+export const getSiblingArticles = (
+  articleId: string,
+  limit: number = 5
+): BlogArticle[] => {
+  const article = getBlogArticleById(articleId);
+  if (!article) return [];
+  return blogArticles
+    .filter((a) => a.id !== articleId && a.pillar === article.pillar)
+    .slice(0, limit);
 };
