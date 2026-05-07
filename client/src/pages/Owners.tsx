@@ -68,7 +68,7 @@ export default function Owners() {
                     onClick={() => openModal(OFFERS.roiBlueprint)}
                     className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Get the 8-Month ROI Blueprint
+                    Get the 8-Month ROI Blueprint, Free
                     <ArrowRight size={18} />
                   </button>
                   <button

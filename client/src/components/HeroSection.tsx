@@ -66,13 +66,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.55 }}
               className="text-white/55 text-sm mb-6 font-body"
             >
-              Optimistic case (30 cycles/day). Typical owner projects $24,237/year.{" "}
-              <a
-                href="#projections"
-                className="text-orange-500 hover:text-orange-400 underline underline-offset-4 transition-colors"
-              >
-                Full math &rarr;
-              </a>
+              Optimistic case (30 cycles/day). Typical owner projects $24,237/year.
             </motion.p>
 
             {/* Subheadline */}

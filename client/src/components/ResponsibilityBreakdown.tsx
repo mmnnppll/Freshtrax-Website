@@ -28,7 +28,7 @@ export default function ResponsibilityBreakdown() {
           className="mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">Your Only Job Is Collecting Revenue</h2>
-          <p className="text-xl text-white/60 max-w-3xl">
+          <p className="text-xl text-white/60 whitespace-nowrap">
             Freshtrax was built to operate without you. Here is the full breakdown of who does what.
           </p>
         </motion.div>

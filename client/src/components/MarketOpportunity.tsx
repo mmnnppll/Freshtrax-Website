@@ -67,7 +67,7 @@ export default function MarketOpportunity() {
             initial={{ opacity: 0, y: 20 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display font-bold text-3xl md:text-5xl text-white max-w-2xl leading-tight"
+            className="font-display font-bold text-3xl md:text-5xl text-white leading-tight whitespace-nowrap"
           >
             Leave your mark,{" "}
             <span className="text-orange-500">not your smell</span>

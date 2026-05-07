@@ -5,6 +5,17 @@ import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/components/SchemaMarkup";
 import { blogArticles, PILLARS, getArticlesByPillar } from "@/data/blogArticles";
 import { Link } from "wouter";
+import { useState } from "react";
+import { Zap, TrendingUp, Building2, Activity } from "lucide-react";
+
+const PILLAR_ICONS: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
+  "shoe-care-gear": Zap,
+  "revenue-business-model": TrendingUp,
+  "venue-owner-playbooks": Building2,
+  "athlete-health-hygiene": Activity,
+};
+
+const POSTS_PER_PAGE = 10;
 
 // ─── Design tokens ────────────────────────────────────────────────────────────
 const FT = {
@@ -30,6 +41,7 @@ const topArticles = [...blogArticles]
 function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0]; index: number }) {
   const count = getArticlesByPillar(pillar.slug).length;
   const labels = ["PILLAR 01", "PILLAR 02", "PILLAR 03", "PILLAR 04"];
+  const IconComp = PILLAR_ICONS[pillar.slug];
   return (
     <Link href={`/blog/pillar/${pillar.slug}`}>
       <a
@@ -54,10 +66,10 @@ function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0]; index: numbe
             background: `${FT.orange}1a`,
             borderRadius: 8,
             display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 20, marginBottom: 12,
+            marginBottom: 12,
           }}
         >
-          {pillar.icon}
+          {IconComp ? <IconComp size={20} color={FT.orange} /> : null}
         </div>
         <p style={{ color: FT.orange, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>
           {labels[index]}
@@ -188,6 +200,14 @@ function BrowseByPillarCard() {
 }
 
 export default function Blog() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(latestPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = latestPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
+
+  function scrollToList() {
+    document.getElementById("latest-dispatches")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   return (
     <>
       <SEOHead
@@ -228,11 +248,46 @@ export default function Blog() {
             className="blog-body-grid"
             style={{ padding: "0 40px 80px", maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 320px", gap: 40, alignItems: "start" }}
           >
-            <div>
+            <div id="latest-dispatches">
               <h2 style={{ fontSize: 13, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.muted, paddingBottom: 16, borderBottom: `1px solid ${FT.border}`, marginBottom: 0 }}>
                 Latest Dispatches
               </h2>
-              {latestPosts.map((article) => <PostRow key={article.id} article={article} />)}
+              {paginatedPosts.map((article) => <PostRow key={article.id} article={article} />)}
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, paddingTop: 32 }}>
+                  <button
+                    onClick={() => { setCurrentPage(p => Math.max(1, p - 1)); scrollToList(); }}
+                    disabled={currentPage === 1}
+                    style={{ padding: "8px 14px", borderRadius: 6, border: `1px solid ${FT.border}`, background: "transparent", color: currentPage === 1 ? FT.dim : FT.text, cursor: currentPage === 1 ? "not-allowed" : "pointer", fontSize: 13, fontWeight: 600 }}
+                  >
+                    ←
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => { setCurrentPage(page); scrollToList(); }}
+                      style={{
+                        padding: "8px 14px", borderRadius: 6, fontSize: 13, fontWeight: 700, cursor: "pointer",
+                        border: `1px solid ${page === currentPage ? FT.orange : FT.border}`,
+                        background: page === currentPage ? `${FT.orange}1a` : "transparent",
+                        color: page === currentPage ? FT.orange : FT.muted,
+                        transition: "all 150ms",
+                      }}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                  <button
+                    onClick={() => { setCurrentPage(p => Math.min(totalPages, p + 1)); scrollToList(); }}
+                    disabled={currentPage === totalPages}
+                    style={{ padding: "8px 14px", borderRadius: 6, border: `1px solid ${FT.border}`, background: "transparent", color: currentPage === totalPages ? FT.dim : FT.text, cursor: currentPage === totalPages ? "not-allowed" : "pointer", fontSize: 13, fontWeight: 600 }}
+                  >
+                    →
+                  </button>
+                </div>
+              )}
             </div>
             <aside style={{ position: "sticky", top: 16 }}>
               <TopArticlesCard />
@@ -258,13 +313,13 @@ export default function Blog() {
               Owners are generating up to $36,830/year per machine — no staff required.
             </p>
             <a
-              href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
+              href="/Freshtrax-roi-blueprint.pdf"
               target="_blank" rel="noopener noreferrer"
               style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: "none", transition: "background 200ms" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
               onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
             >
-              Book my discovery call →
+              Download my free ROI blueprint →
             </a>
           </section>
         </main>
