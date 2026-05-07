@@ -2,10 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <!-- Homepage - Highest Priority -->
+
+  <!-- Homepage -->
   <url>
     <loc>https://getfreshtrax.com/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,185 +18,315 @@
       <image:title>Freshtrax Logo</image:title>
     </image:image>
     <video:video>
-      <video:thumbnail_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4</video:thumbnail_loc>
+      <video:thumbnail_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</video:thumbnail_loc>
       <video:title>Freshtrax Demo Video</video:title>
-      <video:description>12-second cinematic demo of Freshtrax footwear sterilization kiosk in action</video:description>
+      <video:description>12-second cinematic demo of Freshtrax footwear sanitization kiosk in action</video:description>
       <video:content_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4</video:content_loc>
       <video:duration>12</video:duration>
     </video:video>
   </url>
 
-  <!-- Become an Owner - High Priority (Lead Gen) -->
+  <!-- Become an Owner -->
   <url>
     <loc>https://getfreshtrax.com/owners</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- How It Works - High Priority (Educational) -->
+  <!-- How It Works -->
   <url>
     <loc>https://getfreshtrax.com/how-it-works</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- FAQ - Medium-High Priority (Support/Trust) -->
-  <url>
-    <loc>https://getfreshtrax.com/faq</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- About - Medium Priority (Brand/Trust) -->
-  <url>
-    <loc>https://getfreshtrax.com/about</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Contact - Medium Priority (Conversion) -->
-  <url>
-    <loc>https://getfreshtrax.com/contact</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Blog - Medium Priority (Content Marketing) -->
+  <!-- Blog Index -->
   <url>
     <loc>https://getfreshtrax.com/blog</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
 
-  <!-- Blog Articles - Medium Priority (Organic Traffic) -->
+  <!-- FAQ -->
   <url>
-    <loc>https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sterilization</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://getfreshtrax.com/faq</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
-      <image:title>Athlete's Foot Prevention Guide</image:title>
-    </image:image>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://getfreshtrax.com/about</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://getfreshtrax.com/contact</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://getfreshtrax.com/privacy</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://getfreshtrax.com/terms</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/why-gym-shoes-smell-science</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
-      <image:title>Gym Shoes Odor Science</image:title>
-    </image:image>
   </url>
 
   <url>
-    <loc>https://getfreshtrax.com/blog/business-case-shoe-sterilization-fitness</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
-      <image:title>Fitness Venue Business Model</image:title>
-    </image:image>
   </url>
 
   <url>
-    <loc>https://getfreshtrax.com/blog/uvc-light-sterilization-technology</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://getfreshtrax.com/blog/uvc-light-sanitization-technology</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
-      <image:title>UVC Light Technology</image:title>
-    </image:image>
   </url>
 
   <url>
-    <loc>https://getfreshtrax.com/blog/pickleball-court-hygiene-shoe-sterilization</loc>
-    <lastmod>2026-02-20</lastmod>
+    <loc>https://getfreshtrax.com/blog/pickleball-court-hygiene-shoe-sanitization</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
-      <image:title>Pickleball Court Hygiene</image:title>
-    </image:image>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/do-shoe-deodorizer-sprays-actually-work</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/how-to-get-rid-of-athletes-foot-for-good</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/best-low-cost-kiosk-businesses-2026</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/are-gym-shoes-making-you-sick</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/real-reason-shoes-still-smell-after-washing</loc>
-    <lastmod>2026-04-23</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/uvc-light-shoes-kill-bacteria</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/how-to-place-kiosk-gym-step-by-step</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/gyms-add-revenue-without-hiring-staff</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/pickleball-clubs-hygiene-amenities</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/why-serious-crossfit-athletes-clean-their-shoes-differently</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/the-hidden-reason-your-gym-bag-smells-even-after-washing</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/does-freezing-your-shoes-really-kill-bacteria-the-truth</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/how-long-do-gym-shoes-actually-last-most-people-replace-too-late</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/martial-arts-hygiene-what-every-bjj-mma-practitioner-should-know</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/the-embarrassing-gym-moment-nobody-talks-about</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/best-pre-and-post-workout-shoe-care-routine-for-athletes</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/youth-sports-foot-hygiene-what-parents-need-to-know</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/5-things-crossfit-box-owners-are-doing-to-retain-members-in-2026</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/how-boutique-fitness-studios-are-differentiating-on-cleanliness-not-price</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/the-true-cost-of-a-smelly-gym-what-negative-reviews-are-actually-saying</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/martial-arts-studio-owners-guide-to-hygiene-standards</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/how-gyms-are-using-passive-revenue-machines-to-offset-rising-overhead</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/what-members-actually-want-from-their-gym-2026-survey-insights</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/kiosk-business-case-study-what-90-days-in-a-gym-looks-like</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/shoe-care-gear</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/revenue-business-model</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/venue-owner-playbooks</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/athlete-health-hygiene</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
 </urlset>
