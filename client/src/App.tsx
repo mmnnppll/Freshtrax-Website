@@ -3,6 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import CookieConsent from "./components/CookieConsent";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LeadCaptureProvider } from "./contexts/LeadCaptureContext";
 import Home from "./pages/Home";
@@ -45,6 +46,7 @@ function App() {
           <LeadCaptureProvider>
             <Toaster />
             <Router />
+            <CookieConsent />
           </LeadCaptureProvider>
         </TooltipProvider>
       </ThemeProvider>
