@@ -1,0 +1,359 @@
+/**
+ * Freshtrax Static Prerender Script
+ *
+ * Runs after `vite build`. For every route it:
+ *   1. Injects per-page title, meta description, canonical URL, and OG/Twitter tags
+ *   2. For blog articles: injects the full article body as semantic HTML inside #root
+ *      so crawlers that don't run JS see real content.
+ *
+ * Usage (automatic via package.json build script):
+ *   tsx scripts/prerender.ts
+ */
+
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
+import { join } from "path";
+
+// ---------------------------------------------------------------------------
+// Import blog data directly — no path aliases needed (pure data file)
+// ---------------------------------------------------------------------------
+import {
+  blogArticles,
+  PILLARS,
+  type BlogArticle,
+  type Pillar,
+} from "../client/src/data/blogArticles";
+
+// ---------------------------------------------------------------------------
+// Config
+// ---------------------------------------------------------------------------
+const BASE_URL = "https://getfreshtrax.com";
+const DIST_DIR = join(process.cwd(), "dist/public");
+const TEMPLATE_PATH = join(DIST_DIR, "index.html");
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function escapeAttr(str: string): string {
+  return str.replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
+/**
+ * Convert the markdown-like article content format (used in BlogArticle.tsx)
+ * into semantic HTML for crawler consumption.
+ */
+function articleContentToHtml(content: string): string {
+  const paragraphs = content.split("\n\n");
+  const parts: string[] = [];
+
+  for (const para of paragraphs) {
+    const trimmed = para.trim();
+    if (!trimmed) continue;
+
+    if (trimmed.startsWith("# ")) {
+      parts.push(`<h1>${escapeHtml(trimmed.slice(2).trim())}</h1>`);
+    } else if (trimmed.startsWith("## ")) {
+      parts.push(`<h2>${escapeHtml(trimmed.slice(3).trim())}</h2>`);
+    } else if (trimmed.startsWith("### ")) {
+      parts.push(`<h3>${escapeHtml(trimmed.slice(4).trim())}</h3>`);
+    } else if (trimmed.startsWith("#### ")) {
+      parts.push(`<h4>${escapeHtml(trimmed.slice(5).trim())}</h4>`);
+    } else if (trimmed.split("\n").some((l) => l.trimStart().startsWith("- "))) {
+      const items = trimmed
+        .split("\n")
+        .filter((l) => l.trimStart().startsWith("- "))
+        .map((l) => `<li>${escapeHtml(l.replace(/^[\s-]+/, "").trim())}</li>`)
+        .join("");
+      parts.push(`<ul>${items}</ul>`);
+    } else if (trimmed.split("\n").some((l) => /^\d+\./.test(l.trimStart()))) {
+      const items = trimmed
+        .split("\n")
+        .filter((l) => /^\d+\./.test(l.trimStart()))
+        .map((l) => `<li>${escapeHtml(l.replace(/^\d+\.\s*/, "").trim())}</li>`)
+        .join("");
+      parts.push(`<ol>${items}</ol>`);
+    } else {
+      // Apply inline bold (**text**) formatting
+      const inlined = escapeHtml(trimmed).replace(
+        /\*\*([^*]+)\*\*/g,
+        "<strong>$1</strong>"
+      );
+      parts.push(`<p>${inlined}</p>`);
+    }
+  }
+
+  return parts.join("\n");
+}
+
+/**
+ * Build a self-contained article HTML block suitable for injection into #root.
+ * This is what crawlers without JS will see.
+ */
+function buildArticleHtml(article: BlogArticle): string {
+  // article.content already begins with "# Title", which articleContentToHtml
+  // converts to <h1>. Don't add a second <h1> here.
+  const bodyHtml = articleContentToHtml(article.content);
+  return `<article>
+  <p><em>${escapeHtml(article.excerpt)}</em></p>
+  ${bodyHtml}
+</article>`;
+}
+
+/**
+ * Inject route-specific meta tags into the HTML template, and optionally
+ * pre-populate #root with static body content.
+ */
+function buildHtml(opts: {
+  template: string;
+  title: string;
+  description: string;
+  canonical: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  bodyHtml?: string;
+}): string {
+  const {
+    template,
+    title,
+    description,
+    canonical,
+    ogTitle,
+    ogDescription,
+    bodyHtml,
+  } = opts;
+
+  const safeTitle = escapeAttr(title);
+  const safeDesc = escapeAttr(description);
+  const safeCanonical = escapeAttr(canonical);
+  const safeOgTitle = escapeAttr(ogTitle ?? title);
+  const safeOgDesc = escapeAttr(ogDescription ?? description);
+
+  let html = template;
+
+  // Title
+  html = html.replace(/<title>[^<]*<\/title>/, `<title>${safeTitle}</title>`);
+
+  // Meta description
+  html = html.replace(
+    /<meta\s+name="description"\s+content="[^"]*"/,
+    `<meta name="description" content="${safeDesc}"`
+  );
+
+  // Canonical
+  html = html.replace(
+    /<link\s+rel="canonical"\s+href="[^"]*"/,
+    `<link rel="canonical" href="${safeCanonical}"`
+  );
+
+  // OG tags
+  html = html.replace(
+    /property="og:title"\s+content="[^"]*"/,
+    `property="og:title" content="${safeOgTitle}"`
+  );
+  html = html.replace(
+    /property="og:description"\s+content="[^"]*"/,
+    `property="og:description" content="${safeOgDesc}"`
+  );
+  html = html.replace(
+    /property="og:url"\s+content="[^"]*"/,
+    `property="og:url" content="${safeCanonical}"`
+  );
+
+  // Twitter tags
+  html = html.replace(
+    /name="twitter:title"\s+content="[^"]*"/,
+    `name="twitter:title" content="${safeOgTitle}"`
+  );
+  html = html.replace(
+    /name="twitter:description"\s+content="[^"]*"/,
+    `name="twitter:description" content="${safeOgDesc}"`
+  );
+  html = html.replace(
+    /name="twitter:url"\s+content="[^"]*"/,
+    `name="twitter:url" content="${safeCanonical}"`
+  );
+
+  // Inject body content into #root if provided
+  if (bodyHtml) {
+    html = html.replace(
+      /<div id="root"><\/div>/,
+      `<div id="root">${bodyHtml}</div>`
+    );
+  }
+
+  return html;
+}
+
+function writeRoute(routePath: string, html: string): void {
+  // "/blog/some-slug" → dist/public/blog/some-slug/index.html
+  const cleanPath = routePath.replace(/^\//, "");
+  const outDir = cleanPath ? join(DIST_DIR, cleanPath) : DIST_DIR;
+  if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+  const outFile = join(outDir, "index.html");
+  writeFileSync(outFile, html, "utf-8");
+  console.log(`  ✓ ${routePath || "/"}`);
+}
+
+// ---------------------------------------------------------------------------
+// Static routes (title + meta only)
+// ---------------------------------------------------------------------------
+const STATIC_ROUTES: Array<{
+  path: string;
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+}> = [
+  {
+    path: "/",
+    title: "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
+    description:
+      "Freshtrax is the only medical-grade shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required.",
+    ogTitle:
+      "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
+    ogDescription:
+      "Make up to $36,830/year per kiosk (typical: $24,237). Self-service footwear sanitization that eliminates bacteria and odor in 90 seconds.",
+  },
+  {
+    path: "/how-it-works",
+    title: "How It Works | Freshtrax Footwear Sanitization",
+    description:
+      "Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology.",
+    ogTitle: "How It Works | Freshtrax Footwear Sanitization",
+    ogDescription:
+      "Discover the 4-step process: SELECT, INSERT, REFRESH, UNLOAD. Backed by peer-reviewed clinical research.",
+  },
+  {
+    path: "/owners",
+    title: "Become an Owner | Freshtrax Footwear Sanitization",
+    description:
+      "Join the Freshtrax Founders Club. Generate up to $36,830/year per kiosk (typical: $24,237). Zero staff, zero inventory.",
+    ogTitle: "Become an Owner | Freshtrax Footwear Sanitization",
+    ogDescription:
+      "First 20 Founders Club slots. Locked-in $79/month platform fee for life. ROI calculator and full financial projections.",
+  },
+  {
+    path: "/about",
+    title: "About Freshtrax | Our Mission & Vision",
+    description:
+      "Learn about Freshtrax's mission to revolutionize footwear hygiene. Medical-grade shoe sanitization for fitness venues across North America.",
+    ogTitle: "About Freshtrax | Our Mission & Vision",
+    ogDescription:
+      "Discover the story behind Freshtrax and our commitment to eliminating bacteria, fungi, and odor from athletic footwear.",
+  },
+  {
+    path: "/faq",
+    title: "FAQ | Freshtrax Footwear Sanitization",
+    description:
+      "Frequently asked questions about Freshtrax. Learn about the technology, financial performance, operations, maintenance, and how to get started.",
+    ogTitle: "FAQ | Freshtrax Footwear Sanitization",
+    ogDescription:
+      "Get answers about how Freshtrax works, profitability, maintenance costs, and becoming a kiosk owner.",
+  },
+  {
+    path: "/contact",
+    title: "Contact Us | Freshtrax Footwear Sanitization",
+    description:
+      "Get in touch with Freshtrax. Reach us for owner inquiries, partnerships, or support. We respond within 1 business day.",
+    ogTitle: "Contact Us | Freshtrax Footwear Sanitization",
+    ogDescription:
+      "Contact Freshtrax for owner inquiries, venue partnerships, or general questions.",
+  },
+  {
+    path: "/blog",
+    title: "Blog | Freshtrax Footwear Sanitization",
+    description:
+      "Expert articles on footwear hygiene, shoe sanitization science, gym cleanliness, and the Freshtrax kiosk business model.",
+    ogTitle: "Freshtrax Blog | Footwear Hygiene & Sanitization",
+    ogDescription:
+      "Read expert articles on athlete foot health, UV sanitization science, venue hygiene best practices, and kiosk business insights.",
+  },
+  {
+    path: "/privacy",
+    title: "Privacy Policy | Freshtrax",
+    description:
+      "How Freshtrax collects, uses, and safeguards your information when you visit our website or interact with our kiosks.",
+  },
+  {
+    path: "/terms",
+    title: "Terms of Service | Freshtrax",
+    description:
+      "Terms governing use of the Freshtrax website and footwear sanitization kiosk services.",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+function main(): void {
+  if (!existsSync(TEMPLATE_PATH)) {
+    console.error(`\nERROR: ${TEMPLATE_PATH} not found.`);
+    console.error("Run 'pnpm build' (vite build step) before prerendering.\n");
+    process.exit(1);
+  }
+
+  const template = readFileSync(TEMPLATE_PATH, "utf-8");
+  const today = new Date().toISOString().split("T")[0];
+
+  console.log(`\nFreshtrax Prerender — ${today}`);
+  console.log("─".repeat(50));
+
+  // -- Static routes
+  console.log("\nStatic routes:");
+  for (const route of STATIC_ROUTES) {
+    const html = buildHtml({
+      template,
+      title: route.title,
+      description: route.description,
+      canonical: `${BASE_URL}${route.path}`,
+      ogTitle: route.ogTitle,
+      ogDescription: route.ogDescription,
+    });
+    writeRoute(route.path, html);
+  }
+
+  // -- Blog pillar pages
+  console.log("\nBlog pillar pages:");
+  for (const pillar of PILLARS) {
+    const html = buildHtml({
+      template,
+      title: `${pillar.name} | Freshtrax Blog`,
+      description: pillar.description,
+      canonical: `${BASE_URL}/blog/pillar/${pillar.slug}`,
+      ogTitle: `${pillar.name} — Freshtrax`,
+      ogDescription: pillar.description,
+    });
+    writeRoute(`/blog/pillar/${pillar.slug}`, html);
+  }
+
+  // -- Blog article pages (meta + full body content)
+  console.log("\nBlog articles:");
+  for (const article of blogArticles) {
+    const articleHtml = buildArticleHtml(article);
+    const html = buildHtml({
+      template,
+      title: article.seoTitle || article.title,
+      description: article.seoDescription || article.excerpt,
+      canonical: `${BASE_URL}/blog/${article.slug}`,
+      ogTitle: article.seoTitle || article.title,
+      ogDescription: article.seoDescription || article.excerpt,
+      bodyHtml: articleHtml,
+    });
+    writeRoute(`/blog/${article.slug}`, html);
+  }
+
+  // Summary
+  const total =
+    STATIC_ROUTES.length + PILLARS.length + blogArticles.length;
+  console.log(`\n✅ Prerender complete — ${total} pages generated\n`);
+}
+
+main();
