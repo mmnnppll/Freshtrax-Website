@@ -18,7 +18,7 @@ export default function HowItWorks() {
       icon: Zap,
     },
     {
-      number: "2"
+      number: "2",
       title: "INSERT",
       description: "Mount shoes on internal steel rods",
       icon: Footprints,
@@ -87,7 +87,7 @@ export default function HowItWorks() {
     {
       icon: Footprints,
       title: "All Shoe Types",
-      description: "Works on athletic, casual, and specialty footwear,
+      description: "Works on athletic, casual, and specialty footwear",
     },
     {
       icon: BarChart3,
