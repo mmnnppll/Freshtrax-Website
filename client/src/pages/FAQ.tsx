@@ -29,7 +29,7 @@ const faqs = [
       },
       {
         q: "Can the machine handle different shoe types?",
-        a: "Yes. The dual-chamber design accommodates everything from running shoes to cleats to wrestling shoes. The system automatically adjusts sanitization intensity based on shoe type.",
+        a: "Yes. The kiosk accommodates everything from running shoes to cleats to wrestling shoes. The antimicrobial vapor and UV-C light are safe for all common shoe materials and adjust naturally to fit the interior of any shoe type.",
       },
     ],
   },
