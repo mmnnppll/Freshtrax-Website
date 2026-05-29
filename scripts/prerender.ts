@@ -313,7 +313,7 @@ function main(): void {
       template,
       title: route.title,
       description: route.description,
-      canonical: `${BASE_URL}${route.path}`,
+      canonical: route.path === "/" ? `${BASE_URL}/` : `${BASE_URL}${route.path}/`,
       ogTitle: route.ogTitle,
       ogDescription: route.ogDescription,
     });
@@ -327,7 +327,7 @@ function main(): void {
       template,
       title: `${pillar.name} | Freshtrax Blog`,
       description: pillar.description,
-      canonical: `${BASE_URL}/blog/pillar/${pillar.slug}`,
+      canonical: `${BASE_URL}/blog/pillar/${pillar.slug}/`,
       ogTitle: `${pillar.name} — Freshtrax`,
       ogDescription: pillar.description,
     });
@@ -342,7 +342,7 @@ function main(): void {
       template,
       title: article.seoTitle || article.title,
       description: article.seoDescription || article.excerpt,
-      canonical: `${BASE_URL}/blog/${article.slug}`,
+      canonical: `${BASE_URL}/blog/${article.slug}/`,
       ogTitle: article.seoTitle || article.title,
       ogDescription: article.seoDescription || article.excerpt,
       bodyHtml: articleHtml,
