@@ -23,16 +23,16 @@ export default function Owners() {
   return (
     <>
       <SEOHead
-        title="Become an Owner | Freshtrax Footwear Sanitization"
+        title="Shoe Sanitization Kiosk for Sale | Freshtrax Founders Club"
         description="Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237). ROI Calculator, Founder's Club benefits, and partnership opportunities."
-        canonicalUrl="https://getfreshtrax.com/owners"
-        ogTitle="Become an Owner | Freshtrax Footwear Sanitization"
+        canonicalUrl="https://getfreshtrax.com/owners/"
+        ogTitle="Shoe Sanitization Kiosk for Sale | Freshtrax Founders Club"
         ogDescription="Make $3,150–$10,000+ monthly revenue. Access to $3,800 in incentives through the Founder's Club."
       />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "Become an Owner | Freshtrax Footwear Sanitization",
+        title: "Shoe Sanitization Kiosk for Sale | Freshtrax Founders Club",
         description: "Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237).",
-        url: "https://getfreshtrax.com/owners",
+        url: "https://getfreshtrax.com/owners/",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
       <ParticleField />
