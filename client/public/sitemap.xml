@@ -126,6 +126,14 @@
     <priority>0.75</priority>
   </url>
 
+  <!-- Shoe Sanitization Machine Landing Page -->
+  <url>
+    <loc>https://getfreshtrax.com/shoe-sanitization-machine/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Blog Articles -->
   <url>
     <loc>https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization/</loc>

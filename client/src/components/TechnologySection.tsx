@@ -5,7 +5,8 @@
  */
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
-import { Sun, Wind, Droplets } from "lucide-react";
+import { Sun, Wind, Droplets, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 import { OFFERS } from "@/contexts/LeadCaptureContext";
 
@@ -118,6 +119,19 @@ export default function TechnologySection() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={cardsInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <Link
+            href="/shoe-sanitization-machine"
+            className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 text-sm font-semibold transition-colors"
+          >
+            Learn more about our shoe sanitization machine
+            <ArrowRight size={14} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

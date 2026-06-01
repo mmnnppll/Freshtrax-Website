@@ -22,6 +22,7 @@ import VenueCrossfit from "./pages/VenueCrossfit";
 import VenueBadminton from "./pages/VenueBadminton";
 import VenueTennis from "./pages/VenueTennis";
 import VenueBouldering from "./pages/VenueBouldering";
+import ShoeSanitizationMachine from "./pages/ShoeSanitizationMachine";
 
 function Router() {
   return (
@@ -43,6 +44,7 @@ function Router() {
       <Route path={"/badminton-centers"} component={VenueBadminton} />
       <Route path={"/tennis-clubs"} component={VenueTennis} />
       <Route path={"/bouldering-gyms"} component={VenueBouldering} />
+      <Route path={"/shoe-sanitization-machine"} component={ShoeSanitizationMachine} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

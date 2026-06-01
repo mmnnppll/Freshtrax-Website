@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Wind, Droplets, Clock, Footprints, BarChart3, CheckCircle } from "lucide-react";
+import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLeadCapture } from "@/contexts/LeadCaptureContext";
@@ -181,7 +182,10 @@ export default function HowItWorks() {
             >
               <h2 className="text-3xl font-bold mb-3">The Only UVC Shoe Sanitizer Built for High-Traffic Venues</h2>
               <p className="text-white/60 text-lg max-w-2xl">
-                Engineered for the demands of gyms, pickleball clubs, and sports facilities where hundreds of shoes pass through weekly.
+                Engineered for the demands of gyms, pickleball clubs, and sports facilities where hundreds of shoes pass through weekly.{" "}
+                <Link href="/shoe-sanitization-machine" className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors">
+                  See full machine specs →
+                </Link>
               </p>
             </motion.div>
             <motion.div
