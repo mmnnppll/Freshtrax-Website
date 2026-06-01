@@ -132,10 +132,12 @@ export default function HeroSection() {
                 <video
                   ref={videoRef}
                   src={DEMO_VIDEO}
+                  poster={HERO_BG}
                   autoPlay
                   muted={isMuted}
                   loop
                   playsInline
+                  preload="none"
                   className="w-full h-full object-cover"
                 />
                 {/* Unmute Button */}
