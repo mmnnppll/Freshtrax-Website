@@ -46,18 +46,31 @@ export default function HeroSection() {
               </div>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline — H1 is keyword-targeted for SEO; revenue claim is H2 for conversion */}
             <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="inline-flex items-center gap-2 mb-4"
+            >
+              <span className="w-0.5 h-4 bg-orange-500 shrink-0" />
+              <span className="text-xs font-semibold uppercase tracking-widest text-orange-400 font-body">
+                The Shoe Sanitization Kiosk for Fitness and Sports Venues
+              </span>
+            </motion.h1>
+
+            {/* Revenue claim — visually primary */}
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
               className="font-display font-bold text-5xl md:text-6xl leading-tight mb-4 text-white"
             >
               Make up to{" "}
               <span className="text-orange-500">$36,830/year</span>
               <br />
               per kiosk.
-            </motion.h1>
+            </motion.h2>
 
             {/* Earnings disclosure — visible, not fine print */}
             <motion.p
