@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "wouter";
 import { useMemo } from "react";
 import Navbar from "@/components/Navbar";
@@ -45,6 +46,33 @@ function DiscoveryCallCard() {
   );
 }
 
+/** Parse inline markdown — bold and links — into React nodes */
+function renderInline(text: string): React.ReactNode[] {
+  // Split on **bold** and [link text](url) patterns
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i} style={{ color: FT.text, fontWeight: 600 }}>{part.slice(2, -2)}</strong>;
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      const [, label, href] = linkMatch;
+      const isExternal = href.startsWith("http");
+      return isExternal ? (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+          style={{ color: FT.orange, textDecoration: "underline", textUnderlineOffset: 3 }}>
+          {label}
+        </a>
+      ) : (
+        <Link key={i} href={href}>
+          <a style={{ color: FT.orange, textDecoration: "underline", textUnderlineOffset: 3 }}>{label}</a>
+        </Link>
+      );
+    }
+    return part;
+  });
+}
+
 /** Render markdown-like content as React elements */
 function ArticleContent({ content }: { content: string }) {
   const paragraphs = content.split("\n\n");
@@ -60,12 +88,15 @@ function ArticleContent({ content }: { content: string }) {
         if (para.startsWith("### ")) {
           return <h3 key={i} style={{ fontSize: 18, fontWeight: 700, color: FT.text, marginTop: 28, marginBottom: 10 }}>{para.replace("### ", "")}</h3>;
         }
+        if (para.startsWith("#### ")) {
+          return <h4 key={i} style={{ fontSize: 16, fontWeight: 700, color: FT.text, marginTop: 24, marginBottom: 8 }}>{para.replace("#### ", "")}</h4>;
+        }
         if (para.startsWith("- ")) {
           const items = para.split("\n").filter((l) => l.startsWith("- ") || l.startsWith("  - "));
           return (
             <ul key={i} style={{ margin: "12px 0 12px 24px", padding: 0 }}>
               {items.map((item, j) => (
-                <li key={j} style={{ marginBottom: 6, lineHeight: 1.6 }}>{item.replace(/^[\s-]+/, "")}</li>
+                <li key={j} style={{ marginBottom: 6, lineHeight: 1.6 }}>{renderInline(item.replace(/^[\s-]+/, ""))}</li>
               ))}
             </ul>
           );
@@ -75,21 +106,23 @@ function ArticleContent({ content }: { content: string }) {
           return (
             <ol key={i} style={{ margin: "12px 0 12px 24px", padding: 0 }}>
               {items.map((item, j) => (
-                <li key={j} style={{ marginBottom: 6, lineHeight: 1.6 }}>{item.replace(/^\d+\.\s*/, "")}</li>
+                <li key={j} style={{ marginBottom: 6, lineHeight: 1.6 }}>{renderInline(item.replace(/^\d+\.\s*/, ""))}</li>
               ))}
             </ol>
           );
         }
-        if (para.startsWith("*") && para.endsWith("*") && para.includes("Freshtrax")) {
+        // Italic CTA block (lines starting and ending with *)
+        if (para.startsWith("*") && para.endsWith("*") && !para.startsWith("**")) {
+          const inner = para.replace(/^\*/, "").replace(/\*$/, "");
           return (
             <p key={i} style={{ fontSize: 14, color: FT.dim, borderLeft: `2px solid ${FT.orange}`, paddingLeft: 16, margin: "24px 0", fontStyle: "italic" }}>
-              {para.replace(/\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")}
+              {renderInline(inner)}
             </p>
           );
         }
         return para.trim() ? (
           <p key={i} style={{ marginBottom: 20, lineHeight: 1.8 }}>
-            {para.replace(/\*\*([^*]+)\*\*/g, "$1")}
+            {renderInline(para)}
           </p>
         ) : null;
       })}
