@@ -168,24 +168,7 @@ export default function ShoeSanitizationMachine() {
           dateModified: "2026-06-01",
         })}
       />
-      {/* Product schema scoped to this page */}
-      <SchemaMarkup
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: "Freshtrax Shoe Sanitization Machine",
-          description: "Self-service shoe sanitization machine using UVC light, ozone, antimicrobial vapor, and heat. Eliminates odor and bacteria from athletic footwear in 90 seconds. Built for fitness and sports venues.",
-          image: "https://getfreshtrax.com/images/ssm/kiosk-black-bg-01.jpg",
-          brand: { "@type": "Brand", name: "Freshtrax" },
-          url: "https://getfreshtrax.com/shoe-sanitization-machine",
-          offers: {
-            "@type": "Offer",
-            availability: "https://schema.org/InStock",
-            url: "https://getfreshtrax.com/shoe-sanitization-machine",
-            priceCurrency: "USD",
-          },
-        }}
-      />
+      {/* Product schema intentionally omitted — price not public, handled globally in index.html */}
       {/* BreadcrumbList schema */}
       <SchemaMarkup
         schema={createBreadcrumbSchema([
