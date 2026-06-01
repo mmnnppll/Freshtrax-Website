@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
-import { SchemaMarkup, createWebPageSchema } from "@/components/SchemaMarkup";
+import { SchemaMarkup, createWebPageSchema, createFAQSchema, createBreadcrumbSchema } from "@/components/SchemaMarkup";
 
 const venues = [
   {
@@ -151,18 +151,72 @@ export default function ShoeSanitizationMachine() {
     <>
       <SEOHead
         title="Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax"
-        description="Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds. Zero staff. Zero maintenance."
+        description="Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds. Zero staff required."
         canonicalUrl="https://getfreshtrax.com/shoe-sanitization-machine"
         ogTitle="Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax"
         ogDescription="Freshtrax eliminates odor and bacteria from athletic footwear in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat."
+        ogImage="https://getfreshtrax.com/images/ssm/kiosk-black-bg-01.jpg"
       />
+      {/* WebPage schema */}
       <SchemaMarkup
         schema={createWebPageSchema({
           title: "Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax",
-          description:
-            "Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds.",
+          description: "Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds.",
           url: "https://getfreshtrax.com/shoe-sanitization-machine",
+          image: "https://getfreshtrax.com/images/ssm/kiosk-black-bg-01.jpg",
+          datePublished: "2026-06-01",
+          dateModified: "2026-06-01",
         })}
+      />
+      {/* Product schema scoped to this page */}
+      <SchemaMarkup
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Freshtrax Shoe Sanitization Machine",
+          description: "Self-service shoe sanitization machine using UVC light, ozone, antimicrobial vapor, and heat. Eliminates odor and bacteria from athletic footwear in 90 seconds. Built for fitness and sports venues.",
+          image: "https://getfreshtrax.com/images/ssm/kiosk-black-bg-01.jpg",
+          brand: { "@type": "Brand", name: "Freshtrax" },
+          url: "https://getfreshtrax.com/shoe-sanitization-machine",
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            url: "https://getfreshtrax.com/shoe-sanitization-machine",
+            priceCurrency: "USD",
+          },
+        }}
+      />
+      {/* BreadcrumbList schema */}
+      <SchemaMarkup
+        schema={createBreadcrumbSchema([
+          { name: "Home", url: "https://getfreshtrax.com/" },
+          { name: "Shoe Sanitization Machine", url: "https://getfreshtrax.com/shoe-sanitization-machine" },
+        ])}
+      />
+      {/* FAQPage schema — enables rich snippets in SERP */}
+      <SchemaMarkup
+        schema={createFAQSchema([
+          {
+            question: "How is this different from spray sanitizers or UV cabinets?",
+            answer: "Spray stations require staff and leave chemical residue. UV cabinets typically take 10–30 minutes and only treat the exterior. Freshtrax treats the inside of the shoe — where bacteria and odor actually live — in under 90 seconds with no staff involvement.",
+          },
+          {
+            question: "Is it effective against athlete's foot and nail fungus?",
+            answer: "Yes. The UVC and ozone combination targets the dermatophytes responsible for tinea pedis (athlete's foot) and onychomycosis (nail fungus), based on peer-reviewed clinical research. Freshtrax is working toward full FDA classification.",
+          },
+          {
+            question: "What does the machine look like? Will it fit my venue?",
+            answer: "The kiosk stands 71 inches tall with a 28.5 by 26.5 inch footprint and sits on casters for easy repositioning. It fits near entryways, locker room corridors, or beside shoe racks. Placement is confirmed on the partner call.",
+          },
+          {
+            question: "What about maintenance?",
+            answer: "Freshtrax handles maintenance remotely. The dashboard flags issues in real time. Most are resolved without anyone visiting your facility. Quarterly system checks and scheduled maintenance cycles are included.",
+          },
+          {
+            question: "How long until I receive the machine after ordering?",
+            answer: "6 to 7 months from order confirmation. The machine is built to order, not off-the-shelf. Freshtrax works with you during that window to identify and secure your venue placement so you are ready to generate revenue from day one.",
+          },
+        ])}
       />
 
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -176,10 +230,12 @@ export default function ShoeSanitizationMachine() {
             <div className="absolute inset-0 z-0">
               <img
                 src="/images/ssm/kiosk-black-bg-01.jpg"
-                alt="Freshtrax shoe sanitization machine in use"
+                alt="Freshtrax shoe sanitization machine — front view at a sports venue"
                 className="w-full h-full object-cover opacity-30"
                 width={1200}
                 height={800}
+                loading="eager"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
@@ -297,7 +353,7 @@ export default function ShoeSanitizationMachine() {
                       <div className={isEven ? "" : "md:order-1"}>
                         <img
                           src={tech.image}
-                          alt={tech.title}
+                          alt={`${tech.title} stage of the Freshtrax shoe sanitization machine`}
                           className="w-full h-72 object-cover rounded-xl border border-white/10"
                           loading="lazy"
                           width={600}
@@ -370,7 +426,7 @@ export default function ShoeSanitizationMachine() {
                 >
                   <img
                     src="/images/ssm/product-dimensions.png"
-                    alt="Freshtrax shoe sanitization machine dimensions — 28.5 inches wide, 26.5 inches deep, 71 inches tall"
+                    alt="Freshtrax shoe sanitization machine dimensions: 28.5 inches wide, 26.5 inches deep, 71 inches tall, on casters"
                     className="w-full max-w-sm mx-auto"
                     loading="lazy"
                     width={400}
