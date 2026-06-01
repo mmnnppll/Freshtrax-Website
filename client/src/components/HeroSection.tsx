@@ -7,7 +7,7 @@
 import { motion } from "framer-motion";
 import { Download, CalendarDays, Volume2, VolumeX } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
 const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
@@ -15,7 +15,18 @@ const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByY
 export default function HeroSection() {
   const { openModal } = useLeadCapture();
   const [isMuted, setIsMuted] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Only load the video on desktop (lg breakpoint = 1024px).
+  // On mobile the video is the LCP element and causes 40s+ load times on slow 4G.
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
@@ -129,34 +140,42 @@ export default function HeroSection() {
               {/* Glow behind video */}
               <div className="absolute -inset-8 bg-orange-500/[0.06] rounded-full blur-[80px]" />
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
-                <video
-                  ref={videoRef}
-                  src={DEMO_VIDEO}
-                  poster={HERO_BG}
-                  autoPlay
-                  muted={isMuted}
-                  loop
-                  playsInline
-                  preload="none"
-                  className="w-full h-full object-cover"
-                />
-                {/* Unmute Button */}
-                <button
-                  onClick={() => {
-                    setIsMuted(!isMuted);
-                    if (videoRef.current) {
-                      videoRef.current.muted = !isMuted;
-                    }
-                  }}
-                  className="absolute bottom-4 right-4 p-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-                  aria-label={isMuted ? "Unmute video" : "Mute video"}
-                >
-                  {isMuted ? (
-                    <VolumeX size={18} />
-                  ) : (
-                    <Volume2 size={18} />
-                  )}
-                </button>
+                {isDesktop ? (
+                  <>
+                    <video
+                      ref={videoRef}
+                      src={DEMO_VIDEO}
+                      poster={HERO_BG}
+                      autoPlay
+                      muted={isMuted}
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Unmute Button — desktop only */}
+                    <button
+                      onClick={() => {
+                        setIsMuted(!isMuted);
+                        if (videoRef.current) {
+                          videoRef.current.muted = !isMuted;
+                        }
+                      }}
+                      className="absolute bottom-4 right-4 p-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                      aria-label={isMuted ? "Unmute video" : "Mute video"}
+                    >
+                      {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                    </button>
+                  </>
+                ) : (
+                  /* Mobile: static poster image — no video download */
+                  <img
+                    src={HERO_BG}
+                    alt="Freshtrax footwear sanitization kiosk demo"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                )}
               </div>
             </div>
           </motion.div>
