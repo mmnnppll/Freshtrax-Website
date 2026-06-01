@@ -86,7 +86,7 @@ const specs = [
   { label: "Dimensions", value: '28.5" W × 26.5" D × 71" H' },
   { label: "Power", value: "110V standard outlet" },
   { label: "Cycle Time", value: "Under 90 seconds" },
-  { label: "Consumables", value: "None" },
+  { label: "Consumables", value: "Antimicrobial vapor (supplied by Freshtrax)" },
   { label: "Mobility", value: "Mounted on casters" },
   { label: "Payment", value: "Apple Pay, Google Pay, cards, cash" },
   { label: "Pricing Tiers", value: "Basic Fresh ($3.65) / Max Fresh ($4.35)" },
@@ -97,7 +97,7 @@ const specs = [
 const faqs = [
   {
     q: "How is this different from spray sanitizers or UV cabinets?",
-    a: "Spray stations require staff and leave chemical residue. UV cabinets typically take 10–30 minutes and only treat the exterior. Freshtrax treats the inside of the shoe — where bacteria and odor actually live — in under 90 seconds with no chemicals and no staff.",
+    a: "Spray stations require staff and leave chemical residue. UV cabinets typically take 10–30 minutes and only treat the exterior. Freshtrax treats the inside of the shoe — where bacteria and odor actually live — in under 90 seconds with no staff involvement.",
   },
   {
     q: "Is it effective against athlete's foot and nail fungus?",
@@ -230,7 +230,7 @@ export default function ShoeSanitizationMachine() {
                   { stat: "90s", label: "Full cycle" },
                   { stat: "4-Stage", label: "Sanitization process" },
                   { stat: "91–95%", label: "Bioburden reduction*" },
-                  { stat: "$0", label: "Consumables needed" },
+                  { stat: "0", label: "Staff required" },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -476,23 +476,25 @@ export default function ShoeSanitizationMachine() {
             </div>
           </section>
 
-          {/* ── KIOSK IN USE IMAGE ── */}
-          <section className="border-t border-white/5">
-            <div className="container py-6">
+          {/* ── SLOGAN BREAK ── */}
+          <section className="border-t border-white/5 py-24 bg-gradient-to-br from-[#0a0a0a] via-orange-950/20 to-[#0a0a0a] relative overflow-hidden">
+            {/* Subtle radial glow */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+              <div className="w-[600px] h-[300px] bg-orange-500/10 rounded-full blur-3xl" />
+            </div>
+            <div className="container relative z-10 text-center">
               <motion.div
-                initial={{ opacity: 0, scale: 0.98 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="rounded-2xl overflow-hidden"
+                transition={{ duration: 0.7 }}
               >
-                <img
-                  src="/images/ssm/kiosk-in-use.jpg"
-                  alt="Freshtrax shoe sanitization machine in use at a sports venue"
-                  className="w-full h-72 md:h-[420px] object-cover"
-                  loading="lazy"
-                  width={1200}
-                  height={420}
-                />
+                <p className="text-orange-500 text-sm font-semibold uppercase tracking-widest mb-6">Freshtrax</p>
+                <h2 className="text-5xl md:text-7xl font-bold leading-tight">
+                  Leave your mark,
+                  <br />
+                  <span className="text-orange-500">not your smell.</span>
+                </h2>
               </motion.div>
             </div>
           </section>
