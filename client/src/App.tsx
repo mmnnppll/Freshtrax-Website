@@ -17,6 +17,11 @@ import BlogArticle from "./pages/BlogArticle";
 import BlogPillar from "./pages/BlogPillar";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import VenuePickleball from "./pages/VenuePickleball";
+import VenueCrossfit from "./pages/VenueCrossfit";
+import VenueBadminton from "./pages/VenueBadminton";
+import VenueTennis from "./pages/VenueTennis";
+import VenueBouldering from "./pages/VenueBouldering";
 
 function Router() {
   return (
@@ -32,6 +37,12 @@ function Router() {
       <Route path={"/blog/:slug"} component={BlogArticle} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/terms"} component={Terms} />
+      {/* Venue landing pages */}
+      <Route path={"/pickleball-clubs"} component={VenuePickleball} />
+      <Route path={"/crossfit-gyms"} component={VenueCrossfit} />
+      <Route path={"/badminton-centers"} component={VenueBadminton} />
+      <Route path={"/tennis-clubs"} component={VenueTennis} />
+      <Route path={"/bouldering-gyms"} component={VenueBouldering} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

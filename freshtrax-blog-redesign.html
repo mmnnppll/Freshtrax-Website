@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog | Freshtrax — Footwear Sanitization Insights</title>
+<meta name="description" content="Expert field notes on shoe care, fitness business models, venue hygiene, and athlete health. Four pillars, one place." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* ─── Design Tokens ─── */
+  :root {
+    --ft-bg:        #0a0a0a;
+    --ft-card:      #141414;
+    --ft-card-hi:   #1c1c1c;
+    --ft-border:    #262626;
+    --ft-text:      #f5f5f5;
+    --ft-muted:     #9a9a9a;
+    --ft-dim:       #6b6b6b;
+    --ft-orange:    #f57e2c;
+    --ft-orange-dim:#b85a18;
+    --ft-glow-bg:   linear-gradient(180deg, #2a1810, #141414);
+    --ft-font:      'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+    --ft-radius-sm: 6px;
+    --ft-radius:    12px;
+    --ft-radius-lg: 16px;
+  }
+
+  /* ─── Reset ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ft-bg);
+    color: var(--ft-text);
+    font-family: var(--ft-font);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* ─── Starfield ─── */
+  .starfield {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.18) 0%, transparent 100%),
+      radial-gradient(1.2px 1.2px at 37% 7%, rgba(255,255,255,.14) 0%, transparent 100%),
+      radial-gradient(.8px .8px at 62% 24%, rgba(255,255,255,.22) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 11%, rgba(255,255,255,.16) 0%, transparent 100%),
+      radial-gradient(.6px .6px at 93% 38%, rgba(255,255,255,.12) 0%, transparent 100%),
+      radial-gradient(1.2px 1.2px at 25% 55%, rgba(255,255,255,.10) 0%, transparent 100%),
+      radial-gradient(.8px .8px at 51% 72%, rgba(255,255,255,.14) 0%, transparent 100%),
+      radial-gradient(1px 1px at 74% 61%, rgba(255,255,255,.18) 0%, transparent 100%),
+      radial-gradient(.9px .9px at 8% 85%, rgba(255,255,255,.12) 0%, transparent 100%),
+      radial-gradient(1.1px 1.1px at 88% 79%, rgba(255,255,255,.16) 0%, transparent 100%),
+      radial-gradient(.7px .7px at 44% 91%, rgba(255,255,255,.10) 0%, transparent 100%),
+      radial-gradient(1px 1px at 67% 84%, rgba(255,255,255,.14) 0%, transparent 100%),
+      radial-gradient(.8px .8px at 19% 42%, rgba(255,255,255,.12) 0%, transparent 100%),
+      radial-gradient(1.3px 1.3px at 56% 46%, rgba(255,255,255,.08) 0%, transparent 100%);
+  }
+
+  /* ─── Layout shell ─── */
+  .page { position: relative; z-index: 1; min-height: 100vh; }
+
+  /* ─── Nav ─── */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--ft-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,10,.92);
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--ft-text);
+  }
+  .nav-logo svg { flex-shrink: 0; }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 14px;
+  }
+  .nav-links a {
+    color: var(--ft-muted);
+    font-weight: 400;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+  }
+  .nav-links a.active,
+  .nav-links a:hover { color: var(--ft-text); }
+  .nav-links a.active { font-weight: 600; border-bottom-color: var(--ft-orange); }
+  .nav-cta {
+    background: var(--ft-orange);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: var(--ft-radius-sm);
+    font-weight: 600 !important;
+    border-bottom: none !important;
+    transition: background .15s !important;
+  }
+  .nav-cta:hover { background: var(--ft-orange-dim) !important; color: #fff !important; }
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ft-text);
+    border-radius: 2px;
+    transition: .25s;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: var(--ft-card);
+    border-bottom: 1px solid var(--ft-border);
+  }
+  .mobile-menu a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ft-muted);
+    border-bottom: 1px solid var(--ft-border);
+    transition: color .15s;
+  }
+  .mobile-menu a:hover { color: var(--ft-text); }
+  .mobile-menu a.nav-cta {
+    margin: 16px 24px 16px;
+    border-radius: var(--ft-radius-sm);
+    border-bottom: none;
+    color: #fff;
+    text-align: center;
+  }
+  .mobile-menu.open { display: flex; }
+
+  /* ─── Section containers ─── */
+  .section { padding: 0 40px; }
+
+  /* ─── Eyebrow label ─── */
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ft-orange);
+  }
+
+  /* ─── Hero ─── */
+  .hero {
+    padding: 64px 40px 40px;
+  }
+  .hero .label { margin-bottom: 16px; }
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    max-width: 860px;
+  }
+  .hero h1 span { color: var(--ft-orange); }
+  .hero p {
+    margin-top: 18px;
+    font-size: clamp(15px, 1.5vw, 18px);
+    color: var(--ft-muted);
+    max-width: 640px;
+    line-height: 1.6;
+  }
+
+  /* ─── Pillars grid ─── */
+  .pillars-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .pillars-header h2 { font-size: 28px; font-weight: 700; }
+  .pillars-header span { font-size: 13px; color: var(--ft-muted); }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .pillar-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--ft-card);
+    border: 1px solid var(--ft-border);
+    border-radius: var(--ft-radius);
+    padding: 28px;
+    min-height: 240px;
+    transition: border-color .2s ease-out, transform .2s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--ft-orange);
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .pillar-card:hover { border-color: rgba(245,126,44,.4); transform: translateY(-2px); }
+  .pillar-card:hover::before { opacity: 1; }
+  .pillar-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #2a1810;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+  }
+  .pillar-icon svg { color: var(--ft-orange); }
+  .pillar-card .label { margin-bottom: 8px; }
+  .pillar-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ft-text);
+    margin-bottom: 8px;
+  }
+  .pillar-card p {
+    font-size: 13px;
+    color: var(--ft-muted);
+    line-height: 1.55;
+    flex: 1;
+  }
+  .pillar-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--ft-border);
+  }
+  .pillar-card-footer span:first-child { font-size: 12px; color: var(--ft-dim); }
+  .pillar-card-footer .arrow {
+    font-size: 18px;
+    color: var(--ft-orange);
+    transition: transform .2s ease-out;
+  }
+  .pillar-card:hover .arrow { transform: translateX(3px); }
+
+  /* ─── Two-column body ─── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    padding: 40px 40px 60px;
+    align-items: start;
+  }
+
+  /* ─── Latest posts ─── */
+  .latest-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .latest-header h2 { font-size: 24px; font-weight: 700; }
+  .latest-header span { font-size: 12px; color: var(--ft-muted); }
+  .post-list { display: flex; flex-direction: column; }
+  .post-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--ft-border);
+    transition: background .15s;
+  }
+  .post-row:first-child { padding-top: 0; }
+  .post-thumb {
+    width: 160px;
+    height: 96px;
+    border-radius: 10px;
+    border: 1px solid var(--ft-border);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--ft-card-hi);
+    position: relative;
+  }
+  .post-thumb-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Pillar-colored thumb accents */
+  .thumb-gear     { background: linear-gradient(135deg, #1a1a2e, #2a1810); }
+  .thumb-revenue  { background: linear-gradient(135deg, #0f2a1a, #141414); }
+  .thumb-venue    { background: linear(135deg, #1a1a0f, #2a2010); background: linear-gradient(135deg, #1a2010, #141414); }
+  .thumb-athlete  { background: linear-gradient(135deg, #2a101a, #141414); }
+  .thumb-icon { font-size: 26px; opacity: .55; }
+  .post-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(245,126,44,.35);
+    color: var(--ft-orange);
+    white-space: nowrap;
+  }
+  .tag.filled {
+    background: var(--ft-orange);
+    color: #fff;
+    border-color: transparent;
+  }
+  .post-meta-text { font-size: 11px; color: var(--ft-dim); }
+  .post-row h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ft-text);
+    margin-bottom: 6px;
+    transition: color .15s;
+  }
+  .post-row:hover h3 { color: var(--ft-orange); }
+  .post-row p {
+    font-size: 13px;
+    color: var(--ft-muted);
+    line-height: 1.55;
+  }
+
+  /* ─── Pagination ─── */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 32px;
+    font-size: 13px;
+  }
+  .pagination .pg-btn {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--ft-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+    border: 1px solid var(--ft-border);
+    color: var(--ft-muted);
+  }
+  .pagination .pg-btn:hover { border-color: var(--ft-orange); color: var(--ft-orange); }
+  .pagination .pg-btn.active {
+    background: var(--ft-orange);
+    color: #fff;
+    border-color: transparent;
+  }
+  .pagination .pg-nav { color: var(--ft-dim); padding: 0 6px; }
+
+  /* ─── Sidebar ─── */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .sidebar-sticky { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 16px; }
+  .sidebar-card {
+    background: var(--ft-card);
+    border: 1px solid var(--ft-border);
+    border-radius: var(--ft-radius);
+    padding: 20px;
+  }
+  .sidebar-card .label { margin-bottom: 14px; }
+
+  /* Top articles */
+  .top-articles { display: flex; flex-direction: column; gap: 14px; }
+  .top-article-item {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+    align-items: start;
+    transition: opacity .15s;
+  }
+  .top-article-item:hover { opacity: .8; }
+  .top-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ft-orange);
+    line-height: 1;
+  }
+  .top-article-item span {
+    font-size: 13px;
+    color: var(--ft-text);
+    line-height: 1.35;
+  }
+
+  /* CTA card */
+  .cta-card {
+    background: var(--ft-glow-bg);
+    border: 1px solid rgba(245,126,44,.4);
+    border-radius: var(--ft-radius);
+    padding: 20px;
+  }
+  .cta-card .label { margin-bottom: 8px; }
+  .cta-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ft-text);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .cta-card p { font-size: 13px; color: var(--ft-muted); margin-bottom: 14px; }
+  .cta-checks { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .cta-check { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ft-muted); }
+  .cta-check svg { color: var(--ft-orange); flex-shrink: 0; }
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--ft-orange);
+    color: #fff;
+    border-radius: var(--ft-radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: background .15s;
+  }
+  .btn-primary:hover { background: var(--ft-orange-dim); }
+  .cta-note { font-size: 11px; color: var(--ft-dim); text-align: center; margin-top: 8px; }
+
+  /* Browse pills */
+  .pillar-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .pillar-pill {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 7px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(245,126,44,.35);
+    color: var(--ft-orange);
+    transition: background .15s, color .15s;
+    cursor: pointer;
+  }
+  .pillar-pill:hover {
+    background: rgba(245,126,44,.12);
+  }
+
+  /* ─── All Posts section (pillar-filtered) ─── */
+  .all-posts-section { padding: 0 40px 60px; }
+  .all-posts-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+  .pillar-cluster { margin-bottom: 40px; }
+  .cluster-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--ft-border);
+  }
+  .cluster-header h3 { font-size: 18px; font-weight: 700; }
+  .cluster-header .label { margin-bottom: 0; }
+  .cluster-count { font-size: 12px; color: var(--ft-dim); margin-left: auto; }
+  .cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .cluster-card {
+    position: relative;
+    background: var(--ft-card);
+    border: 1px solid var(--ft-border);
+    border-radius: var(--ft-radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color .2s ease-out;
+  }
+  .cluster-card:hover { border-color: rgba(245,126,44,.4); }
+  .cluster-card h4 { font-size: 14px; font-weight: 700; line-height: 1.35; color: var(--ft-text); }
+  .cluster-card-link { color: inherit; }
+  .cluster-card-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--ft-radius);
+  }
+  .cluster-card:hover .cluster-card-link { color: var(--ft-orange); }
+  .cluster-card p { font-size: 12px; color: var(--ft-muted); line-height: 1.5; flex: 1; }
+  .cluster-card-meta { font-size: 11px; color: var(--ft-dim); position: relative; z-index: 1; }
+  .cluster-card-meta a { position: relative; z-index: 1; color: var(--ft-orange); }
+
+  /* ─── Bottom CTA banner ─── */
+  .cta-banner {
+    margin: 0 40px 60px;
+    background: var(--ft-glow-bg);
+    border: 1px solid rgba(245,126,44,.35);
+    border-radius: var(--ft-radius-lg);
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .cta-banner-left .label { margin-bottom: 10px; }
+  .cta-banner-left h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 480px;
+  }
+  .cta-banner-left p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--ft-muted);
+    max-width: 420px;
+  }
+  .cta-banner-right { flex-shrink: 0; }
+  .btn-cta-lg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--ft-orange);
+    color: #fff;
+    border-radius: var(--ft-radius-sm);
+    font-size: 15px;
+    font-weight: 700;
+    transition: background .15s, transform .15s;
+    white-space: nowrap;
+  }
+  .btn-cta-lg:hover { background: var(--ft-orange-dim); transform: translateY(-1px); }
+
+  /* ─── Footer ─── */
+  footer {
+    border-top: 1px solid var(--ft-border);
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--ft-dim);
+  }
+  footer a { color: var(--ft-muted); transition: color .15s; }
+  footer a:hover { color: var(--ft-text); }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 1023px) {
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .body-grid { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .mobile-sidebar { display: flex; flex-direction: column; gap: 16px; padding: 0 40px 40px; }
+    .cluster-grid { grid-template-columns: repeat(2, 1fr); }
+    .sidebar-sticky { position: static; }
+  }
+  @media (min-width: 1024px) {
+    .mobile-sidebar { display: none; }
+  }
+  @media (max-width: 767px) {
+    .nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .hero { padding: 40px 20px 32px; }
+    .section, .all-posts-section { padding-left: 20px; padding-right: 20px; }
+    .body-grid { padding: 24px 20px 40px; }
+    .mobile-sidebar { padding: 0 20px 32px; }
+    .pillars-grid { grid-template-columns: 1fr; gap: 12px; }
+    .pillar-card { min-height: auto; padding: 20px; }
+    .post-row { grid-template-columns: 1fr; gap: 12px; }
+    .post-thumb { width: 100%; height: 180px; }
+    .cluster-grid { grid-template-columns: 1fr; }
+    .cta-banner { flex-direction: column; padding: 28px 24px; margin: 0 20px 40px; }
+    .cta-banner-right { width: 100%; }
+    .btn-cta-lg { width: 100%; justify-content: center; }
+    footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    .pillars-header { flex-direction: column; gap: 4px; }
+    .latest-header { flex-direction: column; gap: 4px; }
+    .all-posts-section { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="starfield" aria-hidden="true"></div>
+<div class="page">
+
+  <!-- ─── Nav ─── -->
+  <nav class="nav">
+    <a href="https://getfreshtrax.com" class="nav-logo" aria-label="Freshtrax home">
+      <svg width="40" height="24" viewBox="0 0 50 30" aria-hidden="true">
+        <defs>
+          <linearGradient id="shoe-grad" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#f57e2c"/>
+            <stop offset="1" stop-color="#c33a14"/>
+          </linearGradient>
+        </defs>
+        <path d="M 2 22 Q 8 10 18 12 Q 26 13 32 18 Q 40 22 46 21 L 46 26 Q 40 27 28 26 Q 14 27 4 27 Z" fill="url(#shoe-grad)"/>
+        <path d="M 2 22 Q 8 10 18 12 Q 26 13 32 18 Q 40 22 46 21" fill="none" stroke="#7a1a08" stroke-width=".8" opacity=".5"/>
+      </svg>
+      FRESHTRAX
+    </a>
+    <div class="nav-links">
+      <a href="https://getfreshtrax.com/how-it-works">How It Works</a>
+      <a href="https://getfreshtrax.com/blog" class="active">Blog</a>
+      <a href="https://getfreshtrax.com/faq">FAQ</a>
+      <a href="https://getfreshtrax.com/about">About</a>
+      <a href="https://calendar.app.google/YWP7rF8gFUXgfMRCA" class="nav-cta" target="_blank" rel="noopener">Become an Owner</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="https://getfreshtrax.com/how-it-works">How It Works</a>
+    <a href="https://getfreshtrax.com/blog">Blog</a>
+    <a href="https://getfreshtrax.com/faq">FAQ</a>
+    <a href="https://getfreshtrax.com/about">About</a>
+    <a href="https://calendar.app.google/YWP7rF8gFUXgfMRCA" class="nav-cta" target="_blank" rel="noopener">Book a Free Call →</a>
+  </div>
+
+  <!-- ─── Hero ─── -->
+  <header class="hero section">
+    <div class="label">The Freshtrax Journal</div>
+    <h1>Field notes on <span>fresh shoes</span>,<br>busy gyms, and quiet kiosks.</h1>
+    <p>Four pillar topics. Every post we publish slots underneath — so finding the next thing you need is faster.</p>
+  </header>
+
+  <!-- ─── Pillar Cards ─── -->
+  <section class="section" style="padding-bottom:40px;padding-top:8px;" aria-label="Content pillars">
+    <div class="pillars-header">
+      <h2>The Four Pillars</h2>
+      <span>20 posts · one topic cluster</span>
+    </div>
+    <div class="pillars-grid">
+
+      <!-- Pillar 01: Shoe Care & Gear -->
+      <a href="#pillar-gear" class="pillar-card" aria-label="Shoe Care & Gear pillar — 6 posts">
+        <div class="pillar-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 16 Q6 8 12 10 Q16 11 19 14 Q22 16 22 15 L22 19 Q20 20 14 19 Q6 20 3 19 Z"/>
+            <path d="M12 10 Q13 7 15 8"/>
+            <path d="M16 11 Q17 8 19 9"/>
+          </svg>
+        </div>
+        <div class="label">Pillar 01</div>
+        <h3>Shoe Care &amp; Gear</h3>
+        <p>How UVC, ozone, and antimicrobials actually work — and why sprays and freezing fall short of medical-grade results.</p>
+        <div class="pillar-card-footer">
+          <span>6 posts</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Pillar 02: Revenue & Business Model -->
+      <a href="#pillar-revenue" class="pillar-card" aria-label="Revenue & Business Model pillar — 4 posts">
+        <div class="pillar-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="label">Pillar 02</div>
+        <h3>Revenue &amp; Business Model</h3>
+        <p>Kiosk ROI, passive income models, financial proof, and the business case behind placing a Freshtrax unit in your venue.</p>
+        <div class="pillar-card-footer">
+          <span>4 posts</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Pillar 03: Venue Owner Playbooks -->
+      <a href="#pillar-venue" class="pillar-card" aria-label="Venue Owner Playbooks pillar — 4 posts">
+        <div class="pillar-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div class="label">Pillar 03</div>
+        <h3>Venue Owner Playbooks</h3>
+        <p>Step-by-step siting guides, hygiene amenity strategy, pickleball and CrossFit venue playbooks for retention and reviews.</p>
+        <div class="pillar-card-footer">
+          <span>4 posts</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Pillar 04: Athlete Health & Hygiene -->
+      <a href="#pillar-athlete" class="pillar-card" aria-label="Athlete Health & Hygiene pillar — 7 posts">
+        <div class="pillar-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+            <line x1="4" y1="22" x2="4" y2="15"/>
+          </svg>
+        </div>
+        <div class="label">Pillar 04</div>
+        <h3>Athlete Health &amp; Hygiene</h3>
+        <p>Foot health, athlete's foot prevention, odor science, gym bag hygiene, and recovery routines for serious athletes.</p>
+        <div class="pillar-card-footer">
+          <span>7 posts</span>
+          <span class="arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── Latest Posts + Sidebar ─── -->
+  <div class="body-grid">
+
+    <!-- Latest posts list -->
+    <main aria-label="Latest posts">
+      <div class="latest-header">
+        <h2>Latest from the Journal</h2>
+        <span>Showing 1–5 of 20</span>
+      </div>
+      <div class="post-list">
+
+        <a href="https://getfreshtrax.com/blog/martial-arts-hygiene-what-every-bjj-mma-practitioner-should-know" class="post-row">
+          <div class="post-thumb thumb-athlete">
+            <div class="post-thumb-inner"><span class="thumb-icon">🥋</span></div>
+          </div>
+          <div>
+            <div class="post-meta-row">
+              <span class="tag">Athlete Health</span>
+              <span class="post-meta-text">Apr 30, 2026 · 10 min read</span>
+            </div>
+            <h3>Martial Arts &amp; Hygiene: What Every BJJ and MMA Practitioner Should Know</h3>
+            <p>Martial arts gyms have some of the highest skin infection rates in sport. Here's what the research says about hygiene in BJJ, MMA, and wrestling — and how to protect yourself.</p>
+          </div>
+        </a>
+
+        <a href="https://getfreshtrax.com/blog/the-hidden-reason-your-gym-bag-smells-even-after-washing" class="post-row">
+          <div class="post-thumb thumb-athlete">
+            <div class="post-thumb-inner"><span class="thumb-icon">🎒</span></div>
+          </div>
+          <div>
+            <div class="post-meta-row">
+              <span class="tag">Athlete Health</span>
+              <span class="post-meta-text">Apr 30, 2026 · 8 min read</span>
+            </div>
+            <h3>The Hidden Reason Your Gym Bag Smells — Even After Washing</h3>
+            <p>You wash your gym bag regularly but it still smells. Here's the actual reason why — and the simple fix most people miss entirely.</p>
+          </div>
+        </a>
+
+        <a href="https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models" class="post-row">
+          <div class="post-thumb thumb-revenue">
+            <div class="post-thumb-inner"><span class="thumb-icon">💰</span></div>
+          </div>
+          <div>
+            <div class="post-meta-row">
+              <span class="tag">Revenue</span>
+              <span class="post-meta-text">Apr 24, 2026 · 12 min read</span>
+            </div>
+            <h3>Passive Income from Fitness Centers: 5 Kiosk Business Models Compared</h3>
+            <p>We compare 5 business models by startup cost, revenue potential, and operational effort — so you can choose the right fit for your venue.</p>
+          </div>
+        </a>
+
+        <a href="https://getfreshtrax.com/blog/how-to-place-kiosk-gym-step-by-step" class="post-row">
+          <div class="post-thumb thumb-venue">
+            <div class="post-thumb-inner"><span class="thumb-icon">📍</span></div>
+          </div>
+          <div>
+            <div class="post-meta-row">
+              <span class="tag">Venue Playbook</span>
+              <span class="post-meta-text">Apr 24, 2026 · 11 min read</span>
+            </div>
+            <h3>How to Place a Kiosk in a Gym or Fitness Center (Step by Step)</h3>
+            <p>Securing a kiosk placement requires the right pitch, the right contact, and the right terms. Here is the complete step-by-step process.</p>
+          </div>
+        </a>
+
+        <a href="https://getfreshtrax.com/blog/does-freezing-your-shoes-really-kill-bacteria-the-truth" class="post-row">
+          <div class="post-thumb thumb-gear">
+            <div class="post-thumb-inner"><span class="thumb-icon">🔬</span></div>
+          </div>
+          <div>
+            <div class="post-meta-row">
+              <span class="tag">Shoe Care</span>
+              <span class="post-meta-text">Apr 22, 2026 · 8 min read</span>
+            </div>
+            <h3>Does Freezing Your Shoes Really Kill Bacteria? The Truth</h3>
+            <p>The "put your shoes in the freezer" hack has been circulating for years. Here's what science actually says — and what actually works.</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Pagination -->
+      <nav class="pagination" aria-label="Post pagination">
+        <span class="pg-nav">← Prev</span>
+        <a href="#" class="pg-btn active">1</a>
+        <a href="#" class="pg-btn">2</a>
+        <a href="#" class="pg-btn">3</a>
+        <a href="#" class="pg-btn">4</a>
+        <span class="pg-nav">Next →</span>
+      </nav>
+    </main>
+
+    <!-- ─── Sidebar (desktop) ─── -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-sticky">
+
+        <!-- Top Articles -->
+        <div class="sidebar-card">
+          <div class="label">★ Top Articles</div>
+          <div class="top-articles">
+            <a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology" class="top-article-item">
+              <span class="top-num">1</span>
+              <span>UVC Light Technology: How Medical-Grade Sanitization Works</span>
+            </a>
+            <a href="https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness" class="top-article-item">
+              <span class="top-num">2</span>
+              <span>The Business Case for Shoe Sanitization Kiosks in Fitness Venues</span>
+            </a>
+            <a href="https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization" class="top-article-item">
+              <span class="top-num">3</span>
+              <span>How to Eliminate Athlete's Foot: A Complete Guide</span>
+            </a>
+            <a href="https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models" class="top-article-item">
+              <span class="top-num">4</span>
+              <span>Passive Income from Fitness Centers: 5 Kiosk Models Compared</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Discovery Call CTA -->
+        <div class="cta-card">
+          <div class="label">★ Talk to Freshtrax</div>
+          <h4>Book a 30-min discovery call</h4>
+          <p>No obligation. Walk through ROI, siting, and payback for your specific venue.</p>
+          <div class="cta-checks">
+            <div class="cta-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Custom ROI for your traffic &amp; venue type
+            </div>
+            <div class="cta-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Founding-owner pricing options available
+            </div>
+          </div>
+          <a href="https://calendar.app.google/YWP7rF8gFUXgfMRCA" target="_blank" rel="noopener" class="btn-primary">Book my free call →</a>
+          <p class="cta-note">Avg. response under 24 hours</p>
+        </div>
+
+        <!-- Browse by Pillar -->
+        <div class="sidebar-card">
+          <div class="label">Browse by Pillar</div>
+          <div class="pillar-pills">
+            <a href="#pillar-gear" class="pillar-pill">Shoe Care &amp; Gear</a>
+            <a href="#pillar-revenue" class="pillar-pill">Revenue</a>
+            <a href="#pillar-venue" class="pillar-pill">Venue Playbooks</a>
+            <a href="#pillar-athlete" class="pillar-pill">Athlete Health</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+  </div>
+
+  <!-- ─── Mobile Sidebar (below posts on tablet/mobile) ─── -->
+  <div class="mobile-sidebar">
+    <div class="cta-card">
+      <div class="label">★ Talk to Freshtrax</div>
+      <h4>Book a 30-min free call</h4>
+      <p>No obligation. ROI walkthrough for your specific venue — kiosk siting, payback, founding pricing.</p>
+      <div class="cta-checks">
+        <div class="cta-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Custom ROI for your traffic &amp; venue type
+        </div>
+        <div class="cta-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Founding-owner pricing options available
+        </div>
+      </div>
+      <a href="https://calendar.app.google/YWP7rF8gFUXgfMRCA" target="_blank" rel="noopener" class="btn-primary">Book my free call →</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="label">★ Top Articles</div>
+      <div class="top-articles" style="margin-top:0">
+        <a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology" class="top-article-item">
+          <span class="top-num">1</span><span>UVC Light Technology: How Medical-Grade Sanitization Works</span>
+        </a>
+        <a href="https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness" class="top-article-item">
+          <span class="top-num">2</span><span>The Business Case for Shoe Sanitization Kiosks in Fitness Venues</span>
+        </a>
+        <a href="https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization" class="top-article-item">
+          <span class="top-num">3</span><span>How to Eliminate Athlete's Foot: A Complete Guide</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── All Posts by Pillar ─── -->
+  <section class="all-posts-section" aria-label="All posts by pillar">
+    <h2>All Posts by Pillar</h2>
+
+    <!-- Pillar 01: Shoe Care & Gear -->
+    <div class="pillar-cluster" id="pillar-gear">
+      <div class="cluster-header">
+        <div class="label">Pillar 01</div>
+        <h3>Shoe Care &amp; Gear</h3>
+        <span class="cluster-count">6 posts</span>
+      </div>
+      <div class="cluster-grid">
+
+        <div class="cluster-card">
+          <span class="tag">Cornerstone</span>
+          <h4><a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology" class="cluster-card-link">UVC Light Technology: How Medical-Grade Sanitization Works</a></h4>
+          <p>UVC light is used in hospitals to sanitize surgical instruments. Discover how this technology eliminates bacteria inside athletic shoes.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/uvc-light-shoes-kill-bacteria">Does UVC Kill Bacteria?</a> · <a href="https://getfreshtrax.com/blog/do-shoe-deodorizer-sprays-actually-work">vs. Sprays</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Shoe Care</span>
+          <h4><a href="https://getfreshtrax.com/blog/uvc-light-shoes-kill-bacteria" class="cluster-card-link">UVC Light for Shoes: Does It Actually Kill Bacteria?</a></h4>
+          <p>The research on UVC efficacy in footwear applications — dosing, exposure time, and what peer-reviewed studies show.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology">How UVC Works</a> · <a href="https://getfreshtrax.com/blog/why-gym-shoes-smell-science">Why Shoes Smell</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Shoe Care</span>
+          <h4><a href="https://getfreshtrax.com/blog/why-gym-shoes-smell-science" class="cluster-card-link">Why Your Gym Shoes Smell: The Science Behind Shoe Odor</a></h4>
+          <p>Shoe odor isn't just unpleasant — it's a sign of active bacterial growth. Understanding the science changes what you do about it.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/real-reason-shoes-still-smell-after-washing">Still Smell After Washing?</a> · <a href="https://getfreshtrax.com/blog/uvc-light-shoes-kill-bacteria">UVC Fix</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Shoe Care</span>
+          <h4><a href="https://getfreshtrax.com/blog/do-shoe-deodorizer-sprays-actually-work" class="cluster-card-link">Do Shoe Deodorizer Sprays Actually Work? What the Science Says</a></h4>
+          <p>Sprays promise to eliminate odor. Here's what the research actually shows — and why masking beats nothing but doesn't beat UVC.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology">UVC vs. Sprays</a> · <a href="https://getfreshtrax.com/blog/does-freezing-your-shoes-really-kill-bacteria-the-truth">vs. Freezing</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Shoe Care</span>
+          <h4><a href="https://getfreshtrax.com/blog/real-reason-shoes-still-smell-after-washing" class="cluster-card-link">The Real Reason Your Shoes Still Smell After Washing Them</a></h4>
+          <p>Washing removes surface dirt but misses the bacterial colonies embedded in foam, fabric, and insoles. Here's why — and the fix.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/why-gym-shoes-smell-science">Why Shoes Smell</a> · <a href="https://getfreshtrax.com/blog/uvc-light-shoes-kill-bacteria">UVC Solution</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Shoe Care</span>
+          <h4><a href="https://getfreshtrax.com/blog/does-freezing-your-shoes-really-kill-bacteria-the-truth" class="cluster-card-link">Does Freezing Your Shoes Really Kill Bacteria? The Truth</a></h4>
+          <p>The freezer hack has been circulating for years. Here's what science actually says about whether cold temperatures kill shoe bacteria.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/do-shoe-deodorizer-sprays-actually-work">vs. Sprays</a> · <a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology">What Actually Works</a></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Pillar 02: Revenue & Business Model -->
+    <div class="pillar-cluster" id="pillar-revenue">
+      <div class="cluster-header">
+        <div class="label">Pillar 02</div>
+        <h3>Revenue &amp; Business Model</h3>
+        <span class="cluster-count">4 posts</span>
+      </div>
+      <div class="cluster-grid">
+
+        <div class="cluster-card">
+          <span class="tag">Cornerstone</span>
+          <h4><a href="https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness" class="cluster-card-link">The Business Case for Shoe Sanitization Kiosks in Fitness Venues</a></h4>
+          <p>Fitness venue owners are discovering a new revenue stream. Here's the financial proof and why this is becoming essential.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models">5 Models Compared</a> · <a href="https://getfreshtrax.com/blog/gyms-add-revenue-without-hiring-staff">Add Revenue</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Revenue</span>
+          <h4><a href="https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models" class="cluster-card-link">Passive Income from Fitness Centers: 5 Kiosk Business Models Compared</a></h4>
+          <p>We compare 5 models by startup cost, revenue potential, and operational effort to find the best fit for your venue.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness">Business Case</a> · <a href="https://getfreshtrax.com/blog/best-low-cost-kiosk-businesses-2026">Low-Cost Models</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Revenue</span>
+          <h4><a href="https://getfreshtrax.com/blog/best-low-cost-kiosk-businesses-2026" class="cluster-card-link">Best Low-Cost Vending and Kiosk Businesses to Start in 2026</a></h4>
+          <p>A data-driven comparison of the most accessible kiosk business models for first-time operators and venue owners looking to diversify.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models">Kiosk Models</a> · <a href="https://getfreshtrax.com/blog/gyms-add-revenue-without-hiring-staff">No Hiring Required</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Revenue</span>
+          <h4><a href="https://getfreshtrax.com/blog/gyms-add-revenue-without-hiring-staff" class="cluster-card-link">How Gyms Can Add a New Revenue Stream Without Hiring Staff</a></h4>
+          <p>Fitness centers are leaving revenue on the table. Here are the best ways to add income streams in 2026 without increasing headcount.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness">Business Case</a> · <a href="https://getfreshtrax.com/blog/how-to-place-kiosk-gym-step-by-step">Siting Guide</a></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Pillar 03: Venue Owner Playbooks -->
+    <div class="pillar-cluster" id="pillar-venue">
+      <div class="cluster-header">
+        <div class="label">Pillar 03</div>
+        <h3>Venue Owner Playbooks</h3>
+        <span class="cluster-count">4 posts</span>
+      </div>
+      <div class="cluster-grid">
+
+        <div class="cluster-card">
+          <span class="tag">Cornerstone</span>
+          <h4><a href="https://getfreshtrax.com/blog/how-to-place-kiosk-gym-step-by-step" class="cluster-card-link">How to Place a Kiosk in a Gym or Fitness Center (Step by Step)</a></h4>
+          <p>The right pitch, the right contact, the right terms. A complete playbook for securing and launching a kiosk placement.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/pickleball-court-hygiene-shoe-sanitization">Pickleball Courts</a> · <a href="https://getfreshtrax.com/blog/gyms-add-revenue-without-hiring-staff">Revenue Strategy</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Venue Playbook</span>
+          <h4><a href="https://getfreshtrax.com/blog/pickleball-court-hygiene-shoe-sanitization" class="cluster-card-link">Pickleball Court Hygiene: Why Shoe Sanitization Matters</a></h4>
+          <p>Pickleball is one of the fastest-growing sports. Here's what club owners need to know about court hygiene and member expectations.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/pickleball-clubs-hygiene-amenities">Hottest Venue</a> · <a href="https://getfreshtrax.com/blog/how-to-place-kiosk-gym-step-by-step">Siting Guide</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Venue Playbook</span>
+          <h4><a href="https://getfreshtrax.com/blog/pickleball-clubs-hygiene-amenities" class="cluster-card-link">Why Pickleball Clubs Are the Hottest Venue for Hygiene Amenities Right Now</a></h4>
+          <p>Demographics, court density, and member affluence make pickleball clubs uniquely positioned for premium hygiene amenities.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/pickleball-court-hygiene-shoe-sanitization">Court Hygiene</a> · <a href="https://getfreshtrax.com/blog/business-case-shoe-sanitization-fitness">Business Case</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Venue Playbook</span>
+          <h4><a href="https://getfreshtrax.com/blog/gyms-add-revenue-without-hiring-staff" class="cluster-card-link">How Gyms Can Add a New Revenue Stream Without Hiring Staff</a></h4>
+          <p>The highest-ROI amenity additions for 2026 don't require any new headcount — here's the breakdown by venue type.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/how-to-place-kiosk-gym-step-by-step">Siting Guide</a> · <a href="https://getfreshtrax.com/blog/passive-income-fitness-centers-kiosk-models">5 Models</a></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Pillar 04: Athlete Health & Hygiene -->
+    <div class="pillar-cluster" id="pillar-athlete">
+      <div class="cluster-header">
+        <div class="label">Pillar 04</div>
+        <h3>Athlete Health &amp; Hygiene</h3>
+        <span class="cluster-count">7 posts</span>
+      </div>
+      <div class="cluster-grid">
+
+        <div class="cluster-card">
+          <span class="tag">Cornerstone</span>
+          <h4><a href="https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization" class="cluster-card-link">How to Eliminate Athlete's Foot: A Complete Guide to Shoe Sanitization</a></h4>
+          <p>Athlete's foot thrives inside athletic shoes. Medical-grade sanitization can eliminate the bacteria and fungi causing this painful condition.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/how-to-get-rid-of-athletes-foot-for-good">Get Rid for Good</a> · <a href="https://getfreshtrax.com/blog/are-gym-shoes-making-you-sick">What's Growing Inside?</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Athlete Health</span>
+          <h4><a href="https://getfreshtrax.com/blog/how-to-get-rid-of-athletes-foot-for-good" class="cluster-card-link">How to Get Rid of Athlete's Foot for Good (Hint: It's Your Shoes)</a></h4>
+          <p>Treating the skin without treating the shoe is like mopping with a dirty mop. Here's the complete, lasting protocol.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization">Complete Guide</a> · <a href="https://getfreshtrax.com/blog/uvc-light-shoes-kill-bacteria">UVC Solution</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Athlete Health</span>
+          <h4><a href="https://getfreshtrax.com/blog/are-gym-shoes-making-you-sick" class="cluster-card-link">Are Gym Shoes Making You Sick? What's Actually Growing Inside Them</a></h4>
+          <p>A look at the microbial environment inside the average gym shoe — and what happens when you keep wearing them session after session.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization">Athlete's Foot</a> · <a href="https://getfreshtrax.com/blog/why-gym-shoes-smell-science">Odor Science</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Athlete Health</span>
+          <h4><a href="https://getfreshtrax.com/blog/why-serious-crossfit-athletes-clean-their-shoes-differently" class="cluster-card-link">Why Serious CrossFit Athletes Clean Their Shoes Differently</a></h4>
+          <p>CrossFit puts shoes through more punishment than almost any other sport. Here's how serious competitors approach shoe hygiene.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/how-long-do-gym-shoes-actually-last-most-people-replace-too-late">Shoe Lifespan</a> · <a href="https://getfreshtrax.com/blog/uvc-light-sanitization-technology">UVC Tech</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Athlete Health</span>
+          <h4><a href="https://getfreshtrax.com/blog/the-hidden-reason-your-gym-bag-smells-even-after-washing" class="cluster-card-link">The Hidden Reason Your Gym Bag Smells — Even After Washing</a></h4>
+          <p>You wash your gym bag regularly but it still smells. Here's the actual reason why — and the simple fix most people miss entirely.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/why-gym-shoes-smell-science">Odor Science</a> · <a href="https://getfreshtrax.com/blog/are-gym-shoes-making-you-sick">What's Growing Inside</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Athlete Health</span>
+          <h4><a href="https://getfreshtrax.com/blog/how-long-do-gym-shoes-actually-last-most-people-replace-too-late" class="cluster-card-link">How Long Do Gym Shoes Actually Last? (Most People Replace Them Too Late)</a></h4>
+          <p>Most athletes replace their shoes based on appearance, not function. Here's the data on when performance and hygiene actually degrade.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/why-serious-crossfit-athletes-clean-their-shoes-differently">CrossFit Care</a> · <a href="https://getfreshtrax.com/blog/are-gym-shoes-making-you-sick">What's Growing Inside</a></span>
+        </div>
+
+        <div class="cluster-card">
+          <span class="tag">Athlete Health</span>
+          <h4><a href="https://getfreshtrax.com/blog/martial-arts-hygiene-what-every-bjj-mma-practitioner-should-know" class="cluster-card-link">Martial Arts &amp; Hygiene: What Every BJJ and MMA Practitioner Should Know</a></h4>
+          <p>Martial arts gyms have some of the highest skin infection rates in sport. Here's the research and how to protect yourself.</p>
+          <span class="cluster-card-meta">Related: <a href="https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization">Eliminate Athlete's Foot</a> · <a href="https://getfreshtrax.com/blog/are-gym-shoes-making-you-sick">What's Growing Inside</a></span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─── Bottom CTA Banner ─── -->
+  <div class="cta-banner" aria-label="Book a discovery call">
+    <div class="cta-banner-left">
+      <div class="label">★ Ready to see the numbers?</div>
+      <h2>Book a 30-minute no-obligation discovery call</h2>
+      <p>Walk through ROI projections, kiosk siting, and payback timeline for your specific venue — with zero pressure to commit.</p>
+    </div>
+    <div class="cta-banner-right">
+      <a href="https://calendar.app.google/YWP7rF8gFUXgfMRCA" target="_blank" rel="noopener" class="btn-cta-lg">
+        Book my free call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <a href="https://getfreshtrax.com" class="nav-logo" style="font-size:16px;gap:8px;" aria-label="Freshtrax">
+      <svg width="30" height="18" viewBox="0 0 50 30" aria-hidden="true">
+        <defs><linearGradient id="shoe-grad2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f57e2c"/><stop offset="1" stop-color="#c33a14"/></linearGradient></defs>
+        <path d="M 2 22 Q 8 10 18 12 Q 26 13 32 18 Q 40 22 46 21 L 46 26 Q 40 27 28 26 Q 14 27 4 27 Z" fill="url(#shoe-grad2)"/>
+      </svg>
+      FRESHTRAX
+    </a>
+    <div class="footer-links">
+      <a href="https://getfreshtrax.com/how-it-works">How It Works</a>
+      <a href="https://getfreshtrax.com/blog">Blog</a>
+      <a href="https://getfreshtrax.com/faq">FAQ</a>
+      <a href="https://getfreshtrax.com/about">About</a>
+      <a href="https://getfreshtrax.com/contact">Contact</a>
+      <a href="https://getfreshtrax.com/privacy">Privacy</a>
+    </div>
+    <span>© 2026 Freshtrax. All rights reserved.</span>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>

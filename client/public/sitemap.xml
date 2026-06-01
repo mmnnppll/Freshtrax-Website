@@ -90,6 +90,42 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Venue Landing Pages -->
+  <url>
+    <loc>https://getfreshtrax.com/pickleball-clubs/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/crossfit-gyms/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/badminton-centers/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/tennis-clubs/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/bouldering-gyms/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
   <!-- Blog Articles -->
   <url>
     <loc>https://getfreshtrax.com/blog/eliminate-athletes-foot-shoe-sanitization/</loc>

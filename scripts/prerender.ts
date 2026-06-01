@@ -288,6 +288,52 @@ const STATIC_ROUTES: Array<{
     description:
       "Terms governing use of the Freshtrax website and footwear sanitization kiosk services.",
   },
+  // Venue landing pages
+  {
+    path: "/pickleball-clubs",
+    title: "Shoe Sanitization Kiosk for Pickleball Clubs | Freshtrax",
+    description:
+      "Freshtrax keeps pickleball courts cleaner and members healthier. Self-service footwear sanitization in 90 seconds. Zero staff, passive revenue for your club.",
+    ogTitle: "Shoe Sanitization Kiosk for Pickleball Clubs | Freshtrax",
+    ogDescription:
+      "Pickleball courts see 50-100+ players daily. Freshtrax eliminates bacteria, fungi, and odor from athletic footwear in 90 seconds.",
+  },
+  {
+    path: "/crossfit-gyms",
+    title: "Shoe Sanitization Kiosk for CrossFit Gyms | Freshtrax",
+    description:
+      "CrossFit boxes see barefoot training, shared mats, and high-sweat footwear every session. Freshtrax eliminates bacteria and odor in 90 seconds. Zero staff.",
+    ogTitle: "Shoe Sanitization Kiosk for CrossFit Gyms | Freshtrax",
+    ogDescription:
+      "CrossFit athletes train barefoot on shared mats. Freshtrax keeps footwear clean and your box smelling like a serious training facility.",
+  },
+  {
+    path: "/badminton-centers",
+    title: "Shoe Sanitization Kiosk for Badminton Centers | Freshtrax",
+    description:
+      "Badminton courts require dedicated indoor shoes — keep them clean with Freshtrax. Medical-grade sanitization in 90 seconds. Pilot-tested at a badminton facility.",
+    ogTitle: "Shoe Sanitization Kiosk for Badminton Centers | Freshtrax",
+    ogDescription:
+      "Freshtrax was first piloted at a badminton facility. Medical-grade shoe sanitization in 90 seconds — fits naturally into your shoe-change policy.",
+  },
+  {
+    path: "/tennis-clubs",
+    title: "Shoe Sanitization Kiosk for Tennis Clubs | Freshtrax",
+    description:
+      "Tennis clubs attract members who value premium amenities. Freshtrax delivers medical-grade shoe sanitization in 90 seconds — a hygiene upgrade your members will notice.",
+    ogTitle: "Shoe Sanitization Kiosk for Tennis Clubs | Freshtrax",
+    ogDescription:
+      "Tennis club members expect premium. Freshtrax delivers hygiene, passive revenue, and zero staffing overhead.",
+  },
+  {
+    path: "/bouldering-gyms",
+    title: "Shoe Sanitization Kiosk for Bouldering Gyms | Freshtrax",
+    description:
+      "Bouldering gyms attract urban, hygiene-conscious climbers. Freshtrax delivers medical-grade shoe sanitization in 90 seconds — a hygiene amenity that fits your community.",
+    ogTitle: "Shoe Sanitization Kiosk for Bouldering Gyms | Freshtrax",
+    ogDescription:
+      "Solve rental shoe odor and protect your climbing community. Freshtrax sanitizes footwear in 90 seconds with zero staff involvement.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
