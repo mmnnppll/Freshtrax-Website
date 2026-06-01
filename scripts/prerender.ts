@@ -118,6 +118,9 @@ function buildHtml(opts: {
   canonical: string;
   ogTitle?: string;
   ogDescription?: string;
+  ogType?: string;
+  ogArticlePublishedTime?: string;
+  ogArticleAuthor?: string;
   bodyHtml?: string;
 }): string {
   const {
@@ -127,6 +130,9 @@ function buildHtml(opts: {
     canonical,
     ogTitle,
     ogDescription,
+    ogType,
+    ogArticlePublishedTime,
+    ogArticleAuthor,
     bodyHtml,
   } = opts;
 
@@ -166,6 +172,26 @@ function buildHtml(opts: {
     /property="og:url"\s+content="[^"]*"/,
     `property="og:url" content="${safeCanonical}"`
   );
+
+  // og:type (default is "website"; blog articles override to "article")
+  if (ogType) {
+    html = html.replace(
+      /property="og:type"\s+content="[^"]*"/,
+      `property="og:type" content="${escapeAttr(ogType)}"`
+    );
+  }
+
+  // og:article tags (injected just before </head> for blog posts)
+  if (ogArticlePublishedTime || ogArticleAuthor) {
+    const articleTags: string[] = [];
+    if (ogArticlePublishedTime) {
+      articleTags.push(`<meta property="og:article:published_time" content="${escapeAttr(ogArticlePublishedTime)}" />`);
+    }
+    if (ogArticleAuthor) {
+      articleTags.push(`<meta property="og:article:author" content="${escapeAttr(ogArticleAuthor)}" />`);
+    }
+    html = html.replace("</head>", `${articleTags.join("\n    ")}\n  </head>`);
+  }
 
   // Twitter tags
   html = html.replace(
@@ -391,6 +417,11 @@ function main(): void {
       canonical: `${BASE_URL}/blog/${article.slug}/`,
       ogTitle: article.seoTitle || article.title,
       ogDescription: article.seoDescription || article.excerpt,
+      ogType: "article",
+      ogArticlePublishedTime: article.publishedDate
+        ? new Date(article.publishedDate).toISOString()
+        : undefined,
+      ogArticleAuthor: article.author || "Freshtrax",
       bodyHtml: articleHtml,
     });
     writeRoute(`/blog/${article.slug}`, html);
