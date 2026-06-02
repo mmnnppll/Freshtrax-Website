@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Zap, TrendingUp, VolumeX, Volume2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -10,9 +10,11 @@ import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/compone
 import AcquisitionProcess from "@/components/AcquisitionProcess";
 import PlacementVenueGuide from "@/components/PlacementVenueGuide";
 import ResponsibilityBreakdown from "@/components/ResponsibilityBreakdown";
-import DetailedFinancials from "@/components/DetailedFinancials";
 import FoundersClubDetails from "@/components/FoundersClubDetails";
 import OwnerFAQs from "@/components/OwnerFAQs";
+
+// Heavy financial components — lazy loaded so they don't block initial paint
+const DetailedFinancials = lazy(() => import("@/components/DetailedFinancials"));
 
 export default function Owners() {
   const { openModal } = useLeadCapture();
@@ -187,7 +189,9 @@ export default function Owners() {
         <AcquisitionProcess />
         <PlacementVenueGuide />
         <ResponsibilityBreakdown />
-        <DetailedFinancials />
+        <Suspense fallback={<div style={{ minHeight: 400, background: "#0a0a0a" }} />}>
+          <DetailedFinancials />
+        </Suspense>
         <FoundersClubDetails />
         <OwnerFAQs />
 
