@@ -7,7 +7,7 @@
 import { motion } from "framer-motion";
 import { Download, CalendarDays, Volume2, VolumeX } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
 const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
@@ -15,16 +15,7 @@ const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByY
 export default function HeroSection() {
   const { openModal } = useLeadCapture();
   const [isMuted, setIsMuted] = useState(true);
-  const [videoSrc, setVideoSrc] = useState<string>("");
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Delay video src assignment until after first paint.
-  // The poster image renders immediately as the LCP element (fast).
-  // The video loads ~1.5s later and autoplays once ready.
-  useEffect(() => {
-    const id = setTimeout(() => setVideoSrc(DEMO_VIDEO), 1500);
-    return () => clearTimeout(id);
-  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
@@ -138,12 +129,9 @@ export default function HeroSection() {
               {/* Glow behind video */}
               <div className="absolute -inset-8 bg-orange-500/[0.06] rounded-full blur-[80px]" />
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
-                {/* Poster shows immediately on all devices (fast LCP).
-                    videoSrc is injected 1.5s after mount so the video
-                    never blocks first paint. */}
                 <video
                   ref={videoRef}
-                  src={videoSrc || undefined}
+                  src={DEMO_VIDEO}
                   poster={HERO_BG}
                   autoPlay
                   muted={isMuted}
