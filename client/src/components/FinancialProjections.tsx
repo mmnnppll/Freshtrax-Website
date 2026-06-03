@@ -108,7 +108,7 @@ export default function FinancialProjections() {
                 onClick={() => setActiveTab(i)}
                 className={`px-4 py-2.5 rounded-lg text-sm font-body font-medium transition-all duration-300 ${
                   activeTab === i
-                    ? "bg-orange-500 text-white"
+                    ? "bg-orange-600 text-white"
                     : "bg-white/[0.04] text-white/50 hover:text-white/80 hover:bg-white/[0.08] border border-white/[0.06]"
                 }`}
               >

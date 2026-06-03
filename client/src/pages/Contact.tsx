@@ -272,7 +272,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 disabled:bg-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full px-6 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 disabled:bg-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                   <ArrowRight size={18} />
@@ -301,7 +301,7 @@ export default function Contact() {
                   "_blank"
                 )
               }
-              className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
+              className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
               Book a Call with Marvin N.
               <ArrowRight size={18} />

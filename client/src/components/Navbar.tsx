@@ -49,7 +49,7 @@ export default function Navbar() {
           ))}
           <a
             href="/owners"
-            className="px-5 py-2.5 bg-orange-500 text-white text-sm font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 font-body"
+            className="px-5 py-2.5 bg-orange-600 text-white text-sm font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 font-body"
           >
             Become an Owner
           </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
             ))}
             <a
               href="/owners"
-              className="mt-2 px-5 py-3 bg-orange-500 text-white text-sm font-semibold rounded-lg text-center font-body block"
+              className="mt-2 px-5 py-3 bg-orange-600 text-white text-sm font-semibold rounded-lg text-center font-body block"
               onClick={() => setMobileOpen(false)}
             >
               Become an Owner

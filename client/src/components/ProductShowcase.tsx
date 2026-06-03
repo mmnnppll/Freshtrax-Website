@@ -119,7 +119,7 @@ export default function ProductShowcase() {
           </p>
           <a
             href="#founders"
-            className="inline-block px-6 md:px-8 py-3 md:py-4 bg-orange-500 hover:bg-orange-600 text-white font-display font-bold rounded-lg transition-colors duration-300"
+            className="inline-block px-6 md:px-8 py-3 md:py-4 bg-orange-600 hover:bg-orange-700 text-white font-display font-bold rounded-lg transition-colors duration-300"
           >
             Claim Your Founder Slot
           </a>

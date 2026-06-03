@@ -52,7 +52,7 @@ export default function SectionCTA({
             </div>
             <button
               onClick={() => openModal(offer)}
-              className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center gap-2 font-body shrink-0 whitespace-nowrap"
+              className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center gap-2 font-body shrink-0 whitespace-nowrap"
             >
               <Download size={16} />
               {buttonText || offer.ctaText}
@@ -83,7 +83,7 @@ export default function SectionCTA({
           </p>
           <button
             onClick={() => openModal(offer)}
-            className="w-full px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
+            className="w-full px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
           >
             {buttonText || offer.ctaText}
             <ArrowRight size={16} />

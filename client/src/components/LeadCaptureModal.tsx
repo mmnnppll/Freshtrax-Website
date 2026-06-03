@@ -252,7 +252,7 @@ export default function LeadCaptureModal({
                           <button
                             type="submit"
                             disabled={!name.trim() || !businessType}
-                            className="w-full px-6 py-3.5 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
+                            className="w-full px-6 py-3.5 bg-orange-600 hover:bg-orange-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                           >
                             Continue
                             <ArrowRight size={16} />
@@ -317,7 +317,7 @@ export default function LeadCaptureModal({
                             <button
                               type="submit"
                               disabled={!email.trim()}
-                              className="flex-1 px-6 py-3.5 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
+                              className="flex-1 px-6 py-3.5 bg-orange-600 hover:bg-orange-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                             >
                               Continue
                               <ArrowRight size={16} />
@@ -431,7 +431,7 @@ export default function LeadCaptureModal({
                               type="button"
                               onClick={handleFinalSubmit}
                               disabled={loading}
-                              className="flex-1 px-6 py-3.5 bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
+                              className="flex-1 px-6 py-3.5 bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                             >
                               {loading ? (
                                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

@@ -68,7 +68,7 @@ export default function Owners() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => openModal(OFFERS.roiBlueprint)}
-                    className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Get the 8-Month ROI Blueprint, Free
                     <ArrowRight size={18} />
@@ -114,7 +114,7 @@ export default function Owners() {
                           videoRef.current.muted = !isMuted;
                         }
                       }}
-                      className="absolute bottom-4 right-4 p-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                      className="absolute bottom-4 right-4 p-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
                       aria-label={isMuted ? "Unmute video" : "Mute video"}
                     >
                       {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
@@ -218,7 +218,7 @@ export default function Owners() {
                     "_blank"
                   )
                 }
-                className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
+                className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Schedule a call
                 <ArrowRight size={18} />
@@ -256,7 +256,7 @@ export default function Owners() {
                   transition={{ delay: idx * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-12 h-12 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center mx-auto mb-4 text-lg">
+                  <div className="w-12 h-12 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center mx-auto mb-4 text-lg">
                     {step.num}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{step.title}</h3>

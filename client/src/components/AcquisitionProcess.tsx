@@ -70,7 +70,7 @@ export default function AcquisitionProcess() {
               >
                 {/* Step number and connector */}
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center text-lg flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-orange-600 text-white font-bold flex items-center justify-center text-lg flex-shrink-0">
                     {step.num}
                   </div>
                   {idx < steps.length - 1 && (

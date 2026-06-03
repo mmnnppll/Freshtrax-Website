@@ -89,7 +89,7 @@ export default function FoundersClub() {
                   href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
+                  className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                 >
                   Book a call with us
                   <ArrowRight size={16} />

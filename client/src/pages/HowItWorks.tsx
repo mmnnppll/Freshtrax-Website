@@ -399,7 +399,7 @@ export default function HowItWorks() {
                     "_blank"
                   )
                 }
-                className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
+                className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Book a call with us
                 <ArrowRight size={18} />
@@ -464,7 +464,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border border-orange-500/30 rounded-lg p-8 relative flex flex-col"
               >
-                <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                   EXCLUSIVE
                 </div>
                 <h3 className="text-2xl font-bold mb-6">Founder's Club</h3>

@@ -67,7 +67,7 @@ export default function TerritoryChecker() {
                 />
                 <button
                   onClick={handleCheck}
-                  className="px-5 py-3.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold font-body transition-colors duration-300 flex items-center gap-2"
+                  className="px-5 py-3.5 bg-orange-600 hover:bg-orange-700 text-white text-sm font-semibold font-body transition-colors duration-300 flex items-center gap-2"
                 >
                   Check
                   <ArrowRight size={14} />

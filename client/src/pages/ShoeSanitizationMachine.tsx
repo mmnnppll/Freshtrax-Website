@@ -245,7 +245,7 @@ export default function ShoeSanitizationMachine() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
-                    className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+                    className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                   >
                     Book a 30-Minute Call
                     <ArrowRight size={18} />
@@ -464,7 +464,7 @@ export default function ShoeSanitizationMachine() {
                   </p>
                   <button
                     onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
-                    className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+                    className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                   >
                     Book a 30-Minute Call
                     <ArrowRight size={18} />
@@ -479,7 +479,7 @@ export default function ShoeSanitizationMachine() {
                 >
                   {/* Founders Club card */}
                   <div className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border border-orange-500/30 rounded-xl p-8 relative">
-                    <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <div className="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       FOUNDERS CLUB
                     </div>
                     <h3 className="text-2xl font-bold mb-2">First 20 Owners</h3>
@@ -577,7 +577,7 @@ export default function ShoeSanitizationMachine() {
                 </p>
                 <button
                   onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
-                  className="px-10 py-5 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-lg rounded-lg transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+                  className="px-10 py-5 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg rounded-lg transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                 >
                   Book Your Partner Call
                   <ArrowRight size={20} />

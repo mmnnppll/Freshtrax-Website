@@ -252,7 +252,7 @@ export default function About() {
                   "_blank"
                 )
               }
-              className="px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
+              className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
               Book a call with us
               <ArrowRight size={18} />

@@ -187,7 +187,7 @@ export default function HeroSection() {
                       videoRef.current.muted = !isMuted;
                     }
                   }}
-                  className="absolute bottom-4 right-4 p-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="absolute bottom-4 right-4 p-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
                   style={{ zIndex: 2 }}
                   aria-label={isMuted ? "Unmute video" : "Mute video"}
                 >

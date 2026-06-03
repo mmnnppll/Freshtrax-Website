@@ -97,7 +97,7 @@ export default function HomeFAQ() {
           </p>
           <button
             onClick={() => openModal(OFFERS.roiBlueprint)}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
           >
             Get my Free ROI Blueprint
             <ArrowRight size={16} />
