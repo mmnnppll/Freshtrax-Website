@@ -46,12 +46,12 @@ export default function Footer() {
                 className="h-full w-auto"
               />
             </a>
-            <p className="text-white/30 text-xs font-body mt-3 max-w-xs leading-relaxed">
+            <p className="text-white/60 text-xs font-body mt-3 max-w-xs leading-relaxed">
               Medical-grade footwear sanitization. Fully automated. Zero competition.
             </p>
             <a
               href="tel:+17788988063"
-              className="mt-4 flex items-center gap-2 text-white/40 hover:text-orange-500 text-xs font-body transition-colors duration-300"
+              className="mt-4 flex items-center gap-2 text-white/60 hover:text-orange-500 text-xs font-body transition-colors duration-300"
             >
               <Phone size={12} />
               +1 778.898.8063
@@ -60,7 +60,7 @@ export default function Footer() {
               href="https://www.instagram.com/fresh.trax/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 flex items-center gap-2 text-white/40 hover:text-orange-500 text-xs font-body transition-colors duration-300"
+              className="mt-2 flex items-center gap-2 text-white/60 hover:text-orange-500 text-xs font-body transition-colors duration-300"
             >
               <Instagram size={12} />
               @fresh.trax
@@ -82,15 +82,15 @@ export default function Footer() {
           {/* Footer Links */}
           {footerSections.map((section, idx) => (
             <div key={idx}>
-              <h4 className="text-white font-semibold text-sm mb-4 font-body">
+              <h3 className="text-white font-semibold text-sm mb-4 font-body">
                 {section.title}
-              </h4>
+              </h3>
               <ul className="space-y-3">
                 {section.links.map((link, linkIdx) => (
                   <li key={`${section.title}-${linkIdx}`}>
                     <a
                       href={link.href}
-                      className="text-white/40 hover:text-orange-500 text-xs font-body transition-colors duration-300"
+                      className="text-white/60 hover:text-orange-500 text-xs font-body transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -103,13 +103,13 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="pt-6 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/20 text-xs font-body">
+          <p className="text-white/50 text-xs font-body">
             &copy; {new Date().getFullYear()} Freshtrax. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a
               href="/terms"
-              className="text-white/20 hover:text-white/40 text-xs font-body transition-colors"
+              className="text-white/50 hover:text-white/80 text-xs font-body transition-colors"
             >
               Terms of Service
             </a>

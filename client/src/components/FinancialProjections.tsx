@@ -160,7 +160,7 @@ export default function FinancialProjections() {
                     key={d.month}
                     className="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"
                   >
-                    <span className="text-[9px] md:text-xs font-mono text-white/40 h-4">
+                    <span className="text-[9px] md:text-xs font-mono text-white/60 h-4">
                       ${(d.cumulative / 1000).toFixed(1)}k
                     </span>
                     <motion.div
@@ -173,7 +173,7 @@ export default function FinancialProjections() {
                           : "bg-gradient-to-t from-white/10 to-white/20"
                       }`}
                     />
-                    <span className="text-[9px] md:text-xs font-mono text-white/30 h-4">
+                    <span className="text-[9px] md:text-xs font-mono text-white/50 h-4">
                       M{d.month}
                     </span>
                   </div>
@@ -185,11 +185,11 @@ export default function FinancialProjections() {
             <div className="mt-4 flex flex-col gap-3">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-sm bg-green-500" />
-                <span className="text-white/40 text-xs font-body">
+                <span className="text-white/65 text-xs font-body">
                   Bars show cumulative net revenue growth month-over-month.
                 </span>
               </div>
-              <p className="text-white/30 text-[11px] font-body leading-relaxed">
+              <p className="text-white/55 text-[11px] font-body leading-relaxed">
                 Gross revenue projections before platform fee and service fee. Modeled on blended avg. revenue of $4.00/cycle ($3.65 + $4.35 blended), after $0.55 operating cost per cycle. Net figures vary by ownership tier — see the ROI Blueprint for full net projections.
               </p>
             </div>
@@ -222,13 +222,13 @@ function StatCard({
           : "bg-white/[0.02] border-white/[0.06]"
       }`}
     >
-      <p className="text-white/40 text-[11px] font-body uppercase tracking-wide mb-2">
+      <p className="text-white/65 text-[11px] font-body uppercase tracking-wide mb-2">
         {label}
       </p>
       <p className={`font-mono text-lg md:text-2xl font-bold ${highlight ? "text-orange-500" : "text-white"}`}>
         {value}
       </p>
-      <p className="text-white/30 text-[11px] font-body mt-1">{sub}</p>
+      <p className="text-white/55 text-[11px] font-body mt-1">{sub}</p>
     </div>
   );
 }

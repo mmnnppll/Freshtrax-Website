@@ -126,7 +126,7 @@ export default function HeroSection() {
             >
               <button
                 onClick={() => openModal(OFFERS.roiBlueprint)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl font-body"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl font-body"
               >
                 <Download size={18} />
                 Get my Free ROI Blueprint
