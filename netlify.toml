@@ -1,19 +1,68 @@
 [build]
   command = "pnpm install && pnpm run build"
-    publish = "dist/public"
-      functions = "netlify/functions"
+  publish = "dist/public"
+  functions = "netlify/functions"
 
-      [[redirects]]
-        from = "/api/send-lead-notification"
-          to = "/.netlify/functions/send-lead-notification"
-            status = 200
+# Cache hashed JS/CSS chunks for 1 year (immutable — Vite adds content hash to filenames)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-            [[redirects]]
-              from = "/api/contact"
-                to = "/.netlify/functions/contact"
-                  status = 200
+# Cache static assets for 1 year
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-                  [[redirects]]
-                    from = "/*"
-                      to = "/index.html"
-                        status = 200
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# HTML — short cache so updates propagate quickly
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Sitemap + robots — revalidate daily
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[redirects]]
+  from = "/api/send-lead-notification"
+  to = "/.netlify/functions/send-lead-notification"
+  status = 200
+
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
