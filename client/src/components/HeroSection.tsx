@@ -7,10 +7,7 @@
 import { motion } from "framer-motion";
 import { Download, CalendarDays, Volume2, VolumeX } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
-import { useState, useRef } from "react";
-
-// Declared outside component — no re-render impact
-declare global { interface HTMLImageElement { fetchPriority: string; } }
+import { useState, useRef, useEffect } from "react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
 const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
@@ -20,6 +17,30 @@ export default function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // IntersectionObserver: only load + play the video when its container
+  // enters the viewport. On initial page load the video has no src,
+  // so the browser never downloads it — the hero BG img is the LCP element.
+  useEffect(() => {
+    const container = containerRef.current;
+    const video = videoRef.current;
+    if (!container || !video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !video.src) {
+          video.src = DEMO_VIDEO;
+          video.play().catch(() => {});
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
@@ -129,7 +150,7 @@ export default function HeroSection() {
             transition={{ duration: 0.9, delay: 0.5 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
+            <div ref={containerRef} className="relative w-full max-w-[280px] sm:max-w-[300px]">
               {/* Glow behind video */}
               <div className="absolute -inset-8 bg-orange-500/[0.06] rounded-full blur-[80px]" />
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
@@ -148,11 +169,10 @@ export default function HeroSection() {
                   }}
                   fetchPriority="high"
                 />
-                {/* Video loads in background — becomes visible when ready */}
+                {/* Video — src injected by IntersectionObserver when visible.
+                    No src on initial load = browser never downloads it = fast LCP. */}
                 <video
                   ref={videoRef}
-                  src={DEMO_VIDEO}
-                  autoPlay
                   muted={isMuted}
                   loop
                   playsInline
