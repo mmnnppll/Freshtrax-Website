@@ -9,12 +9,16 @@ import { Download, CalendarDays, Volume2, VolumeX } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
 import { useState, useRef } from "react";
 
+// Declared outside component — no re-render impact
+declare global { interface HTMLImageElement { fetchPriority: string; } }
+
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
 const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
 
 export default function HeroSection() {
   const { openModal } = useLeadCapture();
   const [isMuted, setIsMuted] = useState(true);
+  const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
@@ -61,9 +65,9 @@ export default function HeroSection() {
 
             {/* Revenue claim — visually primary */}
             <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.45 }}
+              initial={{ y: 10 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5, delay: 0 }}
               className="font-display font-bold text-5xl md:text-6xl leading-tight mb-4 text-white"
             >
               Make up to{" "}
@@ -129,14 +133,30 @@ export default function HeroSection() {
               {/* Glow behind video */}
               <div className="absolute -inset-8 bg-orange-500/[0.06] rounded-full blur-[80px]" />
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
+                {/* Static img overlay — this is the LCP element.
+                    Preloaded via <link rel="preload"> in index.html so it
+                    paints in ~1s. Fades out once the video has a real frame. */}
+                <img
+                  src={HERO_BG}
+                  alt="Freshtrax footwear sanitization kiosk"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  style={{
+                    opacity: videoReady ? 0 : 1,
+                    transition: "opacity 0.4s ease",
+                    pointerEvents: "none",
+                    zIndex: 1,
+                  }}
+                  fetchPriority="high"
+                />
+                {/* Video loads in background — becomes visible when ready */}
                 <video
                   ref={videoRef}
                   src={DEMO_VIDEO}
-                  poster={HERO_BG}
                   autoPlay
                   muted={isMuted}
                   loop
                   playsInline
+                  onCanPlay={() => setVideoReady(true)}
                   className="w-full h-full object-cover"
                 />
                 {/* Unmute Button */}
@@ -148,6 +168,7 @@ export default function HeroSection() {
                     }
                   }}
                   className="absolute bottom-4 right-4 p-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                  style={{ zIndex: 2 }}
                   aria-label={isMuted ? "Unmute video" : "Mute video"}
                 >
                   {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
