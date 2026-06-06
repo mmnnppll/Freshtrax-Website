@@ -3073,6 +3073,346 @@ Clean the outsoles, loosen the laces, remove insoles if possible, and store in a
     seoTitle: "Joining a Tennis League This Summer? Your Pre-Season Gear Checklist Is Missing One Step",
     seoDescription: "Summer tennis league season is here. Most players have their racket restrung and their grip sorted — but overlook the one item that carries them through every single point. Here's the complete pre-season gear checklist.",
   },
+
+  {
+    id: "38",
+    title: "Why Hyrox Athletes Are the Most Shoe-Conscious People in the Gym Right Now",
+    slug: "why-hyrox-athletes-are-the-most-shoe-conscious-people-in-the-gym",
+    excerpt: "Hyrox is one of the fastest-growing fitness races in the world, and it is uniquely brutal on footwear. Here is why serious Hyrox athletes treat shoe hygiene as race prep, not an afterthought.",
+    content: `# Why Hyrox Athletes Are the Most Shoe-Conscious People in the Gym Right Now
+
+## Introduction
+
+Hyrox has arrived. What started as a niche European fitness race has become one of the fastest-growing participation sports in the world, with over 5,000 affiliated gyms and events regularly selling out in London, New York, Amsterdam, and dozens of other cities.
+
+If you've trained for or competed in Hyrox, you already know what it does to your body. Eight one-kilometre runs, each followed by a functional workout station — ski erg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, wall balls. Back to back. For 60 to 90 minutes.
+
+What most athletes don't think about is what that format does to their shoes.
+
+---
+
+## Why Hyrox Is Uniquely Punishing on Footwear
+
+Most sports apply a narrow range of forces to athletic footwear. Running involves repetitive forward motion. Cycling avoids shoe-to-surface contact almost entirely. Even CrossFit, intense as it is, tends to revolve around a smaller set of movement patterns per session.
+
+Hyrox is different. In a single race or training session, your shoes endure:
+
+**Sustained running on rubber flooring.** Eight separate 1km run segments on the same indoor surface create repetitive heat and compression cycles. Shoe interior temperature during sustained cardio consistently reaches 85 to 95°F — the optimal range for bacterial reproduction. Every run segment is another heat cycle where whatever is living in your insole is growing.
+
+**Sled push and pull.** The low-center-of-gravity drive position used in sled work puts extreme lateral and compressive load through the forefoot and midfoot. This stresses the adhesive bonds between the upper and midsole faster than nearly any other movement pattern.
+
+**Ski erg and rowing.** Both involve full-body exertion in a position that keeps your feet stationary and under load for minutes at a time. Moisture output is high, ventilation is minimal, and the insole absorbs all of it.
+
+**Burpee broad jumps.** The combination of floor contact (chest to floor) followed by explosive jumps creates surface contact with the widest variety of vectors. Your upper, lace area, and midsole are all working in ways they weren't designed for simultaneously.
+
+The result: a shoe that accumulates more microbial load, more structural stress, and more moisture per training session than almost any other athletic discipline.
+
+---
+
+## What's Happening Inside Your Shoes After a Hyrox Session
+
+The science of what happens post-training is worth understanding, because it changes how you think about the window between your session and your next one.
+
+The average foot has approximately 250,000 sweat glands, according to the [American Podiatric Medical Association](https://www.apma.org). During intense exercise, those glands can produce more than a pint of moisture combined. The vast majority of that moisture goes directly into your insole foam and shoe lining — materials that are designed to absorb it during activity but can't release it quickly after.
+
+The bacteria primarily responsible for shoe odor — *Brevibacterium*, *Staphylococcus*, and *Micrococcus* — thrive in warm, moist environments. In the immediate post-workout window, while your shoe is still hot and saturated, these bacteria can double their population roughly every 20 minutes.
+
+By the time you're home and your shoes are sitting in your gym bag, the colony is already substantially larger than it was when you finished training. By the next morning, if the shoes haven't been treated or fully dried, you're putting on a shoe with a significantly higher microbial load than the one you wore into the gym.
+
+For athletes training Hyrox 4 to 5 times per week, this cycle repeats without a reset. The colony compounds.
+
+---
+
+## Why Hyrox Athletes Notice This More Than Others
+
+There's a reason the Hyrox community talks about shoe care more than most fitness groups: the performance stakes are visible.
+
+**Foot health affects race day.** Athlete's foot fungal infections, contact dermatitis from bacterial overgrowth, and plantar inflammation all affect running mechanics and movement efficiency. For an event where every second counts and your feet are the primary interface with the ground for the entire race, foot health is not incidental. It is performance-relevant.
+
+**Hyrox athletes track everything.** Heart rate, VO2 max, split times, sled weight progression. The mindset of the Hyrox community is fundamentally data-oriented. When athletes in this group understand that their shoe interior is a measurable hygiene variable — one they can control — they act on it. It's the same logic as sleep optimization or nutrition timing. If it affects performance and you can address it, you address it.
+
+**Equipment investment is high.** Purpose-built Hyrox training shoes — models from NOBULL, Reebok, New Balance, and Puma designed for hybrid running and functional fitness — typically cost $120 to $200. Protecting that investment is a natural extension of the gear-conscious mindset that serious Hyrox athletes already have.
+
+---
+
+## The Hyrox Shoe Hygiene Protocol
+
+For athletes training Hyrox three or more times per week, here's what a consistent shoe hygiene routine looks like:
+
+**Immediately after training:** Remove shoes the moment you finish. Don't wear them through the post-workout stretch, the protein shake conversation, or the drive home. Each additional hour in a warm, enclosed shoe is time the bacterial colony has to grow unchecked.
+
+**Allow full airflow drying.** Loosen laces completely, pull the tongue forward, and place shoes in a ventilated position — not in a bag, not in a locker. Minimum 12 hours before next use. For athletes training daily, a second pair of training shoes is not optional; it's a hygiene requirement.
+
+**Treat the interior, not just the surface.** Sprays and wipes address what's on the outside. The problem is in the insole foam and lining — materials that require UV-C light, ozone, or antimicrobial vapor to penetrate and neutralize effectively. A 90-second sanitization treatment after every session resets the microbial load before it compounds.
+
+**Inspect insoles monthly.** Insoles in high-frequency training shoes absorb and retain bacteria more than any other component. Replace them every three to four months, or more frequently if odor persists despite surface cleaning.
+
+**Track mileage.** Most quality athletic footwear is designed for 300 to 500 miles of use. Hyrox training sessions can involve 8 to 10km of running alone, plus functional work. At four sessions per week, shoe lifespan compresses significantly. Structural integrity loss — flattened midsoles, worn outsole zones — affects force distribution on every movement.
+
+---
+
+## The Performance Argument for Taking Shoe Hygiene Seriously
+
+If you've invested the time to train for Hyrox, the nutrition, the programming, the recovery protocols — letting shoe hygiene be the unmanaged variable doesn't fit the logic.
+
+Recurring foot infections are a consistent, low-level drag on performance. They don't sideline you, but they change how you move. A 3% reduction in push-off efficiency on eight 1km run segments adds up to something measurable on the finish clock.
+
+The athletes in the Hyrox community who talk about shoe hygiene aren't being precious about their gear. They've done the math.
+
+---
+
+## Frequently Asked Questions
+
+**What's the best way to dry Hyrox training shoes between sessions?**  
+Remove shoes immediately after training, loosen laces fully, and place them soles-down in a well-ventilated area. Avoid enclosed bags or lockers, which trap moisture. Cedar shoe inserts or ventilation inserts can accelerate drying but don't replace an active sanitization treatment.
+
+**Do I need different shoes for Hyrox training versus race day?**  
+Many serious competitors use a dedicated race-day shoe maintained in better condition than daily training shoes. For training, a hybrid trainer designed for both running and functional movements is standard. The shoe hygiene protocol is the same regardless of which pair you're wearing.
+
+**How often should I replace my Hyrox training shoes?**  
+With four or more sessions per week, expect a structural lifespan of six to nine months depending on the training volume per session. Replace when you notice midsole compression (the shoe feels noticeably flatter or less responsive), uneven outsole wear, or sole separation at the toe or heel.
+
+---
+
+*Freshtrax kiosks deliver UV-C, ozone, and antimicrobial vapor treatment in under 90 seconds — eliminating the bacterial load in your insoles after every session, not just masking it. [See how it works](https://getfreshtrax.com/how-it-works) or [find a Freshtrax location near you](https://getfreshtrax.com).*
+`,
+    author: "Marvin N.",
+    publishedDate: "2026-06-05",
+    updatedDate: "2026-06-05",
+    category: "Sports & Fitness",
+    tags: ["Hyrox training shoes", "Hyrox shoe hygiene", "best shoes for Hyrox", "gym shoe bacteria", "functional fitness shoe care"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Hyrox athlete lacing up training shoes before a workout session",
+    readingTime: 6,
+    pillar: "shoe-care-gear",
+    seoTitle: "Why Hyrox Athletes Are the Most Shoe-Conscious People in the Gym Right Now",
+    seoDescription: "Hyrox is one of the fastest-growing fitness races in the world and it is brutal on footwear. Here is why serious Hyrox athletes treat shoe hygiene as race prep, not an afterthought.",
+  },
+  {
+    id: "39",
+    title: "What's Actually Growing Inside Your Gym Shoes Between Sessions",
+    slug: "what-is-actually-growing-inside-your-gym-shoes-between-sessions",
+    excerpt: "Most gym-goers know their shoes eventually smell. Here is what is actually causing it, and why the answer changes how you think about shoe hygiene entirely.",
+    content: `# What's Actually Growing Inside Your Gym Shoes Between Sessions
+
+## Introduction
+
+Here's a question most gym-goers have never asked: what exactly is happening inside your training shoes between sessions?
+
+Not in a vague "they smell eventually" way. In a specific, biological, here-is-what-is-living-in-your-insole way.
+
+Because the answer is more concrete than most people expect — and it changes how you think about something you're wearing for an hour or more every time you train.
+
+---
+
+## The Microbiology of a Used Gym Shoe
+
+Athletic footwear creates a near-perfect environment for microbial growth. The conditions inside a closed gym shoe during and after exercise are: warm, dark, moist, and nutrient-rich (from skin cells, sebum, and sweat). These are the conditions that microorganisms are evolutionarily optimized to exploit.
+
+The primary organisms found in used athletic shoes, according to research from the [Journal of Applied Microbiology](https://sfam.org.uk/journals/journal-of-applied-microbiology.html) and podiatric medicine literature, include:
+
+**Brevibacterium.** The primary source of the characteristic smell associated with used shoes. Brevibacterium metabolizes the amino acid methionine, found in sweat, producing methanethiol — the sulfurous compound responsible for the most recognizable shoe odor. This is also the organism responsible for the smell of some aged cheeses, which is why shoe smell and certain cheese smells have the same origin.
+
+**Staphylococcus.** Multiple species in the Staphylococcus family — particularly *S. epidermidis* and *S. haemolyticus* — are normal skin inhabitants that thrive in shoe environments. Most are harmless in context, but an overgrown colony on a compromised skin barrier (blisters, calluses, small abrasions) can cause low-grade infection and contact dermatitis.
+
+**Micrococcus.** Another skin-commensal organism that contributes to odor production and thrives in warm, enclosed conditions.
+
+**Trichophyton rubrum.** The fungal organism responsible for athlete's foot and the most common cause of nail fungus. Unlike the bacteria above, it can survive in shoe materials — particularly fabric lining and insole foam — for months, even in shoes that appear and smell clean.
+
+**Pseudomonas aeruginosa.** Less common but present in gym environments, particularly facilities with pools or damp changing areas. Associated with skin infections in individuals with any skin compromise.
+
+This is the ecosystem living in the insole of shoes worn regularly without interior treatment. Not hypothetically — consistently, at these organisms, in measurable concentrations.
+
+---
+
+## The Growth Curve After a Session
+
+Understanding the timeline of what happens after a workout changes how the problem looks.
+
+During your training session, your foot produces moisture that saturates the insole foam. When you remove your shoe, the interior is at approximately 85 to 95°F — body temperature plus the heat generated by exercise. The shoe is closed, moist, and warm.
+
+In these conditions, the bacteria already present in the shoe can double their population roughly every 20 minutes. The post-workout window — the first two to four hours after a session — is the period of fastest microbial growth.
+
+By the time you've showered, eaten, and the shoes are sitting by your front door the next morning, the colony is materially larger than it was when you finished training. By the second or third session, with no treatment in between, the colony has a critical mass: enough organisms that the odor becomes detectable, that the risk of skin infection rises meaningfully, and that the insole foam itself begins to break down from the biological activity.
+
+The smell you notice after a few weeks of regular training is not the start of the problem. It's confirmation that the colony has been established for some time already.
+
+---
+
+## Why Standard Solutions Don't Work
+
+Most people encounter the odor problem and reach for one of three responses:
+
+**Deodorizing sprays.** These work by neutralizing the compounds that bacteria produce — the methanethiol and other volatile compounds that create the smell. They don't reduce the bacterial count. They don't penetrate the insole foam where the colony lives. The odor returns in one to two days because the source is untouched.
+
+**Airing shoes out.** Better than nothing. Removing moisture slows the growth cycle by eliminating the dampness the organisms require. But it doesn't reset the established colony. A shoe that smells strongly after training will still smell after 12 hours of airing — less strongly, but the organisms are still present.
+
+**Machine washing.** Addresses surface contamination reasonably well but has two problems. First, the insole foam can retain moisture for 24 to 48 hours after a wash cycle, creating a post-wash growth window that can be worse than pre-wash conditions if the shoe doesn't dry completely. Second, repeated machine washing degrades adhesive bonds and foam structure, shortening the functional life of the shoe.
+
+**Freezing shoes.** A popular internet recommendation. Cold temperatures inhibit bacterial growth but don't kill the established colony. When the shoe returns to room temperature, the organisms resume their activity at pre-freeze levels within hours.
+
+None of these approaches addresses the actual problem: the colony living in the insole foam and fabric lining, which requires penetrating treatment — UV-C light, ozone, or antimicrobial vapor — not surface intervention.
+
+---
+
+## What Effective Treatment Looks Like
+
+Treating the interior of an athletic shoe effectively means reaching the materials where the microbial load actually lives. Three mechanisms do this:
+
+**UV-C light (250–270nm):** Disrupts DNA and RNA in microorganisms, preventing reproduction. Clinical research (Torres-Teran et al., 2023, *Infection Control and Hospital Epidemiology*) demonstrates 91–95% bioburden reduction on treated surfaces. Effective against bacteria, fungi, and viruses.
+
+**Ozone:** An unstable oxygen molecule that breaks down organic compounds and destroys microbial cell walls on contact. Generated inside the shoe chamber, it circulates through the insole foam and lining in a way that surface treatments cannot reach. Recognized by the FDA as an effective antimicrobial agent.
+
+**Antimicrobial vapor:** Penetrates fabric fibers and foam layers, reaching the inner surfaces of the insole and lining through diffusion. Addresses organisms in the deepest accessible materials of the shoe interior.
+
+These three mechanisms in combination, delivered in a 90-second treatment cycle, reset the microbial load in the insole to baseline after every session — before the colony has time to compound.
+
+---
+
+## A Simple Post-Training Protocol
+
+For gym-goers training three or more times per week:
+
+- **Immediately after:** Remove shoes, loosen laces, allow airflow. Don't leave shoes in a closed bag or locker.
+- **After every session:** UV-C or ozone-based interior treatment before the next use. This is the step most people skip and the step that determines whether the colony resets or compounds.
+- **Monthly:** Remove insoles and inspect for visible compression, discoloration, or damage. Replace every three to four months under regular use.
+- **Every 6–12 months:** Structural evaluation — midsole compression, outsole wear, sole adhesion. Replace when structural integrity is compromised, not when the shoe looks worn.
+
+The entire protocol takes less than two minutes of active time per session. The 90-second treatment runs while you stretch or change. There's no excuse, logistical or otherwise, for not doing it.
+
+---
+
+## Frequently Asked Questions
+
+**Is gym shoe bacteria dangerous?**  
+For most healthy individuals, the organisms common in gym shoes cause nuisance problems — odor, athlete's foot, contact dermatitis — rather than serious infections. The risk profile is higher for individuals with diabetes, compromised immune systems, or any open skin on the foot, where standard skin commensal organisms can cause more significant infections. The prudent approach is treatment regardless of risk profile: the intervention is trivial and the downside of ignoring it is not.
+
+**Do some people's shoes smell worse than others?**  
+Yes, and it's largely genetic. Skin microbiome composition varies between individuals, which affects both which organisms colonize the shoe and how aggressively they do so. People whose feet produce more apocrine sweat (sweat rich in the organic compounds bacteria metabolize) tend to experience faster and more pronounced odor development. This isn't a personal hygiene failing — it's biology. But the treatment is the same regardless.
+
+**How do I know when my shoe's bacterial load is at a problematic level?**  
+Persistent odor that returns within 24 hours of airing out is the primary signal. Secondary signals include recurring foot irritation or athlete's foot despite topical treatment, visible darkening or discoloration on the insole lining, and a general musty smell even from shoes that appear clean.
+
+---
+
+*Freshtrax kiosks deliver UV-C, ozone, and antimicrobial vapor treatment in under 90 seconds — eliminating the colony at the source before it compounds. [See how it works](https://getfreshtrax.com/how-it-works) or [find a Freshtrax location near you](https://getfreshtrax.com).*
+`,
+    author: "Marvin N.",
+    publishedDate: "2026-06-05",
+    updatedDate: "2026-06-05",
+    category: "Health & Wellness",
+    tags: ["gym shoe bacteria", "why do gym shoes smell", "shoe hygiene gym", "bacteria in athletic shoes", "how to kill bacteria in shoes"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Close-up of worn gym shoe insole showing heavy use from regular training",
+    readingTime: 6,
+    pillar: "athlete-health-hygiene",
+    seoTitle: "What's Actually Growing Inside Your Gym Shoes Between Sessions",
+    seoDescription: "Most gym-goers know their shoes eventually smell. Almost nobody knows what is actually causing it or what is still growing in there right now. The answer is more specific, and more fixable, than you think.",
+  },
+  {
+    id: "40",
+    title: "The Gym Amenity Hyrox Members Actually Want in 2026",
+    slug: "the-gym-amenity-hyrox-members-actually-want-in-2026",
+    excerpt: "With over 5,000 affiliated gyms competing for the same serious athletes, differentiation comes down to the details. Here is why a footwear sanitization kiosk is the highest-ROI amenity you can add in 2026.",
+    content: `# The Gym Amenity Hyrox Members Actually Want in 2026
+
+## Introduction
+
+There are now over 5,000 Hyrox-affiliated gyms worldwide. The number keeps climbing. And with it, the competition for the training membership of every serious functional fitness athlete in your market.
+
+The gyms winning that competition are not doing it on equipment alone. Every Hyrox-affiliated facility has a ski erg and a sled track. That's table stakes. What separates the gyms with strong retention and word-of-mouth growth from the ones competing on price is the quality of the experience around the workout — the details that tell a member this place takes their training as seriously as they do.
+
+Footwear hygiene is one of those details. And in 2026, it's one of the most underleveraged amenity opportunities available to independent gym operators.
+
+---
+
+## The Problem Your Hyrox Members Already Have
+
+Walk through your gym after a Saturday morning Hyrox prep session. Look at the shoes coming off near the entrance, in the locker room, or by the stretching area.
+
+Every one of those shoes just spent 60 to 90 minutes absorbing sweat through eight run segments and eight functional stations. The insole foam inside each pair is warm, saturated, and actively accumulating the bacterial load that produces odor, athlete's foot, and contact dermatitis — all of which affect training performance.
+
+Your members know this. The Hyrox community is disproportionately health-conscious, data-oriented, and already investing in performance optimization across nutrition, sleep, and recovery. Shoe hygiene is a gap they've identified, and most of them are managing it inadequately — a spray that masks rather than treats, or nothing at all.
+
+A footwear sanitization kiosk placed in your facility solves this problem in 90 seconds, at the point of need, immediately after training. No staff involvement. No restocking. No maintenance on your end.
+
+---
+
+## Why This Works Better at Hyrox Gyms Than Almost Anywhere Else
+
+The typical objection to amenity additions is uptake: will members actually use it? For a Hyrox gym, the answer is yes, and here's why.
+
+**Your members are already shoe-conscious.** Hyrox athletes invest $120 to $200 in purpose-built training footwear. They rotate pairs. They track mileage. When a solution exists to extend shoe life and protect foot health, this demographic adopts it — not because you told them to, but because it fits the optimization mindset they already have.
+
+**Your members train at high frequency.** The average Hyrox competitor trains three to five times per week. That's three to five post-session opportunities for kiosk use per member per week. High-frequency training creates high-frequency usage, which is exactly what sustainable kiosk revenue requires.
+
+**The timing is built into the session.** A 90-second shoe treatment fits naturally into the post-workout routine — during the cool-down, while waiting for a post-WOD conversation to end, or on the way out the door. There is no behavior change required. The kiosk fits into the rhythm that already exists.
+
+**Peer adoption accelerates uptake.** The Hyrox community is social. When one athlete uses the kiosk and mentions it in the group chat or during a Saturday session, others try it. Social proof within a community of motivated, performance-focused athletes is a faster adoption driver than any marketing you could run.
+
+---
+
+## What This Looks Like as a Gym Owner
+
+You are not in the shoe sanitization business. You don't need to be. The kiosk operates independently, requires no staff time, and generates revenue from the members who are already in your building.
+
+Here is what the practical arrangement looks like:
+
+The kiosk is placed in a high-visibility location — near the shoe change area, the exit, or the stretching zone where members transition out of training. Members pay per use (typically $3.65 to $4.35 per treatment) via cashless payment. The kiosk owner handles all maintenance, service, and consumable restocking remotely.
+
+As the venue, your role is to provide floor space and a power outlet. In exchange, you gain a premium hygiene amenity that costs you nothing to operate, gives you a legitimate differentiator in member marketing, and positions your facility as one that takes the training environment seriously at every level.
+
+---
+
+## The Differentiation Argument
+
+Member acquisition and retention in the boutique fitness market increasingly comes down to community and environment. Price matters less than it used to as the market has segmented. Your Hyrox members are not leaving for a $10/month cheaper alternative. They're leaving when a newer facility feels more dialed in, more serious, more aligned with where they're trying to go.
+
+A footwear sanitization kiosk is a visible signal. It tells your members that you've thought about what happens after the workout, not just during it. That you've considered the full arc of their training experience. That the details you attend to match the level they're operating at.
+
+That kind of signal earns loyalty in a way that a new piece of equipment or a painted mural on the wall simply doesn't.
+
+---
+
+## How to Introduce It to Your Members
+
+The launch conversation is straightforward:
+
+You've added a Freshtrax footwear sanitization kiosk to the facility. It uses UV-C light, ozone, and antimicrobial vapor to eliminate the bacteria and fungus that build up in shoe insoles during training — the stuff that causes odor, athlete's foot, and recurring foot issues. It takes 90 seconds. It's right by the exit.
+
+That's the entire pitch. You don't need to sell it. You need to surface it once, clearly, in your member communication. The product sells itself to a demographic that already cares about this problem.
+
+A single post in your gym's community channel, a brief mention at your next intro session, and a clear placement near the exit is enough to drive consistent first-use. After that, word of mouth within your community does the rest.
+
+---
+
+## Frequently Asked Questions
+
+**Does the kiosk take up a lot of floor space?**  
+No. A footwear sanitization kiosk has a footprint comparable to a standard locker or equipment storage unit. Placement near the shoe area, locker room entrance, or exit requires minimal dedicated space.
+
+**What maintenance does the gym need to handle?**  
+None. All maintenance, service, and consumable restocking is managed by the kiosk owner or operator. The venue's only requirement is floor space and a standard power outlet.
+
+**How do I explain the cost to members who ask?**  
+Frame it as a post-training recovery tool, not a cleaning product. Hyrox athletes understand the concept of investing in recovery and performance maintenance. The $3.65 to $4.35 per-use cost sits comfortably in that frame.
+
+---
+
+*Freshtrax footwear sanitization kiosks are designed for exactly this placement scenario. [Learn about becoming an owner](https://getfreshtrax.com/owners), [see how the technology works](https://getfreshtrax.com/how-it-works), or [download the ROI Blueprint](https://getfreshtrax.com/) to see the full financial model.*
+`,
+    author: "Marvin N.",
+    publishedDate: "2026-06-05",
+    updatedDate: "2026-06-05",
+    category: "Business & Operations",
+    tags: ["Hyrox gym differentiation", "fitness studio member retention", "gym passive revenue", "boutique gym amenities", "functional fitness gym upgrades"],
+    imageUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    imageAlt: "Modern Hyrox gym interior with functional fitness equipment and clean training space",
+    readingTime: 5,
+    pillar: "venue-owner-playbooks",
+    seoTitle: "The Gym Amenity Hyrox Members Actually Want in 2026",
+    seoDescription: "Hyrox-affiliated gyms are competing hard for training memberships. Here is why a footwear sanitization kiosk is the highest-ROI hygiene amenity you can add and why your members are already looking for it.",
+  },
 ];
 
 export const getBlogArticleBySlug = (slug: string): BlogArticle | undefined => {
