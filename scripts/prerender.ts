@@ -360,7 +360,144 @@ const STATIC_ROUTES: Array<{
     ogDescription:
       "Solve rental shoe odor and protect your climbing community. Freshtrax sanitizes footwear in 90 seconds with zero staff involvement.",
   },
+  {
+    path: "/shoe-sanitization-machine",
+    title: "Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax",
+    description:
+      "Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds. Zero staff required.",
+    ogTitle: "Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax",
+    ogDescription:
+      "Freshtrax eliminates odor and bacteria from athletic footwear in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat.",
+  },
 ];
+
+// ---------------------------------------------------------------------------
+// Sitemap generation
+// ---------------------------------------------------------------------------
+// Per-route priority/changefreq/lastmod. Routes not listed fall back to
+// DEFAULT_SITEMAP_META. Bump a route's lastmod when its content changes.
+const DEFAULT_SITEMAP_META = {
+  priority: "0.5",
+  changefreq: "monthly",
+  lastmod: "2026-06-09",
+};
+
+const SITEMAP_META: Record<
+  string,
+  { priority: string; changefreq: string; lastmod: string }
+> = {
+  "/": { priority: "1.0", changefreq: "weekly", lastmod: "2026-05-06" },
+  "/owners": { priority: "0.9", changefreq: "weekly", lastmod: "2026-05-06" },
+  "/how-it-works": { priority: "0.8", changefreq: "monthly", lastmod: "2026-05-06" },
+  "/blog": { priority: "0.75", changefreq: "weekly", lastmod: "2026-05-06" },
+  "/faq": { priority: "0.7", changefreq: "monthly", lastmod: "2026-05-06" },
+  "/about": { priority: "0.6", changefreq: "yearly", lastmod: "2026-05-06" },
+  "/contact": { priority: "0.6", changefreq: "monthly", lastmod: "2026-05-06" },
+  "/privacy": { priority: "0.3", changefreq: "yearly", lastmod: "2026-05-01" },
+  "/terms": { priority: "0.3", changefreq: "yearly", lastmod: "2026-05-01" },
+  "/pickleball-clubs": { priority: "0.85", changefreq: "monthly", lastmod: "2026-06-01" },
+  "/crossfit-gyms": { priority: "0.85", changefreq: "monthly", lastmod: "2026-06-01" },
+  "/badminton-centers": { priority: "0.80", changefreq: "monthly", lastmod: "2026-06-01" },
+  "/tennis-clubs": { priority: "0.80", changefreq: "monthly", lastmod: "2026-06-01" },
+  "/bouldering-gyms": { priority: "0.75", changefreq: "monthly", lastmod: "2026-06-01" },
+  "/shoe-sanitization-machine": { priority: "0.85", changefreq: "monthly", lastmod: "2026-06-09" },
+};
+
+// Image + video entries for the homepage <url> block (carried over from the
+// previous hand-maintained sitemap).
+const HOMEPAGE_MEDIA = `
+    <image:image>
+      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
+      <image:title>Freshtrax Hero Background</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp</image:loc>
+      <image:title>Freshtrax Logo</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</video:thumbnail_loc>
+      <video:title>Freshtrax Demo Video</video:title>
+      <video:description>12-second cinematic demo of Freshtrax footwear sanitization kiosk in action</video:description>
+      <video:content_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4</video:content_loc>
+      <video:duration>12</video:duration>
+    </video:video>`;
+
+function sitemapUrlEntry(
+  loc: string,
+  lastmod: string,
+  changefreq: string,
+  priority: string,
+  extra = ""
+): string {
+  return `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>${extra}
+  </url>`;
+}
+
+/**
+ * Build sitemap.xml from the same data the router uses, so the sitemap can
+ * never drift from the actual pages again.
+ */
+function buildSitemap(): string {
+  const entries: string[] = [];
+
+  // Static routes
+  for (const route of STATIC_ROUTES) {
+    const meta = SITEMAP_META[route.path] ?? DEFAULT_SITEMAP_META;
+    const loc = route.path === "/" ? `${BASE_URL}/` : `${BASE_URL}${route.path}/`;
+    entries.push(
+      sitemapUrlEntry(
+        loc,
+        meta.lastmod,
+        meta.changefreq,
+        meta.priority,
+        route.path === "/" ? HOMEPAGE_MEDIA : ""
+      )
+    );
+  }
+
+  // Blog pillar pages — lastmod is the newest article in the pillar
+  for (const pillar of PILLARS) {
+    const dates = blogArticles
+      .filter((a) => a.pillar === pillar.slug)
+      .map((a) => a.updatedDate || a.publishedDate)
+      .sort();
+    const lastmod = dates[dates.length - 1] ?? DEFAULT_SITEMAP_META.lastmod;
+    entries.push(
+      sitemapUrlEntry(
+        `${BASE_URL}/blog/pillar/${pillar.slug}/`,
+        lastmod,
+        "weekly",
+        "0.65"
+      )
+    );
+  }
+
+  // Blog articles
+  for (const article of blogArticles) {
+    entries.push(
+      sitemapUrlEntry(
+        `${BASE_URL}/blog/${article.slug}/`,
+        article.updatedDate || article.publishedDate,
+        "monthly",
+        "0.7"
+      )
+    );
+  }
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+${entries.join("\n\n")}
+
+</urlset>
+`;
+}
 
 // ---------------------------------------------------------------------------
 // Main
@@ -427,10 +564,25 @@ function main(): void {
     writeRoute(`/blog/${article.slug}`, html);
   }
 
+  // -- Sitemap (generated from the same data as the routes above)
+  console.log("\nSitemap:");
+  const sitemap = buildSitemap();
+  writeFileSync(join(DIST_DIR, "sitemap.xml"), sitemap, "utf-8");
+  console.log("  ✓ dist/public/sitemap.xml");
+  // Keep the checked-in copy current so dev preview and the repo never drift
+  writeFileSync(
+    join(process.cwd(), "client/public/sitemap.xml"),
+    sitemap,
+    "utf-8"
+  );
+  console.log("  ✓ client/public/sitemap.xml");
+
   // Summary
   const total =
     STATIC_ROUTES.length + PILLARS.length + blogArticles.length;
-  console.log(`\n✅ Prerender complete — ${total} pages generated\n`);
+  console.log(
+    `\n✅ Prerender complete — ${total} pages generated, sitemap has ${total} URLs\n`
+  );
 }
 
 main();
