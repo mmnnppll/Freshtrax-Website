@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 import { toast } from "sonner";
 import { SEOHead } from "@/components/SEOHead";
-import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/components/SchemaMarkup";
+import { SchemaMarkup, organizationSchema, localBusinessSchema, createWebPageSchema } from "@/components/SchemaMarkup";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -70,6 +70,7 @@ export default function Contact() {
         ogDescription="Reach out to Freshtrax for inquiries about becoming an owner, partnerships, or technical support."
       />
       <SchemaMarkup schema={organizationSchema} />
+      <SchemaMarkup schema={localBusinessSchema} />
       <SchemaMarkup schema={createWebPageSchema({
         title: "Contact Us | Freshtrax Footwear Sanitization",
         description: "Get in touch with Freshtrax. Contact us for owner inquiries, partnerships, general questions, or support.",

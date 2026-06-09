@@ -80,11 +80,9 @@ export const productSchema = {
     offerCount: "1",
     availability: "https://schema.org/InStock",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: "12",
-  },
+  // No aggregateRating until there are real owner reviews — fabricated
+  // review markup risks a Google manual action and violates FTC
+  // substantiation requirements for business opportunities.
   url: "https://getfreshtrax.com/owners",
 };
 
@@ -106,10 +104,12 @@ export const localBusinessSchema = {
     email: "getfreshtrax@gmail.com",
   },
   priceRange: "$$$", // Premium equipment
-  serviceArea: {
-    "@type": "Country",
-    name: "United States",
-  },
+  areaServed: [
+    { "@type": "City", name: "Vancouver" },
+    { "@type": "City", name: "Richmond" },
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "United States" },
+  ],
 };
 
 /**

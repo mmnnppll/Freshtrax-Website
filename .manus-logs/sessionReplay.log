@@ -1,0 +1,2 @@
+[2026-06-09T23:43:21.687Z] {"timestamp":1781048600303,"kind":"navigate","url":"http://localhost:3000/contact","viewport":{"width":1280,"height":720},"payload":{"reason":"pushState"}}
+[2026-06-09T23:43:21.687Z] {"timestamp":1781048600312,"kind":"navigate","url":"http://localhost:3000/contact","viewport":{"width":1280,"height":720},"payload":{"reason":"popstate"}}
