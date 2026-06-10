@@ -74,3 +74,7 @@
 [2026-06-10T06:34:10.122Z] {"timestamp":1781073249662,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":1,"documentHeight":10522,"viewportHeight":1267}}
 [2026-06-10T06:34:12.122Z] {"timestamp":1781073250171,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":5427,"documentHeight":10522,"viewportHeight":1267}}
 [2026-06-10T06:34:12.122Z] {"timestamp":1781073250672,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":7561,"documentHeight":10522,"viewportHeight":1267}}
+[2026-06-10T08:44:11.224Z] {"timestamp":1781081049361,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":1,"documentHeight":10516,"viewportHeight":1267}}
+[2026-06-10T08:44:11.224Z] {"timestamp":1781081049869,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":4191,"documentHeight":10516,"viewportHeight":1267}}
+[2026-06-10T08:44:11.224Z] {"timestamp":1781081050370,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":5212,"documentHeight":10516,"viewportHeight":1267}}
+[2026-06-10T08:44:31.223Z] {"timestamp":1781081070189,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":757,"height":1267},"payload":{"scrollX":0,"scrollY":5262,"documentHeight":10516,"viewportHeight":1267}}

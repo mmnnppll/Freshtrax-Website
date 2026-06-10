@@ -1,13 +1,16 @@
 /*
- * Social Proof Section — Live Venue
- * Badminton Sports Center, Richmond, BC
+ * Social Proof Section — Live Pilot Venue
+ * West Coast Badminton Academy, Richmond, BC.
+ * Facts only — no testimonial until we have a real, attributable quote
+ * (FTC posture: same reason the fabricated product rating was removed).
  */
 import { motion } from "framer-motion";
-import { Quote, MapPin } from "lucide-react";
+import { MapPin, CalendarCheck } from "lucide-react";
 import { useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 const PILOT_VIDEO = "/badminton-pilot.mp4";
+const PILOT_PHOTO = "/images/pilot/wcb-kiosk-install.jpg";
 
 export default function PilotSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -66,37 +69,39 @@ export default function PilotSection() {
             </div>
           </motion.div>
 
-          {/* Testimonial */}
+          {/* Live pilot photo + facts */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="flex flex-col gap-6"
           >
-            {/* Quote card */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 relative">
-              <Quote className="w-8 h-8 text-orange-500 mb-4 opacity-80" />
-              <blockquote className="text-white text-xl font-medium leading-relaxed mb-6">
-                "Badminton is high-intensity; the odor shouldn't be. Our members
-                are obsessed with these kiosks. A total game changer for my
-                courts."
-              </blockquote>
-              <div className="flex items-center gap-3 border-t border-white/10 pt-5">
-                <div className="w-10 h-10 rounded-full bg-orange-500/20 border border-orange-500/40 flex items-center justify-center">
-                  <span className="text-orange-400 font-bold text-sm">BC</span>
+            {/* Real install photo */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10">
+              <img
+                src={PILOT_PHOTO}
+                alt="Freshtrax kiosk installed at West Coast Badminton Academy in Richmond, BC"
+                loading="lazy"
+                className="w-full h-72 object-cover object-top"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-5 pt-12">
+                <div className="flex items-center gap-1.5 text-white text-sm font-semibold">
+                  <MapPin size={13} className="text-orange-500" />
+                  <span>West Coast Badminton Academy · Richmond, BC</span>
                 </div>
-                <div>
-                  <p className="text-white font-semibold text-sm">Venue Owner</p>
-                  <div className="flex items-center gap-1.5 text-white/50 text-xs mt-0.5">
-                    <MapPin size={11} />
-                    <span>Badminton Sports Center · Richmond, BC</span>
-                  </div>
+                <div className="flex items-center gap-1.5 text-white/60 text-xs mt-1">
+                  <CalendarCheck size={11} />
+                  <span>Live since April 22, 2026 — our first pilot venue</span>
                 </div>
               </div>
             </div>
 
-            {/* Supporting stat */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* Real numbers from the pilot */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+                <p className="text-3xl font-bold text-orange-500 mb-1">160+</p>
+                <p className="text-white/60 text-sm">Cycles run at pilot</p>
+              </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
                 <p className="text-3xl font-bold text-orange-500 mb-1">90s</p>
                 <p className="text-white/60 text-sm">Full sanitization cycle</p>
