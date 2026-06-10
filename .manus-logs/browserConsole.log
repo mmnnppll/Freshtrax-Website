@@ -11,3 +11,6 @@
 [2026-06-10T00:04:21.609Z] {"timestamp":1781049859707,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
 [2026-06-10T00:06:25.607Z] {"timestamp":1781049985527,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
 [2026-06-10T00:06:25.607Z] {"timestamp":1781049985527,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ROICalculator.tsx"],"stack":null}
+[2026-06-10T00:09:46.655Z] {"timestamp":1781050184225,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-06-10T00:09:46.655Z] {"timestamp":1781050184252,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-06-10T00:09:46.655Z] {"timestamp":1781050184276,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}

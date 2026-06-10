@@ -18,6 +18,13 @@ import {
   Mail,
   Phone,
   Zap,
+  Dumbbell,
+  Target,
+  CircleDot,
+  Mountain,
+  Landmark,
+  MapPin,
+  type LucideIcon,
 } from "lucide-react";
 
 export interface LeadOffer {
@@ -35,13 +42,13 @@ interface LeadCaptureModalProps {
   offer: LeadOffer;
 }
 
-const BUSINESS_TYPES = [
-  { id: "gym", label: "Gym / Fitness Center", icon: "🏋️" },
-  { id: "pickleball", label: "Pickleball / Padel", icon: "🏓" },
-  { id: "tennis", label: "Tennis Club", icon: "🎾" },
-  { id: "climbing", label: "Climbing Gym", icon: "🧗" },
-  { id: "arena", label: "Arena / Sports Complex", icon: "🏟️" },
-  { id: "other", label: "Other Venue", icon: "📍" },
+const BUSINESS_TYPES: { id: string; label: string; icon: LucideIcon }[] = [
+  { id: "gym", label: "Gym / Fitness Center", icon: Dumbbell },
+  { id: "pickleball", label: "Pickleball / Padel", icon: Target },
+  { id: "tennis", label: "Tennis Club", icon: CircleDot },
+  { id: "climbing", label: "Climbing Gym", icon: Mountain },
+  { id: "arena", label: "Arena / Sports Complex", icon: Landmark },
+  { id: "other", label: "Other Venue", icon: MapPin },
 ];
 
 export default function LeadCaptureModal({
@@ -241,7 +248,7 @@ export default function LeadCaptureModal({
                                     : "bg-white/[0.02] border-white/[0.06] text-white/50 hover:border-white/[0.12] hover:text-white/70"
                                 }`}
                               >
-                                <span className="text-base">{bt.icon}</span>
+                                <bt.icon size={16} className="shrink-0" />
                                 <span className="leading-tight">
                                   {bt.label}
                                 </span>
