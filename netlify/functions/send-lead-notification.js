@@ -1,3 +1,5 @@
+const { createCrmLead } = require('./utils/notion-crm');
+
 exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
           return { statusCode: 405, body: 'Method Not Allowed' };
@@ -5,6 +7,18 @@ exports.handler = async (event) => {
 
     try {
           const { name, email, businessType, phone, readyIn30, offer } = JSON.parse(event.body);
+
+      // CRM record first — survives even if the email send fails
+      await createCrmLead({
+              name,
+              email,
+              phone,
+              venueType: businessType,
+              source: 'website_blueprint',
+              stage: 'blueprint_sent',
+              nextAction: 'Follow up on Blueprint download',
+              notes: `Offer: ${offer}. Ready in 30 days: ${readyIn30 ? 'Yes' : 'No'}.`,
+      });
 
       const res = await fetch('https://api.resend.com/emails', {
               method: 'POST',
