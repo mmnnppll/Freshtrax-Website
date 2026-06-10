@@ -34,7 +34,7 @@ export default function Home() {
       <SchemaMarkup schema={createVideoSchema({
         name: "Freshtrax Demo Video",
         description: "12-second cinematic demo of Freshtrax footwear sanitization kiosk in action",
-        thumbnailUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4",
+        thumbnailUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
         uploadDate: "2026-03-20",
         duration: "PT12S",
         contentUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4",
