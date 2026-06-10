@@ -6,6 +6,7 @@ import { useState } from "react";
 import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema, createFAQSchema } from "@/components/SchemaMarkup";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const faqs = [
   {
@@ -115,6 +116,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
+  const { openBookCall } = useBookCall();
   return (
     <>
       <SEOHead
@@ -192,12 +194,7 @@ export default function FAQ() {
               and timeline.
             </p>
             <button
-              onClick={() =>
-                window.open(
-                  "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                  "_blank"
-                )
-              }
+              onClick={openBookCall}
               className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
               Book a call with us

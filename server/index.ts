@@ -52,6 +52,33 @@ async function startServer() {
     }
   });
 
+  // API endpoint for book-a-call qualifier answers
+  app.post("/api/send-booking-qualifier", async (req, res) => {
+    try {
+      const { name, email, venueType, traffic, reason } = req.body;
+
+      await transporter.sendMail({
+        from: process.env.GMAIL_USER || "getfreshtrax@gmail.com",
+        to: "getfreshtrax@gmail.com",
+        subject: `Booking qualifier: ${name} — ${venueType}`,
+        html: `
+          <h2>Book-a-Call Qualifier</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Venue type:</strong> ${venueType}</p>
+          <p><strong>Daily foot traffic:</strong> ${traffic}</p>
+          <p><strong>#1 goal:</strong> ${reason || "Not selected"}</p>
+          <p>They were handed the calendar link after submitting — watch for the booking confirmation.</p>
+        `,
+      });
+
+      res.json({ success: true, message: "Qualifier sent" });
+    } catch (error) {
+      console.error("Error sending booking qualifier:", error);
+      res.status(500).json({ success: false, error: "Failed to send qualifier" });
+    }
+  });
+
   // API endpoint for contact form
   app.post("/api/contact", async (req, res) => {
     try {

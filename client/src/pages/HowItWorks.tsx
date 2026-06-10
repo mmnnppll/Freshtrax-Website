@@ -4,12 +4,14 @@ import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLeadCapture } from "@/contexts/LeadCaptureContext";
+import { useBookCall } from "@/contexts/BookCallContext";
 import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema, createVideoSchema } from "@/components/SchemaMarkup";
 
 export default function HowItWorks() {
   const { openModal } = useLeadCapture();
+  const { openBookCall } = useBookCall();
 
   const steps = [
     {
@@ -393,12 +395,7 @@ export default function HowItWorks() {
                 Join owners who are building passive income with Freshtrax.
               </p>
               <button
-                onClick={() =>
-                  window.open(
-                    "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                    "_blank"
-                  )
-                }
+                onClick={openBookCall}
                 className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Book a call with us

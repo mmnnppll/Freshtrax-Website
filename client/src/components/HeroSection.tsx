@@ -7,6 +7,7 @@
 import { motion } from "framer-motion";
 import { Download, CalendarDays, Volume2, VolumeX } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
+import { useBookCall } from "@/contexts/BookCallContext";
 import { useState, useRef, useEffect } from "react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
@@ -14,6 +15,7 @@ const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByY
 
 export default function HeroSection() {
   const { openModal } = useLeadCapture();
+  const { openBookCall } = useBookCall();
   const [isMuted, setIsMuted] = useState(true);
   const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -132,7 +134,7 @@ export default function HeroSection() {
                 Get my Free ROI Blueprint
               </button>
               <button
-                onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
+                onClick={openBookCall}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 font-body"
               >
                 <CalendarDays size={16} />

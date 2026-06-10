@@ -7,6 +7,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import CookieConsent from "./components/CookieConsent";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LeadCaptureProvider } from "./contexts/LeadCaptureContext";
+import { BookCallProvider } from "./contexts/BookCallContext";
 
 // Route-level code splitting — each page is a separate JS chunk.
 // The browser only downloads the code for the page being visited.
@@ -68,9 +69,11 @@ function App() {
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <LeadCaptureProvider>
-            <Toaster />
-            <Router />
-            <CookieConsent />
+            <BookCallProvider>
+              <Toaster />
+              <Router />
+              <CookieConsent />
+            </BookCallProvider>
           </LeadCaptureProvider>
         </TooltipProvider>
       </ThemeProvider>

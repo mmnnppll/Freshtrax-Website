@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/components/SchemaMarkup";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 export interface VenueConfig {
   // SEO
@@ -35,6 +36,7 @@ const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj
 
 export default function VenueLandingPage({ config }: { config: VenueConfig }) {
   const { openModal } = useLeadCapture();
+  const { openBookCall } = useBookCall();
 
   return (
     <>
@@ -112,7 +114,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
                 <ArrowRight size={16} />
               </button>
               <button
-                onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
+                onClick={openBookCall}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 font-body"
               >
                 <CalendarDays size={16} />
@@ -285,7 +287,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
                 Get the Free ROI Blueprint
               </button>
               <button
-                onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
+                onClick={openBookCall}
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 font-body"
               >
                 <CalendarDays size={16} />

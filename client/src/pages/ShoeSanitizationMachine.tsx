@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, createWebPageSchema, createFAQSchema, createBreadcrumbSchema } from "@/components/SchemaMarkup";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const venues = [
   {
@@ -147,6 +148,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function ShoeSanitizationMachine() {
+  const { openBookCall } = useBookCall();
   return (
     <>
       <SEOHead
@@ -244,7 +246,7 @@ export default function ShoeSanitizationMachine() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
-                    onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
+                    onClick={openBookCall}
                     className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                   >
                     Book a 30-Minute Call
@@ -463,7 +465,7 @@ export default function ShoeSanitizationMachine() {
                     If you're a venue owner who wants a kiosk without purchasing equipment upfront, we offer a limited venue partnership model for high-traffic locations. That conversation starts with a 30-minute call.
                   </p>
                   <button
-                    onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
+                    onClick={openBookCall}
                     className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                   >
                     Book a 30-Minute Call
@@ -576,7 +578,7 @@ export default function ShoeSanitizationMachine() {
                   It takes 30 minutes to find out if your venue is the right fit — and whether ownership or a venue partnership makes more sense for you.
                 </p>
                 <button
-                  onClick={() => window.open("https://calendar.app.google/YWP7rF8gFUXgfMRCA", "_blank")}
+                  onClick={openBookCall}
                   className="px-10 py-5 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg rounded-lg transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                 >
                   Book Your Partner Call

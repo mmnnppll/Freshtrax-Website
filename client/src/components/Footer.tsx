@@ -3,6 +3,7 @@
  * Updated footer with new page structure and CTA links.
  */
 import { ArrowRight, Instagram, Phone } from "lucide-react";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const footerSections = [
   {
@@ -32,6 +33,7 @@ const footerSections = [
 ];
 
 export default function Footer() {
+  const { openBookCall } = useBookCall();
   return (
     <footer className="relative border-t border-white/[0.04] py-12 md:py-16">
       <div className="container">
@@ -66,12 +68,7 @@ export default function Footer() {
               @fresh.trax
             </a>
             <button
-              onClick={() =>
-                window.open(
-                  "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                  "_blank"
-                )
-              }
+              onClick={openBookCall}
               className="mt-6 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/20 text-orange-500 text-xs font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2 font-body"
             >
               Book a Call

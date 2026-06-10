@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, Zap, TrendingUp, VolumeX, Volume2 } from "luci
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
+import { useBookCall } from "@/contexts/BookCallContext";
 import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/components/SchemaMarkup";
@@ -11,6 +12,7 @@ import AcquisitionProcess from "@/components/AcquisitionProcess";
 import PlacementVenueGuide from "@/components/PlacementVenueGuide";
 import ResponsibilityBreakdown from "@/components/ResponsibilityBreakdown";
 import ROICalculator from "@/components/ROICalculator";
+import BlueprintScrollTrigger from "@/components/BlueprintScrollTrigger";
 import FoundersClubDetails from "@/components/FoundersClubDetails";
 import OwnerFAQs from "@/components/OwnerFAQs";
 
@@ -19,6 +21,7 @@ const DetailedFinancials = lazy(() => import("@/components/DetailedFinancials"))
 
 export default function Owners() {
   const { openModal } = useLeadCapture();
+  const { openBookCall } = useBookCall();
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
@@ -37,6 +40,7 @@ export default function Owners() {
         description: "Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237).",
         url: "https://getfreshtrax.com/owners/",
       })} />
+      <BlueprintScrollTrigger />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
       <ParticleField />
       <Navbar />
@@ -75,12 +79,7 @@ export default function Owners() {
                     <ArrowRight size={18} />
                   </button>
                   <button
-                    onClick={() =>
-                      window.open(
-                        "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                        "_blank"
-                      )
-                    }
+                    onClick={openBookCall}
                     className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Book a call with us
@@ -206,12 +205,7 @@ export default function Owners() {
                 priority support, and a locked-for-life $79/month platform fee with 0% service fee on your founding machine.
               </p>
               <button
-                onClick={() =>
-                  window.open(
-                    "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                    "_blank"
-                  )
-                }
+                onClick={openBookCall}
                 className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Schedule a call

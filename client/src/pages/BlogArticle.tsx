@@ -7,6 +7,7 @@ import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createArticleSchema } from "@/components/SchemaMarkup";
 import { getBlogArticleBySlug, getSiblingArticles, getPillarBySlug } from "@/data/blogArticles";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const FT = {
   bg: "#0a0a0a",
@@ -21,6 +22,7 @@ const FT = {
 } as const;
 
 function DiscoveryCallCard() {
+  const { openBookCall } = useBookCall();
   return (
     <div style={{ background: "linear-gradient(180deg, #2a1810, #141414)", border: `1px solid ${FT.orange}66`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
       <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
@@ -33,15 +35,15 @@ function DiscoveryCallCard() {
           </li>
         ))}
       </ul>
-      <a
-        href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
-        target="_blank" rel="noopener noreferrer"
-        style={{ display: "block", textAlign: "center", background: FT.orange, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: "none", transition: "background 200ms" }}
+      <button
+        type="button"
+        onClick={openBookCall}
+        style={{ display: "block", width: "100%", textAlign: "center", background: FT.orange, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer", transition: "background 200ms" }}
         onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
         onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
       >
         Book my call →
-      </a>
+      </button>
     </div>
   );
 }
@@ -131,6 +133,7 @@ function ArticleContent({ content }: { content: string }) {
 }
 
 export default function BlogArticle() {
+  const { openBookCall } = useBookCall();
   const params = useParams();
   const slug = params.slug as string;
 
@@ -325,15 +328,15 @@ export default function BlogArticle() {
             <p style={{ color: FT.muted, fontSize: 16, marginBottom: 28 }}>
               No pressure — just the real numbers and how the machine works.
             </p>
-            <a
-              href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
-              target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: "none" }}
+            <button
+              type="button"
+              onClick={openBookCall}
+              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, border: "none", cursor: "pointer" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
               onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
             >
               Book my discovery call →
-            </a>
+            </button>
           </section>
         </main>
         <Footer />

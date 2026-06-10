@@ -3,12 +3,14 @@ import { ArrowRight, Heart, Lightbulb, Target, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLeadCapture } from "@/contexts/LeadCaptureContext";
+import { useBookCall } from "@/contexts/BookCallContext";
 import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/components/SchemaMarkup";
 
 export default function About() {
   const { openModal } = useLeadCapture();
+  const { openBookCall } = useBookCall();
 
   return (
     <>
@@ -246,12 +248,7 @@ export default function About() {
               owner wanting to offer premium hygiene solutions, let's talk.
             </p>
             <button
-              onClick={() =>
-                window.open(
-                  "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                  "_blank"
-                )
-              }
+              onClick={openBookCall}
               className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
               Book a call with us

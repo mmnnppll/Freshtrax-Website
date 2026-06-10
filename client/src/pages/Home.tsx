@@ -9,6 +9,7 @@ import MarketOpportunity from "@/components/MarketOpportunity";
 import FoundersClub from "@/components/FoundersClub";
 import HomeFAQ from "@/components/HomeFAQ";
 import Footer from "@/components/Footer";
+import BlueprintScrollTrigger from "@/components/BlueprintScrollTrigger";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, productSchema, createWebPageSchema, createVideoSchema } from "@/components/SchemaMarkup";
 
@@ -38,6 +39,7 @@ export default function Home() {
         duration: "PT12S",
         contentUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4",
       })} />
+      <BlueprintScrollTrigger />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
       <ParticleField />
       <Navbar />

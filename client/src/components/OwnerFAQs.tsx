@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const faqs = [
   {
@@ -71,6 +72,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 }
 
 export default function OwnerFAQs() {
+  const { openBookCall } = useBookCall();
   return (
     <section className="py-20 border-t border-white/5">
       <div className="container">
@@ -109,12 +111,7 @@ export default function OwnerFAQs() {
             Book a call with Marvin to discuss your specific situation, venue, and timeline.
           </p>
           <button
-            onClick={() =>
-              window.open(
-                "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                "_blank"
-              )
-            }
+            onClick={openBookCall}
             className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-block"
           >
             Book a Call

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { Check, ArrowRight, Download } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/Freshtraxmachineinuse_fb5b8d19.jpg";
 
@@ -21,6 +22,7 @@ const benefits = [
 export default function FoundersClub() {
   const { ref, isInView } = useInView({ threshold: 0.05 });
   const { openModal } = useLeadCapture();
+  const { openBookCall } = useBookCall();
 
   return (
     <section id="founders" className="relative py-16 md:py-24" ref={ref}>
@@ -85,15 +87,14 @@ export default function FoundersClub() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-3"
               >
-                <a
-                  href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={openBookCall}
                   className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                 >
                   Book a call with us
                   <ArrowRight size={16} />
-                </a>
+                </button>
                 <button
                   className="px-6 py-3 bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-white/70 hover:text-white font-medium text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                   onClick={() => openModal(OFFERS.roiBlueprint)}

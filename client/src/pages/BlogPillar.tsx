@@ -4,6 +4,7 @@ import ParticleField from "@/components/ParticleField";
 import { SEOHead } from "@/components/SEOHead";
 import { PILLARS, getPillarBySlug, getArticlesByPillar, blogArticles } from "@/data/blogArticles";
 import { Link, useRoute } from "wouter";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const FT = {
   bg: "#0a0a0a",
@@ -63,6 +64,7 @@ function ArticleCard({ article }: { article: typeof blogArticles[0] }) {
 }
 
 export default function BlogPillar() {
+  const { openBookCall } = useBookCall();
   const [, params] = useRoute("/blog/pillar/:slug");
   const slug = params?.slug ?? "";
   const pillar = getPillarBySlug(slug);
@@ -169,15 +171,15 @@ export default function BlogPillar() {
             <p style={{ color: FT.muted, fontSize: 16, marginBottom: 28 }}>
               No pressure — just the real numbers and how the machine works.
             </p>
-            <a
-              href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
-              target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: "none" }}
+            <button
+              type="button"
+              onClick={openBookCall}
+              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, border: "none", cursor: "pointer" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
               onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
             >
               Book my call →
-            </a>
+            </button>
           </section>
         </main>
         <Footer />

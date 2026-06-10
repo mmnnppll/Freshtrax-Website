@@ -127,7 +127,9 @@ export default function LeadCaptureModal({
     
     setLoading(false);
     setSubmitted(true);
-    
+    // Converted leads are excluded from the scroll-triggered prompt
+    localStorage.setItem("ft_lead_captured", "1");
+
     // Auto-trigger PDF download
     setTimeout(() => {
       const link = document.createElement("a");

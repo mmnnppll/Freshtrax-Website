@@ -7,8 +7,10 @@ import ParticleField from "@/components/ParticleField";
 import { toast } from "sonner";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, localBusinessSchema, createWebPageSchema } from "@/components/SchemaMarkup";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 export default function Contact() {
+  const { openBookCall } = useBookCall();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -146,14 +148,13 @@ export default function Contact() {
                 <ArrowRight className="w-8 h-8 text-orange-500 mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Quick Call</h3>
                 <p className="text-white/60 text-sm">
-                  <a
-                    href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={openBookCall}
                     className="hover:text-orange-500 transition-colors"
                   >
                     Book a call with us
-                  </a>
+                  </button>
                 </p>
               </motion.div>
             </div>
@@ -296,12 +297,7 @@ export default function Contact() {
               timeline.
             </p>
             <button
-              onClick={() =>
-                window.open(
-                  "https://calendar.app.google/YWP7rF8gFUXgfMRCA",
-                  "_blank"
-                )
-              }
+              onClick={openBookCall}
               className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
               Book a Call with Marvin N.

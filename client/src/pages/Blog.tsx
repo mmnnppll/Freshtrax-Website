@@ -7,6 +7,7 @@ import { blogArticles, PILLARS, getArticlesByPillar } from "@/data/blogArticles"
 import { Link } from "wouter";
 import { useState } from "react";
 import { Zap, TrendingUp, Building2, Activity } from "lucide-react";
+import { useBookCall } from "@/contexts/BookCallContext";
 
 const PILLAR_ICONS: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
   "shoe-care-gear": Zap,
@@ -153,6 +154,7 @@ function TopArticlesCard() {
 }
 
 function DiscoveryCallCard() {
+  const { openBookCall } = useBookCall();
   return (
     <div style={{ background: "linear-gradient(180deg, #2a1810, #141414)", border: `1px solid ${FT.orange}66`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
       <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
@@ -165,15 +167,15 @@ function DiscoveryCallCard() {
           </li>
         ))}
       </ul>
-      <a
-        href="https://calendar.app.google/YWP7rF8gFUXgfMRCA"
-        target="_blank" rel="noopener noreferrer"
-        style={{ display: "block", textAlign: "center", background: FT.orange, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, textDecoration: "none", transition: "background 200ms" }}
+      <button
+        type="button"
+        onClick={openBookCall}
+        style={{ display: "block", width: "100%", textAlign: "center", background: FT.orange, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer", transition: "background 200ms" }}
         onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
         onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
       >
         Book my call →
-      </a>
+      </button>
     </div>
   );
 }
