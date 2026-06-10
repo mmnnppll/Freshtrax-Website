@@ -7,12 +7,14 @@ import nodemailer from "nodemailer";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Email configuration
+// Email configuration — credentials come from env vars only.
+// Production email goes through Netlify functions (Resend); this Express
+// path is only used when self-hosting, and requires GMAIL_USER/GMAIL_PASSWORD.
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.GMAIL_USER || "getfreshtrax@gmail.com",
-    pass: process.env.GMAIL_PASSWORD || "mpjq edee gidy lzdz",
+    pass: process.env.GMAIL_PASSWORD,
   },
 });
 
