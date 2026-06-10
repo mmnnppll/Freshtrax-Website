@@ -13,8 +13,9 @@ exports.handler = async (event) => {
                         'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                        from: 'Freshtrax Leads <onboarding@resend.dev>',
+                        from: 'Freshtrax Leads <noreply@getfreshtrax.com>',
                         to: 'getfreshtrax@gmail.com',
+                        reply_to: email,
                         subject: `Booking qualifier: ${name} — ${venueType}`,
                         html: `
                                   <h2>Book-a-Call Qualifier</h2>
