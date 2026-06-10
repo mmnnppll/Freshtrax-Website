@@ -3,3 +3,11 @@
 [2026-06-09T23:42:53.644Z] {"timestamp":1781048571411,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-06-09T23:42:53.644Z] {"timestamp":1781048571416,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-06-09T23:42:53.644Z] {"timestamp":1781048571472,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-06-10T00:04:14.487Z] {"timestamp":1781049852480,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-06-10T00:04:14.487Z] {"timestamp":1781049852498,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-06-10T00:04:14.487Z] {"timestamp":1781049852510,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-06-10T00:04:21.609Z] {"timestamp":1781049859592,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-06-10T00:04:21.609Z] {"timestamp":1781049859608,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-06-10T00:04:21.609Z] {"timestamp":1781049859707,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-06-10T00:06:25.607Z] {"timestamp":1781049985527,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-06-10T00:06:25.607Z] {"timestamp":1781049985527,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ROICalculator.tsx"],"stack":null}

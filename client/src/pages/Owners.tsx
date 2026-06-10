@@ -10,6 +10,7 @@ import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/compone
 import AcquisitionProcess from "@/components/AcquisitionProcess";
 import PlacementVenueGuide from "@/components/PlacementVenueGuide";
 import ResponsibilityBreakdown from "@/components/ResponsibilityBreakdown";
+import ROICalculator from "@/components/ROICalculator";
 import FoundersClubDetails from "@/components/FoundersClubDetails";
 import OwnerFAQs from "@/components/OwnerFAQs";
 
@@ -176,14 +177,7 @@ export default function Owners() {
         </section>
 
         {/* ROI Calculator */}
-        <section className="py-20 border-t border-white/5">
-          <div className="container">
-            <h2 className="text-4xl font-bold mb-12 text-center">
-              Project Your Revenue
-            </h2>
-            <ROICalculator />
-          </div>
-        </section>
+        <ROICalculator />
 
         {/* New Expanded Sections */}
         <AcquisitionProcess />
@@ -270,102 +264,5 @@ export default function Owners() {
       <Footer />
     </div>
     </>
-  );
-}
-
-function ROICalculator() {
-  const [dailyCycles, setDailyCycles] = useState(25);
-  const [isFounder, setIsFounder] = useState(false);
-
-  const grossPerCycle = 4.00; // Blended average: ($3.65 + $4.35) / 2
-  const operatingCostPerCycle = 0.55; // Antimicrobial fog, credit card fees, electricity
-  const revShareRate = isFounder ? 0 : 0.05; // 0% on founding machine for Founders, 5% for regular
-  const netPerCycle = grossPerCycle * (1 - revShareRate) - operatingCostPerCycle; // $3.25 standard | $3.45 founder
-  const dailyRevenue = dailyCycles * netPerCycle;
-  const monthlyRevenue = dailyCycles * netPerCycle * (365 / 12);
-  const annualRevenue = dailyCycles * netPerCycle * 365;
-  
-  // Platform fees
-  const platformFee = isFounder ? 79 : 99; // $79 for Founder's Club, $99 for regular
-  const monthlyNetProfit = monthlyRevenue - platformFee;
-  const annualNetProfit = annualRevenue - (platformFee * 12);
-  
-  // Machine cost is confidential - available in the Blueprint PDF
-  // Removed hardcoded payback calculation
-
-  return (
-    <div className="max-w-2xl mx-auto">
-      <div className="bg-white/5 border border-white/10 rounded-lg p-8">
-        <div className="mb-8">
-          <label className="block text-sm font-semibold mb-4">
-            Daily Cycles: <span className="text-orange-500">{dailyCycles}</span>
-          </label>
-          <input
-            type="range"
-            min="5"
-            max="50"
-            value={dailyCycles}
-            onChange={(e) => setDailyCycles(Number(e.target.value))}
-            className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-orange-500"
-          />
-          <div className="flex justify-between text-xs text-white/50 mt-2">
-            <span>5 cycles/day</span>
-            <span>50 cycles/day</span>
-          </div>
-        </div>
-
-        <div className="mb-6 p-4 bg-orange-500/10 border border-orange-500/20 rounded-lg">
-          <label className="flex items-center gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={isFounder}
-              onChange={(e) => setIsFounder(e.target.checked)}
-              className="w-4 h-4 accent-orange-500"
-            />
-            <span className="text-sm text-white/80">
-              {isFounder ? "Founder's Club Member" : "Regular Owner"}
-            </span>
-          </label>
-          {isFounder && (
-            <p className="text-xs text-orange-500/80 mt-2">
-              Platform fee: $79/mo | Service fee: None on founding machine — permanently
-            </p>
-          )}
-          {!isFounder && (
-            <p className="text-xs text-orange-500/80 mt-2">
-              Platform fee: $99/mo | Service fee: 5% of revenue
-            </p>
-          )}
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white/5 rounded-lg p-4">
-            <p className="text-white/60 text-sm mb-1">Daily Revenue</p>
-            <p className="text-2xl font-bold text-orange-500">
-              ${dailyRevenue.toFixed(0)}
-            </p>
-          </div>
-          <div className="bg-white/5 rounded-lg p-4">
-            <p className="text-white/60 text-sm mb-1">Monthly Net Profit</p>
-            <p className="text-2xl font-bold text-green-400">
-              ${monthlyNetProfit.toFixed(0)}
-            </p>
-          </div>
-          <div className="bg-white/5 rounded-lg p-4">
-            <p className="text-white/60 text-sm mb-1">Annual Net Profit</p>
-            <p className="text-2xl font-bold text-green-400">
-              ${annualNetProfit.toFixed(0)}
-            </p>
-          </div>
-
-        </div>
-
-        <p className="text-xs text-white/50 mt-6 text-center">
-          Gross revenue: $4.00/cycle | Operating cost: $0.55/cycle | Net per cycle: $3.25 (standard) / $3.45 (founding machine)<br />
-          Platform fee: {isFounder ? "$79/mo" : "$99/mo"} | Service fee: {isFounder ? "None on founding machine" : "5% of revenue"}<br />
-          <span className="text-orange-500">Download the 8-Month ROI Blueprint PDF for machine acquisition cost and complete payback analysis</span>
-         </p>
-      </div>
-    </div>
   );
 }
