@@ -1,4 +1,5 @@
 import VenueLandingPage, { VenueConfig } from "@/components/VenueLandingPage";
+import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Badminton Centers | Freshtrax",
@@ -65,6 +66,7 @@ const config: VenueConfig = {
       a: "Yes. Venue operators can become kiosk owners through the Freshtrax Founders Club, keeping 100% of cycle revenue after the platform fee.",
     },
   ],
+  offer: OFFERS.badmintonSheet,
 };
 
 export default function VenueBadminton() {

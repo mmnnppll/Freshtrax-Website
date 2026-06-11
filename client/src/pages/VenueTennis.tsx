@@ -1,4 +1,5 @@
 import VenueLandingPage, { VenueConfig } from "@/components/VenueLandingPage";
+import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Tennis Clubs | Freshtrax",
@@ -65,6 +66,7 @@ const config: VenueConfig = {
       a: "A brief email or club newsletter announcement typically drives strong first-week adoption. Signage at the kiosk location handles ongoing awareness.",
     },
   ],
+  offer: OFFERS.tennisSheet,
 };
 
 export default function VenueTennis() {

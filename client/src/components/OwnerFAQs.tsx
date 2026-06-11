@@ -13,6 +13,11 @@ const faqs = [
     answer: "Our kiosks are built to require minimal maintenance so your downtime is minimized because we monitor units remotely. On occasion you would need to swap out the antimicrobial detergent when it's low and clean the filter. We are here to support you throughout.",
   },
   {
+    question: "Do I need to own a gym or venue to become an owner?",
+    answer:
+      "No. Many owners don't operate a venue — they purchase the kiosk and place it inside a partner venue under a revenue-share agreement. We support placement with venue target lists, pitch materials, and deal structures that work for both sides. If you can find 30 minutes for a call, we'll map out your placement plan together.",
+  },
+  {
     question: "Can I own more than one unit?",
     answer: "Yes. Multiple unit owners receive the same founding terms on each unit during the founding period. Owning more than one unit in multiple venues is the natural scaling path for this model.",
   },

@@ -11,6 +11,17 @@ const footerSections = [
     links: [
       { label: "How It Works", href: "/how-it-works" },
       { label: "ROI Calculator", href: "/owners" },
+      { label: "Shoe Sanitization Machine", href: "/shoe-sanitization-machine" },
+    ],
+  },
+  {
+    title: "Venues",
+    links: [
+      { label: "Pickleball Clubs", href: "/pickleball-clubs" },
+      { label: "Tennis Clubs", href: "/tennis-clubs" },
+      { label: "Badminton Centers", href: "/badminton-centers" },
+      { label: "Climbing Gyms", href: "/bouldering-gyms" },
+      { label: "Training Boxes", href: "/crossfit-gyms" },
     ],
   },
   {
@@ -38,7 +49,7 @@ export default function Footer() {
     <footer className="relative border-t border-white/[0.04] py-12 md:py-16">
       <div className="container">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="/" className="h-10 flex items-center">

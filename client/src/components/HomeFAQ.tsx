@@ -31,6 +31,11 @@ const homeFAQs = [
       "24/7 remote technical support, monthly performance reviews, and quarterly strategy calls. Most issues are resolved remotely via software diagnostics. Founder's Club members get priority support and a dedicated account manager. Hardware failures trigger our replacement protocol — downtime is minimized.",
   },
   {
+    question: "Do I need to own a gym or venue to buy a Freshtrax kiosk?",
+    answer:
+      "No. Many Freshtrax owners don't operate a venue — they buy the kiosk and place it inside a partner venue (gym, racket club, indoor sports facility) under a revenue-share agreement. We help with placement: venue target lists, pitch materials, and the rev-share structures that work. Book a 30-minute call and we'll map out your placement plan.",
+  },
+  {
     question: "Is my territory exclusive? Can a competitor put one next to mine?",
     answer:
       "Founder's Club members (first 20 owners) receive territory exclusivity — no competing Freshtrax unit within your defined zone. Regular owners don't have exclusivity but operate in a market of 1,000+ venues per metro. We actively manage placement to protect owner economics.",

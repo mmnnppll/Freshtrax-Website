@@ -1,4 +1,5 @@
 import VenueLandingPage, { VenueConfig } from "@/components/VenueLandingPage";
+import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for CrossFit Gyms | Freshtrax",
@@ -65,6 +66,7 @@ const config: VenueConfig = {
       a: "Freshtrax kiosks are designed for unattended operation. Remote diagnostics are built into the platform. The typical maintenance requirement is minimal and infrequent.",
     },
   ],
+  offer: OFFERS.gymSheet,
 };
 
 export default function VenueCrossfit() {

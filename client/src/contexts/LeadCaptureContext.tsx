@@ -52,6 +52,59 @@ export const OFFERS = {
           pdfUrl: "/Freshtrax-roi-blueprint.pdf",
           ctaText: "Get the breakdown",
     },
+    // ── Venue-specific wrappers — same Blueprint PDF, audience-flavored.
+    // presetBusinessType pre-selects the venue type in the modal so the
+    // visitor skips a step and the lead auto-segments in the CRM.
+    pickleballSheet: {
+          label: "Pickleball Club Intelligence",
+          headline: "Get the Pickleball Club Revenue Sheet",
+          description:
+                  "How pickleball clubs turn a high-traffic corner into $24,237+/year — revenue math, placement guide, and the member-experience pitch.",
+          pdfName: "Freshtrax Pickleball Club Revenue Sheet.pdf",
+          pdfUrl: "/Freshtrax-roi-blueprint.pdf",
+          ctaText: "Get the revenue sheet",
+          presetBusinessType: "racket",
+    },
+    tennisSheet: {
+          label: "Tennis Club Intelligence",
+          headline: "Get the Tennis Club Revenue Sheet",
+          description:
+                  "How tennis clubs add a premium amenity members notice — revenue math, placement guide, and projections for racket-sport traffic.",
+          pdfName: "Freshtrax Tennis Club Revenue Sheet.pdf",
+          pdfUrl: "/Freshtrax-roi-blueprint.pdf",
+          ctaText: "Get the revenue sheet",
+          presetBusinessType: "racket",
+    },
+    badmintonSheet: {
+          label: "Badminton Center Intelligence",
+          headline: "Get the Badminton Center Revenue Sheet",
+          description:
+                  "Built on real data from our badminton pilot venue — revenue math, placement guide, and projections for dedicated-shoe court traffic.",
+          pdfName: "Freshtrax Badminton Center Revenue Sheet.pdf",
+          pdfUrl: "/Freshtrax-roi-blueprint.pdf",
+          ctaText: "Get the revenue sheet",
+          presetBusinessType: "racket",
+    },
+    climbingSheet: {
+          label: "Climbing Gym Intelligence",
+          headline: "Get the Climbing Gym Revenue Sheet",
+          description:
+                  "How climbing and bouldering gyms solve rental-shoe odor and add revenue — full math, placement guide, and member-experience pitch.",
+          pdfName: "Freshtrax Climbing Gym Revenue Sheet.pdf",
+          pdfUrl: "/Freshtrax-roi-blueprint.pdf",
+          ctaText: "Get the revenue sheet",
+          presetBusinessType: "climbing",
+    },
+    gymSheet: {
+          label: "Gym & Box Intelligence",
+          headline: "Get the Gym Revenue Sheet",
+          description:
+                  "How gyms, boxes, and training facilities add zero-staff revenue per square foot — full math, placement guide, and member-retention angle.",
+          pdfName: "Freshtrax Gym Revenue Sheet.pdf",
+          pdfUrl: "/Freshtrax-roi-blueprint.pdf",
+          ctaText: "Get the revenue sheet",
+          presetBusinessType: "gym",
+    },
 };
 
 interface LeadCaptureContextType {

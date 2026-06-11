@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import EconomicsSection from "@/components/EconomicsSection";
 import FinancialProjections from "@/components/FinancialProjections";
 import TechnologySection from "@/components/TechnologySection";
+import VenueCategoriesSection from "@/components/VenueCategoriesSection";
 import PilotSection from "@/components/PilotSection";
 import MarketOpportunity from "@/components/MarketOpportunity";
 import FoundersClub from "@/components/FoundersClub";
@@ -69,6 +70,7 @@ export default function Home() {
         <section id="technology" aria-label="Technology section">
           <TechnologySection />
         </section>
+        <VenueCategoriesSection />
         <div
           className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
           aria-hidden="true"

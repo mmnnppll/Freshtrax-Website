@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, createWebPageSchema } from "@/components/SchemaMarkup";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
 import { useBookCall } from "@/contexts/BookCallContext";
+import type { LeadOffer } from "@/components/LeadCaptureModal";
 
 export interface VenueConfig {
   // SEO
@@ -30,6 +31,8 @@ export interface VenueConfig {
   operatorReasons: { title: string; description: string }[];
   // FAQ items
   faqs: { q: string; a: string }[];
+  // Venue-flavored lead magnet (falls back to the generic Blueprint)
+  offer?: LeadOffer;
 }
 
 const HERO_BG = "/images/shoe-sanitization-kiosk-hero.webp";
@@ -37,6 +40,7 @@ const HERO_BG = "/images/shoe-sanitization-kiosk-hero.webp";
 export default function VenueLandingPage({ config }: { config: VenueConfig }) {
   const { openModal } = useLeadCapture();
   const { openBookCall } = useBookCall();
+  const offer = config.offer ?? OFFERS.roiBlueprint;
 
   return (
     <>
@@ -107,10 +111,10 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
               className="flex flex-col sm:flex-row gap-4"
             >
               <button
-                onClick={() => openModal(OFFERS.roiBlueprint)}
+                onClick={() => openModal(offer)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl font-body"
               >
-                Get the Free ROI Blueprint
+                {config.offer ? "Get the Free Revenue Sheet" : "Get the Free ROI Blueprint"}
                 <ArrowRight size={16} />
               </button>
               <button
@@ -281,10 +285,10 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => openModal(OFFERS.roiBlueprint)}
+                onClick={() => openModal(offer)}
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg font-body"
               >
-                Get the Free ROI Blueprint
+                {config.offer ? "Get the Free Revenue Sheet" : "Get the Free ROI Blueprint"}
               </button>
               <button
                 onClick={openBookCall}

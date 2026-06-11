@@ -1,4 +1,5 @@
 import VenueLandingPage, { VenueConfig } from "@/components/VenueLandingPage";
+import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Pickleball Clubs | Freshtrax",
@@ -65,6 +66,7 @@ const config: VenueConfig = {
       a: "Kiosk owners (which can be the venue itself or an independent operator) collect revenue through the Freshtrax platform. Payments are cashless. The venue hosts the kiosk in exchange for a revenue split or a flat placement arrangement.",
     },
   ],
+  offer: OFFERS.pickleballSheet,
 };
 
 export default function VenuePickleball() {

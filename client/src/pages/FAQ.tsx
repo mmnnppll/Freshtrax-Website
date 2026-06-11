@@ -88,6 +88,10 @@ const faqs = [
     category: "Getting Started",
     questions: [
       {
+        q: "Do I need to own a gym or venue to buy a Freshtrax kiosk?",
+        a: "No. Many Freshtrax owners don't operate a venue — they buy the kiosk and place it inside a partner venue (gym, racket club, indoor sports facility) under a revenue-share agreement. We help with placement: venue target lists, pitch materials, and the rev-share structures that work. Book a 30-minute call and we'll map out your placement plan.",
+      },
+      {
         q: "How long does it take to deploy a machine?",
         a: "From purchase to deployment: 6-7 months. We handle logistics, and user training. You start collecting revenue immediately after launch.",
       },

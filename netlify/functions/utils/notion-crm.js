@@ -11,13 +11,17 @@
 
 const NOTION_CRM_DB_ID = process.env.NOTION_CRM_DB_ID || '3d394b2fe19b472bbb2d3673be2e73bf';
 
-// Website venue ids → CRM "Venue Type" select options
+// Website venue ids → CRM "Venue Type" select options.
+// Legacy ids (pickleball/tennis/arena) kept for older cached clients.
 const VENUE_TYPE_MAP = {
   gym: 'gym',
+  racket: 'racket_sports',
+  team: 'indoor_team_sports',
+  climbing: 'bouldering',
+  novenue: 'no_venue_entrepreneur',
   pickleball: 'pickleball',
   tennis: 'tennis',
-  climbing: 'bouldering',
-  arena: 'arena',
+  arena: 'other',
   other: 'other',
 };
 

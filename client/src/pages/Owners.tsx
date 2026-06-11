@@ -12,6 +12,7 @@ import AcquisitionProcess from "@/components/AcquisitionProcess";
 import PlacementVenueGuide from "@/components/PlacementVenueGuide";
 import ResponsibilityBreakdown from "@/components/ResponsibilityBreakdown";
 import ROICalculator from "@/components/ROICalculator";
+import OwnershipPaths from "@/components/OwnershipPaths";
 import BlueprintScrollTrigger from "@/components/BlueprintScrollTrigger";
 import FoundersClubDetails from "@/components/FoundersClubDetails";
 import OwnerFAQs from "@/components/OwnerFAQs";
@@ -177,6 +178,9 @@ export default function Owners() {
 
         {/* ROI Calculator */}
         <ROICalculator />
+
+        {/* Two ownership paths — venue owners + placement entrepreneurs */}
+        <OwnershipPaths />
 
         {/* New Expanded Sections */}
         <AcquisitionProcess />

@@ -20,9 +20,9 @@ import {
   Zap,
   Dumbbell,
   Target,
-  CircleDot,
+  Volleyball,
   Mountain,
-  Landmark,
+  Briefcase,
   MapPin,
   type LucideIcon,
 } from "lucide-react";
@@ -34,6 +34,8 @@ export interface LeadOffer {
   pdfName: string;
   pdfUrl: string;
   ctaText: string;
+  /** Pre-selects a venue type in step 1 (id from BUSINESS_TYPES). */
+  presetBusinessType?: string;
 }
 
 interface LeadCaptureModalProps {
@@ -44,10 +46,10 @@ interface LeadCaptureModalProps {
 
 const BUSINESS_TYPES: { id: string; label: string; icon: LucideIcon }[] = [
   { id: "gym", label: "Gym / Fitness Center", icon: Dumbbell },
-  { id: "pickleball", label: "Pickleball / Padel", icon: Target },
-  { id: "tennis", label: "Tennis Club", icon: CircleDot },
-  { id: "climbing", label: "Climbing Gym", icon: Mountain },
-  { id: "arena", label: "Arena / Sports Complex", icon: Landmark },
+  { id: "racket", label: "Racket & Court Sports", icon: Target },
+  { id: "team", label: "Indoor Team Sports", icon: Volleyball },
+  { id: "climbing", label: "Climbing / Bouldering", icon: Mountain },
+  { id: "novenue", label: "I don't own a venue (yet)", icon: Briefcase },
   { id: "other", label: "Other Venue", icon: MapPin },
 ];
 
@@ -59,6 +61,13 @@ export default function LeadCaptureModal({
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
   const [businessType, setBusinessType] = useState("");
+
+  // Venue pages pass a preset so the visitor skips picking their venue type
+  useEffect(() => {
+    if (open && offer.presetBusinessType) {
+      setBusinessType(offer.presetBusinessType);
+    }
+  }, [open, offer.presetBusinessType]);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [readyIn30, setReadyIn30] = useState<boolean | null>(null);

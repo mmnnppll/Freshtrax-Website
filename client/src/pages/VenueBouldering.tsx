@@ -1,4 +1,5 @@
 import VenueLandingPage, { VenueConfig } from "@/components/VenueLandingPage";
+import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Bouldering Gyms | Freshtrax",
@@ -65,6 +66,7 @@ const config: VenueConfig = {
       a: "The kiosk requires a standard power outlet and a small floor footprint. Most installs are completed in under an hour. Freshtrax guides you through placement and member communication.",
     },
   ],
+  offer: OFFERS.climbingSheet,
 };
 
 export default function VenueBouldering() {
