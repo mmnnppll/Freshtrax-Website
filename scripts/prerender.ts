@@ -22,6 +22,7 @@ import {
   type BlogArticle,
   type Pillar,
 } from "../client/src/data/blogArticles";
+import { CITIES } from "../client/src/data/cities";
 
 // ---------------------------------------------------------------------------
 // Config
@@ -459,6 +460,18 @@ function buildSitemap(): string {
     );
   }
 
+  // City landing pages
+  for (const c of CITIES) {
+    entries.push(
+      sitemapUrlEntry(
+        `${BASE_URL}/gyms/${c.slug}/`,
+        "2026-06-11",
+        "monthly",
+        "0.8"
+      )
+    );
+  }
+
   // Blog pillar pages — lastmod is the newest article in the pillar
   for (const pillar of PILLARS) {
     const dates = blogArticles
@@ -529,6 +542,20 @@ function main(): void {
     writeRoute(route.path, html);
   }
 
+  // -- City landing pages
+  console.log("\nCity pages:");
+  for (const c of CITIES) {
+    const html = buildHtml({
+      template,
+      title: c.seoTitle,
+      description: c.seoDescription,
+      canonical: `${BASE_URL}/gyms/${c.slug}/`,
+      ogTitle: c.seoTitle,
+      ogDescription: c.seoDescription,
+    });
+    writeRoute(`/gyms/${c.slug}`, html);
+  }
+
   // -- Blog pillar pages
   console.log("\nBlog pillar pages:");
   for (const pillar of PILLARS) {
@@ -579,7 +606,7 @@ function main(): void {
 
   // Summary
   const total =
-    STATIC_ROUTES.length + PILLARS.length + blogArticles.length;
+    STATIC_ROUTES.length + CITIES.length + PILLARS.length + blogArticles.length;
   console.log(
     `\n✅ Prerender complete — ${total} pages generated, sitemap has ${total} URLs\n`
   );

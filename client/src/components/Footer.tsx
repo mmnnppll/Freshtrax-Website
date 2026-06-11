@@ -4,6 +4,7 @@
  */
 import { ArrowRight, Instagram, Phone } from "lucide-react";
 import { useBookCall } from "@/contexts/BookCallContext";
+import { CITIES } from "@/data/cities";
 
 const footerSections = [
   {
@@ -107,6 +108,25 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Locations row — local SEO internal links */}
+        <div className="pb-6 mb-6 border-b border-white/[0.04]">
+          <p className="text-white/40 text-xs font-body">
+            <span className="text-white/55 font-semibold">Serving the Lower Mainland:</span>{" "}
+            {CITIES.map((c, i) => (
+              <span key={c.slug}>
+                <a
+                  href={`/gyms/${c.slug}`}
+                  className="hover:text-orange-500 transition-colors duration-300"
+                >
+                  {c.name}
+                </a>
+                {i < CITIES.length - 1 && " · "}
+              </span>
+            ))}
+            {" "}— and venues across Canada &amp; the US.
+          </p>
         </div>
 
         {/* Bottom Section */}

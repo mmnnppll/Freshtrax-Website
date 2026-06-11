@@ -28,6 +28,7 @@ const VenueBadminton     = lazy(() => import("./pages/VenueBadminton"));
 const VenueTennis        = lazy(() => import("./pages/VenueTennis"));
 const VenueBouldering    = lazy(() => import("./pages/VenueBouldering"));
 const ShoeSanitizationMachine = lazy(() => import("./pages/ShoeSanitizationMachine"));
+const CityLanding        = lazy(() => import("./pages/CityLanding"));
 
 // Minimal fallback — invisible, no layout shift
 const PageShell = () => (
@@ -56,6 +57,7 @@ function Router() {
         <Route path={"/tennis-clubs"} component={VenueTennis} />
         <Route path={"/bouldering-gyms"} component={VenueBouldering} />
         <Route path={"/shoe-sanitization-machine"} component={ShoeSanitizationMachine} />
+        <Route path={"/gyms/:city"} component={CityLanding} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>

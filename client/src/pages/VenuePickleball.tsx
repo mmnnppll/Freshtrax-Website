@@ -28,12 +28,12 @@ const config: VenueConfig = {
   stats: [
     { value: "8M+", label: "Pickleball players in the US" },
     { value: "90s", label: "Full sanitization cycle" },
-    { value: "$500–$1,000+", label: "Estimated monthly kiosk revenue" },
+    { value: "$2,019–$3,067", label: "Monthly net revenue (20–30 cycles/day)" },
   ],
   operatorReasons: [
     {
       title: "Passive revenue with no staffing cost",
-      description: "Every cycle generates $3.65–$4.35 in net revenue for the kiosk owner. At 10–15 cycles per day, that adds up fast with zero additional headcount.",
+      description: "Every cycle generates $3.25–$3.45 net for the kiosk owner after operating costs. At 20–30 cycles per day, that's $2,019–$3,067/month with zero additional headcount.",
     },
     {
       title: "Premium amenity that differentiates your club",
