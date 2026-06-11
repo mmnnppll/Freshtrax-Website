@@ -32,7 +32,7 @@ export interface VenueConfig {
   faqs: { q: string; a: string }[];
 }
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
+const HERO_BG = "/images/shoe-sanitization-kiosk-hero.webp";
 
 export default function VenueLandingPage({ config }: { config: VenueConfig }) {
   const { openModal } = useLeadCapture();

@@ -10,9 +10,9 @@ import { Link } from "wouter";
 
 import { OFFERS } from "@/contexts/LeadCaptureContext";
 
-const UVC_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/UVC_3bbff82f.png";
-const OZONE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/Ozoneactivated_662092c4.webp";
-const ANTIMICROBIAL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/antimicrobialfog_1cd80916.png";
+const UVC_IMG = "/images/uvc-light-shoe-sanitization.jpg";
+const OZONE_IMG = "/images/ozone-shoe-sanitization-cycle.webp";
+const ANTIMICROBIAL_IMG = "/images/antimicrobial-fog-shoe-sanitization.jpg";
 
 const technologies = [
   {

@@ -107,7 +107,7 @@ export function generateOrganizationSchema() {
     description:
       "Medical-grade footwear sanitization kiosk for fitness venues and sports centers",
     url: "https://getfreshtrax.com",
-    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp",
+    logo: "https://getfreshtrax.com/images/freshtrax-logo-black.png",
     sameAs: [
       "https://www.facebook.com/freshtrax",
       "https://www.instagram.com/freshtrax",

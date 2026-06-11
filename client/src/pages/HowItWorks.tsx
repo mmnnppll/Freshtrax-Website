@@ -51,7 +51,7 @@ export default function HowItWorks() {
       effectiveness:
         "Clinical studies show 91-95% bioburden reduction on treated surfaces (Torres-Teran et al., 2023, ICHE).",
       image:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/uvc-feature_e3435a49.png",
+        "/images/uvc-light-shoe-sanitization.jpg",
     },
     {
       title: "Ozone",
@@ -64,7 +64,7 @@ export default function HowItWorks() {
       effectiveness:
         "Recognized in peer-reviewed literature as an effective sanitization method for fungal infections (Gupta & Simkovich, 2022, JAPMA).",
       image:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/ozone-activated_f4057814.webp",
+        "/images/ozone-shoe-sanitization-cycle.webp",
     },
     {
       title: "Antimicrobial Vapor",
@@ -77,7 +77,7 @@ export default function HowItWorks() {
       effectiveness:
         "Safe formulation used in medical-grade sterilization protocols. Complements UVC and Ozone for comprehensive coverage.",
       image:
-        "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/antimicrobial-fog-feature_5eeb8f30.png",
+        "/images/antimicrobial-fog-shoe-sanitization.jpg",
     },
   ];
 

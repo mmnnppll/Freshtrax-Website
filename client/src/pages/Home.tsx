@@ -29,12 +29,12 @@ export default function Home() {
         title: "Freshtrax | Footwear Sanitization Kiosk for Fitness & Sports Venues",
         description: "Freshtrax is a self-service footwear sanitization kiosk for fitness & sports venues. Medical-grade UVC + ozone eliminates odor in 90 seconds.",
         url: "https://getfreshtrax.com/",
-        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+        image: "https://getfreshtrax.com/images/shoe-sanitization-kiosk-hero.webp",
       })} />
       <SchemaMarkup schema={createVideoSchema({
         name: "Freshtrax Demo Video",
         description: "12-second cinematic demo of Freshtrax footwear sanitization kiosk in action",
-        thumbnailUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+        thumbnailUrl: "https://getfreshtrax.com/images/shoe-sanitization-kiosk-hero.webp",
         uploadDate: "2026-03-20",
         duration: "PT12S",
         contentUrl: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4",

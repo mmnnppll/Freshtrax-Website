@@ -6,8 +6,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 
-const KIOSK_INTERIOR = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-image_1771456842184_fa9c46ac_1771456842195_6473f454_7665cf28.png";
-const MACHINE_IN_USE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/Freshtraxmachineinuse_7c511678.jpg";
+const KIOSK_INTERIOR = "/images/shoes-inside-uvc-sanitization-chamber.jpg";
+const MACHINE_IN_USE = "/images/freshtrax-shoe-sanitization-kiosk-gym.jpg";
 const SANITIZATION_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/SantizationPromotionVideo_c7a4d6b5.mp4";
 
 export default function ProductShowcase() {

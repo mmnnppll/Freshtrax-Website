@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <a href="/" className="h-10 flex items-center">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/LogoOrange_8d50748d.jpg"
+                src="/images/freshtrax-logo.jpg"
                 alt="Freshtrax"
                 className="h-full w-auto"
               />

@@ -407,15 +407,15 @@ const SITEMAP_META: Record<
 // previous hand-maintained sitemap).
 const HOMEPAGE_MEDIA = `
     <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</image:loc>
+      <image:loc>/images/shoe-sanitization-kiosk-hero.webp</image:loc>
       <image:title>Freshtrax Hero Background</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp</image:loc>
+      <image:loc>/images/freshtrax-logo-black.png</image:loc>
       <image:title>Freshtrax Logo</image:title>
     </image:image>
     <video:video>
-      <video:thumbnail_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp</video:thumbnail_loc>
+      <video:thumbnail_loc>/images/shoe-sanitization-kiosk-hero.webp</video:thumbnail_loc>
       <video:title>Freshtrax Demo Video</video:title>
       <video:description>12-second cinematic demo of Freshtrax footwear sanitization kiosk in action</video:description>
       <video:content_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4</video:content_loc>

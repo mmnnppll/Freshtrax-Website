@@ -9,7 +9,7 @@ import { Check, ArrowRight, Download } from "lucide-react";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
 import { useBookCall } from "@/contexts/BookCallContext";
 
-const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/Freshtraxmachineinuse_fb5b8d19.jpg";
+const MACHINE_IMG = "/images/freshtrax-shoe-sanitization-kiosk-gym.jpg";
 
 const benefits = [
   "$79/month platform fee (vs. $99 regular)",

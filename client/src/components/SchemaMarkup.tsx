@@ -37,7 +37,7 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "Freshtrax",
   url: "https://getfreshtrax.com",
-  logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp",
+  logo: "https://getfreshtrax.com/images/freshtrax-logo-black.png",
   description: "Medical-grade footwear sanitization kiosk for fitness venues",
   foundingDate: "2024",
   contactPoint: {
@@ -64,7 +64,7 @@ export const productSchema = {
   description:
     "Medical-grade self-service footwear sanitization kiosk using UVC light, ozone, and antimicrobial vapor technology. Download the ROI Blueprint PDF for pricing and acquisition details.",
   image:
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp",
+    "https://getfreshtrax.com/images/shoe-sanitization-kiosk-hero.webp",
   brand: {
     "@type": "Brand",
     name: "Freshtrax",
@@ -96,7 +96,7 @@ export const localBusinessSchema = {
   name: "Freshtrax",
   url: "https://getfreshtrax.com",
   image:
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp",
+    "https://getfreshtrax.com/images/freshtrax-logo-black.png",
   description: "Medical-grade footwear sanitization kiosk for fitness venues",
   contactPoint: {
     "@type": "ContactPoint",
@@ -181,7 +181,7 @@ export const createWebPageSchema = (props: WebPageSchemaProps) => ({
     name: "Freshtrax",
     logo: {
       "@type": "ImageObject",
-      url: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp",
+      url: "https://getfreshtrax.com/images/freshtrax-logo-black.png",
     },
   },
 });
@@ -218,7 +218,7 @@ export const createArticleSchema = (props: ArticleSchemaProps) => ({
     name: "Freshtrax",
     logo: {
       "@type": "ImageObject",
-      url: "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/FreshtraxLogoblack.webp",
+      url: "https://getfreshtrax.com/images/freshtrax-logo-black.png",
     },
   },
   mainEntityOfPage: {

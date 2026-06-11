@@ -10,7 +10,7 @@ import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
 import { useBookCall } from "@/contexts/BookCallContext";
 import { useState, useRef, useEffect } from "react";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/hero-bg-ECzbAorEHV8DYBJU9NrUhH.webp";
+const HERO_BG = "/images/shoe-sanitization-kiosk-hero.webp";
 const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
 
 export default function HeroSection() {
