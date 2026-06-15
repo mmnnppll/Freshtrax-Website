@@ -25,7 +25,7 @@ export default function Privacy() {
       <SEOHead
         title="Privacy Policy | Freshtrax"
         description="How Freshtrax collects, uses, discloses, and safeguards your information when you visit our website or interact with our footwear sanitization kiosks."
-        canonicalUrl="https://getfreshtrax.com/privacy"
+        canonicalUrl="https://getfreshtrax.com/privacy/"
       />
       <SchemaMarkup
         schema={createWebPageSchema({

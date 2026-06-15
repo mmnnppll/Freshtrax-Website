@@ -215,7 +215,7 @@ export default function Blog() {
       <SEOHead
         title="Blog | Freshtrax – Shoe Hygiene & Kiosk Business Journal"
         description="Science-backed articles on shoe sanitization, athlete foot health, kiosk revenue models, and venue owner playbooks."
-        canonicalUrl="https://getfreshtrax.com/blog"
+        canonicalUrl="https://getfreshtrax.com/blog/"
         ogTitle="Freshtrax Journal"
         ogDescription="Science-backed articles on shoe hygiene, foot health, and the business of Freshtrax kiosks."
       />

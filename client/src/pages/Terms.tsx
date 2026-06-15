@@ -28,7 +28,7 @@ export default function Terms() {
       <SEOHead
         title="Terms of Service | Freshtrax"
         description="Terms governing use of the Freshtrax website and footwear sanitization kiosk services."
-        canonicalUrl="https://getfreshtrax.com/terms"
+        canonicalUrl="https://getfreshtrax.com/terms/"
       />
       <SchemaMarkup
         schema={createWebPageSchema({

@@ -67,7 +67,7 @@ export default function Contact() {
       <SEOHead
         title="Contact Us | Freshtrax Footwear Sanitization"
         description="Get in touch with Freshtrax. Contact us for owner inquiries, partnerships, general questions, or support. We respond within 1 business day."
-        canonicalUrl="https://getfreshtrax.com/contact"
+        canonicalUrl="https://getfreshtrax.com/contact/"
         ogTitle="Contact Us | Freshtrax Footwear Sanitization"
         ogDescription="Reach out to Freshtrax for inquiries about becoming an owner, partnerships, or technical support."
       />

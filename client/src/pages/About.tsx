@@ -17,7 +17,7 @@ export default function About() {
       <SEOHead
         title="About Freshtrax | Our Mission & Vision"
         description="Learn about Freshtrax's mission to revolutionize footwear hygiene. Founded by Marvin N., we're committed to eliminating bacteria and odor from athletic shoes using medical-grade technology."
-        canonicalUrl="https://getfreshtrax.com/about"
+        canonicalUrl="https://getfreshtrax.com/about/"
         ogTitle="About Freshtrax | Our Mission & Vision"
         ogDescription="Discover the story behind Freshtrax and our commitment to relentless execution, customer obsession, and innovation."
       />

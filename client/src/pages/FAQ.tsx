@@ -126,7 +126,7 @@ export default function FAQ() {
       <SEOHead
         title="FAQ | Freshtrax Footwear Sanitization"
         description="Frequently asked questions about Freshtrax footwear sanitization kiosk. Learn about product technology, financial performance, operations, and getting started."
-        canonicalUrl="https://getfreshtrax.com/faq"
+        canonicalUrl="https://getfreshtrax.com/faq/"
         ogTitle="FAQ | Freshtrax Footwear Sanitization"
         ogDescription="Get answers to common questions about how Freshtrax works, profitability, maintenance, and becoming an owner."
       />

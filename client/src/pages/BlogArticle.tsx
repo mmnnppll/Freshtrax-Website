@@ -144,7 +144,7 @@ export default function BlogArticle() {
   if (!article) {
     return (
       <>
-        <SEOHead title="Article Not Found | Freshtrax" description="The article you're looking for could not be found." canonicalUrl="https://getfreshtrax.com/blog" />
+        <SEOHead title="Article Not Found | Freshtrax" description="The article you're looking for could not be found." canonicalUrl="https://getfreshtrax.com/blog/" />
         <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: FT.bg, color: FT.text }}>
           <ParticleField />
           <Navbar />
@@ -160,7 +160,7 @@ export default function BlogArticle() {
     );
   }
 
-  const articleUrl = `https://getfreshtrax.com/blog/${article.slug}`;
+  const articleUrl = `https://getfreshtrax.com/blog/${article.slug}/`;
 
   return (
     <>

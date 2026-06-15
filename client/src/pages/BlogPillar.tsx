@@ -87,7 +87,7 @@ export default function BlogPillar() {
       <SEOHead
         title={`${pillar.name} | Freshtrax Journal`}
         description={pillar.description}
-        canonicalUrl={`https://getfreshtrax.com/blog/pillar/${pillar.slug}`}
+        canonicalUrl={`https://getfreshtrax.com/blog/pillar/${pillar.slug}/`}
         ogTitle={`${pillar.name} – Freshtrax`}
         ogDescription={pillar.description}
       />

@@ -137,7 +137,7 @@ export default function HowItWorks() {
       <SEOHead
         title="How It Works | Freshtrax Footwear Sanitization"
         description="Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology."
-        canonicalUrl="https://getfreshtrax.com/how-it-works"
+        canonicalUrl="https://getfreshtrax.com/how-it-works/"
         ogTitle="How It Works | Freshtrax Footwear Sanitization"
         ogDescription="Discover the 4-step process: SELECT, INSERT, REFRESH, UNLOAD. Backed by peer-reviewed clinical research."
       />

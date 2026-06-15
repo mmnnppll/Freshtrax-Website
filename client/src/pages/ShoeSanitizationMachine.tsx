@@ -154,7 +154,7 @@ export default function ShoeSanitizationMachine() {
       <SEOHead
         title="Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax"
         description="Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds. Zero staff required."
-        canonicalUrl="https://getfreshtrax.com/shoe-sanitization-machine"
+        canonicalUrl="https://getfreshtrax.com/shoe-sanitization-machine/"
         ogTitle="Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax"
         ogDescription="Freshtrax eliminates odor and bacteria from athletic footwear in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat."
         ogImage="https://getfreshtrax.com/images/ssm/kiosk-black-bg-01.jpg"
