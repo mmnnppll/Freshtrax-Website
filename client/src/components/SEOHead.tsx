@@ -39,6 +39,16 @@ export function SEOHead({
     }
     canonical.setAttribute("href", canonicalUrl);
 
+    // Update og:url — keep in sync with the canonical so social shares of
+    // inner pages don't fall back to the homepage URL
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement("meta");
+      ogUrl.setAttribute("property", "og:url");
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute("content", canonicalUrl);
+
     // Update Open Graph tags
     if (ogTitle) {
       let ogTitleTag = document.querySelector('meta[property="og:title"]');
@@ -68,6 +78,36 @@ export function SEOHead({
         document.head.appendChild(ogImageTag);
       }
       ogImageTag.setAttribute("content", ogImage);
+    }
+
+    // Update Twitter Card tags — the prerendered HTML sets these, so mirror
+    // the OG/canonical values on client-side navigation to keep them in parity
+    let twitterUrl = document.querySelector('meta[name="twitter:url"]');
+    if (!twitterUrl) {
+      twitterUrl = document.createElement("meta");
+      twitterUrl.setAttribute("name", "twitter:url");
+      document.head.appendChild(twitterUrl);
+    }
+    twitterUrl.setAttribute("content", canonicalUrl);
+
+    if (ogTitle) {
+      let twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      if (!twitterTitle) {
+        twitterTitle = document.createElement("meta");
+        twitterTitle.setAttribute("name", "twitter:title");
+        document.head.appendChild(twitterTitle);
+      }
+      twitterTitle.setAttribute("content", ogTitle);
+    }
+
+    if (ogDescription) {
+      let twitterDesc = document.querySelector('meta[name="twitter:description"]');
+      if (!twitterDesc) {
+        twitterDesc = document.createElement("meta");
+        twitterDesc.setAttribute("name", "twitter:description");
+        document.head.appendChild(twitterDesc);
+      }
+      twitterDesc.setAttribute("content", ogDescription);
     }
   }, [title, description, canonicalUrl, ogTitle, ogDescription, ogImage]);
 
