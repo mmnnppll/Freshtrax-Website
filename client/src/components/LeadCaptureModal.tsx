@@ -26,6 +26,8 @@ import {
   MapPin,
   type LucideIcon,
 } from "lucide-react";
+import { trackLead } from "@/lib/analytics";
+import HoneypotField from "./HoneypotField";
 
 export interface LeadOffer {
   label: string;
@@ -73,6 +75,8 @@ export default function LeadCaptureModal({
   const [readyIn30, setReadyIn30] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot, stays empty for humans
 
   // Reset form when modal closes
   useEffect(() => {
@@ -86,6 +90,8 @@ export default function LeadCaptureModal({
         setReadyIn30(null);
         setLoading(false);
         setSubmitted(false);
+        setError("");
+        setWebsite("");
       }, 300);
       return () => clearTimeout(timer);
     }
@@ -115,10 +121,12 @@ export default function LeadCaptureModal({
   };
 
   const handleFinalSubmit = async () => {
+    if (loading) return;
     setLoading(true);
+    setError("");
     try {
-      // Send email notification to admin
-      await fetch("/api/send-lead-notification", {
+      // Saves the lead to the CRM and emails the team
+      const res = await fetch("/api/send-lead-notification", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -128,16 +136,28 @@ export default function LeadCaptureModal({
           phone,
           readyIn30,
           offer: offer.label,
+          website,
         }),
       });
-    } catch (error) {
-      console.error("Failed to send notification:", error);
+      if (!res.ok) throw new Error(`Lead endpoint returned ${res.status}`);
+    } catch (err) {
+      console.error("Failed to send notification:", err);
+      setLoading(false);
+      setError(
+        "We couldn't save your details. Please try again, or email getfreshtrax@gmail.com.",
+      );
+      return;
     }
-    
+
     setLoading(false);
     setSubmitted(true);
+    trackLead("blueprint", { venue_type: businessType });
     // Converted leads are excluded from the scroll-triggered prompt
-    localStorage.setItem("ft_lead_captured", "1");
+    try {
+      localStorage.setItem("ft_lead_captured", "1");
+    } catch {
+      /* storage blocked */
+    }
 
     // Auto-trigger PDF download
     setTimeout(() => {
@@ -323,6 +343,8 @@ export default function LeadCaptureModal({
                             />
                           </div>
 
+                          <HoneypotField value={website} onChange={setWebsite} />
+
                           <div className="flex gap-3">
                             <button
                               type="button"
@@ -435,6 +457,12 @@ export default function LeadCaptureModal({
                               </div>
                             </button>
                           </div>
+
+                          {error && (
+                            <p role="alert" className="text-red-400 text-sm font-body mb-4">
+                              {error}
+                            </p>
+                          )}
 
                           <div className="flex gap-3">
                             <button

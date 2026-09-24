@@ -26,6 +26,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { CALENDAR_URL } from "@/contexts/BookCallContext";
+import { trackLead } from "@/lib/analytics";
+import HoneypotField from "./HoneypotField";
 
 interface BookCallModalProps {
   open: boolean;
@@ -59,6 +61,7 @@ export default function BookCallModal({ open, onClose }: BookCallModalProps) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [website, setWebsite] = useState(""); // honeypot, stays empty for humans
 
   // Reset to a clean form whenever the modal reopens
   useEffect(() => {
@@ -80,20 +83,37 @@ export default function BookCallModal({ open, onClose }: BookCallModalProps) {
 
   const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim()) return;
+    if (loading || !name.trim() || !email.trim()) return;
     setLoading(true);
-    try {
-      await fetch("/api/send-booking-qualifier", {
+
+    const send = () =>
+      fetch("/api/send-booking-qualifier", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, venueType, traffic, reason }),
+        body: JSON.stringify({ name, email, venueType, traffic, reason, website }),
       });
-    } catch (error) {
-      console.error("Failed to send booking qualifier:", error);
+
+    // One automatic retry. Either way the visitor still gets the calendar
+    // link: the booking itself captures the lead even if the qualifier fails.
+    let saved = false;
+    for (let attempt = 0; attempt < 2 && !saved; attempt++) {
+      try {
+        const res = await send();
+        saved = res.ok;
+        if (!res.ok) console.error("Booking qualifier returned", res.status);
+      } catch (error) {
+        console.error("Failed to send booking qualifier:", error);
+      }
     }
+
     setLoading(false);
     setSubmitted(true);
-    localStorage.setItem("ft_lead_captured", "1");
+    if (saved) trackLead("book_call", { venue_type: venueType });
+    try {
+      localStorage.setItem("ft_lead_captured", "1");
+    } catch {
+      /* storage blocked */
+    }
   };
 
   if (!open) return null;
@@ -271,6 +291,8 @@ export default function BookCallModal({ open, onClose }: BookCallModalProps) {
                               </button>
                             ))}
                           </div>
+
+                          <HoneypotField value={website} onChange={setWebsite} />
 
                           <button
                             type="submit"

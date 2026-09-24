@@ -174,7 +174,7 @@
 
   <url>
     <loc>https://getfreshtrax.com/blog/pillar/shoe-care-gear/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
@@ -188,14 +188,14 @@
 
   <url>
     <loc>https://getfreshtrax.com/blog/pillar/venue-owner-playbooks/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://getfreshtrax.com/blog/pillar/athlete-health-hygiene/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
@@ -476,6 +476,48 @@
   <url>
     <loc>https://getfreshtrax.com/blog/the-gym-amenity-hyrox-members-actually-want-in-2026/</loc>
     <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/playing-tennis-padel-pickleball-same-week-shoes/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/padel-pickleball-moving-into-tennis-clubs-amenities/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/pickleball-5-million-new-players-shoe-mistake/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/indoor-pickleball-boom-new-facilities-build-in-day-one/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/why-climbing-shoes-are-the-smelliest-thing-in-your-gym-bag/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://getfreshtrax.com/blog/bouldering-gyms-adding-fitness-floors-hygiene-amenity/</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
