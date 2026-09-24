@@ -162,6 +162,9 @@
               analytics_storage: 'denied'
             });
             fbq('consent', 'revoke');
+            // If Clarity was loaded under an earlier Accept, tell it to stop
+            // using cookies for the rest of this visit.
+            if (clarityLoaded && window.clarity) window.clarity('consent', false);
           }
         };
       })();

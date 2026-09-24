@@ -26,9 +26,12 @@ const FT = {
   border: "#262626",
   text: "#f5f5f5",
   muted: "#9a9a9a",
-  dim: "#6b6b6b",
+  dim: "#848484", // was #6b6b6b; raised to meet 4.5:1 on the dark cards
   orange: "#f57e2c",
   orangeDim: "#b85a18",
+  // Button background for white text (WCAG AA 4.5:1); FT.orange stays for text.
+  cta: "#ca4c0a",
+  ctaHover: "#b24309",
 } as const;
 
 const latestPosts = [...blogArticles].sort(
@@ -75,9 +78,9 @@ function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0]; index: numbe
         <p style={{ color: FT.orange, fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>
           {labels[index]}
         </p>
-        <h3 style={{ fontSize: 22, fontWeight: 700, lineHeight: 1.25, marginBottom: 10 }}>
+        <h2 style={{ fontSize: 22, fontWeight: 700, lineHeight: 1.25, marginBottom: 10 }}>
           {pillar.name}
-        </h3>
+        </h2>
         <p style={{ fontSize: 13, color: FT.muted, lineHeight: 1.6, marginBottom: 48 }}>
           {pillar.description}
         </p>
@@ -170,9 +173,9 @@ function DiscoveryCallCard() {
       <button
         type="button"
         onClick={openBookCall}
-        style={{ display: "block", width: "100%", textAlign: "center", background: FT.orange, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer", transition: "background 200ms" }}
-        onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
-        onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
+        style={{ display: "block", width: "100%", textAlign: "center", background: FT.cta, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer", transition: "background 200ms" }}
+        onMouseEnter={(e) => (e.currentTarget.style.background = FT.ctaHover)}
+        onMouseLeave={(e) => (e.currentTarget.style.background = FT.cta)}
       >
         Book my call →
       </button>
@@ -317,9 +320,9 @@ export default function Blog() {
             <a
               href="/Freshtrax-roi-blueprint.pdf"
               target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: "none", transition: "background 200ms" }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
-              onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
+              style={{ display: "inline-block", background: FT.cta, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: "none", transition: "background 200ms" }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = FT.ctaHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.background = FT.cta)}
             >
               Download my free ROI blueprint →
             </a>

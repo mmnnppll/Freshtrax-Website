@@ -5,6 +5,7 @@
 import { ArrowRight, Instagram, Phone } from "lucide-react";
 import { useBookCall } from "@/contexts/BookCallContext";
 import { CITIES } from "@/data/cities";
+import { openCookieSettings } from "@/lib/analytics";
 
 const footerSections = [
   {
@@ -139,6 +140,13 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Freshtrax. All rights reserved.
           </p>
           <div className="flex gap-6">
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="py-2 md:py-0 text-white/60 hover:text-white/80 text-xs font-body transition-colors"
+            >
+              Cookie settings
+            </button>
             <a
               href="/terms"
               className="py-2 md:py-0 text-white/60 hover:text-white/80 text-xs font-body transition-colors"

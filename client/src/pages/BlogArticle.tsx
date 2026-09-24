@@ -16,9 +16,12 @@ const FT = {
   border: "#262626",
   text: "#f5f5f5",
   muted: "#9a9a9a",
-  dim: "#6b6b6b",
+  dim: "#848484", // was #6b6b6b; raised to meet 4.5:1 on the dark cards
   orange: "#f57e2c",
   orangeDim: "#b85a18",
+  // Button background for white text (WCAG AA 4.5:1); FT.orange stays for text.
+  cta: "#ca4c0a",
+  ctaHover: "#b24309",
 } as const;
 
 function DiscoveryCallCard() {
@@ -26,7 +29,7 @@ function DiscoveryCallCard() {
   return (
     <div style={{ background: "linear-gradient(180deg, #2a1810, #141414)", border: `1px solid ${FT.orange}66`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
       <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
-      <h4 style={{ fontSize: 17, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>Book a 30-min discovery call</h4>
+      <h2 style={{ fontSize: 17, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>Book a 30-min discovery call</h2>
       <ul style={{ padding: 0, margin: "0 0 20px", listStyle: "none" }}>
         {["See the machine live + get real numbers", "No sales pressure — just the facts"].map((item) => (
           <li key={item} style={{ fontSize: 13, color: FT.muted, marginBottom: 8, paddingLeft: 16, position: "relative" }}>
@@ -38,9 +41,9 @@ function DiscoveryCallCard() {
       <button
         type="button"
         onClick={openBookCall}
-        style={{ display: "block", width: "100%", textAlign: "center", background: FT.orange, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer", transition: "background 200ms" }}
-        onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
-        onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
+        style={{ display: "block", width: "100%", textAlign: "center", background: FT.cta, color: "#fff", padding: "12px 16px", borderRadius: 8, fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer", transition: "background 200ms" }}
+        onMouseEnter={(e) => (e.currentTarget.style.background = FT.ctaHover)}
+        onMouseLeave={(e) => (e.currentTarget.style.background = FT.cta)}
       >
         Book my call →
       </button>
@@ -367,9 +370,9 @@ export default function BlogArticle() {
             <button
               type="button"
               onClick={openBookCall}
-              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, border: "none", cursor: "pointer" }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
-              onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
+              style={{ display: "inline-block", background: FT.cta, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, border: "none", cursor: "pointer" }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = FT.ctaHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.background = FT.cta)}
             >
               Book my discovery call →
             </button>

@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
-import { getStoredConsent, setConsent } from "@/lib/analytics";
+import { COOKIE_SETTINGS_EVENT, getStoredConsent, setConsent } from "@/lib/analytics";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (!getStoredConsent()) setVisible(true);
+    // The footer's "Cookie settings" link reopens the banner so visitors can
+    // change their choice at any time.
+    const reopen = () => setVisible(true);
+    window.addEventListener(COOKIE_SETTINGS_EVENT, reopen);
+    return () => window.removeEventListener(COOKIE_SETTINGS_EVENT, reopen);
   }, []);
 
   function accept() {

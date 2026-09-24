@@ -1,11 +1,15 @@
 const { createCrmLead } = require('./utils/notion-crm');
 const {
-  json, parseBody, clean, isValidEmail, isBot, escapeHtml, sendNotification,
+  json, parseBody, clean, isValidEmail, isBot, isRateLimited, escapeHtml, sendNotification,
 } = require('./utils/lead-helpers');
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  if (isRateLimited(event, 'booking')) {
+    return json(429, { success: false, error: 'Too many submissions. Please try again in a few minutes.' });
   }
 
   const body = parseBody(event);
