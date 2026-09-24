@@ -83,7 +83,9 @@
   status = 301
   force = true
 
+# SPA fallback for URLs without a prerendered page. Points at the plain
+# shell, not /index.html, because index.html is the server-rendered homepage.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/spa-shell.html"
   status = 200

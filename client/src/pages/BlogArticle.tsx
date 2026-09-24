@@ -66,7 +66,7 @@ function renderInline(text: string): React.ReactNode[] {
           {label}
         </a>
       ) : (
-        <Link key={i} href={href}>
+        <Link key={i} href={href} asChild>
           <a style={{ color: FT.orange, textDecoration: "underline", textUnderlineOffset: 3 }}>{label}</a>
         </Link>
       );
@@ -151,7 +151,7 @@ export default function BlogArticle() {
           <main style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <div style={{ textAlign: "center" }}>
               <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 16 }}>Article Not Found</h1>
-              <Link href="/blog"><a style={{ color: FT.orange }}>← Back to blog</a></Link>
+              <Link href="/blog" asChild><a style={{ color: FT.orange }}>← Back to blog</a></Link>
             </div>
           </main>
           <Footer />
@@ -190,11 +190,11 @@ export default function BlogArticle() {
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" style={{ padding: "80px 40px 0", maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, flexWrap: "wrap" }}>
-              <Link href="/blog"><a style={{ color: FT.dim, textDecoration: "none" }}>JOURNAL</a></Link>
+              <Link href="/blog" asChild><a style={{ color: FT.dim, textDecoration: "none" }}>JOURNAL</a></Link>
               <span style={{ color: FT.border }}>/</span>
               {pillar && (
                 <>
-                  <Link href={`/blog/pillar/${pillar.slug}`}>
+                  <Link href={`/blog/pillar/${pillar.slug}`} asChild>
                     <a style={{ color: FT.orange, textDecoration: "none" }}>{pillar.name}</a>
                   </Link>
                   <span style={{ color: FT.border }}>/</span>
@@ -225,7 +225,7 @@ export default function BlogArticle() {
               <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 13, color: FT.dim, marginBottom: 32, flexWrap: "wrap" }}>
                 <span style={{ color: FT.text, fontWeight: 600 }}>{article.author}</span>
                 <span>·</span>
-                <span>{new Date(article.publishedDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+                <span>{new Date(article.publishedDate).toLocaleDateString("en-US", { timeZone: "UTC", year: "numeric", month: "long", day: "numeric" })}</span>
                 <span>·</span>
                 <span>{article.readingTime} min read</span>
               </div>
@@ -257,7 +257,7 @@ export default function BlogArticle() {
                     ★ More in {pillar?.name}
                   </p>
                   {siblings.map((s) => (
-                    <Link key={s.id} href={`/blog/${s.slug}`}>
+                    <Link key={s.id} href={`/blog/${s.slug}`} asChild>
                       <a style={{ display: "block", padding: "10px 0", borderBottom: `1px solid ${FT.border}`, textDecoration: "none", color: FT.text, fontSize: 14, fontWeight: 500, lineHeight: 1.4 }}
                         onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                         onMouseLeave={(e) => (e.currentTarget.style.color = FT.text)}>
@@ -266,7 +266,7 @@ export default function BlogArticle() {
                     </Link>
                   ))}
                   {pillar && (
-                    <Link href={`/blog/pillar/${pillar.slug}`}>
+                    <Link href={`/blog/pillar/${pillar.slug}`} asChild>
                       <a style={{ display: "block", marginTop: 12, fontSize: 12, color: FT.dim, textDecoration: "none" }}
                         onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                         onMouseLeave={(e) => (e.currentTarget.style.color = FT.dim)}>
@@ -292,7 +292,7 @@ export default function BlogArticle() {
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {siblings.map((s) => (
                       <li key={s.id} style={{ marginBottom: 12 }}>
-                        <Link href={`/blog/${s.slug}`}>
+                        <Link href={`/blog/${s.slug}`} asChild>
                           <a style={{ display: "flex", gap: 8, fontSize: 13, color: FT.text, textDecoration: "none", lineHeight: 1.4, fontWeight: 500, transition: "color 200ms" }}
                             onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                             onMouseLeave={(e) => (e.currentTarget.style.color = FT.text)}>
@@ -304,7 +304,7 @@ export default function BlogArticle() {
                     ))}
                   </ul>
                   <div style={{ borderTop: `1px solid ${FT.border}`, paddingTop: 12, marginTop: 4 }}>
-                    <Link href={`/blog/pillar/${pillar.slug}`}>
+                    <Link href={`/blog/pillar/${pillar.slug}`} asChild>
                       <a style={{ fontSize: 12, color: FT.dim, textDecoration: "none" }}
                         onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                         onMouseLeave={(e) => (e.currentTarget.style.color = FT.dim)}>

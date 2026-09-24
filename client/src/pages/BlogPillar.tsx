@@ -20,7 +20,7 @@ const FT = {
 
 function ArticleCard({ article }: { article: typeof blogArticles[0] }) {
   return (
-    <Link href={`/blog/${article.slug}`}>
+    <Link href={`/blog/${article.slug}`} asChild>
       <a
         style={{
           display: "flex",
@@ -54,7 +54,7 @@ function ArticleCard({ article }: { article: typeof blogArticles[0] }) {
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: 12, color: FT.dim }}>
             <span>
-              {new Date(article.publishedDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+              {new Date(article.publishedDate).toLocaleDateString("en-US", { timeZone: "UTC", month: "short", day: "numeric", year: "numeric" })}
             </span>
             <span>{article.readingTime} min read</span>
           </div>
@@ -77,7 +77,7 @@ export default function BlogPillar() {
       <div style={{ minHeight: "100vh", background: FT.bg, color: FT.text, display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ textAlign: "center" }}>
           <h1 style={{ fontSize: 32, fontWeight: 700, marginBottom: 16 }}>Pillar not found</h1>
-          <Link href="/blog"><a style={{ color: FT.orange }}>← Back to blog</a></Link>
+          <Link href="/blog" asChild><a style={{ color: FT.orange }}>← Back to blog</a></Link>
         </div>
       </div>
     );
@@ -101,7 +101,7 @@ export default function BlogPillar() {
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" style={{ padding: "80px 40px 0", maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5 }}>
-              <Link href="/blog"><a style={{ color: FT.dim, textDecoration: "none" }}>JOURNAL</a></Link>
+              <Link href="/blog" asChild><a style={{ color: FT.dim, textDecoration: "none" }}>JOURNAL</a></Link>
               <span style={{ color: FT.border }}>/</span>
               <span style={{ color: FT.orange }}>{pillar.name}</span>
             </div>
@@ -143,7 +143,7 @@ export default function BlogPillar() {
               {otherPillars.map((p) => {
                 const count = getArticlesByPillar(p.slug).length;
                 return (
-                  <Link key={p.slug} href={`/blog/pillar/${p.slug}`}>
+                  <Link key={p.slug} href={`/blog/pillar/${p.slug}`} asChild>
                     <a
                       style={{ display: "flex", gap: 16, padding: 20, background: FT.card, border: `1px solid ${FT.border}`, borderRadius: 12, textDecoration: "none", color: FT.text, transition: "border-color 200ms", alignItems: "flex-start" }}
                       onMouseEnter={(e) => (e.currentTarget.style.borderColor = `${FT.orange}66`)}
