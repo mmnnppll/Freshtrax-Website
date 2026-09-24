@@ -3,12 +3,12 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Bouldering Gyms | Freshtrax",
-  seoDescription: "Bouldering gyms attract urban, hygiene-conscious climbers. Freshtrax delivers medical-grade shoe sanitization in 90 seconds — a hygiene amenity that fits your community.",
+  seoDescription: "Bouldering gyms attract urban, hygiene-conscious climbers. Freshtrax delivers three-stage shoe sanitization in 90 seconds — a hygiene amenity that fits your community.",
   canonicalUrl: "https://getfreshtrax.com/bouldering-gyms/",
   venueName: "Bouldering Gyms",
   venueSlug: "bouldering-gyms",
   headline: "The Shoe Sanitization Kiosk for Bouldering Gyms",
-  subheadline: "Climbing gyms attract urban athletes who value cleanliness and community. Freshtrax fits that culture — medical-grade shoe hygiene in 90 seconds, no staff, passive revenue for your gym.",
+  subheadline: "Climbing gyms attract urban athletes who value cleanliness and community. Freshtrax fits that culture — three-stage shoe sanitization in 90 seconds, no staff, passive revenue for your gym.",
   problemIntro:
     "Bouldering gyms see a unique hygiene dynamic: climbing shoes come on and off throughout a session, rental shoes are shared between strangers, and crash pads absorb sweat from bare feet and socks. The bacteria and fungi that accumulate in climbing footwear — and transfer onto mats and wall holds — are a real, if underacknowledged, concern. Urban climbing gyms attract an educated, health-aware demographic that responds well to hygiene transparency. A Freshtrax kiosk signals that your gym is thinking about their health, not just their send list.",
   benefits: [
@@ -59,7 +59,7 @@ const config: VenueConfig = {
     },
     {
       q: "How do we position this to our climbing community?",
-      a: "Climbing communities respond to transparency and values alignment. A simple post explaining that you've added medical-grade shoe sanitization typically generates strong positive engagement.",
+      a: "Climbing communities respond to transparency and values alignment. A simple post explaining that you've added a shoe sanitization kiosk typically generates strong positive engagement.",
     },
     {
       q: "What is the setup process?",

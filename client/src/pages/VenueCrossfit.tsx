@@ -3,14 +3,14 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for CrossFit Gyms | Freshtrax",
-  seoDescription: "CrossFit boxes see barefoot training, shared mats, and high-sweat footwear every session. Freshtrax eliminates bacteria and odor in 90 seconds. Zero staff.",
+  seoDescription: "CrossFit boxes see barefoot training, shared mats, and high-sweat shoes every session. Freshtrax eliminates bacteria and odor in 90 seconds. Zero staff.",
   canonicalUrl: "https://getfreshtrax.com/crossfit-gyms/",
   venueName: "CrossFit Boxes",
   venueSlug: "crossfit-gyms",
   headline: "The Shoe Sanitization Kiosk for CrossFit Boxes",
-  subheadline: "CrossFit athletes push hard, train barefoot, and share mats. Freshtrax keeps footwear clean and your box smelling like a serious training facility.",
+  subheadline: "CrossFit athletes push hard, train barefoot, and share mats. Freshtrax keeps shoes clean and your box smelling like a serious training facility.",
   problemIntro:
-    "CrossFit programming regularly moves athletes from shoes to bare feet and back — Olympic lifts, rope climbs, box jumps. Shared rubber mats absorb sweat from hundreds of sessions and become a transfer point for bacteria and fungi. The smell that builds up in a busy box isn't just a nuisance; it's a measurable hygiene gap. Athletes notice, and so do prospects on a trial visit. Footwear sanitization addresses the problem at the source before it reaches the mat.",
+    "CrossFit programming regularly moves athletes from shoes to bare feet and back — Olympic lifts, rope climbs, box jumps. Shared rubber mats absorb sweat from hundreds of sessions and become a transfer point for bacteria and fungi. The smell that builds up in a busy box isn't just a nuisance; it's a measurable hygiene gap. Athletes notice, and so do prospects on a trial visit. Shoe sanitization addresses the problem at the source before it reaches the mat.",
   benefits: [
     {
       title: "Kills bacteria before it reaches your mats",
@@ -37,7 +37,7 @@ const config: VenueConfig = {
     },
     {
       title: "Reduces mat cleaning frequency",
-      description: "Cleaner footwear means mats accumulate less debris and bacteria. Many box owners report reducing deep-clean frequency after installing a Freshtrax kiosk.",
+      description: "Cleaner shoes mean mats accumulate less debris and bacteria. Many box owners report reducing deep-clean frequency after installing a Freshtrax kiosk.",
     },
     {
       title: "Differentiates your box in a crowded market",

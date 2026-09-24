@@ -125,7 +125,7 @@ export const CITIES: City[] = [
       "Freshtrax brings self-service shoe sanitization kiosks to Surrey's pickleball courts, rec centers, and gyms. 90-second cycles, zero staff, passive venue revenue.",
     headline: "Shoe Sanitization Kiosks for Surrey Venues",
     intro:
-      "Surrey is one of the fastest-growing cities in Canada, and its indoor-sports infrastructure is racing to keep up — new pickleball courts, expanding rec centers, and gym openings across every town centre. Growth means traffic, and traffic means footwear hygiene becomes a daily operational question.",
+      "Surrey is one of the fastest-growing cities in Canada, and its indoor-sports infrastructure is racing to keep up — new pickleball courts, expanding rec centers, and gym openings across every town centre. Growth means traffic, and traffic means shoe hygiene becomes a daily operational question.",
     venueScene:
       "Pickleball is the story in Surrey: courts are being added faster than anywhere else in the region, and the sport's demographics — frequent players, dedicated court shoes, long sessions — are the strongest usage fit in the Freshtrax network. Add indoor soccer facilities and family rec centres with high weekend throughput, and Surrey venues have the cycle volume that makes a kiosk's math work at the optimistic end of the range.",
     venueHighlights: [

@@ -178,7 +178,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-orange-400 mb-3 font-body">How Freshtrax Helps</p>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-white">
-                Medical-grade sanitization. 90 seconds.
+                Three-stage sanitization. 90 seconds.
               </h2>
             </motion.div>
 

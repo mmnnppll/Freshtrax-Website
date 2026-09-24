@@ -40,7 +40,7 @@ const venues = [
   },
   {
     name: "Handball Courts",
-    desc: "Fast-paced, court-shoe-dependent sport with a dedicated regular player base. Shared court environments make footwear hygiene a genuine concern.",
+    desc: "Fast-paced, court-shoe-dependent sport with a dedicated regular player base. Shared court environments make shoe hygiene a genuine concern.",
   },
   {
     name: "Dodgeball & Court Sports Leagues",
@@ -71,7 +71,7 @@ const technologies = [
     title: "Antimicrobial Vapor",
     icon: Droplets,
     desc: "Dispersed through vents in the steel rods, the vapor penetrates fabric fibers and internal surfaces, reaching areas UV and ozone alone can't access.",
-    evidence: "Safe formulation used in medical-grade sanitization protocols.",
+    evidence: "Safe formulation that complements UVC and ozone.",
     image: "/images/ssm/antimicrobial-fog-feature.webp",
   },
   {
@@ -156,7 +156,7 @@ export default function ShoeSanitizationMachine() {
         description="Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds. Zero staff required."
         canonicalUrl="https://getfreshtrax.com/shoe-sanitization-machine/"
         ogTitle="Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax"
-        ogDescription="Freshtrax eliminates odor and bacteria from athletic footwear in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat."
+        ogDescription="Freshtrax eliminates odor and bacteria from athletic shoes in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat."
         ogImage="https://getfreshtrax.com/images/ssm/kiosk-black-bg-01.jpg"
       />
       {/* WebPage schema */}

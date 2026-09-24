@@ -279,27 +279,27 @@ const STATIC_ROUTES: Array<{
     path: "/",
     title: "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
     description:
-      "Freshtrax is the only medical-grade shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required.",
+      "Freshtrax is the only three-stage shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required.",
     ogTitle:
       "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
     ogDescription:
-      "Make up to $36,830/year per kiosk (typical: $24,237). Self-service footwear sanitization that eliminates bacteria and odor in 90 seconds.",
+      "Make up to $36,830/year per kiosk (typical: $24,237). Self-service shoe sanitization that eliminates bacteria and odor in 90 seconds.",
   },
   {
     path: "/how-it-works",
-    title: "How It Works | Freshtrax Footwear Sanitization",
+    title: "How It Works | Freshtrax Shoe Sanitization",
     description:
-      "Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology.",
-    ogTitle: "How It Works | Freshtrax Footwear Sanitization",
+      "Learn how Freshtrax sanitizes athletic shoes in 90 seconds using UVC light, ozone, and antimicrobial vapor technology.",
+    ogTitle: "How It Works | Freshtrax Shoe Sanitization",
     ogDescription:
       "Discover the 4-step process: SELECT, INSERT, REFRESH, UNLOAD. Backed by peer-reviewed clinical research.",
   },
   {
     path: "/owners",
-    title: "Become an Owner | Freshtrax Footwear Sanitization",
+    title: "Become an Owner | Freshtrax Shoe Sanitization",
     description:
       "Join the Freshtrax Founders Club. Generate up to $36,830/year per kiosk (typical: $24,237). Zero staff, zero inventory.",
-    ogTitle: "Become an Owner | Freshtrax Footwear Sanitization",
+    ogTitle: "Become an Owner | Freshtrax Shoe Sanitization",
     ogDescription:
       "First 20 Founders Club slots. Locked-in $79/month platform fee for life. ROI calculator and full financial projections.",
   },
@@ -307,35 +307,35 @@ const STATIC_ROUTES: Array<{
     path: "/about",
     title: "About Freshtrax | Our Mission & Vision",
     description:
-      "Learn about Freshtrax's mission to revolutionize footwear hygiene. Medical-grade shoe sanitization for fitness venues across North America.",
+      "Learn about Freshtrax's mission to revolutionize shoe hygiene. Three-stage shoe sanitization for fitness venues across North America.",
     ogTitle: "About Freshtrax | Our Mission & Vision",
     ogDescription:
-      "Discover the story behind Freshtrax and our commitment to eliminating bacteria, fungi, and odor from athletic footwear.",
+      "Discover the story behind Freshtrax and our commitment to eliminating bacteria, fungi, and odor from athletic shoes.",
   },
   {
     path: "/faq",
-    title: "FAQ | Freshtrax Footwear Sanitization",
+    title: "FAQ | Freshtrax Shoe Sanitization",
     description:
       "Frequently asked questions about Freshtrax. Learn about the technology, financial performance, operations, maintenance, and how to get started.",
-    ogTitle: "FAQ | Freshtrax Footwear Sanitization",
+    ogTitle: "FAQ | Freshtrax Shoe Sanitization",
     ogDescription:
       "Get answers about how Freshtrax works, profitability, maintenance costs, and becoming a kiosk owner.",
   },
   {
     path: "/contact",
-    title: "Contact Us | Freshtrax Footwear Sanitization",
+    title: "Contact Us | Freshtrax Shoe Sanitization",
     description:
       "Get in touch with Freshtrax. Reach us for owner inquiries, partnerships, or support. We respond within 1 business day.",
-    ogTitle: "Contact Us | Freshtrax Footwear Sanitization",
+    ogTitle: "Contact Us | Freshtrax Shoe Sanitization",
     ogDescription:
       "Contact Freshtrax for owner inquiries, venue partnerships, or general questions.",
   },
   {
     path: "/blog",
-    title: "Blog | Freshtrax Footwear Sanitization",
+    title: "Blog | Freshtrax Shoe Sanitization",
     description:
-      "Expert articles on footwear hygiene, shoe sanitization science, gym cleanliness, and the Freshtrax kiosk business model.",
-    ogTitle: "Freshtrax Blog | Footwear Hygiene & Sanitization",
+      "Expert articles on shoe hygiene, shoe sanitization science, gym cleanliness, and the Freshtrax kiosk business model.",
+    ogTitle: "Freshtrax Blog | Shoe Hygiene & Sanitization",
     ogDescription:
       "Read expert articles on athlete foot health, UV sanitization science, venue hygiene best practices, and kiosk business insights.",
   },
@@ -349,41 +349,41 @@ const STATIC_ROUTES: Array<{
     path: "/terms",
     title: "Terms of Service | Freshtrax",
     description:
-      "Terms governing use of the Freshtrax website and footwear sanitization kiosk services.",
+      "Terms governing use of the Freshtrax website and shoe sanitization kiosk services.",
   },
   // Venue landing pages
   {
     path: "/pickleball-clubs",
     title: "Shoe Sanitization Kiosk for Pickleball Clubs | Freshtrax",
     description:
-      "Freshtrax keeps pickleball courts cleaner and members healthier. Self-service footwear sanitization in 90 seconds. Zero staff, passive revenue for your club.",
+      "Freshtrax keeps pickleball courts cleaner and members healthier. Self-service shoe sanitization in 90 seconds. Zero staff, passive revenue for your club.",
     ogTitle: "Shoe Sanitization Kiosk for Pickleball Clubs | Freshtrax",
     ogDescription:
-      "Pickleball courts see 50-100+ players daily. Freshtrax eliminates bacteria, fungi, and odor from athletic footwear in 90 seconds.",
+      "Pickleball courts see 50-100+ players daily. Freshtrax eliminates bacteria, fungi, and odor from athletic shoes in 90 seconds.",
   },
   {
     path: "/crossfit-gyms",
     title: "Shoe Sanitization Kiosk for CrossFit Gyms | Freshtrax",
     description:
-      "CrossFit boxes see barefoot training, shared mats, and high-sweat footwear every session. Freshtrax eliminates bacteria and odor in 90 seconds. Zero staff.",
+      "CrossFit boxes see barefoot training, shared mats, and high-sweat shoes every session. Freshtrax eliminates bacteria and odor in 90 seconds. Zero staff.",
     ogTitle: "Shoe Sanitization Kiosk for CrossFit Gyms | Freshtrax",
     ogDescription:
-      "CrossFit athletes train barefoot on shared mats. Freshtrax keeps footwear clean and your box smelling like a serious training facility.",
+      "CrossFit athletes train barefoot on shared mats. Freshtrax keeps shoes clean and your box smelling like a serious training facility.",
   },
   {
     path: "/badminton-centers",
     title: "Shoe Sanitization Kiosk for Badminton Centers | Freshtrax",
     description:
-      "Badminton courts require dedicated indoor shoes — keep them clean with Freshtrax. Medical-grade sanitization in 90 seconds. Pilot-tested at a badminton facility.",
+      "Badminton courts require dedicated indoor shoes — keep them clean with Freshtrax. Three-stage sanitization in 90 seconds. Pilot-tested at a badminton facility.",
     ogTitle: "Shoe Sanitization Kiosk for Badminton Centers | Freshtrax",
     ogDescription:
-      "Freshtrax was first piloted at a badminton facility. Medical-grade shoe sanitization in 90 seconds — fits naturally into your shoe-change policy.",
+      "Freshtrax was first piloted at a badminton facility. Three-stage shoe sanitization in 90 seconds — fits naturally into your shoe-change policy.",
   },
   {
     path: "/tennis-clubs",
     title: "Shoe Sanitization Kiosk for Tennis Clubs | Freshtrax",
     description:
-      "Tennis clubs attract members who value premium amenities. Freshtrax delivers medical-grade shoe sanitization in 90 seconds — a hygiene upgrade your members will notice.",
+      "Tennis clubs attract members who value premium amenities. Freshtrax delivers three-stage shoe sanitization in 90 seconds — a hygiene upgrade your members will notice.",
     ogTitle: "Shoe Sanitization Kiosk for Tennis Clubs | Freshtrax",
     ogDescription:
       "Tennis club members expect premium. Freshtrax delivers hygiene, passive revenue, and zero staffing overhead.",
@@ -392,10 +392,10 @@ const STATIC_ROUTES: Array<{
     path: "/bouldering-gyms",
     title: "Shoe Sanitization Kiosk for Bouldering Gyms | Freshtrax",
     description:
-      "Bouldering gyms attract urban, hygiene-conscious climbers. Freshtrax delivers medical-grade shoe sanitization in 90 seconds — a hygiene amenity that fits your community.",
+      "Bouldering gyms attract urban, hygiene-conscious climbers. Freshtrax delivers three-stage shoe sanitization in 90 seconds — a hygiene amenity that fits your community.",
     ogTitle: "Shoe Sanitization Kiosk for Bouldering Gyms | Freshtrax",
     ogDescription:
-      "Solve rental shoe odor and protect your climbing community. Freshtrax sanitizes footwear in 90 seconds with zero staff involvement.",
+      "Solve rental shoe odor and protect your climbing community. Freshtrax sanitizes shoes in 90 seconds with zero staff involvement.",
   },
   {
     path: "/shoe-sanitization-machine",
@@ -404,7 +404,7 @@ const STATIC_ROUTES: Array<{
       "Freshtrax is the shoe sanitization machine built for fitness venues. UVC, ozone, and antimicrobial vapor eliminate odor and bacteria in 90 seconds. Zero staff required.",
     ogTitle: "Shoe Sanitization Machine for Gyms & Sports Venues | Freshtrax",
     ogDescription:
-      "Freshtrax eliminates odor and bacteria from athletic footwear in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat.",
+      "Freshtrax eliminates odor and bacteria from athletic shoes in 90 seconds using UVC light, ozone, antimicrobial vapor, and heat.",
   },
 ];
 
@@ -454,7 +454,7 @@ const HOMEPAGE_MEDIA = `
     <video:video>
       <video:thumbnail_loc>/images/shoe-sanitization-kiosk-hero.webp</video:thumbnail_loc>
       <video:title>Freshtrax Demo Video</video:title>
-      <video:description>12-second cinematic demo of Freshtrax footwear sanitization kiosk in action</video:description>
+      <video:description>12-second cinematic demo of Freshtrax shoe sanitization kiosk in action</video:description>
       <video:content_loc>https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4</video:content_loc>
       <video:duration>12</video:duration>
     </video:video>`;

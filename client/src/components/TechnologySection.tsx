@@ -67,7 +67,7 @@ export default function TechnologySection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-bold text-3xl md:text-5xl text-white mb-3 max-w-2xl leading-tight"
           >
-            Three layers of <span className="text-orange-500">medical-grade</span> protection
+            <span className="text-orange-500">Three layers</span> of protection
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

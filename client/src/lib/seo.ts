@@ -12,11 +12,11 @@ export interface SEOConfig {
 }
 
 export const DEFAULT_SEO: SEOConfig = {
-  title: "Freshtrax — Medical-Grade Footwear Sanitization",
+  title: "Freshtrax — Three-Stage Shoe Sanitization",
   description:
-    "Make up to $36,830/year per kiosk (typical owner: $24,237). Freshtrax is a self-service footwear sanitization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds. Zero staff, zero inventory, zero competition.",
+    "Make up to $36,830/year per kiosk (typical owner: $24,237). Freshtrax is a self-service shoe sanitization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds. Zero staff, zero inventory, zero competition.",
   keywords: [
-    "footwear sanitization",
+    "shoe sanitization",
     "shoe sanitizer",
     "gym equipment",
     "passive income",
@@ -105,7 +105,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "Freshtrax",
     description:
-      "Medical-grade footwear sanitization kiosk for fitness venues and sports centers",
+      "Three-stage shoe sanitization kiosk for fitness venues and sports centers",
     url: "https://getfreshtrax.com",
     logo: "https://getfreshtrax.com/images/freshtrax-logo-black.png",
     sameAs: [
@@ -123,9 +123,9 @@ export function generateProductSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "Freshtrax Footwear Sanitization Kiosk",
+    name: "Freshtrax Shoe Sanitization Kiosk",
     description:
-      "Self-service medical-grade footwear sanitization system using UVC, Ozone, and Antimicrobial Vapor",
+      "Self-service shoe sanitization system using UVC, Ozone, and Antimicrobial Vapor",
     brand: {
       "@type": "Brand",
       name: "Freshtrax",
@@ -147,9 +147,9 @@ export function generateLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Freshtrax",
-    description: "Footwear sanitization kiosk owner",
+    description: "Shoe sanitization kiosk owner",
     areaServed: ["US", "CA"],
-    serviceType: "Footwear Sanitization",
+    serviceType: "Shoe Sanitization",
   };
 }
 

@@ -48,7 +48,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img src={HERO_BG} alt="Freshtrax footwear sanitization kiosk background" className="w-full h-full object-cover" />
+        <img src={HERO_BG} alt="Freshtrax shoe sanitization kiosk background" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/50 to-transparent" />
       </div>
@@ -116,7 +116,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-white/70 text-lg mb-8 leading-relaxed font-body"
             >
-              Freshtrax — a self-service footwear sanitization kiosk. It eliminates bacteria and odor from athletic shoes in 90 seconds.
+              Freshtrax — a self-service shoe sanitization kiosk. It eliminates bacteria and odor from athletic shoes in 90 seconds.
             </motion.p>
 
             {/* CTAs */}
@@ -161,7 +161,7 @@ export default function HeroSection() {
                     paints in ~1s. Fades out once the video has a real frame. */}
                 <img
                   src={HERO_BG}
-                  alt="Freshtrax footwear sanitization kiosk"
+                  alt="Freshtrax shoe sanitization kiosk"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{
                     opacity: videoReady ? 0 : 1,

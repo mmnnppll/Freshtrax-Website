@@ -19,22 +19,22 @@ export default function Home() {
     <>
       <SEOHead
         title="Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues"
-        description="Freshtrax is the only medical-grade shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required."
+        description="Freshtrax is the only three-stage shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required."
         canonicalUrl="https://getfreshtrax.com/"
         ogTitle="Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues"
-        ogDescription="Make up to $36,830/year per kiosk (optimistic case, 30 cycles/day). Typical owner projects $24,237/year. Freshtrax is a self-service footwear sanitization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds."
+        ogDescription="Make up to $36,830/year per kiosk (optimistic case, 30 cycles/day). Typical owner projects $24,237/year. Freshtrax is a self-service shoe sanitization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds."
       />
       <SchemaMarkup schema={organizationSchema} />
       <SchemaMarkup schema={productSchema} />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "Freshtrax | Footwear Sanitization Kiosk for Fitness & Sports Venues",
-        description: "Freshtrax is a self-service footwear sanitization kiosk for fitness & sports venues. Medical-grade UVC + ozone eliminates odor in 90 seconds.",
+        title: "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
+        description: "Freshtrax is a self-service shoe sanitization kiosk for fitness & sports venues. UVC light and ozone eliminate odor in 90 seconds.",
         url: "https://getfreshtrax.com/",
         image: "https://getfreshtrax.com/images/shoe-sanitization-kiosk-hero.webp",
       })} />
       <SchemaMarkup schema={createVideoSchema({
         name: "Freshtrax Demo Video",
-        description: "12-second cinematic demo of Freshtrax footwear sanitization kiosk in action",
+        description: "12-second cinematic demo of Freshtrax shoe sanitization kiosk in action",
         thumbnailUrl: "https://getfreshtrax.com/images/shoe-sanitization-kiosk-hero.webp",
         uploadDate: "2026-03-20",
         duration: "PT12S",

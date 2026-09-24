@@ -27,7 +27,7 @@ export default function Terms() {
     <>
       <SEOHead
         title="Terms of Service | Freshtrax"
-        description="Terms governing use of the Freshtrax website and footwear sanitization kiosk services."
+        description="Terms governing use of the Freshtrax website and shoe sanitization kiosk services."
         canonicalUrl="https://getfreshtrax.com/terms/"
       />
       <SchemaMarkup
@@ -61,7 +61,7 @@ export default function Terms() {
               >
                 getfreshtrax.com
               </a>{" "}
-              or interacting with any Freshtrax footwear sanitization kiosk (&quot;Services&quot;).
+              or interacting with any Freshtrax shoe sanitization kiosk (&quot;Services&quot;).
             </p>
             <p className="text-white/70 font-body text-base leading-relaxed mb-10">
               By accessing our website or using our Services, you agree to be bound by these Terms. If you do
@@ -93,7 +93,7 @@ export default function Terms() {
                   1. About Freshtrax
                 </h2>
                 <p>
-                  Freshtrax is a footwear sanitization kiosk company that provides automated shoe-cleaning
+                  Freshtrax is a shoe sanitization kiosk company that provides automated shoe-cleaning
                   solutions for venues, businesses, and public spaces. Our services include the placement,
                   operation, and maintenance of Freshtrax kiosk units, as well as information and resources
                   available through our website at{" "}
@@ -143,7 +143,7 @@ export default function Terms() {
                   4. Kiosk Services
                 </h2>
                 <p className="mb-3">
-                  Our footwear sanitization kiosks are designed for public or semi-public use at partner
+                  Our shoe sanitization kiosks are designed for public or semi-public use at partner
                   venues. By using a Freshtrax kiosk, you acknowledge that:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">

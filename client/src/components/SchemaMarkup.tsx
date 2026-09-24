@@ -38,7 +38,7 @@ export const organizationSchema = {
   name: "Freshtrax",
   url: "https://getfreshtrax.com",
   logo: "https://getfreshtrax.com/images/freshtrax-logo-black.png",
-  description: "Medical-grade footwear sanitization kiosk for fitness venues",
+  description: "Three-stage shoe sanitization kiosk for fitness venues",
   foundingDate: "2024",
   contactPoint: {
     "@type": "ContactPoint",
@@ -60,9 +60,9 @@ export const organizationSchema = {
 export const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Freshtrax Footwear Sanitization Kiosk",
+  name: "Freshtrax Shoe Sanitization Kiosk",
   description:
-    "Medical-grade self-service footwear sanitization kiosk using UVC light, ozone, and antimicrobial vapor technology. Download the ROI Blueprint PDF for pricing and acquisition details.",
+    "Self-service shoe sanitization kiosk using UVC light, ozone, and antimicrobial vapor technology. Download the ROI Blueprint PDF for pricing and acquisition details.",
   image:
     "https://getfreshtrax.com/images/shoe-sanitization-kiosk-hero.webp",
   brand: {
@@ -97,7 +97,7 @@ export const localBusinessSchema = {
   url: "https://getfreshtrax.com",
   image:
     "https://getfreshtrax.com/images/freshtrax-logo-black.png",
-  description: "Medical-grade footwear sanitization kiosk for fitness venues",
+  description: "Three-stage shoe sanitization kiosk for fitness venues",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",

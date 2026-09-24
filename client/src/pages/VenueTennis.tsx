@@ -3,7 +3,7 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Tennis Clubs | Freshtrax",
-  seoDescription: "Tennis clubs attract members who value premium amenities. Freshtrax delivers medical-grade shoe sanitization in 90 seconds — a hygiene upgrade your members will notice.",
+  seoDescription: "Tennis clubs attract members who value premium amenities. Freshtrax delivers three-stage shoe sanitization in 90 seconds — a hygiene upgrade your members will notice.",
   canonicalUrl: "https://getfreshtrax.com/tennis-clubs/",
   venueName: "Tennis Clubs",
   venueSlug: "tennis-clubs",
