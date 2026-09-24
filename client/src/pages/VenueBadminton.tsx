@@ -3,14 +3,14 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Badminton Centers | Freshtrax",
-  seoDescription: "Badminton courts require dedicated indoor shoes — keep them clean with Freshtrax. Medical-grade sanitization in 90 seconds. Pilot-tested at a badminton facility.",
+  seoDescription: "Badminton courts require dedicated indoor shoes — keep them clean with Freshtrax. Three-stage sanitization in 90 seconds. Pilot-tested at a badminton facility.",
   canonicalUrl: "https://getfreshtrax.com/badminton-centers/",
   venueName: "Badminton Centers",
   venueSlug: "badminton-centers",
   headline: "The Shoe Sanitization Kiosk for Badminton Centers",
   subheadline: "Badminton requires dedicated indoor footwear — which means the same shoes are worn session after session on shared courts. Freshtrax keeps those shoes clean, your courts cleaner, and your members healthier.",
   problemIntro:
-    "Badminton culture already enforces a shoe-change at the door — players know to keep outdoor shoes off the court. That discipline is good for your floors. But those same indoor court shoes wear session after session without deep cleaning. Sweat, bacteria, and fungi accumulate inside the shoe and transfer onto the court surface every time a player steps on. Freshtrax was first piloted at a badminton facility and the results were clear: regular footwear sanitization measurably reduces the bacterial load on court surfaces and virtually eliminates odor complaints in the facility.",
+    "Badminton culture already enforces a shoe-change at the door — players know to keep outdoor shoes off the court. That discipline is good for your floors. But those same indoor court shoes wear session after session without deep cleaning. Sweat, bacteria, and fungi accumulate inside the shoe and transfer onto the court surface every time a player steps on. Freshtrax was first piloted at a badminton facility and the results were clear: regular shoe sanitization measurably reduces the bacterial load on court surfaces and virtually eliminates odor complaints in the facility.",
   benefits: [
     {
       title: "Complements your existing shoe-change policy",

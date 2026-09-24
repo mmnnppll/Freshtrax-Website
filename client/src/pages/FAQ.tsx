@@ -124,15 +124,15 @@ export default function FAQ() {
   return (
     <>
       <SEOHead
-        title="FAQ | Freshtrax Footwear Sanitization"
-        description="Frequently asked questions about Freshtrax footwear sanitization kiosk. Learn about product technology, financial performance, operations, and getting started."
+        title="FAQ | Freshtrax Shoe Sanitization"
+        description="Frequently asked questions about Freshtrax shoe sanitization kiosk. Learn about product technology, financial performance, operations, and getting started."
         canonicalUrl="https://getfreshtrax.com/faq/"
-        ogTitle="FAQ | Freshtrax Footwear Sanitization"
+        ogTitle="FAQ | Freshtrax Shoe Sanitization"
         ogDescription="Get answers to common questions about how Freshtrax works, profitability, maintenance, and becoming an owner."
       />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "FAQ | Freshtrax Footwear Sanitization",
-        description: "Frequently asked questions about Freshtrax footwear sanitization kiosk.",
+        title: "FAQ | Freshtrax Shoe Sanitization",
+        description: "Frequently asked questions about Freshtrax shoe sanitization kiosk.",
         url: "https://getfreshtrax.com/faq",
       })} />
       <SchemaMarkup schema={createFAQSchema(faqs.flatMap(category => category.questions.map(q => ({

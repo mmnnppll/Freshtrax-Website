@@ -29,7 +29,7 @@ const opportunities = [
     stat: "Zero",
     label: "direct competition",
     description:
-      "Inspired by proven Asian models. No comparable automated footwear hygiene product exists in North America.",
+      "Inspired by proven Asian models. No comparable automated shoe hygiene product exists in North America.",
     span: "md:col-span-1",
     featured: false,
   },
@@ -37,7 +37,7 @@ const opportunities = [
     stat: "$3.65–$4.35",
     label: "proven consumer behavior",
     description:
-      "Athletes invest in performance. Footwear hygiene is the natural, obvious next spend — per use.",
+      "Athletes invest in performance. Shoe hygiene is the natural, obvious next spend — per use.",
     span: "md:col-span-2",
     featured: false,
   },

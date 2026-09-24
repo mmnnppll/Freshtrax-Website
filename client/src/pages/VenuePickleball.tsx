@@ -3,12 +3,12 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const config: VenueConfig = {
   seoTitle: "Shoe Sanitization Kiosk for Pickleball Clubs | Freshtrax",
-  seoDescription: "Freshtrax keeps pickleball courts cleaner and members healthier. Self-service footwear sanitization in 90 seconds. Zero staff, passive revenue for your club.",
+  seoDescription: "Freshtrax keeps pickleball courts cleaner and members healthier. Self-service shoe sanitization in 90 seconds. Zero staff, passive revenue for your club.",
   canonicalUrl: "https://getfreshtrax.com/pickleball-clubs/",
   venueName: "Pickleball Clubs",
   venueSlug: "pickleball-clubs",
   headline: "The Shoe Sanitization Kiosk Built for Pickleball Clubs",
-  subheadline: "Pickleball courts see 50-100+ players daily. Freshtrax eliminates bacteria, fungi, and odor from athletic footwear in 90 seconds — protecting your members and your floor.",
+  subheadline: "Pickleball courts see 50-100+ players daily. Freshtrax eliminates bacteria, fungi, and odor from athletic shoes in 90 seconds — protecting your members and your floor.",
   problemIntro:
     "Pickleball is the fastest-growing sport in North America, with over 8 million players and counting. That growth creates a hygiene reality most clubs don't talk about: dozens of players in close proximity, sharing the same court surface session after session. Athlete's foot, fungal nail infections, and foot odor complaints are common byproducts of high-traffic shared courts. The bacteria and fungi responsible don't stay on the floor — they travel in and out on every pair of shoes that walks through your door.",
   benefits: [
@@ -41,7 +41,7 @@ const config: VenueConfig = {
     },
     {
       title: "Protects your court investment",
-      description: "Cleaner footwear means less debris, less grime, and less wear on your court surface. The kiosk pays for itself while extending the life of your courts.",
+      description: "Cleaner shoes mean less debris, less grime, and less wear on your court surface. The kiosk pays for itself while extending the life of your courts.",
     },
     {
       title: "No inventory, no consumables, no maintenance headaches",

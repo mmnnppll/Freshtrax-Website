@@ -24,7 +24,7 @@ export default function Privacy() {
     <>
       <SEOHead
         title="Privacy Policy | Freshtrax"
-        description="How Freshtrax collects, uses, discloses, and safeguards your information when you visit our website or interact with our footwear sanitization kiosks."
+        description="How Freshtrax collects, uses, discloses, and safeguards your information when you visit our website or interact with our shoe sanitization kiosks."
         canonicalUrl="https://getfreshtrax.com/privacy/"
       />
       <SchemaMarkup
@@ -53,7 +53,7 @@ export default function Privacy() {
             <p className="text-white/70 font-body text-base leading-relaxed mb-10">
               Freshtrax (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information
-              when you visit our website or interact with our footwear sanitization kiosk services.
+              when you visit our website or interact with our shoe sanitization kiosk services.
             </p>
 
             {/* Table of Contents */}

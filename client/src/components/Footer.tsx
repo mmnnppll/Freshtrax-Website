@@ -63,7 +63,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-white/60 text-xs font-body mt-3 max-w-xs leading-relaxed">
-              Medical-grade footwear sanitization. Fully automated. Zero competition.
+              Three-stage shoe sanitization. Fully automated. Zero competition.
             </p>
             <a
               href="tel:+17788988063"

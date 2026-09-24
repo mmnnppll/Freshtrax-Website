@@ -47,7 +47,7 @@ export const OFFERS = {
           label: "Market Intelligence",
           headline: "See the $1B market breakdown",
           description:
-                  "Deep-dive into the $1B+ athletic footwear hygiene market. Includes venue-by-venue opportunity analysis and competitive landscape.",
+                  "Deep-dive into the $1B+ athletic shoe hygiene market. Includes venue-by-venue opportunity analysis and competitive landscape.",
           pdfName: "Freshtrax Market Breakdown.pdf",
           pdfUrl: "/Freshtrax-roi-blueprint.pdf",
           ctaText: "Get the breakdown",

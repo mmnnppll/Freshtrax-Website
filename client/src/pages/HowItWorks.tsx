@@ -75,7 +75,7 @@ export default function HowItWorks() {
       targets:
         "Targets bacteria and fungi in hard-to-reach areas within shoe materials.",
       effectiveness:
-        "Safe formulation used in medical-grade sterilization protocols. Complements UVC and Ozone for comprehensive coverage.",
+        "Safe formulation that complements UVC and Ozone for comprehensive coverage.",
       image:
         "/images/antimicrobial-fog-shoe-sanitization.jpg",
     },
@@ -90,7 +90,7 @@ export default function HowItWorks() {
     {
       icon: Footprints,
       title: "All Shoe Types",
-      description: "Works on athletic, casual, and specialty footwear",
+      description: "Works on athletic, casual, and specialty shoes",
     },
     {
       icon: BarChart3,
@@ -100,7 +100,7 @@ export default function HowItWorks() {
     {
       icon: CheckCircle,
       title: "Safe & Effective",
-      description: "Medical-grade sanitization without harsh chemicals",
+      description: "Thorough sanitization without harsh chemicals",
     },
   ];
 
@@ -128,22 +128,22 @@ export default function HowItWorks() {
     {
       question: "What's the difference between this and shoe sprays?",
       answer:
-        "Sprays only mask odors temporarily. Freshtrax eliminates odor at the molecular level and kills pathogens throughout the shoe, not just on the surface. Clinical studies confirm the effectiveness of UVC and ozone sterilization.",
+        "Sprays only mask odors temporarily. Freshtrax eliminates odor at the molecular level and kills pathogens throughout the shoe, not just on the surface. Clinical studies confirm the effectiveness of UVC and ozone sanitization.",
     },
   ];
 
   return (
     <>
       <SEOHead
-        title="How It Works | Freshtrax Footwear Sanitization"
-        description="Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology."
+        title="How It Works | Freshtrax Shoe Sanitization"
+        description="Learn how Freshtrax sanitizes athletic shoes in 90 seconds using UVC light, ozone, and antimicrobial vapor technology."
         canonicalUrl="https://getfreshtrax.com/how-it-works/"
-        ogTitle="How It Works | Freshtrax Footwear Sanitization"
+        ogTitle="How It Works | Freshtrax Shoe Sanitization"
         ogDescription="Discover the 4-step process: SELECT, INSERT, REFRESH, UNLOAD. Backed by peer-reviewed clinical research."
       />
       <SchemaMarkup schema={createWebPageSchema({
-        title: "How It Works | Freshtrax Footwear Sanitization",
-        description: "Learn how Freshtrax sanitizes athletic shoes in 90 seconds using medical-grade UVC light, ozone, and antimicrobial vapor technology.",
+        title: "How It Works | Freshtrax Shoe Sanitization",
+        description: "Learn how Freshtrax sanitizes athletic shoes in 90 seconds using UVC light, ozone, and antimicrobial vapor technology.",
         url: "https://getfreshtrax.com/how-it-works",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -167,7 +167,7 @@ export default function HowItWorks() {
               </h1>
               <p className="text-xl text-white/70 mb-8">
                 Freshtrax is a shoe sanitization machine for gyms, fitness centers, and sports venues.
-                Three technologies work together to eliminate bacteria, fungi, and odor from athletic footwear in 90 seconds.
+                Three technologies work together to eliminate bacteria, fungi, and odor from athletic shoes in 90 seconds.
               </p>
             </motion.div>
           </div>

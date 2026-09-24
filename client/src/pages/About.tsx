@@ -16,14 +16,14 @@ export default function About() {
     <>
       <SEOHead
         title="About Freshtrax | Our Mission & Vision"
-        description="Learn about Freshtrax's mission to revolutionize footwear hygiene. Founded by Marvin N., we're committed to eliminating bacteria and odor from athletic shoes using medical-grade technology."
+        description="Learn about Freshtrax's mission to revolutionize shoe hygiene. Founded by Marvin N., we're committed to eliminating bacteria and odor from athletic shoes using UVC light, ozone, and antimicrobial vapor."
         canonicalUrl="https://getfreshtrax.com/about/"
         ogTitle="About Freshtrax | Our Mission & Vision"
         ogDescription="Discover the story behind Freshtrax and our commitment to relentless execution, customer obsession, and innovation."
       />
       <SchemaMarkup schema={createWebPageSchema({
         title: "About Freshtrax | Our Mission & Vision",
-        description: "Learn about Freshtrax's mission to revolutionize footwear hygiene. Founded by Marvin N.",
+        description: "Learn about Freshtrax's mission to revolutionize shoe hygiene. Founded by Marvin N.",
         url: "https://getfreshtrax.com/about",
       })} />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -99,7 +99,7 @@ export default function About() {
                     profitably for over a decade across Japan, South Korea, and China
                     — and a complete absence of it anywhere in North America. I worked
                     directly with the manufacturer to adapt the technology for
-                    footwear. The result is Freshtrax: a three-stage, medical-grade
+                    footwear. The result is Freshtrax: a three-stage
                     sanitization kiosk that eliminates what sprays can't reach, in
                     90 seconds.
                   </p>
