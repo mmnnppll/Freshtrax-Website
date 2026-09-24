@@ -25,7 +25,7 @@ function DiscoveryCallCard() {
   const { openBookCall } = useBookCall();
   return (
     <div style={{ background: "linear-gradient(180deg, #2a1810, #141414)", border: `1px solid ${FT.orange}66`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
-      <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
+      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
       <h4 style={{ fontSize: 17, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>Book a 30-min discovery call</h4>
       <ul style={{ padding: 0, margin: "0 0 20px", listStyle: "none" }}>
         {["See the machine live + get real numbers", "No sales pressure — just the facts"].map((item) => (
@@ -48,13 +48,16 @@ function DiscoveryCallCard() {
   );
 }
 
-/** Parse inline markdown — bold and links — into React nodes */
+/** Parse inline markdown — bold, italic and links — into React nodes */
 function renderInline(text: string): React.ReactNode[] {
-  // Split on **bold** and [link text](url) patterns
-  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  // Split on **bold**, *italic* and [link text](url) patterns
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\)|\*[^*\s][^*\n]*?\*)/g);
   return parts.map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return <strong key={i} style={{ color: FT.text, fontWeight: 600 }}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.length > 2 && part.startsWith("*") && part.endsWith("*")) {
+      return <em key={i}>{part.slice(1, -1)}</em>;
     }
     const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (linkMatch) {
@@ -81,6 +84,39 @@ function ArticleContent({ content }: { content: string }) {
   return (
     <div style={{ color: FT.muted, lineHeight: 1.8, fontSize: 16 }}>
       {paragraphs.map((para, i) => {
+        if (para.trim() === "---") {
+          return <hr key={i} style={{ border: "none", borderTop: `1px solid ${FT.border}`, margin: "32px 0" }} />;
+        }
+        if (para.trim().startsWith("|")) {
+          const rows = para
+            .trim()
+            .split("\n")
+            .filter((l) => l.trim().startsWith("|") && !/^\|[\s:|-]+\|$/.test(l.trim()))
+            .map((l) => l.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim()));
+          const [head, ...body] = rows;
+          return (
+            <div key={i} style={{ overflowX: "auto", margin: "20px 0", border: `1px solid ${FT.border}`, borderRadius: 8 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14, lineHeight: 1.5 }}>
+                <thead>
+                  <tr>
+                    {head.map((c, j) => (
+                      <th key={j} style={{ textAlign: "left", padding: "10px 12px", color: FT.text, borderBottom: `1px solid ${FT.border}` }}>{renderInline(c)}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {body.map((r, k) => (
+                    <tr key={k}>
+                      {r.map((c, j) => (
+                        <td key={j} style={{ padding: "10px 12px", borderBottom: `1px solid ${FT.border}`, verticalAlign: "top" }}>{renderInline(c)}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
         if (para.startsWith("# ")) {
           return <h2 key={i} style={{ fontSize: 28, fontWeight: 700, color: FT.text, marginTop: 40, marginBottom: 16 }}>{para.replace("# ", "")}</h2>;
         }
@@ -189,13 +225,13 @@ export default function BlogArticle() {
 
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" style={{ padding: "80px 40px 0", maxWidth: 1280, margin: "0 auto" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, flexWrap: "wrap" }}>
-              <Link href="/blog" asChild><a style={{ color: FT.dim, textDecoration: "none" }}>JOURNAL</a></Link>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, flexWrap: "wrap" }}>
+              <Link href="/blog" asChild><a style={{ color: FT.dim, textDecoration: "none", display: "inline-block", padding: "10px 0" }}>JOURNAL</a></Link>
               <span style={{ color: FT.border }}>/</span>
               {pillar && (
                 <>
                   <Link href={`/blog/pillar/${pillar.slug}`} asChild>
-                    <a style={{ color: FT.orange, textDecoration: "none" }}>{pillar.name}</a>
+                    <a style={{ color: FT.orange, textDecoration: "none", display: "inline-block", padding: "10px 0" }}>{pillar.name}</a>
                   </Link>
                   <span style={{ color: FT.border }}>/</span>
                 </>
@@ -213,7 +249,7 @@ export default function BlogArticle() {
             <article>
               {/* Tag + title */}
               {pillar && (
-                <span style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.orange, background: `${FT.orange}1a`, padding: "4px 10px", borderRadius: 4, display: "inline-block", marginBottom: 16 }}>
+                <span style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.orange, background: `${FT.orange}1a`, padding: "4px 10px", borderRadius: 4, display: "inline-block", marginBottom: 16 }}>
                   {pillar.name}
                 </span>
               )}
@@ -232,7 +268,7 @@ export default function BlogArticle() {
 
               {/* Hero image */}
               <div style={{ borderRadius: 12, overflow: "hidden", marginBottom: 40, height: 360, background: FT.cardHi }}>
-                <img src={article.imageUrl} alt={article.imageAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src={article.imageUrl} alt={article.imageAlt} fetchPriority="high" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
 
               {/* Body */}
@@ -240,10 +276,10 @@ export default function BlogArticle() {
 
               {/* Tags */}
               <div style={{ marginTop: 48, paddingTop: 24, borderTop: `1px solid ${FT.border}` }}>
-                <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.dim, marginBottom: 12 }}>Tags</p>
+                <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.dim, marginBottom: 12 }}>Tags</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {article.tags.map((tag) => (
-                    <span key={tag} style={{ fontSize: 11, color: FT.muted, background: FT.card, border: `1px solid ${FT.border}`, borderRadius: 4, padding: "4px 10px" }}>
+                    <span key={tag} style={{ fontSize: 12, color: FT.muted, background: FT.card, border: `1px solid ${FT.border}`, borderRadius: 4, padding: "4px 10px" }}>
                       {tag}
                     </span>
                   ))}
@@ -253,7 +289,7 @@ export default function BlogArticle() {
               {/* Sibling strip (mobile — inside article) */}
               {siblings.length > 0 && (
                 <div className="sibling-strip-mobile" style={{ display: "none", marginTop: 48, paddingTop: 24, borderTop: `1px solid ${FT.border}` }}>
-                  <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>
+                  <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>
                     ★ More in {pillar?.name}
                   </p>
                   {siblings.map((s) => (
@@ -267,7 +303,7 @@ export default function BlogArticle() {
                   ))}
                   {pillar && (
                     <Link href={`/blog/pillar/${pillar.slug}`} asChild>
-                      <a style={{ display: "block", marginTop: 12, fontSize: 12, color: FT.dim, textDecoration: "none" }}
+                      <a style={{ display: "block", marginTop: 4, padding: "10px 0", fontSize: 12, color: FT.dim, textDecoration: "none" }}
                         onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                         onMouseLeave={(e) => (e.currentTarget.style.color = FT.dim)}>
                         ↑ Up to pillar page
@@ -286,7 +322,7 @@ export default function BlogArticle() {
               {/* Sibling cluster */}
               {siblings.length > 0 && pillar && (
                 <div style={{ background: FT.card, border: `1px solid ${FT.border}`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
-                  <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>
+                  <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>
                     ★ Cluster · {pillar.name}
                   </p>
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -305,7 +341,7 @@ export default function BlogArticle() {
                   </ul>
                   <div style={{ borderTop: `1px solid ${FT.border}`, paddingTop: 12, marginTop: 4 }}>
                     <Link href={`/blog/pillar/${pillar.slug}`} asChild>
-                      <a style={{ fontSize: 12, color: FT.dim, textDecoration: "none" }}
+                      <a style={{ display: "inline-block", padding: "10px 0", fontSize: 12, color: FT.dim, textDecoration: "none" }}
                         onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                         onMouseLeave={(e) => (e.currentTarget.style.color = FT.dim)}>
                         ↑ Up to pillar page
@@ -321,7 +357,7 @@ export default function BlogArticle() {
 
           {/* Bottom CTA */}
           <section style={{ background: "linear-gradient(180deg, #2a1810 0%, #141414 100%)", borderTop: `1px solid ${FT.border}`, padding: "64px 40px", textAlign: "center" }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 12 }}>★ Ready to own a Freshtrax machine?</p>
+            <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 12 }}>★ Ready to own a Freshtrax machine?</p>
             <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 700, marginBottom: 16, maxWidth: 480, margin: "0 auto 16px" }}>
               See the real numbers in a 30-min call
             </h2>

@@ -99,8 +99,8 @@ export default function CityLanding() {
           </div>
           <div className="container relative z-10 max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
               className="inline-flex items-center gap-2 mb-5"
             >
@@ -110,24 +110,24 @@ export default function CityLanding() {
               </span>
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.7, delay: 0.25 }}
               className="font-display font-bold text-4xl md:text-5xl leading-tight mb-5"
             >
               {city.headline}
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-white/70 text-lg mb-8 leading-relaxed font-body"
             >
               {city.intro}
             </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.55 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -168,7 +168,7 @@ export default function CityLanding() {
         </section>
 
         {/* ── LOCAL MARKET ── */}
-        <section className="container py-20 max-w-3xl mx-auto">
+        <section className="container py-14 md:py-20 max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ export default function CityLanding() {
                 </p>
                 <button
                   onClick={openBookCall}
-                  className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors"
+                  className="inline-flex items-center gap-2 py-2 text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors"
                 >
                   Arrange a pilot visit <ArrowRight size={14} />
                 </button>
@@ -245,7 +245,7 @@ export default function CityLanding() {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="container py-20 max-w-3xl mx-auto">
+        <section className="container py-14 md:py-20 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">
             Freshtrax in {city.name} — common questions
           </h2>
@@ -258,7 +258,7 @@ export default function CityLanding() {
 
         {/* ── CTA ── */}
         <section className="border-t border-white/5">
-          <div className="container py-20 text-center max-w-2xl mx-auto">
+          <div className="container py-14 md:py-20 text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Put a Freshtrax on your {city.name} floor
             </h2>

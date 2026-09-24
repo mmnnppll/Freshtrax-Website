@@ -157,8 +157,8 @@ export default function HowItWorks() {
           </div>
           <div className="container relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               transition={{ duration: 0.8 }}
               className="max-w-3xl"
             >
@@ -174,11 +174,11 @@ export default function HowItWorks() {
         </section>
 
         {/* 4-Step Process */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
@@ -194,7 +194,7 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-16"
+              className="mb-10 md:mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">The Process</h2>
               <p className="text-white/60 text-lg">
@@ -234,13 +234,13 @@ export default function HowItWorks() {
         </section>
 
         {/* Technology Deep-Dive */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-16"
+              className="mb-10 md:mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">The Science</h2>
               <p className="text-white/60 text-lg">
@@ -308,13 +308,13 @@ export default function HowItWorks() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-16"
+              className="mb-10 md:mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Why Freshtrax</h2>
               <p className="text-white/60 text-lg">
@@ -344,13 +344,13 @@ export default function HowItWorks() {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-16"
+              className="mb-10 md:mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Frequently Asked</h2>
               <p className="text-white/60 text-lg">
@@ -385,7 +385,7 @@ export default function HowItWorks() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -408,7 +408,7 @@ export default function HowItWorks() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

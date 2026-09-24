@@ -151,8 +151,8 @@ export default function FAQ() {
 
           <div className="container relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -166,15 +166,15 @@ export default function FAQ() {
         </section>
 
         {/* FAQ Sections */}
-        <section className="py-20">
+        <section className="py-14 md:py-20">
           <div className="container max-w-4xl">
             {faqs.map((section, sectionIdx) => (
               <motion.div
                 key={sectionIdx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
                 transition={{ delay: sectionIdx * 0.1 }}
-                className="mb-16"
+                className="mb-10 md:mb-16"
               >
                 <h2 className="text-3xl font-bold mb-8 text-orange-500">
                   {section.category}
@@ -190,7 +190,7 @@ export default function FAQ() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container text-center">
             <h2 className="text-4xl font-bold mb-6">Still Have Questions?</h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">

@@ -82,7 +82,7 @@ export default function EconomicsSection() {
                   : "bg-[#111]/60 backdrop-blur-sm border border-white/[0.06] hover:border-orange-500/20"
               }`}
             >
-              <p className="text-white/40 text-[11px] font-body uppercase tracking-wide mb-3 relative z-10">
+              <p className="text-white/40 text-xs font-body uppercase tracking-wide mb-3 relative z-10">
                 {metric.label}
               </p>
               <p className={`font-mono text-xl md:text-2xl font-bold relative z-10 ${

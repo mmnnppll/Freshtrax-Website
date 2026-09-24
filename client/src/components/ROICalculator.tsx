@@ -38,7 +38,7 @@ export default function ROICalculator() {
     cycles < 15 ? "Conservative territory" : cycles < 25 ? "Base case territory" : "Optimistic territory";
 
   return (
-    <section id="roi-calculator" className="py-20 border-t border-white/5" aria-label="ROI Calculator">
+    <section id="roi-calculator" className="py-14 md:py-20 border-t border-white/5" aria-label="ROI Calculator">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,13 +77,13 @@ export default function ROICalculator() {
               aria-label="Cycles per day"
               className="[&_[data-slot=slider-range]]:bg-orange-600 [&_[data-slot=slider-thumb]]:border-orange-600"
             />
-            <div className="relative mt-3 h-5 text-xs text-white/50">
+            <div className="relative mt-1 h-10 text-xs text-white/60">
               {SCENARIO_MARKS.map((mark) => (
                 <button
                   key={mark.cycles}
                   type="button"
                   onClick={() => setCycles(mark.cycles)}
-                  className={`absolute whitespace-nowrap hover:text-orange-400 transition-colors ${
+                  className={`absolute top-0 h-10 flex items-center whitespace-nowrap hover:text-orange-400 transition-colors ${
                     mark.cycles === 30 ? "-translate-x-full" : "-translate-x-1/2"
                   } ${cycles === mark.cycles ? "text-orange-400 font-semibold" : ""}`}
                   style={{ left: `${((mark.cycles - 5) / 25) * 100}%` }}

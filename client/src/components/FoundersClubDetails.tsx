@@ -16,7 +16,7 @@ const founderComparison = [
 
 export default function FoundersClubDetails() {
   return (
-    <section className="py-20 border-t border-white/5">
+    <section className="py-14 md:py-20 border-t border-white/5">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,35 @@ export default function FoundersClubDetails() {
           className="mb-12"
         >
           <h3 className="text-2xl font-bold mb-6">Your Structural Advantage as a Founding Owner</h3>
-          <div className="overflow-hidden rounded-lg border border-white/10">
+          {/* Phones: one card per scenario, so no column is hidden off-screen */}
+          <div className="md:hidden space-y-3">
+            {founderComparison.map((row, idx) => (
+              <div
+                key={idx}
+                className={`rounded-lg border p-4 ${
+                  row.highlight ? "border-orange-500/30 bg-orange-500/10" : "border-white/10 bg-white/5"
+                }`}
+              >
+                <p className="font-semibold text-white/90 mb-3">{row.scenario}</p>
+                <dl className="grid grid-cols-3 gap-2 text-sm">
+                  <div>
+                    <dt className="text-white/55 text-xs mb-1">Standard</dt>
+                    <dd className="text-white/80">{row.standard}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-orange-400/80 text-xs mb-1">Founder</dt>
+                    <dd className="text-orange-400 font-semibold">{row.founder}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-green-400/80 text-xs mb-1">Advantage</dt>
+                    <dd className="text-green-400 font-semibold">{row.diff}</dd>
+                  </div>
+                </dl>
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden md:block overflow-hidden rounded-lg border border-white/10">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>

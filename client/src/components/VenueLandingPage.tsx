@@ -75,8 +75,8 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
 
           <div className="container relative z-10 max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-flex items-center gap-2 mb-5"
             >
@@ -87,8 +87,8 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-5 text-white"
             >
@@ -96,8 +96,8 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
               className="text-white/70 text-lg md:text-xl mb-8 leading-relaxed font-body max-w-2xl"
             >
@@ -105,8 +105,8 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -135,8 +135,8 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
               {config.stats.map((stat, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ y: 16 }}
+                  whileInView={{ y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
@@ -149,7 +149,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
         </section>
 
         {/* ── THE PROBLEM ──────────────────────────────────────────────────── */}
-        <section className="container py-20 max-w-3xl mx-auto">
+        <section className="container py-14 md:py-20 max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -168,7 +168,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
 
         {/* ── BENEFITS ─────────────────────────────────────────────────────── */}
         <section className="bg-white/[0.02] border-y border-white/10">
-          <div className="container py-20">
+          <div className="container py-14 md:py-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +202,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
         </section>
 
         {/* ── FOR VENUE OPERATORS ──────────────────────────────────────────── */}
-        <section className="container py-20 max-w-5xl mx-auto">
+        <section className="container py-14 md:py-20 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
         {/* ── FAQ ──────────────────────────────────────────────────────────── */}
         {config.faqs.length > 0 && (
           <section className="bg-white/[0.02] border-y border-white/10">
-            <div className="container py-20 max-w-3xl mx-auto">
+            <div className="container py-14 md:py-20 max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
         )}
 
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
-        <section className="container py-24 text-center max-w-2xl mx-auto">
+        <section className="container py-16 md:py-24 text-center max-w-2xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

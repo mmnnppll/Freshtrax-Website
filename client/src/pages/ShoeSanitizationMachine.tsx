@@ -228,8 +228,8 @@ export default function ShoeSanitizationMachine() {
 
             <div className="container relative z-10">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ y: 30 }}
+                animate={{ y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="max-w-2xl"
               >
@@ -290,13 +290,13 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── HOW IT WORKS ── */}
-          <section className="py-24 border-t border-white/5">
+          <section className="py-16 md:py-24 border-t border-white/5">
             <div className="container">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mb-16"
+                className="mb-10 md:mb-16"
               >
                 <p className="text-orange-500 text-sm font-semibold uppercase tracking-widest mb-3">The Technology</p>
                 <h2 className="text-4xl font-bold mb-4">Four Stages. One 90-Second Cycle.</h2>
@@ -354,13 +354,13 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── VENUE FIT ── */}
-          <section className="py-24 border-t border-white/5 bg-white/[0.01]">
+          <section className="py-16 md:py-24 border-t border-white/5 bg-white/[0.01]">
             <div className="container">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mb-16"
+                className="mb-10 md:mb-16"
               >
                 <p className="text-orange-500 text-sm font-semibold uppercase tracking-widest mb-3">Venue Fit</p>
                 <h2 className="text-4xl font-bold mb-4">Which Venues Get the Most from a Shoe Sanitization Machine</h2>
@@ -400,7 +400,7 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── MACHINE + SPECS ── */}
-          <section className="py-24 border-t border-white/5">
+          <section className="py-16 md:py-24 border-t border-white/5">
             <div className="container">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
@@ -450,7 +450,7 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── OWN A MACHINE ── */}
-          <section className="py-24 border-t border-white/5 bg-gradient-to-b from-orange-500/5 to-transparent">
+          <section className="py-16 md:py-24 border-t border-white/5 bg-gradient-to-b from-orange-500/5 to-transparent">
             <div className="container">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <motion.div
@@ -507,7 +507,7 @@ export default function ShoeSanitizationMachine() {
                     <div className="mt-6 pt-6 border-t border-white/10">
                       <Link
                         href="/owners"
-                        className="text-orange-400 hover:text-orange-300 text-sm font-semibold inline-flex items-center gap-1 transition-colors"
+                        className="py-2 text-orange-400 hover:text-orange-300 text-sm font-semibold inline-flex items-center gap-1 transition-colors"
                       >
                         See full financial projections
                         <ArrowRight size={14} />
@@ -520,7 +520,7 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── SLOGAN BREAK ── */}
-          <section className="border-t border-white/5 py-24 bg-gradient-to-br from-[#0a0a0a] via-orange-950/20 to-[#0a0a0a] relative overflow-hidden">
+          <section className="border-t border-white/5 py-16 md:py-24 bg-gradient-to-br from-[#0a0a0a] via-orange-950/20 to-[#0a0a0a] relative overflow-hidden">
             {/* Subtle radial glow */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
               <div className="w-[600px] h-[300px] bg-orange-500/10 rounded-full blur-3xl" />
@@ -543,7 +543,7 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── FAQ ── */}
-          <section className="py-24 border-t border-white/5">
+          <section className="py-16 md:py-24 border-t border-white/5">
             <div className="container">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -565,7 +565,7 @@ export default function ShoeSanitizationMachine() {
           </section>
 
           {/* ── FINAL CTA ── */}
-          <section className="py-24 border-t border-white/5">
+          <section className="py-16 md:py-24 border-t border-white/5">
             <div className="container text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

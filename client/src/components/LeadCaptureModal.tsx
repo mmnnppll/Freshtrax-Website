@@ -364,7 +364,7 @@ export default function LeadCaptureModal({
                             </button>
                           </div>
 
-                          <p className="text-white/20 text-[11px] font-body mt-4 text-center">
+                          <p className="text-white/20 text-xs font-body mt-4 text-center">
                             No spam. Unsubscribe anytime. Your data stays
                             private.
                           </p>
