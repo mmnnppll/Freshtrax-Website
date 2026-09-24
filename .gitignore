@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output (Netlify builds from source on every deploy)
+dist/
+
+# Local tooling logs and editor state
+.manus-logs/
+*.log
+.DS_Store
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Netlify CLI
+.netlify/
