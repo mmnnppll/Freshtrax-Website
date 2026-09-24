@@ -5,8 +5,8 @@
  * Requires NOTION_API_KEY in the Netlify environment, and the integration
  * must be connected to the CRM database in Notion.
  *
- * Never throws: a Notion outage must not break lead emails. Callers fire
- * this and move on; failures are logged for the function log.
+ * Never throws: a Notion outage must not break lead emails. Resolves to
+ * true when the record was created, false otherwise (failures are logged).
  */
 
 const NOTION_CRM_DB_ID = process.env.NOTION_CRM_DB_ID || '3d394b2fe19b472bbb2d3673be2e73bf';
@@ -40,7 +40,7 @@ const VENUE_TYPE_MAP = {
 async function createCrmLead(lead) {
   if (!process.env.NOTION_API_KEY) {
     console.warn('NOTION_API_KEY not set — skipping CRM write');
-    return;
+    return false;
   }
 
   const today = new Date().toISOString().split('T')[0];
@@ -80,9 +80,12 @@ async function createCrmLead(lead) {
     });
     if (!res.ok) {
       console.error('Notion CRM write failed:', res.status, await res.text());
+      return false;
     }
+    return true;
   } catch (error) {
     console.error('Notion CRM write error:', error);
+    return false;
   }
 }
 
