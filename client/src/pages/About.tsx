@@ -109,7 +109,9 @@ export default function About() {
                     <div className="flex gap-5 p-5 items-start">
                       <div className="flex-shrink-0 w-44 rounded-lg overflow-hidden border border-white/10 shadow-lg">
                         <img
-                          src="/termination-letter.jpg"
+                          loading="lazy"
+                          decoding="async"
+                          src="/termination-letter.webp"
                           alt="Termination letter — the moment that started Freshtrax"
                           className="w-full h-auto object-cover"
                         />
@@ -147,7 +149,7 @@ export default function About() {
                 {/* Factory photo */}
                 <div className="w-full rounded-xl overflow-hidden border border-white/10">
                   <img
-                    src="/founder-factory.jpg"
+                    src="/founder-factory.webp"
                     alt="Marvin at the factory sourcing the Freshtrax kiosk technology"
                     className="w-full h-auto object-cover"
                   />

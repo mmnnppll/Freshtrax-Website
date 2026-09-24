@@ -113,6 +113,8 @@ export default function FoundersClub() {
               className="hidden lg:flex relative items-center justify-center overflow-hidden"
             >
               <img
+                loading="lazy"
+                decoding="async"
                 src={MACHINE_IMG}
                 alt="Freshtrax Kiosk Machine In Use"
                 className="w-full h-full object-cover max-h-[520px]"

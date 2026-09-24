@@ -38,6 +38,7 @@ function ArticleCard({ article }: { article: typeof blogArticles[0] }) {
       >
         <div style={{ height: 180, overflow: "hidden", background: FT.cardHi, flexShrink: 0 }}>
           <img
+            decoding="async"
             src={article.imageUrl}
             alt={article.imageAlt}
             style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 300ms ease-out" }}
