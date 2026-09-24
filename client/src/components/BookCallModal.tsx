@@ -75,6 +75,15 @@ export default function BookCallModal({ open, onClose }: BookCallModalProps) {
     onClose();
   };
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+
   const handleStep1Submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!venueType || !traffic) return;

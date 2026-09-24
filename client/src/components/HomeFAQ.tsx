@@ -18,7 +18,7 @@ const homeFAQs = [
   {
     question: "What's the realistic ROI, and how quickly does it pay off?",
     answer:
-      "At 20 cycles/day (base case), owners project $24,237/year net. At 30 cycles/day (optimistic), that's $36,830/year. Most owners cover their machine cost within 6–8 months. The full math — conservative, base, and optimistic scenarios — is in the Blueprint PDF.",
+      "At 20 cycles/day (base case), owners project $24,237/year net. At 30 cycles/day (optimistic), that's $36,830/year. The machine pays for itself in about 3.9 months at the base case, or about 8.1 months at the conservative case (10 cycles/day). The full math — conservative, base, and optimistic scenarios — is in the Blueprint PDF.",
   },
   {
     question: "How long does it take from purchase to deployment?",

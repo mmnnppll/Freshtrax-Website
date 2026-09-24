@@ -122,7 +122,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 font-body"
               >
                 <CalendarDays size={16} />
-                Book a call
+                Book a 30-Minute Call
               </button>
             </motion.div>
           </div>
@@ -295,7 +295,7 @@ export default function VenueLandingPage({ config }: { config: VenueConfig }) {
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 font-body"
               >
                 <CalendarDays size={16} />
-                Book a call
+                Book a 30-Minute Call
               </button>
             </div>
           </motion.div>

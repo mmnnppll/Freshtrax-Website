@@ -15,6 +15,7 @@ import ResponsibilityBreakdown from "@/components/ResponsibilityBreakdown";
 import ROICalculator from "@/components/ROICalculator";
 import OwnershipPaths from "@/components/OwnershipPaths";
 import BlueprintScrollTrigger from "@/components/BlueprintScrollTrigger";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 import FoundersClubDetails from "@/components/FoundersClubDetails";
 import OwnerFAQs from "@/components/OwnerFAQs";
 
@@ -33,14 +34,14 @@ export default function Owners() {
         description="Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237). ROI Calculator, Founder's Club benefits, and partnership opportunities."
         canonicalUrl="https://getfreshtrax.com/owners/"
         ogTitle="Shoe Sanitization Kiosk for Sale | Freshtrax Founders Club"
-        ogDescription="Make $3,150–$10,000+ monthly revenue. Access to $3,800 in incentives through the Founder's Club."
+        ogDescription="Make up to $36,830/year per kiosk (optimistic case; typical owner projects $24,237/year). Founder's Club: $79/month locked for life, 0% service fee on your founding machine."
       />
       <SchemaMarkup schema={createWebPageSchema({
         title: "Shoe Sanitization Kiosk for Sale | Freshtrax Founders Club",
         description: "Join the Freshtrax network as an owner. Generate up to $36,830/year per kiosk (typical: $24,237).",
         url: "https://getfreshtrax.com/owners/",
       })} />
-      <BlueprintScrollTrigger />
+      <BlueprintScrollTrigger afterSelector="#founders-club" />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
       <ParticleField />
       <Navbar />
@@ -70,19 +71,19 @@ export default function Owners() {
                   Run a shoe sanitization kiosk business in fitness centers, pickleball clubs, and sports venues.
                   Owners can generate up to $36,830/year per machine (typical: $24,237) with zero staff and zero inventory.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
                   <button
                     onClick={() => openModal(OFFERS.roiBlueprint)}
-                    className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="whitespace-nowrap px-7 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Get the 8-Month ROI Blueprint, Free
+                    Get the Free ROI Blueprint
                     <ArrowRight size={18} />
                   </button>
                   <button
                     onClick={openBookCall}
-                    className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
+                    className="whitespace-nowrap px-7 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Book a call with us
+                    Book a 30-Minute Call
                     <ArrowRight size={18} />
                   </button>
                 </div>
@@ -215,7 +216,7 @@ export default function Owners() {
                 },
                 {
                   num: "2",
-                  title: "Book a Call",
+                  title: "Book a 30-Minute Call",
                   desc: "Talk to Marvin about your venue, market, and timeline.",
                 },
                 {
@@ -243,6 +244,7 @@ export default function Owners() {
         </section>
       </main>
       <Footer />
+      <MobileStickyCTA />
     </div>
     </>
   );

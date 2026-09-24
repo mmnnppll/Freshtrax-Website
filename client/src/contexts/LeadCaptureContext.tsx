@@ -11,7 +11,7 @@ export const OFFERS = {
           label: "Owner Intelligence",
           headline: "Get the 8-Month ROI Blueprint",
           description:
-                  "I will show you exactly the steps on how to generate $3,150+ monthly revenue from a single kiosk.",
+                  "Machine pricing, all three scenarios, and the month-by-month math — including the conservative case that pays back in 8 months.",
           pdfName: "Freshtrax 8-Month ROI Blueprint.pdf",
           pdfUrl: "/Freshtrax-roi-blueprint.pdf",
           ctaText: "Get the blueprint now",

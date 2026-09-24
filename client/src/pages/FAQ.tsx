@@ -38,8 +38,8 @@ const faqs = [
     category: "Financial & ROI",
     questions: [
       {
-        q: "What if my venue doesn't hit 25 cycles per day?",
-        a: "Even at 15 cycles/day (conservative scenario), you're looking at $1,575/month or $18,900/year — still a 240% Year 1 return. The machine pays for itself in 5 months at that volume. Most owners hit 25+ within 3 months of launch.",
+        q: "What if my venue only does 10 cycles per day?",
+        a: "That's our conservative scenario: about $970/month or $11,645/year net on your founding machine, and the machine pays for itself in about 8.1 months. Placement drives volume, so we help you pick the highest-traffic spot before install.",
       },
       {
         q: "Do I keep 100% of the revenue?",
@@ -105,7 +105,7 @@ const faqs = [
       },
       {
         q: "Can I finance the machine?",
-        a: "Yes. Connect with us, and we can come up with a plan that works for you. Download the 8-Month ROI Blueprint PDF to see the machine cost and financing options. Most owners pay off the machine within 3-4 months from revenue.",
+        a: "Yes. Connect with us, and we can come up with a plan that works for you. Download the 8-Month ROI Blueprint PDF to see the machine cost and financing options. In the base case (20 cycles/day) the machine pays for itself in about 3.9 months; the conservative case (10 cycles/day) takes about 8.1 months.",
       },
       {
         q: "What venues are best for Freshtrax?",
@@ -201,7 +201,7 @@ export default function FAQ() {
               onClick={openBookCall}
               className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
-              Book a call with us
+              Book a 30-Minute Call
               <ArrowRight size={18} />
             </button>
           </div>

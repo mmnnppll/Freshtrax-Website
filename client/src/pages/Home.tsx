@@ -11,6 +11,7 @@ import FoundersClub from "@/components/FoundersClub";
 import HomeFAQ from "@/components/HomeFAQ";
 import Footer from "@/components/Footer";
 import BlueprintScrollTrigger from "@/components/BlueprintScrollTrigger";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, productSchema, createWebPageSchema, createVideoSchema } from "@/components/SchemaMarkup";
 
@@ -19,7 +20,7 @@ export default function Home() {
     <>
       <SEOHead
         title="Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues"
-        description="Freshtrax is the only three-stage shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required."
+        description="Freshtrax is the first self-service shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates odor and bacteria in 90 seconds. Zero staff required."
         canonicalUrl="https://getfreshtrax.com/"
         ogTitle="Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues"
         ogDescription="Make up to $36,830/year per kiosk (optimistic case, 30 cycles/day). Typical owner projects $24,237/year. Freshtrax is a self-service shoe sanitization kiosk that eliminates bacteria and odor from athletic shoes in 90 seconds."
@@ -40,7 +41,7 @@ export default function Home() {
         duration: "PT12S",
         contentUrl: "https://getfreshtrax.com/videos/kiosk-demo-720.mp4",
       })} />
-      <BlueprintScrollTrigger />
+      <BlueprintScrollTrigger afterSelector="#founders" />
       <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden">
       <ParticleField />
       <Navbar />
@@ -49,6 +50,25 @@ export default function Home() {
           <HeroSection />
         </section>
         {/* Subtle divider */}
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="pilot" aria-label="Venue partner results">
+          <PilotSection />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <section id="technology" aria-label="Technology section">
+          <TechnologySection />
+        </section>
+        <div
+          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
+          aria-hidden="true"
+        />
+        <VenueCategoriesSection />
         <div
           className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
           aria-hidden="true"
@@ -62,21 +82,6 @@ export default function Home() {
         />
         <section id="projections" aria-label="Financial projections section">
           <FinancialProjections />
-        </section>
-        <div
-          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
-          aria-hidden="true"
-        />
-        <section id="technology" aria-label="Technology section">
-          <TechnologySection />
-        </section>
-        <VenueCategoriesSection />
-        <div
-          className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
-          aria-hidden="true"
-        />
-        <section id="pilot" aria-label="Venue partner results">
-          <PilotSection />
         </section>
         <div
           className="h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent"
@@ -101,6 +106,7 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      <MobileStickyCTA />
     </div>
     </>
   );

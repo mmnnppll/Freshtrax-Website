@@ -66,7 +66,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-white/60 text-xs font-body mt-3 max-w-xs leading-relaxed">
-              Three-stage shoe sanitization. Fully automated. Zero competition.
+              Three-stage shoe sanitization. Fully automated. First in North America.
             </p>
             <a
               href="tel:+17788988063"
@@ -88,7 +88,7 @@ export default function Footer() {
               onClick={openBookCall}
               className="mt-4 md:mt-6 px-5 py-3 md:px-4 md:py-2 text-sm md:text-xs bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/20 text-orange-500 font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2 font-body"
             >
-              Book a Call
+              Book a 30-Minute Call
               <ArrowRight size={12} />
             </button>
           </div>

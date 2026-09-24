@@ -119,7 +119,7 @@ export default function OwnerFAQs() {
             onClick={openBookCall}
             className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-block"
           >
-            Book a Call
+            Book a 30-Minute Call
           </button>
         </motion.div>
       </div>

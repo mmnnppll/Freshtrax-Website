@@ -253,7 +253,7 @@ export default function About() {
               onClick={openBookCall}
               className="px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 inline-flex items-center gap-2"
             >
-              Book a call with us
+              Book a 30-Minute Call
               <ArrowRight size={18} />
             </button>
           </div>
