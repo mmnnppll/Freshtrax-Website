@@ -1,29 +1,31 @@
 import { useState, useEffect } from "react";
-
-const CONSENT_KEY = "freshtrax_cookie_consent";
+import { getStoredConsent, setConsent } from "@/lib/analytics";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(CONSENT_KEY);
-    if (!stored) setVisible(true);
+    if (!getStoredConsent()) setVisible(true);
   }, []);
 
   function accept() {
-    localStorage.setItem(CONSENT_KEY, "accepted");
+    setConsent(true);
     setVisible(false);
   }
 
   function decline() {
-    localStorage.setItem(CONSENT_KEY, "declined");
+    setConsent(false);
     setVisible(false);
   }
 
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#111111] border-t border-white/10 px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div
+      role="region"
+      aria-label="Cookie consent"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-[#111111] border-t border-white/10 px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+    >
       <p className="text-sm text-white/70 max-w-2xl">
         We use cookies and similar technologies to analyze traffic, personalize content, and serve targeted ads (including via Meta and Google). By clicking{" "}
         <span className="text-white font-medium">Accept</span>, you consent to our use of cookies.{" "}

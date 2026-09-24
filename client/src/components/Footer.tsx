@@ -55,6 +55,8 @@ export default function Footer() {
           <div className="md:col-span-2">
             <a href="/" className="h-10 flex items-center">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/images/freshtrax-logo.jpg"
                 alt="Freshtrax"
                 className="h-full w-auto"

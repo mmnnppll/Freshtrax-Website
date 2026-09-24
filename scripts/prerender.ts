@@ -12,6 +12,7 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
+import { pathToFileURL } from "url";
 
 // ---------------------------------------------------------------------------
 // Import blog data directly — no path aliases needed (pure data file)
@@ -123,6 +124,7 @@ function buildHtml(opts: {
   ogArticlePublishedTime?: string;
   ogArticleAuthor?: string;
   bodyHtml?: string;
+  ssr?: boolean;
 }): string {
   const {
     template,
@@ -135,6 +137,7 @@ function buildHtml(opts: {
     ogArticlePublishedTime,
     ogArticleAuthor,
     bodyHtml,
+    ssr,
   } = opts;
 
   const safeTitle = escapeAttr(title);
@@ -208,15 +211,48 @@ function buildHtml(opts: {
     `name="twitter:url" content="${safeCanonical}"`
   );
 
-  // Inject body content into #root if provided
+  // Inject body content into #root if provided. Server-rendered React output
+  // is marked data-ssr="1" so main.tsx hydrates it; the plain-HTML article
+  // fallback is not, so React replaces it as before.
   if (bodyHtml) {
+    const attr = ssr ? ' data-ssr="1"' : "";
     html = html.replace(
       /<div id="root"><\/div>/,
-      `<div id="root">${bodyHtml}</div>`
+      () => `<div id="root"${attr}>${bodyHtml}</div>`
     );
   }
 
   return html;
+}
+
+// ---------------------------------------------------------------------------
+// Server rendering (built by `vite build --ssr src/entry-server.tsx`)
+// ---------------------------------------------------------------------------
+type RenderFn = (path: string) => Promise<string>;
+let renderPage: RenderFn | null = null;
+const ssrFailures: string[] = [];
+
+async function loadRenderer(): Promise<void> {
+  const entry = join(process.cwd(), "dist/server/entry-server.js");
+  if (!existsSync(entry)) {
+    console.warn(`\nWARNING: ${entry} not found — pages will not be server-rendered.`);
+    return;
+  }
+  const mod = await import(pathToFileURL(entry).href);
+  renderPage = mod.render as RenderFn;
+}
+
+/** Render a route to HTML, or return undefined so the caller falls back. */
+async function ssr(routePath: string): Promise<string | undefined> {
+  if (!renderPage) return undefined;
+  try {
+    const html = await renderPage(routePath);
+    return html.trim() ? html : undefined;
+  } catch (error) {
+    ssrFailures.push(routePath);
+    console.warn(`  ! SSR failed for ${routePath}: ${(error as Error).message}`);
+    return undefined;
+  }
 }
 
 function writeRoute(routePath: string, html: string): void {
@@ -515,7 +551,7 @@ ${entries.join("\n\n")}
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
-function main(): void {
+async function main(): Promise<void> {
   if (!existsSync(TEMPLATE_PATH)) {
     console.error(`\nERROR: ${TEMPLATE_PATH} not found.`);
     console.error("Run 'pnpm build' (vite build step) before prerendering.\n");
@@ -528,9 +564,18 @@ function main(): void {
   console.log(`\nFreshtrax Prerender — ${today}`);
   console.log("─".repeat(50));
 
+  // Untouched SPA shell for the Netlify catch-all rewrite. index.html itself
+  // becomes the server-rendered homepage below, which must not be served for
+  // unknown URLs (React would try to hydrate homepage HTML on another route).
+  writeFileSync(join(DIST_DIR, "spa-shell.html"), template, "utf-8");
+  console.log("  ✓ spa-shell.html (catch-all fallback)");
+
+  await loadRenderer();
+
   // -- Static routes
   console.log("\nStatic routes:");
   for (const route of STATIC_ROUTES) {
+    const body = await ssr(route.path);
     const html = buildHtml({
       template,
       title: route.title,
@@ -538,6 +583,8 @@ function main(): void {
       canonical: route.path === "/" ? `${BASE_URL}/` : `${BASE_URL}${route.path}/`,
       ogTitle: route.ogTitle,
       ogDescription: route.ogDescription,
+      bodyHtml: body,
+      ssr: !!body,
     });
     writeRoute(route.path, html);
   }
@@ -545,6 +592,7 @@ function main(): void {
   // -- City landing pages
   console.log("\nCity pages:");
   for (const c of CITIES) {
+    const body = await ssr(`/gyms/${c.slug}`);
     const html = buildHtml({
       template,
       title: c.seoTitle,
@@ -552,6 +600,8 @@ function main(): void {
       canonical: `${BASE_URL}/gyms/${c.slug}/`,
       ogTitle: c.seoTitle,
       ogDescription: c.seoDescription,
+      bodyHtml: body,
+      ssr: !!body,
     });
     writeRoute(`/gyms/${c.slug}`, html);
   }
@@ -559,6 +609,7 @@ function main(): void {
   // -- Blog pillar pages
   console.log("\nBlog pillar pages:");
   for (const pillar of PILLARS) {
+    const body = await ssr(`/blog/pillar/${pillar.slug}`);
     const html = buildHtml({
       template,
       title: `${pillar.name} | Freshtrax Blog`,
@@ -566,6 +617,8 @@ function main(): void {
       canonical: `${BASE_URL}/blog/pillar/${pillar.slug}/`,
       ogTitle: `${pillar.name} — Freshtrax`,
       ogDescription: pillar.description,
+      bodyHtml: body,
+      ssr: !!body,
     });
     writeRoute(`/blog/pillar/${pillar.slug}`, html);
   }
@@ -573,7 +626,9 @@ function main(): void {
   // -- Blog article pages (meta + full body content)
   console.log("\nBlog articles:");
   for (const article of blogArticles) {
-    const articleHtml = buildArticleHtml(article);
+    // Prefer the real server-rendered page; fall back to plain article HTML.
+    const rendered = await ssr(`/blog/${article.slug}`);
+    const articleHtml = rendered ?? buildArticleHtml(article);
     const html = buildHtml({
       template,
       title: article.seoTitle || article.title,
@@ -587,6 +642,7 @@ function main(): void {
         : undefined,
       ogArticleAuthor: article.author || "Freshtrax",
       bodyHtml: articleHtml,
+      ssr: !!rendered,
     });
     writeRoute(`/blog/${article.slug}`, html);
   }
@@ -608,8 +664,18 @@ function main(): void {
   const total =
     STATIC_ROUTES.length + CITIES.length + PILLARS.length + blogArticles.length;
   console.log(
-    `\n✅ Prerender complete — ${total} pages generated, sitemap has ${total} URLs\n`
+    `\n✅ Prerender complete — ${total} pages generated, sitemap has ${total} URLs`
   );
+  if (!renderPage) {
+    console.log("⚠️  Server renderer missing — no pages were server-rendered.\n");
+  } else if (ssrFailures.length) {
+    console.log(`⚠️  ${ssrFailures.length} page(s) fell back to client rendering: ${ssrFailures.join(", ")}\n`);
+  } else {
+    console.log(`✅ All ${total} pages server-rendered\n`);
+  }
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

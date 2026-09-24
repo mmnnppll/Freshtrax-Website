@@ -1,63 +1,71 @@
 const { createCrmLead } = require('./utils/notion-crm');
+const {
+  json, parseBody, clean, isValidEmail, isBot, escapeHtml, sendNotification,
+} = require('./utils/lead-helpers');
 
 exports.handler = async (event) => {
-    if (event.httpMethod !== 'POST') {
-          return { statusCode: 405, body: 'Method Not Allowed' };
-    }
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
 
-    try {
-          const { name, email, businessType, phone, readyIn30, offer } = JSON.parse(event.body);
+  const body = parseBody(event);
+  if (!body) {
+    return json(400, { success: false, error: 'Invalid request' });
+  }
 
-      // CRM record first — survives even if the email send fails
-      await createCrmLead({
-              name,
-              email,
-              phone,
-              venueType: businessType,
-              source: 'website_blueprint',
-              stage: 'blueprint_sent',
-              nextAction: 'Follow up on Blueprint download',
-              notes: `Offer: ${offer}. Ready in 30 days: ${readyIn30 ? 'Yes' : 'No'}.`,
-      });
+  // Honeypot filled: answer like a success so the bot moves on.
+  if (isBot(body)) {
+    console.warn('Blueprint form: honeypot triggered, submission dropped');
+    return json(200, { success: true, message: 'Notification sent' });
+  }
 
-      const res = await fetch('https://api.resend.com/emails', {
-              method: 'POST',
-              headers: {
-                        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-                        'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                        from: 'Freshtrax Leads <noreply@getfreshtrax.com>',
-                        to: 'getfreshtrax@gmail.com',
-                        reply_to: email,
-                        subject: `New Lead: ${name} - ${businessType}`,
-                        html: `
-                                  <h2>New Lead Submission</h2>
-                                            <p><strong>Name:</strong> ${name}</p>
-                                                      <p><strong>Email:</strong> ${email}</p>
-                                                                <p><strong>Business Type:</strong> ${businessType}</p>
-                                                                          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-                                                                                    <p><strong>Ready in 30 days:</strong> ${readyIn30 ? 'Yes' : 'No'}</p>
-                                                                                              <p><strong>Offer:</strong> ${offer}</p>
-                                                                                                        <p><strong>Downloaded PDF:</strong> Yes</p>
-                                                                                                                `,
-              }),
-      });
+  const name = clean(body.name, 120);
+  const email = clean(body.email, 254);
+  const businessType = clean(body.businessType, 60);
+  const phone = clean(body.phone, 40);
+  const offer = clean(body.offer, 120);
+  const readyIn30 = body.readyIn30 === true;
 
-      if (!res.ok) {
-              const error = await res.text();
-              throw new Error(error);
-      }
+  if (!name || !email) {
+    return json(400, { success: false, error: 'Missing required fields' });
+  }
+  if (!isValidEmail(email)) {
+    return json(400, { success: false, error: 'Invalid email address' });
+  }
 
-      return {
-              statusCode: 200,
-              body: JSON.stringify({ success: true, message: 'Notification sent' }),
-      };
-    } catch (error) {
-          console.error('Error sending email:', error);
-          return {
-                  statusCode: 500,
-                  body: JSON.stringify({ success: false, error: 'Failed to send notification' }),
-          };
-    }
+  // CRM record first — survives even if the email send fails
+  const crmSaved = await createCrmLead({
+    name,
+    email,
+    phone,
+    venueType: businessType,
+    source: 'website_blueprint',
+    stage: 'blueprint_sent',
+    nextAction: 'Follow up on Blueprint download',
+    notes: `Offer: ${offer}. Ready in 30 days: ${readyIn30 ? 'Yes' : 'No'}.`,
+  });
+
+  const emailSent = await sendNotification({
+    from: 'Freshtrax Leads <noreply@getfreshtrax.com>',
+    replyTo: email,
+    subject: `New Lead: ${name} - ${businessType}`,
+    html: `
+      <h2>New Lead Submission</h2>
+      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Business Type:</strong> ${escapeHtml(businessType)}</p>
+      <p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+      <p><strong>Ready in 30 days:</strong> ${readyIn30 ? 'Yes' : 'No'}</p>
+      <p><strong>Offer:</strong> ${escapeHtml(offer)}</p>
+      <p><strong>Downloaded PDF:</strong> Yes</p>
+      ${crmSaved ? '' : '<p><strong>Note:</strong> the Notion CRM write failed for this lead. Add it manually.</p>'}
+    `,
+  });
+
+  // The lead is safe if it landed in either place.
+  if (!crmSaved && !emailSent) {
+    console.error('Blueprint form: lead was not saved to CRM or email', { email });
+    return json(500, { success: false, error: 'Failed to send notification' });
+  }
+  return json(200, { success: true, message: 'Notification sent' });
 };

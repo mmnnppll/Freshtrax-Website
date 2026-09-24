@@ -293,6 +293,8 @@ export default function HowItWorks() {
                     </div>
                     <div className={idx % 2 === 1 ? "md:order-1" : ""}>
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={tech.image}
                         alt={tech.title}
                         className="w-full h-auto rounded-lg"

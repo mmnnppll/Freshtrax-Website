@@ -92,6 +92,8 @@ export default function TechnologySection() {
               {/* Image */}
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#0a0a0a]">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={tech.image}
                   alt={tech.title}
                   className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${

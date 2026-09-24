@@ -8,6 +8,8 @@ import { toast } from "sonner";
 import { SEOHead } from "@/components/SEOHead";
 import { SchemaMarkup, organizationSchema, localBusinessSchema, createWebPageSchema } from "@/components/SchemaMarkup";
 import { useBookCall } from "@/contexts/BookCallContext";
+import { trackLead } from "@/lib/analytics";
+import HoneypotField from "@/components/HoneypotField";
 
 export default function Contact() {
   const { openBookCall } = useBookCall();
@@ -18,6 +20,7 @@ export default function Contact() {
     company: "",
     inquiryType: "owner",
     message: "",
+    website: "", // honeypot, stays empty for humans
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -46,6 +49,7 @@ export default function Contact() {
       }
 
       toast.success("Message sent! We'll respond within 1 business day.");
+      trackLead("contact", { inquiry_type: formData.inquiryType });
       setFormData({
         name: "",
         email: "",
@@ -53,6 +57,7 @@ export default function Contact() {
         company: "",
         inquiryType: "owner",
         message: "",
+        website: "",
       });
     } catch (error) {
       toast.error("Failed to send message. Please try again.");
@@ -269,6 +274,11 @@ export default function Contact() {
                     placeholder="Tell us more about your inquiry..."
                   />
                 </div>
+
+                <HoneypotField
+                  value={formData.website}
+                  onChange={(value) => setFormData((prev) => ({ ...prev, website: value }))}
+                />
 
                 {/* Submit Button */}
                 <button

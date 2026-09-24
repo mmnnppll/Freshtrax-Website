@@ -44,7 +44,7 @@ function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0]; index: numbe
   const labels = ["PILLAR 01", "PILLAR 02", "PILLAR 03", "PILLAR 04"];
   const IconComp = PILLAR_ICONS[pillar.slug];
   return (
-    <Link href={`/blog/pillar/${pillar.slug}`}>
+    <Link href={`/blog/pillar/${pillar.slug}`} asChild>
       <a
         style={{
           display: "block",
@@ -93,7 +93,7 @@ function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0]; index: numbe
 function PostRow({ article }: { article: typeof blogArticles[0] }) {
   const pillar = PILLARS.find((p) => p.slug === article.pillar);
   return (
-    <Link href={`/blog/${article.slug}`}>
+    <Link href={`/blog/${article.slug}`} asChild>
       <a
         className="post-row"
         style={{
@@ -120,7 +120,7 @@ function PostRow({ article }: { article: typeof blogArticles[0] }) {
               </span>
             )}
             <span style={{ fontSize: 12, color: FT.dim }}>
-              {new Date(article.publishedDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} · {article.readingTime} min read
+              {new Date(article.publishedDate).toLocaleDateString("en-US", { timeZone: "UTC", month: "short", day: "numeric", year: "numeric" })} · {article.readingTime} min read
             </span>
           </div>
         </div>
@@ -139,7 +139,7 @@ function TopArticlesCard() {
             <span style={{ fontSize: 22, fontWeight: 800, color: FT.orange, lineHeight: 1, flexShrink: 0, width: 28 }}>
               {String(i + 1).padStart(2, "0")}
             </span>
-            <Link href={`/blog/${article.slug}`}>
+            <Link href={`/blog/${article.slug}`} asChild>
               <a style={{ fontSize: 13, color: FT.text, textDecoration: "none", lineHeight: 1.4, fontWeight: 500 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = FT.orange)}
                 onMouseLeave={(e) => (e.currentTarget.style.color = FT.text)}>
@@ -186,7 +186,7 @@ function BrowseByPillarCard() {
       <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>Browse by Pillar</p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         {PILLARS.map((pillar) => (
-          <Link key={pillar.slug} href={`/blog/pillar/${pillar.slug}`}>
+          <Link key={pillar.slug} href={`/blog/pillar/${pillar.slug}`} asChild>
             <a
               style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.text, border: `1px solid ${FT.border}`, borderRadius: 6, padding: "6px 12px", textDecoration: "none", transition: "border-color 200ms, color 200ms" }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = FT.orange; e.currentTarget.style.color = FT.orange; }}

@@ -58,28 +58,28 @@ const technologies = [
     icon: Zap,
     desc: "Steel rods emit UV-C light at 250–270nm — disrupting microbial DNA and RNA to deactivate bacteria, fungi, viruses, and biofilm on contact.",
     evidence: "Torres-Teran et al., 2023 (ICHE) — 91–95% bioburden reduction.",
-    image: "/images/ssm/uvc-feature.png",
+    image: "/images/ssm/uvc-feature.webp",
   },
   {
     title: "Ozone",
     icon: Wind,
     desc: "Generated at the top of the chamber, ozone circulates throughout the shoe interior, reaching every seam, lace, and insole pocket — breaking down odor molecules at the molecular level.",
     evidence: "Gupta & Simkovich, 2022 (JAPMA) — effective against dermatophytes responsible for athlete's foot.",
-    image: "/images/ssm/ozone-activated.jpg",
+    image: "/images/ssm/ozone-activated.webp",
   },
   {
     title: "Antimicrobial Vapor",
     icon: Droplets,
     desc: "Dispersed through vents in the steel rods, the vapor penetrates fabric fibers and internal surfaces, reaching areas UV and ozone alone can't access.",
     evidence: "Safe formulation used in medical-grade sanitization protocols.",
-    image: "/images/ssm/antimicrobial-fog-feature.png",
+    image: "/images/ssm/antimicrobial-fog-feature.webp",
   },
   {
     title: "Heat",
     icon: Thermometer,
     desc: "Applied throughout the cycle to accelerate sanitization and eliminate residual moisture — the primary fuel for odor and bacterial growth.",
     evidence: "Thermal drying removes the moisture environment that bacteria and fungi depend on.",
-    image: "/images/ssm/inside-chamber-steel-rods.png",
+    image: "/images/ssm/inside-chamber-steel-rods.webp",
   },
 ];
 
@@ -337,6 +337,7 @@ export default function ShoeSanitizationMachine() {
                       </div>
                       <div className={isEven ? "" : "md:order-1"}>
                         <img
+                          decoding="async"
                           src={tech.image}
                           alt={`${tech.title} stage of the Freshtrax shoe sanitization machine`}
                           className="w-full h-72 object-cover rounded-xl border border-white/10"
@@ -410,7 +411,8 @@ export default function ShoeSanitizationMachine() {
                   viewport={{ once: true }}
                 >
                   <img
-                    src="/images/ssm/product-dimensions.png"
+                    decoding="async"
+                    src="/images/ssm/product-dimensions.webp"
                     alt="Freshtrax shoe sanitization machine dimensions: 28.5 inches wide, 26.5 inches deep, 71 inches tall, on casters"
                     className="w-full max-w-sm mx-auto"
                     loading="lazy"
