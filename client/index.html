@@ -32,16 +32,12 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://getfreshtrax.com/" />
     
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://d2xsxph8kpxj0f.cloudfront.net" />
-
     <!-- Preload hero background image (LCP element) — relative so it matches the <img> URL exactly -->
     <link rel="preload" as="image" href="/images/shoe-sanitization-kiosk-hero.webp" fetchpriority="high" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Fonts are self-hosted (client/src/fonts.css). Not preloaded: measured on a
+         throttled phone profile, preloading delayed first paint by ~0.4s. -->
     
     <title>Freshtrax — Shoe sanitization self-serve kiosk</title>
     

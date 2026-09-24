@@ -100,8 +100,8 @@ export default function BlogPillar() {
 
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" style={{ padding: "80px 40px 0", maxWidth: 1280, margin: "0 auto" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5 }}>
-              <Link href="/blog" asChild><a style={{ color: FT.dim, textDecoration: "none" }}>JOURNAL</a></Link>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5 }}>
+              <Link href="/blog" asChild><a style={{ color: FT.dim, textDecoration: "none", display: "inline-block", padding: "10px 0" }}>JOURNAL</a></Link>
               <span style={{ color: FT.border }}>/</span>
               <span style={{ color: FT.orange }}>{pillar.name}</span>
             </div>
@@ -113,7 +113,7 @@ export default function BlogPillar() {
               <div style={{ width: 48, height: 48, background: `${FT.orange}1a`, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24 }}>
                 {pillar.icon}
               </div>
-              <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange }}>
+              <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange }}>
                 {articles.length} articles
               </p>
             </div>
@@ -165,7 +165,7 @@ export default function BlogPillar() {
 
           {/* CTA */}
           <section style={{ background: "linear-gradient(180deg, #2a1810 0%, #141414 100%)", borderTop: `1px solid ${FT.border}`, padding: "64px 40px", textAlign: "center" }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 12 }}>★ Ready to own a Freshtrax machine?</p>
+            <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 12 }}>★ Ready to own a Freshtrax machine?</p>
             <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 700, marginBottom: 16, maxWidth: 480, margin: "0 auto 16px" }}>
               Book a 30-min discovery call
             </h2>

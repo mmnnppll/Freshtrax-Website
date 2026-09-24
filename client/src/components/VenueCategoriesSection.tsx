@@ -45,7 +45,7 @@ export default function VenueCategoriesSection() {
   const { openBookCall } = useBookCall();
 
   return (
-    <section id="venues" className="py-20 border-t border-white/5" aria-label="Venue types">
+    <section id="venues" className="py-14 md:py-20 border-t border-white/5" aria-label="Venue types">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export default function VenueCategoriesSection() {
                     <Link
                       key={l.href}
                       href={l.href}
-                      className="text-orange-400 hover:text-orange-300 text-sm font-semibold transition-colors"
+                      className="inline-block py-2 text-orange-400 hover:text-orange-300 text-sm font-semibold transition-colors"
                     >
                       {l.label}
                     </Link>

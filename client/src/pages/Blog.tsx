@@ -72,7 +72,7 @@ function PillarCard({ pillar, index }: { pillar: typeof PILLARS[0]; index: numbe
         >
           {IconComp ? <IconComp size={20} color={FT.orange} /> : null}
         </div>
-        <p style={{ color: FT.orange, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>
+        <p style={{ color: FT.orange, fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>
           {labels[index]}
         </p>
         <h3 style={{ fontSize: 22, fontWeight: 700, lineHeight: 1.25, marginBottom: 10 }}>
@@ -115,7 +115,7 @@ function PostRow({ article }: { article: typeof blogArticles[0] }) {
           </p>
           <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
             {pillar && (
-              <span style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.orange, background: `${FT.orange}1a`, padding: "3px 8px", borderRadius: 4 }}>
+              <span style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.orange, background: `${FT.orange}1a`, padding: "3px 8px", borderRadius: 4 }}>
                 {pillar.name}
               </span>
             )}
@@ -132,7 +132,7 @@ function PostRow({ article }: { article: typeof blogArticles[0] }) {
 function TopArticlesCard() {
   return (
     <div style={{ background: FT.card, border: `1px solid ${FT.border}`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
-      <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>Top Articles</p>
+      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>Top Articles</p>
       <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
         {topArticles.map((article, i) => (
           <li key={article.id} style={{ display: "flex", gap: 12, marginBottom: 16 }}>
@@ -157,7 +157,7 @@ function DiscoveryCallCard() {
   const { openBookCall } = useBookCall();
   return (
     <div style={{ background: "linear-gradient(180deg, #2a1810, #141414)", border: `1px solid ${FT.orange}66`, borderRadius: 12, padding: 24, marginBottom: 16 }}>
-      <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
+      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 8 }}>★ Talk to Freshtrax</p>
       <h4 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12, lineHeight: 1.3 }}>Book a 30-min discovery call</h4>
       <ul style={{ padding: 0, margin: "0 0 20px", listStyle: "none" }}>
         {["See the machine live + get real numbers", "No sales pressure — just the facts"].map((item) => (
@@ -183,12 +183,12 @@ function DiscoveryCallCard() {
 function BrowseByPillarCard() {
   return (
     <div style={{ background: FT.card, border: `1px solid ${FT.border}`, borderRadius: 12, padding: 24 }}>
-      <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>Browse by Pillar</p>
+      <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>Browse by Pillar</p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         {PILLARS.map((pillar) => (
           <Link key={pillar.slug} href={`/blog/pillar/${pillar.slug}`} asChild>
             <a
-              style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.text, border: `1px solid ${FT.border}`, borderRadius: 6, padding: "6px 12px", textDecoration: "none", transition: "border-color 200ms, color 200ms" }}
+              style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: FT.text, border: `1px solid ${FT.border}`, borderRadius: 6, padding: "6px 12px", textDecoration: "none", transition: "border-color 200ms, color 200ms" }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = FT.orange; e.currentTarget.style.color = FT.orange; }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = FT.border; e.currentTarget.style.color = FT.text; }}
             >
@@ -229,7 +229,7 @@ export default function Blog() {
 
           {/* Hero */}
           <section style={{ paddingTop: 96, paddingBottom: 48, paddingLeft: 40, paddingRight: 40, maxWidth: 1280, margin: "0 auto" }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>The Journal</p>
+            <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 16 }}>The Journal</p>
             <h1 style={{ fontSize: "clamp(36px, 5vw, 56px)", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.5px", maxWidth: 920, marginBottom: 20 }}>
               Shoe hygiene, athlete performance, &amp; the business of&nbsp;Freshtrax.
             </h1>
@@ -262,7 +262,7 @@ export default function Blog() {
                   <button
                     onClick={() => { setCurrentPage(p => Math.max(1, p - 1)); scrollToList(); }}
                     disabled={currentPage === 1}
-                    style={{ padding: "8px 14px", borderRadius: 6, border: `1px solid ${FT.border}`, background: "transparent", color: currentPage === 1 ? FT.dim : FT.text, cursor: currentPage === 1 ? "not-allowed" : "pointer", fontSize: 13, fontWeight: 600 }}
+                    style={{ minWidth: 44, minHeight: 44, padding: "8px 14px", borderRadius: 6, border: `1px solid ${FT.border}`, background: "transparent", color: currentPage === 1 ? FT.dim : FT.text, cursor: currentPage === 1 ? "not-allowed" : "pointer", fontSize: 13, fontWeight: 600 }}
                   >
                     ←
                   </button>
@@ -271,7 +271,7 @@ export default function Blog() {
                       key={page}
                       onClick={() => { setCurrentPage(page); scrollToList(); }}
                       style={{
-                        padding: "8px 14px", borderRadius: 6, fontSize: 13, fontWeight: 700, cursor: "pointer",
+                        minWidth: 44, minHeight: 44, padding: "8px 14px", borderRadius: 6, fontSize: 13, fontWeight: 700, cursor: "pointer",
                         border: `1px solid ${page === currentPage ? FT.orange : FT.border}`,
                         background: page === currentPage ? `${FT.orange}1a` : "transparent",
                         color: page === currentPage ? FT.orange : FT.muted,
@@ -284,7 +284,7 @@ export default function Blog() {
                   <button
                     onClick={() => { setCurrentPage(p => Math.min(totalPages, p + 1)); scrollToList(); }}
                     disabled={currentPage === totalPages}
-                    style={{ padding: "8px 14px", borderRadius: 6, border: `1px solid ${FT.border}`, background: "transparent", color: currentPage === totalPages ? FT.dim : FT.text, cursor: currentPage === totalPages ? "not-allowed" : "pointer", fontSize: 13, fontWeight: 600 }}
+                    style={{ minWidth: 44, minHeight: 44, padding: "8px 14px", borderRadius: 6, border: `1px solid ${FT.border}`, background: "transparent", color: currentPage === totalPages ? FT.dim : FT.text, cursor: currentPage === totalPages ? "not-allowed" : "pointer", fontSize: 13, fontWeight: 600 }}
                   >
                     →
                   </button>
@@ -307,7 +307,7 @@ export default function Blog() {
 
           {/* Bottom CTA */}
           <section style={{ background: "linear-gradient(180deg, #2a1810 0%, #141414 100%)", borderTop: `1px solid ${FT.border}`, padding: "64px 40px", textAlign: "center" }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 12 }}>★ Ready to own a Freshtrax machine?</p>
+            <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: FT.orange, marginBottom: 12 }}>★ Ready to own a Freshtrax machine?</p>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 700, marginBottom: 16, maxWidth: 560, margin: "0 auto 16px" }}>
               See the real numbers in a 30-min call
             </h2>

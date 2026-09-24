@@ -36,7 +36,7 @@ export default function OwnershipPaths() {
   const { openBookCall } = useBookCall();
 
   return (
-    <section className="py-20 border-t border-white/5" aria-label="Ownership paths">
+    <section className="py-14 md:py-20 border-t border-white/5" aria-label="Ownership paths">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

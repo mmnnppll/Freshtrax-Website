@@ -11,7 +11,9 @@ import { useBookCall } from "@/contexts/BookCallContext";
 import { useState, useRef, useEffect } from "react";
 
 const HERO_BG = "/images/shoe-sanitization-kiosk-hero.webp";
-const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
+// Self-hosted H.264 copy of the CloudFront demo clip (HEVC 1440x1920, 7.7 MB ->
+// H.264 720x960, 1.1 MB). HEVC does not play in Firefox or on many Android phones.
+const DEMO_VIDEO = "/videos/kiosk-demo-720.mp4";
 
 export default function HeroSection() {
   const { openModal } = useLeadCapture();
@@ -59,8 +61,8 @@ export default function HeroSection() {
           <div className="max-w-xl">
             {/* Tagline */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ x: -20 }}
+              animate={{ x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-6"
             >
@@ -75,8 +77,8 @@ export default function HeroSection() {
 
             {/* Headline — H1 is keyword-targeted for SEO; revenue claim is H2 for conversion */}
             <motion.h1
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 10 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
               className="inline-flex items-center gap-2 mb-4"
             >
@@ -101,8 +103,8 @@ export default function HeroSection() {
 
             {/* Earnings disclosure — visible, not fine print */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.55 }}
               className="text-white/55 text-sm mb-6 font-body"
             >
@@ -111,8 +113,8 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-white/70 text-lg mb-8 leading-relaxed font-body"
             >
@@ -121,8 +123,8 @@ export default function HeroSection() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
@@ -147,8 +149,8 @@ export default function HeroSection() {
 
           {/* Right: Demo Video */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            initial={{ scale: 0.95, y: 20 }}
+            animate={{ scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
             className="flex justify-center lg:justify-end"
           >
@@ -189,7 +191,7 @@ export default function HeroSection() {
                       videoRef.current.muted = !isMuted;
                     }
                   }}
-                  className="absolute bottom-4 right-4 p-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="absolute bottom-3 right-3 w-11 h-11 flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
                   style={{ zIndex: 2 }}
                   aria-label={isMuted ? "Unmute video" : "Mute video"}
                 >

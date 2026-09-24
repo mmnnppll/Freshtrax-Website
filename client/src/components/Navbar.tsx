@@ -30,8 +30,10 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="/" className="h-8 md:h-10 flex items-center" aria-label="Freshtrax home">
           <img
-            src="/images/freshtrax-logo.jpg"
+            src="/images/freshtrax-logo-640.webp"
             alt="Freshtrax"
+            width={640}
+            height={79}
             className="h-full w-auto"
           />
         </a>
@@ -57,7 +59,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white/80 hover:text-white"
+          className="md:hidden -mr-2 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileOpen}

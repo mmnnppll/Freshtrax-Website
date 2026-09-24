@@ -160,7 +160,12 @@ export default function FinancialProjections() {
                     key={d.month}
                     className="flex-1 flex flex-col items-center justify-end gap-1.5 h-full"
                   >
-                    <span className="text-[9px] md:text-xs font-mono text-white/60 h-4">
+                    {/* Phones label every 3rd month so the values don't collide */}
+                    <span
+                      className={`text-[10px] md:text-xs font-mono text-white/60 h-4 whitespace-nowrap ${
+                        (i + 1) % 3 === 0 ? "" : "invisible md:visible"
+                      }`}
+                    >
                       ${(d.cumulative / 1000).toFixed(1)}k
                     </span>
                     <motion.div
@@ -173,7 +178,7 @@ export default function FinancialProjections() {
                           : "bg-gradient-to-t from-white/10 to-white/20"
                       }`}
                     />
-                    <span className="text-[9px] md:text-xs font-mono text-white/50 h-4">
+                    <span className="text-[10px] md:text-xs font-mono text-white/60 h-4">
                       M{d.month}
                     </span>
                   </div>
@@ -189,7 +194,7 @@ export default function FinancialProjections() {
                   Bars show cumulative net revenue growth month-over-month.
                 </span>
               </div>
-              <p className="text-white/55 text-[11px] font-body leading-relaxed">
+              <p className="text-white/55 text-xs font-body leading-relaxed">
                 Gross revenue projections before platform fee and service fee. Modeled on blended avg. revenue of $4.00/cycle ($3.65 + $4.35 blended), after $0.55 operating cost per cycle. Net figures vary by ownership tier — see the ROI Blueprint for full net projections.
               </p>
             </div>
@@ -222,13 +227,13 @@ function StatCard({
           : "bg-white/[0.02] border-white/[0.06]"
       }`}
     >
-      <p className="text-white/65 text-[11px] font-body uppercase tracking-wide mb-2">
+      <p className="text-white/65 text-xs font-body uppercase tracking-wide mb-2">
         {label}
       </p>
       <p className={`font-mono text-lg md:text-2xl font-bold ${highlight ? "text-orange-500" : "text-white"}`}>
         {value}
       </p>
-      <p className="text-white/55 text-[11px] font-body mt-1">{sub}</p>
+      <p className="text-white/55 text-xs font-body mt-1">{sub}</p>
     </div>
   );
 }

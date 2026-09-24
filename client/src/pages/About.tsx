@@ -38,8 +38,8 @@ export default function About() {
 
           <div className="container relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.8 }}
               className="max-w-3xl"
             >
@@ -56,7 +56,7 @@ export default function About() {
         </section>
 
         {/* Founder Story */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <motion.div
@@ -165,7 +165,7 @@ export default function About() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div
@@ -199,7 +199,7 @@ export default function About() {
         </section>
 
         {/* Core Values */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <h2 className="text-4xl font-bold mb-12 text-center">Our Values</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -242,7 +242,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join Us?</h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">

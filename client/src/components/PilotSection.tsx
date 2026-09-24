@@ -6,25 +6,24 @@
  */
 import { motion } from "framer-motion";
 import { MapPin, CalendarCheck } from "lucide-react";
-import { useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import LazyVideo from "./LazyVideo";
 
-const PILOT_VIDEO = "/badminton-pilot.mp4";
+// Re-encoded copy of badminton-pilot.mp4 (12.6 MB -> 3.6 MB, same resolution).
+const PILOT_VIDEO = "/badminton-pilot-mobile.mp4";
+const PILOT_POSTER = "/images/pilot/badminton-pilot-poster.webp";
 const PILOT_PHOTO = "/images/pilot/wcb-kiosk-install.jpg";
 
 export default function PilotSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
 
   return (
-    <section className="py-24 border-t border-white/5" aria-label="Venue partner results">
+    <section className="py-16 md:py-24 border-t border-white/5" aria-label="Venue partner results">
       <div className="container">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <p className="text-orange-500 text-sm font-semibold uppercase tracking-widest mb-3">
             Real Venues. Real Results.
@@ -44,28 +43,12 @@ export default function PilotSection() {
           >
             <div className="absolute -inset-4 bg-orange-500/[0.06] rounded-2xl blur-[40px]" />
             <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black">
-              <video
-                ref={videoRef}
+              <LazyVideo
                 src={PILOT_VIDEO}
-                autoPlay
-                muted={isMuted}
-                loop
-                playsInline
-                className="w-full h-auto object-cover"
+                poster={PILOT_POSTER}
+                iconSize={16}
+                className="w-full h-auto aspect-[480/848] object-cover"
               />
-              {/* Mute toggle */}
-              <button
-                onClick={() => {
-                  setIsMuted(!isMuted);
-                  if (videoRef.current) {
-                    videoRef.current.muted = !isMuted;
-                  }
-                }}
-                className="absolute bottom-4 right-4 p-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-full transition-all duration-300 shadow-lg"
-                aria-label={isMuted ? "Unmute video" : "Mute video"}
-              >
-                {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-              </button>
             </div>
           </motion.div>
 

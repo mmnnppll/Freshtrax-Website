@@ -46,7 +46,7 @@ export default function HomeFAQ() {
   const { openModal } = useLeadCapture();
 
   return (
-    <section className="py-24 border-t border-white/5" aria-label="Frequently asked questions">
+    <section className="py-16 md:py-24 border-t border-white/5" aria-label="Frequently asked questions">
       {/* FAQPage schema for Google rich snippets */}
       <SchemaMarkup
         schema={createFAQSchema(

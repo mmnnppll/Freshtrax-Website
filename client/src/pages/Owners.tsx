@@ -1,6 +1,7 @@
-import { useState, useRef, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Zap, TrendingUp, VolumeX, Volume2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Zap, TrendingUp } from "lucide-react";
+import LazyVideo from "@/components/LazyVideo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLeadCapture, OFFERS } from "@/contexts/LeadCaptureContext";
@@ -23,9 +24,7 @@ const DetailedFinancials = lazy(() => import("@/components/DetailedFinancials"))
 export default function Owners() {
   const { openModal } = useLeadCapture();
   const { openBookCall } = useBookCall();
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const DEMO_VIDEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663320106798/ByYadj377S2Q2TrQ4TArq4/openart-enhanced_1776890114044_1e2c34a5_6aa45cb4.mp4";
+  const DEMO_VIDEO = "/videos/kiosk-demo-720.mp4";
 
   return (
     <>
@@ -59,8 +58,8 @@ export default function Owners() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Copy */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="max-w-xl"
               >
@@ -91,35 +90,19 @@ export default function Owners() {
 
               {/* Right: Demo Video */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
+                initial={{ scale: 0.95, y: 20 }}
+                animate={{ scale: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.5 }}
                 className="flex justify-center lg:justify-end"
               >
                 <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
                   <div className="absolute -inset-8 bg-orange-500/[0.06] rounded-full blur-[80px]" />
                   <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
-                    <video
-                      ref={videoRef}
+                    <LazyVideo
                       src={DEMO_VIDEO}
-                      autoPlay
-                      muted={isMuted}
-                      loop
-                      playsInline
+                      poster="/images/shoe-sanitization-kiosk-hero.webp"
                       className="w-full h-full object-cover"
                     />
-                    <button
-                      onClick={() => {
-                        setIsMuted(!isMuted);
-                        if (videoRef.current) {
-                          videoRef.current.muted = !isMuted;
-                        }
-                      }}
-                      className="absolute bottom-4 right-4 p-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-                      aria-label={isMuted ? "Unmute video" : "Mute video"}
-                    >
-                      {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -128,7 +111,7 @@ export default function Owners() {
         </section>
 
         {/* Why Own Freshtrax */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <h2 className="text-4xl font-bold mb-12 text-center">
               Why Become an Owner
@@ -193,7 +176,7 @@ export default function Owners() {
         <OwnerFAQs />
 
         {/* Founder's Club CTA */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <motion.div
               initial={{ opacity: 0 }}
@@ -220,7 +203,7 @@ export default function Owners() {
         </section>
 
         {/* Next Steps */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <h2 className="text-4xl font-bold mb-12 text-center">Next Steps</h2>
             <div className="grid md:grid-cols-3 gap-8">

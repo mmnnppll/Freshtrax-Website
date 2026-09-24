@@ -95,8 +95,8 @@ export default function Contact() {
 
           <div className="container relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
@@ -110,13 +110,13 @@ export default function Contact() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container">
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               {/* Info Cards */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
                 className="bg-white/5 border border-white/10 rounded-lg p-6"
               >
                 <Mail className="w-8 h-8 text-orange-500 mb-4" />
@@ -132,8 +132,8 @@ export default function Contact() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ y: 20 }}
+                whileInView={{ y: 0 }}
                 transition={{ delay: 0.1 }}
                 className="bg-white/5 border border-white/10 rounded-lg p-6"
               >
@@ -156,7 +156,7 @@ export default function Contact() {
                   <button
                     type="button"
                     onClick={openBookCall}
-                    className="hover:text-orange-500 transition-colors"
+                    className="py-2 hover:text-orange-500 transition-colors"
                   >
                     Book a call with us
                   </button>
@@ -299,7 +299,7 @@ export default function Contact() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 border-t border-white/5">
+        <section className="py-14 md:py-20 border-t border-white/5">
           <div className="container text-center">
             <h2 className="text-4xl font-bold mb-6">Prefer a Quick Chat?</h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
