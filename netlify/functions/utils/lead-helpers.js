@@ -44,6 +44,40 @@ function isBot(body) {
   return clean(body[HONEYPOT_FIELD]) !== '';
 }
 
+/*
+ * Best-effort rate limit: at most RATE_LIMIT submissions per client IP per
+ * RATE_WINDOW_MS, per endpoint. State lives in the function instance's memory,
+ * so it resets on cold starts and is not shared between parallel instances.
+ * It stops a single script hammering a form; it is not a hard guarantee.
+ */
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const hits = new Map(); // key -> array of timestamps
+
+function clientIp(event) {
+  const h = event.headers || {};
+  return (
+    h['x-nf-client-connection-ip'] ||
+    (h['x-forwarded-for'] || '').split(',')[0].trim() ||
+    'unknown'
+  );
+}
+
+/** Returns true when this request is over the limit (and records it otherwise). */
+function isRateLimited(event, endpoint, now = Date.now()) {
+  const key = `${endpoint}:${clientIp(event)}`;
+  const recent = (hits.get(key) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (recent.length >= RATE_LIMIT) {
+    hits.set(key, recent);
+    return true;
+  }
+  recent.push(now);
+  hits.set(key, recent);
+  // Keep memory bounded on long-lived instances.
+  if (hits.size > 5000) hits.clear();
+  return false;
+}
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -99,6 +133,7 @@ module.exports = {
   clean,
   isValidEmail,
   isBot,
+  isRateLimited,
   escapeHtml,
   sendNotification,
 };

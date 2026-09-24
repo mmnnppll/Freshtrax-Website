@@ -8,6 +8,13 @@
 
 export const CONSENT_KEY = "freshtrax_cookie_consent";
 
+/** Window event that reopens the cookie banner (dispatched by the footer link). */
+export const COOKIE_SETTINGS_EVENT = "freshtrax:cookie-settings";
+
+export function openCookieSettings(): void {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT));
+}
+
 export type LeadSource = "blueprint" | "book_call" | "contact";
 
 /**

@@ -120,7 +120,7 @@ export default function Contact() {
                 className="bg-white/5 border border-white/10 rounded-lg p-6"
               >
                 <Mail className="w-8 h-8 text-orange-500 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Email</h3>
+                <h2 className="text-lg font-semibold mb-2">Email</h2>
                 <p className="text-white/60 text-sm">
                   <a
                     href="mailto:getfreshtrax@gmail.com"
@@ -138,7 +138,7 @@ export default function Contact() {
                 className="bg-white/5 border border-white/10 rounded-lg p-6"
               >
                 <Clock className="w-8 h-8 text-orange-500 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Response Time</h3>
+                <h2 className="text-lg font-semibold mb-2">Response Time</h2>
                 <p className="text-white/60 text-sm">
                   We respond to all inquiries within 1 business day.
                 </p>
@@ -151,7 +151,7 @@ export default function Contact() {
                 className="bg-white/5 border border-white/10 rounded-lg p-6"
               >
                 <ArrowRight className="w-8 h-8 text-orange-500 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Quick Call</h3>
+                <h2 className="text-lg font-semibold mb-2">Quick Call</h2>
                 <p className="text-white/60 text-sm">
                   <button
                     type="button"
@@ -241,10 +241,11 @@ export default function Contact() {
 
                 {/* Inquiry Type */}
                 <div>
-                  <label className="block text-sm font-semibold mb-2">
+                  <label htmlFor="inquiryType" className="block text-sm font-semibold mb-2">
                     I'm interested in... *
                   </label>
                   <select
+                    id="inquiryType"
                     name="inquiryType"
                     value={formData.inquiryType}
                     onChange={handleChange}

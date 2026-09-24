@@ -13,9 +13,12 @@ const FT = {
   border: "#262626",
   text: "#f5f5f5",
   muted: "#9a9a9a",
-  dim: "#6b6b6b",
+  dim: "#848484", // was #6b6b6b; raised to meet 4.5:1 on the dark cards
   orange: "#f57e2c",
   orangeDim: "#b85a18",
+  // Button background for white text (WCAG AA 4.5:1); FT.orange stays for text.
+  cta: "#ca4c0a",
+  ctaHover: "#b24309",
 } as const;
 
 function ArticleCard({ article }: { article: typeof blogArticles[0] }) {
@@ -46,9 +49,9 @@ function ArticleCard({ article }: { article: typeof blogArticles[0] }) {
           />
         </div>
         <div style={{ padding: 24, flex: 1, display: "flex", flexDirection: "column" }}>
-          <h3 style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.3, marginBottom: 10 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.3, marginBottom: 10 }}>
             {article.title}
-          </h3>
+          </h2>
           <p style={{ fontSize: 13, color: FT.muted, lineHeight: 1.6, flex: 1, marginBottom: 16 }}>
             {article.excerpt}
           </p>
@@ -175,9 +178,9 @@ export default function BlogPillar() {
             <button
               type="button"
               onClick={openBookCall}
-              style={{ display: "inline-block", background: FT.orange, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, border: "none", cursor: "pointer" }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = FT.orangeDim)}
-              onMouseLeave={(e) => (e.currentTarget.style.background = FT.orange)}
+              style={{ display: "inline-block", background: FT.cta, color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 700, fontSize: 16, border: "none", cursor: "pointer" }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = FT.ctaHover)}
+              onMouseLeave={(e) => (e.currentTarget.style.background = FT.cta)}
             >
               Book my call →
             </button>
