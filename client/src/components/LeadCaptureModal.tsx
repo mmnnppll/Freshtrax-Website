@@ -108,6 +108,15 @@ export default function LeadCaptureModal({
     [onClose],
   );
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+
   const handleStep1Submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !businessType) return;

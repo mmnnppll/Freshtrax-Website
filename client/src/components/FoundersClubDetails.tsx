@@ -16,7 +16,7 @@ const founderComparison = [
 
 export default function FoundersClubDetails() {
   return (
-    <section className="py-14 md:py-20 border-t border-white/5">
+    <section id="founders-club" className="py-14 md:py-20 border-t border-white/5">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

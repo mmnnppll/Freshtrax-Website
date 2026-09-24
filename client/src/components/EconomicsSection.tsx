@@ -17,7 +17,7 @@ const metrics = [
   },
   {
     label: "Net per cycle",
-    value: "$3.10–$3.90",
+    value: "$3.10–$3.80",
     sub: "After $0.55 op. cost",
     accent: false,
   },
@@ -63,7 +63,7 @@ export default function EconomicsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-white/50 text-base font-body max-w-2xl mb-10"
           >
-            Freshtrax is the only three-stage shoe sanitization kiosk built for North American fitness venues.
+            Freshtrax is the first self-service shoe sanitization kiosk built for North American fitness venues.
             Owners acquire the asset once and earn predictable recurring revenue with zero staff involvement.
           </motion.p>
         </div>

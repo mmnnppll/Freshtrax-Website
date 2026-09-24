@@ -70,7 +70,7 @@ export default function HeroSection() {
                 <div className="w-0.5 h-12 bg-orange-500 mt-1 shrink-0" />
                 <div>
                   <p className="text-white/60 text-xl font-body">Zero staff, zero inventory,</p>
-                  <p className="text-white font-bold text-xl font-body">zero competition.</p>
+                  <p className="text-white font-bold text-xl font-body">first in North America.</p>
                 </div>
               </div>
             </motion.div>
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 font-body"
               >
                 <CalendarDays size={16} />
-                Book a call
+                Book a 30-Minute Call
               </button>
             </motion.div>
 
@@ -160,7 +160,8 @@ export default function HeroSection() {
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16]">
                 {/* Static img overlay — this is the LCP element.
                     Preloaded via <link rel="preload"> in index.html so it
-                    paints in ~1s. Fades out once the video has a real frame. */}
+                    paints in ~1s. Fades out only once the video is playing, so a
+                    blocked autoplay (iOS Low Power Mode) never shows a black box. */}
                 <img
                   src={HERO_BG}
                   alt="Freshtrax shoe sanitization kiosk"
@@ -180,7 +181,7 @@ export default function HeroSection() {
                   muted={isMuted}
                   loop
                   playsInline
-                  onCanPlay={() => setVideoReady(true)}
+                  onPlaying={() => setVideoReady(true)}
                   className="w-full h-full object-cover"
                 />
                 {/* Unmute Button */}

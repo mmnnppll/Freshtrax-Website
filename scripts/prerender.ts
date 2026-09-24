@@ -279,7 +279,7 @@ const STATIC_ROUTES: Array<{
     path: "/",
     title: "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
     description:
-      "Freshtrax is the only three-stage shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates bacteria and odor in 90 seconds. Zero staff required.",
+      "Freshtrax is the first self-service shoe sanitization kiosk built for North American fitness venues. UVC + ozone eliminates odor and bacteria in 90 seconds. Zero staff required.",
     ogTitle:
       "Freshtrax | Shoe Sanitization Kiosk for Fitness & Sports Venues",
     ogDescription:

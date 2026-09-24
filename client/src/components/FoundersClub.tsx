@@ -92,7 +92,7 @@ export default function FoundersClub() {
                   onClick={openBookCall}
                   className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-body"
                 >
-                  Book a call with us
+                  Book a 30-Minute Call
                   <ArrowRight size={16} />
                 </button>
                 <button

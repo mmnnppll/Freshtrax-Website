@@ -1,7 +1,6 @@
 /*
  * Design: Dark Matter Industrial — Market Opportunity
  * Clean bento grid with consistent card heights.
- * CTA: "See the $1B Market Breakdown"
  */
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
@@ -10,26 +9,26 @@ import { OFFERS } from "@/contexts/LeadCaptureContext";
 
 const opportunities = [
   {
-    stat: "$1B",
-    label: "addressable market",
+    stat: "First",
+    label: "in the US & Canada",
     description:
-      "Self-service hygiene kiosk projected to reach $1B in 2025 — nearly untouched in Western markets.",
+      "Shoe sanitization kiosks are an everyday amenity in Asian sports venues. Freshtrax is the first built for North American gyms and courts.",
     span: "md:col-span-2",
     featured: true,
   },
   {
-    stat: "85.6M+",
-    label: "target audience (US & CA)",
+    stat: "10+ yrs",
+    label: "proven overseas",
     description:
-      "Fitness centers, pickleball hubs, tennis clubs, and sports centers are the ideal Tier 1 placement venues.",
+      "The self-serve model has run for over a decade in Japan, South Korea, and China.",
     span: "md:col-span-1",
     featured: false,
   },
   {
-    stat: "Zero",
-    label: "direct competition",
+    stat: "110V",
+    label: "plug in and go",
     description:
-      "Inspired by proven Asian models. No comparable automated shoe hygiene product exists in North America.",
+      "Standard outlet, no plumbing, no build-out. Ships fully assembled on casters.",
     span: "md:col-span-1",
     featured: false,
   },
